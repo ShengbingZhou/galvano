@@ -1,0 +1,151 @@
+<Project ModBy="Inserter" SigType="0" Name="C:/Users/Bing/Downloads/GalvanoDrv_PADC_DAC_IADC_OK/TEST.rvl" Date="2017-12-24">
+    <IP Version="1_5_062609"/>
+    <Design DesignEntry="Schematic/Mixed HDL" Synthesis="lse" DeviceFamily="LatticeXP2" DesignName="TEST"/>
+    <Core InsertDataset="0" Insert="1" Reveal_sig="120680525" Name="top_LA0" ID="0">
+        <Setting>
+            <Clock SampleClk="pll_inst/clkos" SampleEnable="0" EnableClk="" EnableClk_Pri="0"/>
+            <TraceBuffer Implementation="0" BitTimeStamp="0" hasTimeStamp="0" IncTrigSig="0" BufferDepth="1024"/>
+            <Capture Mode="0" MinSamplesPerTrig="16"/>
+            <Event CntEnable="0" MaxEventCnt="8"/>
+            <TrigOut Polarity="0" MinPulseWidth="0" TrigOutNetType="1" EnableTrigOut="0" TrigOutNet="reveal_debug_TEST_LA0_net"/>
+            <DistRAM Disable="0"/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trace>
+                <Sig Type="SIG" Name="xiadc_filter_inst/data_en"/>
+                <Bus Name="xiadc_filter_inst/DATA">
+                    <Sig Type="SIG" Name="xiadc_filter_inst/DATA:0"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/DATA:1"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/DATA:2"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/DATA:3"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/DATA:4"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/DATA:5"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/DATA:6"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/DATA:7"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/DATA:8"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/DATA:9"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/DATA:10"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/DATA:11"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/DATA:12"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/DATA:13"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/DATA:14"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/DATA:15"/>
+                </Bus>
+                <Sig Type="SIG" Name="xiadc_filter_inst/enable"/>
+                <Sig Type="SIG" Name="xiadc_filter_inst/reset"/>
+                <Sig Type="SIG" Name="xiadc_filter_inst/word_clk"/>
+                <Bus Name="xiadc_filter_inst/word_count">
+                    <Sig Type="SIG" Name="xiadc_filter_inst/word_count:0"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/word_count:1"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/word_count:2"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/word_count:3"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/word_count:4"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/word_count:5"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/word_count:6"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/word_count:7"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/word_count:8"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/word_count:9"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/word_count:10"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/word_count:11"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/word_count:12"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/word_count:13"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/word_count:14"/>
+                    <Sig Type="SIG" Name="xiadc_filter_inst/word_count:15"/>
+                </Bus>
+                <Sig Type="SIG" Name="xiadc_filter_inst/mdata1"/>
+                <Sig Type="SIG" Name="xiadc_filter_inst/mclk1"/>
+                <Sig Type="SIG" Name="xpadc_inst/dvalid"/>
+                <Bus Name="xpadc_inst/dout">
+                    <Sig Type="SIG" Name="xpadc_inst/dout:0"/>
+                    <Sig Type="SIG" Name="xpadc_inst/dout:1"/>
+                    <Sig Type="SIG" Name="xpadc_inst/dout:2"/>
+                    <Sig Type="SIG" Name="xpadc_inst/dout:3"/>
+                    <Sig Type="SIG" Name="xpadc_inst/dout:4"/>
+                    <Sig Type="SIG" Name="xpadc_inst/dout:5"/>
+                    <Sig Type="SIG" Name="xpadc_inst/dout:6"/>
+                    <Sig Type="SIG" Name="xpadc_inst/dout:7"/>
+                    <Sig Type="SIG" Name="xpadc_inst/dout:8"/>
+                    <Sig Type="SIG" Name="xpadc_inst/dout:9"/>
+                    <Sig Type="SIG" Name="xpadc_inst/dout:10"/>
+                    <Sig Type="SIG" Name="xpadc_inst/dout:11"/>
+                    <Sig Type="SIG" Name="xpadc_inst/dout:12"/>
+                    <Sig Type="SIG" Name="xpadc_inst/dout:13"/>
+                    <Sig Type="SIG" Name="xpadc_inst/dout:14"/>
+                    <Sig Type="SIG" Name="xpadc_inst/dout:15"/>
+                </Bus>
+                <Bus Name="u0_msg">
+                    <Sig Type="SIG" Name="u0_msg:0"/>
+                    <Sig Type="SIG" Name="u0_msg:1"/>
+                    <Sig Type="SIG" Name="u0_msg:2"/>
+                    <Sig Type="SIG" Name="u0_msg:3"/>
+                    <Sig Type="SIG" Name="u0_msg:4"/>
+                    <Sig Type="SIG" Name="u0_msg:5"/>
+                    <Sig Type="SIG" Name="u0_msg:6"/>
+                    <Sig Type="SIG" Name="u0_msg:7"/>
+                    <Sig Type="SIG" Name="u0_msg:8"/>
+                    <Sig Type="SIG" Name="u0_msg:9"/>
+                    <Sig Type="SIG" Name="u0_msg:10"/>
+                    <Sig Type="SIG" Name="u0_msg:11"/>
+                    <Sig Type="SIG" Name="u0_msg:12"/>
+                    <Sig Type="SIG" Name="u0_msg:13"/>
+                    <Sig Type="SIG" Name="u0_msg:14"/>
+                    <Sig Type="SIG" Name="u0_msg:15"/>
+                    <Sig Type="SIG" Name="u0_msg:16"/>
+                    <Sig Type="SIG" Name="u0_msg:17"/>
+                    <Sig Type="SIG" Name="u0_msg:18"/>
+                    <Sig Type="SIG" Name="u0_msg:19"/>
+                    <Sig Type="SIG" Name="u0_msg:20"/>
+                    <Sig Type="SIG" Name="u0_msg:21"/>
+                    <Sig Type="SIG" Name="u0_msg:22"/>
+                    <Sig Type="SIG" Name="u0_msg:23"/>
+                    <Sig Type="SIG" Name="u0_msg:24"/>
+                    <Sig Type="SIG" Name="u0_msg:25"/>
+                    <Sig Type="SIG" Name="u0_msg:26"/>
+                    <Sig Type="SIG" Name="u0_msg:27"/>
+                    <Sig Type="SIG" Name="u0_msg:28"/>
+                    <Sig Type="SIG" Name="u0_msg:29"/>
+                    <Sig Type="SIG" Name="u0_msg:30"/>
+                    <Sig Type="SIG" Name="u0_msg:31"/>
+                    <Sig Type="SIG" Name="u0_msg:32"/>
+                    <Sig Type="SIG" Name="u0_msg:33"/>
+                    <Sig Type="SIG" Name="u0_msg:34"/>
+                    <Sig Type="SIG" Name="u0_msg:35"/>
+                    <Sig Type="SIG" Name="u0_msg:36"/>
+                    <Sig Type="SIG" Name="u0_msg:37"/>
+                    <Sig Type="SIG" Name="u0_msg:38"/>
+                    <Sig Type="SIG" Name="u0_msg:39"/>
+                    <Sig Type="SIG" Name="u0_msg:40"/>
+                    <Sig Type="SIG" Name="u0_msg:41"/>
+                    <Sig Type="SIG" Name="u0_msg:42"/>
+                    <Sig Type="SIG" Name="u0_msg:43"/>
+                    <Sig Type="SIG" Name="u0_msg:44"/>
+                    <Sig Type="SIG" Name="u0_msg:45"/>
+                    <Sig Type="SIG" Name="u0_msg:46"/>
+                    <Sig Type="SIG" Name="u0_msg:47"/>
+                    <Sig Type="SIG" Name="u0_msg:48"/>
+                    <Sig Type="SIG" Name="u0_msg:49"/>
+                    <Sig Type="SIG" Name="u0_msg:50"/>
+                    <Sig Type="SIG" Name="u0_msg:51"/>
+                    <Sig Type="SIG" Name="u0_msg:52"/>
+                    <Sig Type="SIG" Name="u0_msg:53"/>
+                    <Sig Type="SIG" Name="u0_msg:54"/>
+                    <Sig Type="SIG" Name="u0_msg:55"/>
+                    <Sig Type="SIG" Name="u0_msg:56"/>
+                    <Sig Type="SIG" Name="u0_msg:57"/>
+                    <Sig Type="SIG" Name="u0_msg:58"/>
+                    <Sig Type="SIG" Name="u0_msg:59"/>
+                    <Sig Type="SIG" Name="u0_msg:60"/>
+                    <Sig Type="SIG" Name="u0_msg:61"/>
+                    <Sig Type="SIG" Name="u0_msg:62"/>
+                    <Sig Type="SIG" Name="u0_msg:63"/>
+                </Bus>
+            </Trace>
+            <Trigger>
+                <TU Serialbits="0" Type="0" ID="1" Sig="xiadc_filter_inst/reset,"/>
+                <TU Serialbits="0" Type="0" ID="2" Sig="xiadc_filter_inst/data_en,"/>
+                <TE MaxSequence="2" MaxEvnCnt="1" ID="1" Resource="0"/>
+                <TE MaxSequence="2" MaxEvnCnt="1" ID="2" Resource="0"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>

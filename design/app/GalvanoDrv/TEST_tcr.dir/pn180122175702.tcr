@@ -1,0 +1,9 @@
+#Start recording tcl command: 1/22/2018 13:08:38
+#Project Location: D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID; Project name: TEST
+prj_project open "D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/TEST.ldf"
+prj_src add "D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/src/XPOS_PID.vhd"
+prj_src add "D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/Subtractor.ipx"
+prj_src add "D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/AdderS16.ipx"
+prj_src add "D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/MultiplierS16.ipx"
+prj_run Export -impl impl1 -task Bitgen
+#Stop recording: 1/22/2018 17:57:02

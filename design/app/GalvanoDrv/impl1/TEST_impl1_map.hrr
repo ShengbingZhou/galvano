@@ -1,0 +1,659 @@
+---------------------------------------------------
+Report for cell top
+   Instance path: top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	    1714.00        100.0
+                                  LUT4	    1558.00        100.0
+                               DISTRAM	       6.00        100.0
+                                 IOBUF	         37        100.0
+                                PFUREG	       1854        100.0
+                                RIPPLE	        295        100.0
+                                   EBR	          9        100.0
+                            MULT18X18B	          3        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                           uart_uniq_1	          1        29.8
+                        reveal_coretop	          1        40.1
+                     pll_module_uniq_0	          1         0.0
+                               mg5ahub	          1         2.0
+                  dec256sinc24b_uniq_1	          1         7.9
+                       XPOS_PID_uniq_0	          1         3.3
+                      DAC7731IF_uniq_1	          1         1.1
+                      DAC7731IF_uniq_0	          1         1.1
+                      ADS8685IF_uniq_1	          1         2.6
+                      ADS8685IF_uniq_0	          1         4.4
+---------------------------------------------------
+Report for cell ADS8685IF_uniq_1
+   Instance path: top/YPADC_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      45.00         2.6
+                                  LUT4	      67.00         4.3
+                                PFUREG	         57         3.1
+                                RIPPLE	          8         2.7
+---------------------------------------------------
+Report for cell uart_uniq_1
+   Instance path: top/uart_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     510.00        29.8
+                                  LUT4	     495.00        31.8
+                                PFUREG	        502        27.1
+                                RIPPLE	         74        25.1
+                                   EBR	          2        22.2
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                      uart_fifo_uniq_1	          1         2.2
+---------------------------------------------------
+Report for cell uart_fifo_uniq_1
+   Instance path: top/uart_inst/u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      38.33         2.2
+                                  LUT4	       8.00         0.5
+                                PFUREG	         32         1.7
+                                RIPPLE	         32        10.8
+                                   EBR	          2        22.2
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                FADD2B	          7         0.4
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/uart_inst/u1/bdcnt_bctr_cia
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/uart_inst/u1/e_cmp_ci_a
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/uart_inst/u1/a0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/uart_inst/u1/g_cmp_ci_a
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/uart_inst/u1/a1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/uart_inst/u1/w_ctr_cia
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/uart_inst/u1/r_ctr_cia
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell reveal_coretop
+   Instance path: top/top_reveal_coretop_instance
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     686.83        40.1
+                                  LUT4	     719.17        46.2
+                               DISTRAM	       4.00        66.7
+                                PFUREG	        708        38.2
+                                RIPPLE	         46        15.6
+                                   EBR	          7        77.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                               top_la0	          1        40.0
+---------------------------------------------------
+Report for cell top_la0
+   Instance path: top/top_reveal_coretop_instance/core0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     685.83        40.0
+                                  LUT4	     718.17        46.1
+                               DISTRAM	       4.00        66.7
+                                PFUREG	        708        38.2
+                                RIPPLE	         46        15.6
+                                   EBR	          7        77.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                          top_la0_trig	          1         7.5
+rvl_tm(NUM_TRACE_SIGNALS=119,NUM_TRACE_SAMPLES=1024,NUM_TRIGGER_SIGNALS=2,NUM_TRIG_MAX=1,REVEAL_SIG=120680525,LSCC_FAMILY="XP2")	          1        14.1
+rvl_jtag_int(NUM_TRACE_SIGNALS=119,NUM_TRIGGER_SIGNALS=2)	          1        18.5
+---------------------------------------------------
+Report for cell top_la0_trig
+   Instance path: top/top_reveal_coretop_instance/core0/trig_u
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     128.67         7.5
+                                  LUT4	     144.33         9.3
+                               DISTRAM	       4.00        66.7
+                                PFUREG	        119         6.4
+                                RIPPLE	         18         6.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+              rvl_tu(NUM_TU_BITS=1)_U0	          1         0.4
+                 rvl_tu(NUM_TU_BITS=1)	          1         0.5
+rvl_te(NUM_TU=2,NUM_TE_ROW=4,NUM_TE_COL=2,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XP2")	          1         2.1
+rvl_te(NUM_TU=2,NUM_TE_ROW=4,NUM_TE_COL=2,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XP2")_U1	          1         3.2
+    rvl_tcnt(NUM_TE=2,NUM_TCNT_BITS=3)	          1         0.8
+         rvl_decode(NUM_TU=2,NUM_TE=2)	          1         0.2
+---------------------------------------------------
+Report for cell rvl_tu(NUM_TU_BITS=1)
+   Instance path: top/top_reveal_coretop_instance/core0/trig_u/tu_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.83         0.5
+                                  LUT4	       6.67         0.4
+                                PFUREG	          8         0.4
+---------------------------------------------------
+Report for cell rvl_tu(NUM_TU_BITS=1)_U0
+   Instance path: top/top_reveal_coretop_instance/core0/trig_u/tu_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       7.33         0.4
+                                  LUT4	       6.00         0.4
+                                PFUREG	          8         0.4
+---------------------------------------------------
+Report for cell rvl_te(NUM_TU=2,NUM_TE_ROW=4,NUM_TE_COL=2,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XP2")
+   Instance path: top/top_reveal_coretop_instance/core0/trig_u/te_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      36.17         2.1
+                                  LUT4	      38.33         2.5
+                               DISTRAM	       2.00        33.3
+                                PFUREG	         37         2.0
+                                RIPPLE	          9         3.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+pmi_distributed_dpramXbnoner2248b8aa2f	          1         0.2
+---------------------------------------------------
+Report for cell pmi_distributed_dpramXbnoner2248b8aa2f
+   Instance path: top/top_reveal_coretop_instance/core0/trig_u/te_1/pmi_distributed_dpramXP2binarynonereg224
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.00         0.2
+                                  LUT4	       1.00         0.1
+                               DISTRAM	       2.00        33.3
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell rvl_te(NUM_TU=2,NUM_TE_ROW=4,NUM_TE_COL=2,NUM_TE_EVENT_CNT_BITS=0,LSCC_FAMILY="XP2")_U1
+   Instance path: top/top_reveal_coretop_instance/core0/trig_u/te_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      55.33         3.2
+                                  LUT4	      59.33         3.8
+                               DISTRAM	       2.00        33.3
+                                PFUREG	         53         2.9
+                                RIPPLE	          9         3.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+pmi_distributed_dpramXbnoner2248b8aa2f	          1         0.2
+---------------------------------------------------
+Report for cell pmi_distributed_dpramXbnoner2248b8aa2f
+   Instance path: top/top_reveal_coretop_instance/core0/trig_u/te_0/pmi_distributed_dpramXP2binarynonereg224
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.00         0.2
+                                  LUT4	       1.00         0.1
+                               DISTRAM	       2.00        33.3
+                                PFUREG	          2         0.1
+---------------------------------------------------
+Report for cell rvl_tcnt(NUM_TE=2,NUM_TCNT_BITS=3)
+   Instance path: top/top_reveal_coretop_instance/core0/trig_u/tcnt_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      14.17         0.8
+                                  LUT4	      18.00         1.2
+                                PFUREG	         13         0.7
+---------------------------------------------------
+Report for cell rvl_decode(NUM_TU=2,NUM_TE=2)
+   Instance path: top/top_reveal_coretop_instance/core0/trig_u/decode_u
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.00         0.2
+                                  LUT4	       6.00         0.4
+---------------------------------------------------
+Report for cell rvl_tm(NUM_TRACE_SIGNALS=119,NUM_TRACE_SAMPLES=1024,NUM_TRIGGER_SIGNALS=2,NUM_TRIG_MAX=1,REVEAL_SIG=120680525,LSCC_FAMILY="XP2")
+   Instance path: top/top_reveal_coretop_instance/core0/tm_u
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     240.92        14.1
+                                  LUT4	     134.67         8.6
+                                PFUREG	        350        18.9
+                                RIPPLE	         24         8.1
+                                   EBR	          7        77.8
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+pmi_ram_dpXbnonesadr11910102411910102412180f38	          1         0.1
+---------------------------------------------------
+Report for cell pmi_ram_dpXbnonesadr11910102411910102412180f38
+   Instance path: top/top_reveal_coretop_instance/core0/tm_u/pmi_ram_dpXP2binarynonespeedasyncdisablereg119101024119101024
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                  LUT4	       1.00         0.1
+                                   EBR	          7        77.8
+---------------------------------------------------
+Report for cell rvl_jtag_int(NUM_TRACE_SIGNALS=119,NUM_TRIGGER_SIGNALS=2)
+   Instance path: top/top_reveal_coretop_instance/core0/jtag_int_u
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     316.25        18.5
+                                  LUT4	     439.17        28.2
+                                PFUREG	        239        12.9
+                                RIPPLE	          4         1.4
+---------------------------------------------------
+Report for cell ADS8685IF_uniq_0
+   Instance path: top/XPADC_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      75.67         4.4
+                                  LUT4	      84.00         5.4
+                                PFUREG	        103         5.6
+                                RIPPLE	          8         2.7
+---------------------------------------------------
+Report for cell pll_module_uniq_0
+   Instance path: top/pll_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell XPOS_PID_uniq_0
+   Instance path: top/xpos_pid_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      57.00         3.3
+                                PFUREG	         49         2.6
+                                RIPPLE	         47        15.9
+                            MULT18X18B	          3        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                     Subtractor_uniq_1	          1         0.6
+                     Subtractor_uniq_0	          1         0.3
+                  MultiplierS16_uniq_1	          1         0.0
+                  MultiplierS16_uniq_2	          1         0.0
+                  MultiplierS16_uniq_0	          1         0.0
+                       AdderS16_uniq_2	          1         0.5
+                       AdderS16_uniq_3	          1         0.2
+                       AdderS16_uniq_1	          1         0.5
+---------------------------------------------------
+Report for cell AdderS16_uniq_3
+   Instance path: top/xpos_pid_inst/sumall_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       3.33         0.2
+                                RIPPLE	          9         3.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                FADD2B	          9         0.2
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sumall_inst/addsub_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.33         0.0
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sumall_inst/addsub_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.33         0.0
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sumall_inst/addsub_3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.33         0.0
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sumall_inst/addsub_4
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.33         0.0
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sumall_inst/addsub_5
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.33         0.0
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sumall_inst/addsub_6
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.33         0.0
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sumall_inst/addsub_7
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.33         0.0
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sumall_inst/addsub_8
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sumall_inst/addsub_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell AdderS16_uniq_2
+   Instance path: top/xpos_pid_inst/sum2_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       9.00         0.5
+                                RIPPLE	          9         3.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                FADD2B	          9         0.5
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum2_inst/addsub_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum2_inst/addsub_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum2_inst/addsub_3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum2_inst/addsub_4
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum2_inst/addsub_5
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum2_inst/addsub_6
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum2_inst/addsub_7
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum2_inst/addsub_8
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum2_inst/addsub_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell AdderS16_uniq_1
+   Instance path: top/xpos_pid_inst/sum1_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       9.00         0.5
+                                RIPPLE	          9         3.1
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                FADD2B	          9         0.5
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum1_inst/addsub_1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum1_inst/addsub_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum1_inst/addsub_3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum1_inst/addsub_4
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum1_inst/addsub_5
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum1_inst/addsub_6
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum1_inst/addsub_7
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum1_inst/addsub_8
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/sum1_inst/addsub_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell Subtractor_uniq_0
+   Instance path: top/xpos_pid_inst/ek_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       4.33         0.3
+                                RIPPLE	         10         3.4
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                FADD2B	          1         0.1
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/ek_inst/precin_inst51
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell Subtractor_uniq_1
+   Instance path: top/xpos_pid_inst/delta_e1_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      10.00         0.6
+                                RIPPLE	         10         3.4
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                FADD2B	          1         0.1
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/xpos_pid_inst/delta_e1_inst/precin_inst51
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.3
+---------------------------------------------------
+Report for cell MultiplierS16_uniq_0
+   Instance path: top/xpos_pid_inst/Mp_delta_e1_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                            MULT18X18B	          1        33.3
+---------------------------------------------------
+Report for cell MultiplierS16_uniq_1
+   Instance path: top/xpos_pid_inst/Mi_e_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                            MULT18X18B	          1        33.3
+---------------------------------------------------
+Report for cell MultiplierS16_uniq_2
+   Instance path: top/xpos_pid_inst/Md_delta_e12_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                            MULT18X18B	          1        33.3
+---------------------------------------------------
+Report for cell dec256sinc24b_uniq_1
+   Instance path: top/XIADC_Filter_Inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     136.00         7.9
+                                  LUT4	      33.00         2.1
+                                PFUREG	        179         9.7
+                                RIPPLE	         60        20.3
+---------------------------------------------------
+Report for cell DAC7731IF_uniq_1
+   Instance path: top/YDAC_INST
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      19.50         1.1
+                                  LUT4	      27.00         1.7
+                                PFUREG	         27         1.5
+---------------------------------------------------
+Report for cell DAC7731IF_uniq_0
+   Instance path: top/XDAC_INST
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      19.00         1.1
+                                  LUT4	      27.00         1.7
+                                PFUREG	         27         1.5
+---------------------------------------------------
+Report for cell mg5ahub
+   Instance path: top/mg5ahub
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      33.75         2.0
+                                  LUT4	      23.50         1.5
+                                PFUREG	         41         2.2
+                                RIPPLE	          5         1.7
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                              ORCALUT5	         10         0.0
+---------------------------------------------------
+Report for cell ORCALUT5
+   Instance path: top/mg5ahub/genblk0_genblk5_jtage_u_RNO_11
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell ORCALUT5
+   Instance path: top/mg5ahub/genblk0_genblk5_jtage_u_RNO_2
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.25         0.0
+                                  LUT4	       1.00         0.1
+---------------------------------------------------
+Report for cell ORCALUT5
+   Instance path: top/mg5ahub/genblk0_genblk5_jtage_u_RNO_7
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell ORCALUT5
+   Instance path: top/mg5ahub/genblk0_genblk5_jtage_u_RNO_8
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell ORCALUT5
+   Instance path: top/mg5ahub/genblk0_genblk5_jtage_u_RNO_4
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell ORCALUT5
+   Instance path: top/mg5ahub/bit_count_RNO_3
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.0
+                                  LUT4	       2.00         0.1
+---------------------------------------------------
+Report for cell ORCALUT5
+   Instance path: top/mg5ahub/genblk0_genblk5_jtage_u_RNO_9
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell ORCALUT5
+   Instance path: top/mg5ahub/genblk0_genblk5_jtage_u_RNO_5
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell ORCALUT5
+   Instance path: top/mg5ahub/genblk0_genblk5_jtage_u_RNO_6
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.25         0.0
+                                  LUT4	       0.50         0.0
+---------------------------------------------------
+Report for cell ORCALUT5
+   Instance path: top/mg5ahub/genblk0_genblk5_jtage_u_RNO_10
+                     Cell usage:
+                                  cell	      count    Res Usage(%)

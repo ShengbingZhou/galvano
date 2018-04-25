@@ -1,0 +1,7 @@
+MODULE MultiplierS16 DEFIN MultiplierS16.vhd
+	SUBMODULE MULT18X18B
+		INSTANCE dsp_0
+	SUBMODULE VLO
+		INSTANCE scuba_vlo_inst
+	SUBMODULE VHI
+		INSTANCE scuba_vhi_inst

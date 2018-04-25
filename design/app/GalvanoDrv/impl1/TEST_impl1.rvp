@@ -1,0 +1,46 @@
+#-- Lattice Semiconductor Corporation Ltd.
+#-- Bali Reveal project file
+
+#device options
+[Device]
+part = LFXP2-8E-5TN144C
+family = LatticeXP2
+device = LFXP2-8E
+speed = 5
+package = TQFP144
+operation = Commercial
+
+#design options
+[Design]
+title = TEST
+path = D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/impl1
+core_generate = D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/impl1
+search_path = D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID
+top = top
+lpf = D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/TEST.lpf
+synthesis = lse
+
+#strategy options
+VHDL2008 = false
+
+#HDLs options
+[HDLs]
+D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/src/top.vhd = VHDL, work
+D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/src/ads8685if.vhd = VHDL, work
+D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/src/dec256sinc24b.v = Verilog
+D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/src/dac7731if.vhd = VHDL, work
+D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/src/pll_module.vhd = VHDL, work
+D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/src/uart.v = Verilog
+D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/src/uart_fifo.v = Verilog
+D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/src/XPOS_PID.vhd = VHDL, work
+D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/Subtractor.vhd = VHDL, work
+D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/AdderS16.vhd = VHDL, work
+D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/MultiplierS16.vhd = VHDL, work
+[HDL_Defines]
+SBP_SYNTHESIS=
+[HDL_Param]
+[Generated]
+D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/impl1/reveal_workspace/tmpreveal/top_la0_trig_gen.v=Verilog
+D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/impl1/reveal_workspace/tmpreveal/top_la0_gen.v=Verilog
+D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/impl1/reveal_workspace/tmpreveal/top_rvl_top.v=Verilog,work
+D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd=VHDL,work

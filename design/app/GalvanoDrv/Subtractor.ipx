@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="Subtractor" module="Subtractor" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2018 01 22 13:13:37.889" version="3.5" type="Module" synthesis="lse" source_format="VHDL">
+  <Package>
+		<File name="Subtractor.lpc" type="lpc" modified="2018 01 22 13:13:35.439"/>
+		<File name="Subtractor.vhd" type="top_level_vhdl" modified="2018 01 22 13:13:35.517"/>
+		<File name="Subtractor_tmpl.vhd" type="template_vhdl" modified="2018 01 22 13:13:35.517"/>
+		<File name="tb_Subtractor_tmpl.vhd" type="testbench_vhdl" modified="2018 01 22 13:13:35.533"/>
+  </Package>
+</DiamondModule>

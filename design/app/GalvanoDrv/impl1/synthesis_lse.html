@@ -1,0 +1,582 @@
+<HTML>
+<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
+synthesis:  version Diamond (64-bit) 3.7.0.96.1
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Jan 22 15:42:52 2018
+
+
+Command Line:  synthesis -f TEST_impl1_lattice.synproj -gui -msgset D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/promote.xml 
+
+Synthesis options:
+The -a option is LatticeXP2.
+The -s option is 5.
+The -t option is TQFP144.
+The -d option is LFXP2-8E.
+Using package TQFP144.
+Using performance grade 5.
+                                                          
+
+##########################################################
+
+### Lattice Family : LatticeXP2
+
+### Device  : LFXP2-8E
+
+### Package : TQFP144
+
+### Speed   : 5
+
+##########################################################
+
+                                                          
+
+Optimization goal = Timing
+Top-level module name = top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/lscc/diamond/3.7_x64/ispfpga/mg5a00/data (searchpath added)
+-p D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/impl1 (searchpath added)
+-p D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID (searchpath added)
+-p D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/impl1/reveal_workspace/TEST (searchpath added)
+Key file = C:/lscc/diamond/3.7_x64/module/reveal/document/reveal_test.dat
+Mixed language design
+File C:/lscc/diamond/3.7_x64/module/reveal/src/ertl/ertl.v is encrypted
+
+File C:/lscc/diamond/3.7_x64/module/reveal/src/rvl_j2w_module/rvl_j2w_module.v is encrypted
+
+File C:/lscc/diamond/3.7_x64/module/reveal/src/ertl/JTAG_SOFT.v is encrypted
+
+Verilog design file = C:/lscc/diamond/3.7_x64/cae_library/synthesis/verilog/pmi_def.v
+Verilog design file = C:/lscc/diamond/3.7_x64/module/reveal/src/ertl/ertl.v
+Verilog design file = C:/lscc/diamond/3.7_x64/module/reveal/src/rvl_j2w_module/rvl_j2w_module.v
+Verilog design file = C:/lscc/diamond/3.7_x64/module/reveal/src/rvl_j2w_module/wb2sci.v
+Verilog design file = C:/lscc/diamond/3.7_x64/module/reveal/src/ertl/JTAG_SOFT.v
+Verilog design file = D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/impl1/reveal_workspace/tmpreveal/top_la0_trig_gen.v
+Verilog design file = D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/impl1/reveal_workspace/tmpreveal/top_la0_gen.v
+Verilog design file = D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/impl1/reveal_workspace/tmpreveal/top_rvl_top.v
+VHDL library = work
+VHDL design file = D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd
+NGD file = TEST_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Analyzing Verilog file C:/lscc/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/lscc/diamond/3.7_x64/cae_library/synthesis/verilog/pmi_def.v. VERI-1482
+Analyzing Verilog file c:/lscc/diamond/3.7_x64/module/reveal/src/rvl_j2w_module/wb2sci.v. VERI-1482
+Analyzing Verilog file d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_la0_trig_gen.v. VERI-1482
+Analyzing Verilog file d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_la0_gen.v. VERI-1482
+Analyzing Verilog file d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.v. VERI-1482
+Analyzing Verilog file .__ydixd0.v. VERI-1482
+Analyzing Verilog file .__ydixd0.v. VERI-1482
+Analyzing VHDL file d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd. VHDL-1481
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(4): analyzing entity reveal_coretop. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(18): analyzing architecture one. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(189): analyzing entity top. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(243): analyzing entity pll_module_uniq_0. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(260): analyzing entity ads8685if_uniq_0. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(315): analyzing entity ads8685if_uniq_1. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(336): analyzing entity dac7731if_uniq_0. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(356): analyzing entity dac7731if_uniq_1. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(376): analyzing entity xpos_pid_uniq_0. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(388): analyzing architecture behavioral. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(831): analyzing entity ads8685if. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(846): analyzing architecture behavioral. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(988): analyzing entity dac7731if. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(1002): analyzing architecture behavioral. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(1080): analyzing entity pll_module. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(1089): analyzing architecture structure. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(1164): analyzing entity xpos_pid. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(1176): analyzing architecture behavioral. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(1257): analyzing entity subtractor. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(1264): analyzing architecture structure. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(1325): analyzing entity adders16. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(1332): analyzing architecture structure. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(1380): analyzing entity multipliers16. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(1387): analyzing architecture structure. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(1622): analyzing architecture structure. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(1691): analyzing architecture behavioral. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(1827): analyzing architecture behavioral. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(1963): analyzing architecture behavioral. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2039): analyzing architecture behavioral. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2117): analyzing entity subtractor_uniq_0. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2126): analyzing entity subtractor_uniq_1. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2135): analyzing entity subtractor_uniq_2. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2144): analyzing entity adders16_uniq_0. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2153): analyzing entity multipliers16_uniq_0. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2162): analyzing entity multipliers16_uniq_1. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2171): analyzing entity multipliers16_uniq_2. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2180): analyzing entity adders16_uniq_1. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2189): analyzing entity adders16_uniq_2. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2198): analyzing entity adders16_uniq_3. VHDL-1012
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2205): analyzing architecture behavioral. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2284): analyzing architecture structure. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2343): analyzing architecture structure. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2402): analyzing architecture structure. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2461): analyzing architecture structure. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2507): analyzing architecture structure. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2742): analyzing architecture structure. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2977): analyzing architecture structure. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(3212): analyzing architecture structure. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(3258): analyzing architecture structure. VHDL-1010
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(3304): analyzing architecture structure. VHDL-1010
+INFO - synthesis: The default VHDL library search path is now "D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/impl1". VHDL-1504
+Top module language type = VHDL.
+unit top is not yet analyzed. VHDL-1485
+d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(189): executing top(behavioral)
+
+WARNING - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(485): using initial value "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU" for u2_msg since it is never assigned. VHDL-1303
+WARNING - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(486): using initial value "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU" for u3_msg since it is never assigned. VHDL-1303
+WARNING - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(487): using initial value "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU" for u4_msg since it is never assigned. VHDL-1303
+WARNING - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(488): using initial value "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU" for u5_msg since it is never assigned. VHDL-1303
+WARNING - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(489): using initial value "UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU" for u6_msg since it is never assigned. VHDL-1303
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(775): going to verilog side to elaborate module dec256sinc24b_uniq_1. VHDL-1399
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(775): back to VHDL to continue elaboration. VHDL-1400
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(777): going to verilog side to elaborate module dec256sinc24b_uniq_2. VHDL-1399
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(777): back to VHDL to continue elaboration. VHDL-1400
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(786): going to verilog side to elaborate module uart_uniq_1. VHDL-1399
+INFO - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(786): back to VHDL to continue elaboration. VHDL-1400
+WARNING - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(481): net u_req[6] does not have a driver. VDB-1002
+WARNING - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(239): replacing existing netlist top(behavioral). VHDL-1205
+Top module name (VHDL, mixed language): top
+Loading NGL library 'C:/lscc/diamond/3.7_x64/ispfpga/mg5a00/data/mg5alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.7_x64/ispfpga/ep5a00/data/ep5alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.7_x64/ispfpga/ep5g00/data/ep5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.7_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'mg5a33x38.nph' in environment: C:/lscc/diamond/3.7_x64/ispfpga.
+Package Status:                     Final          Version 1.47.
+Top-level module name = top.
+WARNING - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.v(1228): net rx_msg[63] does not have a driver. VDB-1002
+WARNING - synthesis: uart_tx2 is not assigned a value (floating) -- simulation mismatch possible.
+######## Missing driver on net u_req[6]. Patching with GND.
+######## Missing driver on net u_req[5]. Patching with GND.
+######## Missing driver on net u_req[4]. Patching with GND.
+######## Missing driver on net u_req[3]. Patching with GND.
+######## Missing driver on net u_req[2]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[63]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[62]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[61]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[60]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[59]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[58]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[57]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[56]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[55]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[54]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[53]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[52]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[51]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[50]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[49]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[48]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[47]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[46]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[45]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[44]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[43]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[42]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[41]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[40]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[39]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[38]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[37]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[36]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[35]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[34]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[33]. Patching with GND.
+######## Missing driver on net \uart_inst/rx_msg[32]. Patching with GND.
+######## Missing driver on net n2381. Patching with GND.
+WARNING - synthesis: d:/prog_develop/latticefpga/galvanodrv_padc_dac_pid/impl1/reveal_workspace/tmpreveal/top_rvl_top.vhd(2254): Register \xpos_pid_inst/pos_pre_reg_i0 is stuck at Zero. VDB-5013
+INFO - synthesis: Extracted state machine for register '\uart_inst/u_state' with one-hot encoding
+State machine has 3 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 001
+
+ 0001 -> 010
+
+ 0010 -> 100
+
+INFO - synthesis: Extracted state machine for register '\uart_inst/tx_state' with one-hot encoding
+State machine has 3 reachable states with original encodings of:
+
+ 000 
+
+ 001 
+
+ 010 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 000 -> 001
+
+ 001 -> 010
+
+ 010 -> 100
+
+INFO - synthesis: Extracted state machine for register '\uart_inst/rx_state' with one-hot encoding
+State machine has 4 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+ 0011 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 0001
+
+ 0001 -> 0010
+
+ 0010 -> 0100
+
+ 0011 -> 1000
+
+
+
+
+WARNING - synthesis: Bit 0 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 1 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 2 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 3 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 4 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 5 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 6 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 7 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 8 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 9 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 10 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 11 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 12 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 13 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 14 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 15 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 16 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 17 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 18 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 19 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 20 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 21 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 22 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 23 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 40 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 41 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 42 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 43 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 44 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 45 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 46 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 47 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 48 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 49 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 50 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 51 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 52 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 53 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 54 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 55 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 56 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 57 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 58 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 59 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 60 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 61 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 62 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 63 of Register u1_msg is stuck at Zero
+######## GSR will not be inferred because the gsr attribute is present in either the top or sub module or because an instantiated GSR is present.
+Duplicate register/latch removal. \top_reveal_coretop_instance/core0/tm_u/rd_dout_tm_i0_i14 is a one-to-one match with \top_reveal_coretop_instance/core0/tm_u/rd_dout_tm_i0_i13.
+Duplicate register/latch removal. \top_reveal_coretop_instance/core0/tm_u/rd_dout_tm_i0_i12 is a one-to-one match with \top_reveal_coretop_instance/core0/tm_u/rd_dout_tm_i0_i14.
+Applying 1.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+top_prim.v file will not be written because encrypted design file is being used
+
+WARNING - synthesis: Appending of file D:\Prog_Develop\LatticeFPGA\GalvanoDrv_PADC_DAC_PID\impl1/pmi_distributed_dpramXbnoner2248b8aa2f.v to file D:\Prog_Develop\LatticeFPGA\GalvanoDrv_PADC_DAC_PID\impl1/top_prim.v failed.
+Results of NGD DRC are available in top_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.7_x64/ispfpga/mg5a00/data/mg5alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.7_x64/ispfpga/ep5a00/data/ep5alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.7_x64/ispfpga/ep5g00/data/ep5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.7_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.7_x64/ispfpga/data/neoprims.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.7_x64/ispfpga/data/neomacro.ngl'...
+Loading NGO design 'lngotmp/pmi_distributed_dpramxbnoner2248b8aa2f.ngo'...
+Loading NGO design 'lngotmp/pmi_ram_dpxbnonesadr11910102411910102412180f38.ngo'...
+Logic has been added to the IP to support JTAG capability.
+Loading NGO design 'C:/lscc/diamond/3.7_x64/ispfpga/mg5a00/data/mg5ahub.ngl'...
+WARNING - synthesis: logical net 'YIADC_MDAT' has no load.
+WARNING - synthesis: input pad net 'YIADC_MDAT' has no legal load.
+WARNING - synthesis: logical net 'XPADC_SDO1' has no load.
+WARNING - synthesis: input pad net 'XPADC_SDO1' has no legal load.
+WARNING - synthesis: logical net 'XPADC_RVS' has no load.
+WARNING - synthesis: input pad net 'XPADC_RVS' has no legal load.
+WARNING - synthesis: logical net 'YPADC_SDO0' has no load.
+WARNING - synthesis: input pad net 'YPADC_SDO0' has no legal load.
+WARNING - synthesis: logical net 'YPADC_SDO1' has no load.
+WARNING - synthesis: input pad net 'YPADC_SDO1' has no legal load.
+WARNING - synthesis: logical net 'YPADC_RVS' has no load.
+WARNING - synthesis: input pad net 'YPADC_RVS' has no legal load.
+WARNING - synthesis: logical net 'XDAC_SDO' has no load.
+WARNING - synthesis: input pad net 'XDAC_SDO' has no legal load.
+WARNING - synthesis: logical net 'YDAC_SDO' has no load.
+WARNING - synthesis: input pad net 'YDAC_SDO' has no legal load.
+WARNING - synthesis: logical net 'uart_rx2' has no load.
+WARNING - synthesis: input pad net 'uart_rx2' has no legal load.
+WARNING - synthesis: logical net 'top_reveal_coretop_instance/jupdate[0]' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/bdcnt_bctr_cia/S0' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/bdcnt_bctr_cia/S1' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/e_cmp_ci_a/S0' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/e_cmp_ci_a/S1' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/a0/C1' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/a0/S1' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/g_cmp_ci_a/S0' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/g_cmp_ci_a/S1' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/a1/C1' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/a1/S1' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/w_ctr_cia/S0' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/w_ctr_cia/S1' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/r_ctr_cia/S0' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/r_ctr_cia/S1' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sumall_inst/addsub_8/C1' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sumall_inst/addsub_8/S1' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sumall_inst/addsub_0/S0' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sum2_inst/addsub_8/C1' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sum2_inst/addsub_8/S1' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sum2_inst/addsub_0/S0' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sum1_inst/addsub_8/C1' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sum1_inst/addsub_8/S1' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sum1_inst/addsub_0/S0' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/ek_inst/precin_inst51/S0' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/ek_inst/precin_inst51/S1' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/delta_e1_inst/precin_inst51/S0' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/delta_e1_inst/precin_inst51/S1' has no load.
+WARNING - synthesis: logical net 'mg5ahub/tdoa' has no load.
+WARNING - synthesis: logical net 'mg5ahub/cdn' has no load.
+WARNING - synthesis: logical net 'mg5ahub/ip_enable_15' has no load.
+WARNING - synthesis: logical net 'mg5ahub/genblk0_genblk5_un1_jtage_u_1' has no load.
+WARNING - synthesis: logical net 'mg5ahub/genblk0_genblk5_un1_jtage_u' has no load.
+WARNING - synthesis: logical net 'mg5ahub/rom_rd_addr_cry_0_S0_0' has no load.
+WARNING - synthesis: logical net 'mg5ahub/rom_rd_addr_s_0_S1_7' has no load.
+WARNING - synthesis: logical net 'mg5ahub/rom_rd_addr_s_0_COUT_7' has no load.
+WARNING - synthesis: DRC complete with 54 warnings.
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file TEST_impl1.ngd.
+
+################### Begin Area Report (top)######################
+Number of register bits => 1809 of 6564 (27 % )
+AGEB2 => 5
+ALEB2 => 5
+AND2 => 3
+CB2 => 5
+CCU2B => 211
+CU2 => 10
+EPLLD1 => 1
+FADD2B => 36
+FD1P3AX => 466
+FD1P3BX => 48
+FD1P3DX => 729
+FD1S3AX => 20
+FD1S3BX => 33
+FD1S3DX => 450
+FD1S3IX => 48
+FD1S3JX => 15
+FSUB2B => 18
+GSR => 1
+IB => 9
+INV => 6
+L6MUX21 => 62
+MULT18X18B => 3
+OB => 27
+OBZ => 1
+ORCALUT4 => 1532
+PDPW16KB => 2
+PFUMX => 136
+ROM16X1 => 2
+XOR2 => 1
+pmi_distributed_dpramXbnoner2248b8aa2f => 2
+pmi_ram_dpXbnonesadr11910102411910102412180f38 => 1
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+jtagconn16 => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 7
+  Net : pll_inst/clk2, loads : 590
+  Net : pll_inst/TEMP_CLK_c, loads : 484
+  Net : XIADC_Filter_Inst/word_clk_N_823, loads : 113
+  Net : clk_pid, loads : 49
+  Net : XY_CLK_c, loads : 32
+  Net : pll_inst/clk3, loads : 5
+  Net : top_reveal_coretop_instance/jtck[0], loads : 1
+Clock Enable Nets
+Number of Clock Enables: 123
+Top 10 highest fanout Clock Enables:
+  Net : top_reveal_coretop_instance/core0/jtag_int_u/jtck_N_2822_enable_69, loads : 139
+  Net : uart_inst/clk2_enable_372, loads : 64
+  Net : top_reveal_coretop_instance/core0/jtag_int_u/jtck_N_2822_enable_358, loads : 50
+  Net : top_reveal_coretop_instance/core0/jtag_int_u/jtck_N_2822_enable_309, loads : 50
+  Net : rst_dly_cnt_31__N_177, loads : 42
+  Net : XDAC_INST/dac_lr_N_1433, loads : 36
+  Net : YPADC_inst/clk_ref_N_880_enable_65, loads : 32
+  Net : XPADC_inst/TEMP_CLK_c_enable_33, loads : 32
+  Net : XPADC_inst/clk_ref_N_880_enable_68, loads : 32
+  Net : uart_inst/u1/wren_i, loads : 25
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : top_reveal_coretop_instance/jtck_N_2822, loads : 408
+  Net : top_reveal_coretop_instance/core0/trig_u/te_1/jrstn_N_2820, loads : 403
+  Net : top_reveal_coretop_instance/core0/trig_u/tcnt_0/reset_rvl_n, loads : 281
+  Net : top_reveal_coretop_instance/core0/jtag_int_u/jtck_N_2822_enable_69, loads : 150
+  Net : pll_inst/clk_ref_N_880, loads : 139
+  Net : top_reveal_coretop_instance/core0/jtag_int_u/n24732, loads : 138
+  Net : uart_inst/rx_msg_31__N_1851[3], loads : 133
+  Net : top_reveal_coretop_instance/core0/jtag_int_u/n15, loads : 127
+  Net : YPADC_inst/sys_rstn_d2_N_868, loads : 91
+  Net : clk2_enable_429, loads : 81
+################### End Clock Report ##################
+
+<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk6 [get_nets clk_pid]                 |  200.000 MHz|   28.924 MHz|    22 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk5 [get_nets                          |             |             |
+\XIADC_Filter_Inst/word_clk_N_823]      |  200.000 MHz|  157.704 MHz|     4 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk4 [get_nets clk3]                    |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk3 [get_nets XY_CLK_c]                |  200.000 MHz|  238.095 MHz|    10  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets XIADC_CLKIN_N]           |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets                          |             |             |
+\top_reveal_coretop_instance/jtck[0]]   |  200.000 MHz|   83.119 MHz|    12 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk2]                    |            -|            -|     0  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+3 constraints not met.
+
+
+Peak Memory Usage: 156.371  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 8.596  secs
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

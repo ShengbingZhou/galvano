@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DiamondModule name="MultiplierS16" module="Multiplier" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2018 01 22 13:19:38.429" version="4.9" type="Module" synthesis="lse" source_format="VHDL">
+  <Package>
+		<File name="MultiplierS16.lpc" type="lpc" modified="2018 01 22 13:19:37.056"/>
+		<File name="MultiplierS16.vhd" type="top_level_vhdl" modified="2018 01 22 13:19:37.103"/>
+		<File name="MultiplierS16_tmpl.vhd" type="template_vhdl" modified="2018 01 22 13:19:37.103"/>
+		<File name="tb_MultiplierS16_tmpl.vhd" type="testbench_vhdl" modified="2018 01 22 13:19:37.103"/>
+  </Package>
+</DiamondModule>

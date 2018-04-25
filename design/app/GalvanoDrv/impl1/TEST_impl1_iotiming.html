@@ -1,0 +1,141 @@
+<HTML>
+<HEAD><TITLE>I/O Timing Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Top"></A><B><U><big>I/O Timing Report</big></U></B>
+Loading design for application iotiming from file test_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-8E
+Package:     TQFP144
+Performance: 6
+Package Status:                     Final          Version 1.47.
+Performance Hardware Data Status:   Final          Version 11.5.
+Loading design for application iotiming from file test_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-8E
+Package:     TQFP144
+Performance: 7
+Package Status:                     Final          Version 1.47.
+Performance Hardware Data Status:   Final          Version 11.5.
+Loading design for application iotiming from file test_impl1.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-8E
+Package:     TQFP144
+Performance: M
+Package Status:                     Final          Version 1.47.
+Performance Hardware Data Status:   Final          Version 11.5.
+// Design: top
+// Package: TQFP144
+// ncd File: test_impl1.ncd
+// Version: Diamond (64-bit) 3.7.0.96.1
+// Written on Mon Jan 22 15:43:56 2018
+// M: Minimum Performance Grade
+// iotiming TEST_impl1.ncd TEST_impl1.prf -gui -msgset D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/promote.xml
+
+I/O Timing Report (All units are in ns)
+
+Worst Case Results across Performance Grades (M, 7, 6, 5):
+
+// Input Setup and Hold Times
+
+Port       Clock  Edge  Setup Performance_Grade  Hold Performance_Grade
+----------------------------------------------------------------------
+XIADC_MDAT clk_in F     1.650      5       0.689     5
+XPADC_SDO0 clk_in R     1.126      5       0.230     7
+XY_SYNC    XY_CLK R     1.377      5       1.311     5
+XY_X       XY_CLK R     0.720      5       0.702     5
+XY_Y       XY_CLK R     0.664      5       0.777     5
+uart_rx1   clk_in R     5.408      5      -0.378     M
+
+
+// Clock to Output Delay
+
+Port      Clock  Edge  Max_Delay Performance_Grade  Min_Delay Performance_Grade
+------------------------------------------------------------------------
+XDAC_CS   clk_in R     8.190         5        2.477          M
+XDAC_LDAC clk_in R     8.508         5        2.559          M
+XDAC_RST  clk_in R    10.613         5        3.094          M
+XDAC_SCK  clk_in R     8.485         5        2.543          M
+XDAC_SDI  clk_in R     8.509         5        2.570          M
+XPADC_CS  clk_in F     9.396         5        2.459          M
+XPADC_SCK clk_in R    11.889         5        2.552          M
+XPADC_SDI clk_in F     7.417         5        2.303          M
+XY_STATUS XY_CLK R    10.777         5        2.016          M
+YDAC_CS   clk_in R     7.076         5        2.220          M
+YDAC_LDAC clk_in R     6.863         5        2.172          M
+YDAC_RST  clk_in R     9.594         5        2.798          M
+YDAC_SCK  clk_in R     6.815         5        2.133          M
+YDAC_SDI  clk_in R     7.287         5        2.281          M
+YPADC_CS  clk_in F     8.114         5        2.189          M
+YPADC_SCK clk_in R     9.620         5        2.095          M
+YPADC_SDI clk_in F     6.345         5        2.021          M
+cfg_done  clk_in R     9.586         5        2.783          M
+uart_tx1  clk_in R     6.528         5        2.026          M
+WARNING: you must also run trce with hold speed: 5
+WARNING: you must also run trce with hold speed: 7
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

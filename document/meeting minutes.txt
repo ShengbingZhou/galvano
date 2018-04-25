@@ -1,0 +1,15 @@
+Meeting Minutes (2017/3/18):
+Question:
+* Full range: +/-0.35rad (+/-20)
+* Step Response time (1% of full scale, 7mrad): 0.2ms
+* Position detector nonlinearity: 1mrad (1/100 ADC accuracy)
+* Position detector offset drift: 10urad/K
+* Position ADC bits (16bit, 10urad resolution), speed? ADS8685 (500KSPS)
+* Relation between position loop -> speed loop -> current loop?
+* Current sampling bits, speed? Usage of current loop?
+* Current DAC: DAC8871 (16bit, +/-18V output, 1us settling time), DAC7731 (16bit, +10v internal ref, 5us settling time)
+
+* BOM: 1500 RMB for 2 axis.
+
+Action:
+Mar 31: Zhangyuan, find a set of galvo system.

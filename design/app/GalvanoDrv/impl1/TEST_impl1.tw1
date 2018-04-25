@@ -1,0 +1,506 @@
+
+Loading design for application trce from file test_impl1_map.ncd.
+Design name: top
+NCD version: 3.3
+Vendor:      LATTICE
+Device:      LFXP2-8E
+Package:     TQFP144
+Performance: 5
+Loading device for application trce from file 'mg5a33x38.nph' in environment: C:/lscc/diamond/3.7_x64/ispfpga.
+Package Status:                     Final          Version 1.47.
+Performance Hardware Data Status:   Final          Version 11.5.
+Setup and Hold Report
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.7.0.96.1
+Mon Jan 22 15:43:04 2018
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o TEST_impl1.tw1 -gui -msgset D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/promote.xml TEST_impl1_map.ncd TEST_impl1.prf 
+Design file:     test_impl1_map.ncd
+Preference file: test_impl1.prf
+Device,speed:    LFXP2-8E,5
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk2" 50.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 4.269ns (weighted slack = 8.538ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sys_rst_66_rep_586  (from TEMP_CLK_c +)
+   Destination:    FF         Data in        uart_inst/regs_i0_i153  (to clk2 +)
+                   FF                        uart_inst/regs_i0_i152
+
+   Delay:               5.487ns  (21.2% logic, 78.8% route), 4 logic levels.
+
+ Constraint Details:
+
+      5.487ns physical path delay SLICE_1730 to uart_inst/SLICE_1056 meets
+      (delay constraint based on source clock period of 50.000ns and destination clock period of 20.000ns)
+     10.000ns delay constraint less
+      0.244ns CE_SET requirement (totaling 9.756ns) by 4.269ns
+
+ Physical Path Details:
+
+      Data path SLICE_1730 to uart_inst/SLICE_1056:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.383 SLICE_1730.CLK to  SLICE_1730.Q0 SLICE_1730 (from TEMP_CLK_c)
+ROUTE        53   e 1.081  SLICE_1730.Q0 to  SLICE_1389.A1 sys_rst_N
+CTOF_DEL    ---     0.260  SLICE_1389.A1 to  SLICE_1389.F1 SLICE_1389
+ROUTE         2   e 1.081  SLICE_1389.F1 to *SLICE_1381.C1 n24742
+CTOF_DEL    ---     0.260 *SLICE_1381.C1 to *SLICE_1381.F1 uart_inst/SLICE_1381
+ROUTE         8   e 1.081 *SLICE_1381.F1 to *SLICE_1479.B1 uart_inst/n22994
+CTOF_DEL    ---     0.260 *SLICE_1479.B1 to *SLICE_1479.F1 uart_inst/SLICE_1479
+ROUTE         4   e 1.081 *SLICE_1479.F1 to *SLICE_1056.CE uart_inst/clk2_enable_132 (to clk2)
+                  --------
+                    5.487   (21.2% logic, 78.8% route), 4 logic levels.
+
+Report:   87.245MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "TEMP_CLK_c" 20.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 32.976ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              xpos_pid_inst/pos_adc_reg_i1  (from clk_pid +)
+   Destination:    FF         Data in        XDAC_INST/data_reg_i0_i14  (to TEMP_CLK_c +)
+
+   Delay:              16.931ns  (61.6% logic, 38.4% route), 19 logic levels.
+
+ Constraint Details:
+
+     16.931ns physical path delay xpos_pid_inst/SLICE_1222 to XDAC_INST/SLICE_313 meets
+     50.000ns delay constraint less
+      0.093ns DIN_SET requirement (totaling 49.907ns) by 32.976ns
+
+ Physical Path Details:
+
+      Data path xpos_pid_inst/SLICE_1222 to XDAC_INST/SLICE_313:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.383 *LICE_1222.CLK to *SLICE_1222.Q1 xpos_pid_inst/SLICE_1222 (from clk_pid)
+ROUTE         1   e 1.081 *SLICE_1222.Q1 to */SLICE_211.B0 xpos_pid_inst/pos_adc_reg[1]
+C0TOFCO_DE  ---     0.790 */SLICE_211.B0 to *SLICE_211.FCO xpos_pid_inst/SLICE_211
+ROUTE         1   e 0.001 *SLICE_211.FCO to *SLICE_212.FCI xpos_pid_inst/ek_inst/co1
+FCITOFCO_D  ---     0.081 *SLICE_212.FCI to *SLICE_212.FCO xpos_pid_inst/SLICE_212
+ROUTE         1   e 0.001 *SLICE_212.FCO to *SLICE_213.FCI xpos_pid_inst/ek_inst/co2
+FCITOFCO_D  ---     0.081 *SLICE_213.FCI to *SLICE_213.FCO xpos_pid_inst/SLICE_213
+ROUTE         1   e 0.001 *SLICE_213.FCO to *SLICE_214.FCI xpos_pid_inst/ek_inst/co3
+FCITOFCO_D  ---     0.081 *SLICE_214.FCI to *SLICE_214.FCO xpos_pid_inst/SLICE_214
+ROUTE         1   e 0.001 *SLICE_214.FCO to *SLICE_215.FCI xpos_pid_inst/ek_inst/co4
+FCITOFCO_D  ---     0.081 *SLICE_215.FCI to *SLICE_215.FCO xpos_pid_inst/SLICE_215
+ROUTE         1   e 0.001 *SLICE_215.FCO to *SLICE_216.FCI xpos_pid_inst/ek_inst/co5
+FCITOF0_DE  ---     0.305 *SLICE_216.FCI to */SLICE_216.F0 xpos_pid_inst/SLICE_216
+ROUTE         4   e 1.081 */SLICE_216.F0 to */SLICE_226.A0 xpos_pid_inst/ek[11]
+C0TOFCO_DE  ---     0.790 */SLICE_226.A0 to *SLICE_226.FCO xpos_pid_inst/delta_e1_inst/SLICE_226
+ROUTE         1   e 0.001 *SLICE_226.FCO to *SLICE_227.FCI xpos_pid_inst/delta_e1_inst/co6
+FCITOF1_DE  ---     0.393 *SLICE_227.FCI to */SLICE_227.F1 xpos_pid_inst/delta_e1_inst/SLICE_227
+ROUTE         1   e 1.081 */SLICE_227.F1 to *nst/dsp_0.B16 xpos_pid_inst/delta_e1[14]
+PD_DEL      ---     4.585 *nst/dsp_0.B16 to *nst/dsp_0.P21 xpos_pid_inst/Mp_delta_e1_inst/dsp_0
+ROUTE         1   e 1.081 *nst/dsp_0.P21 to */SLICE_201.B0 xpos_pid_inst/mp_delta_e1[17]
+C0TOFCO_DE  ---     0.790 */SLICE_201.B0 to *SLICE_201.FCO xpos_pid_inst/sum1_inst/SLICE_201
+ROUTE         1   e 0.001 *SLICE_201.FCO to *SLICE_202.FCI xpos_pid_inst/sum1_inst/co1
+FCITOFCO_D  ---     0.081 *SLICE_202.FCI to *SLICE_202.FCO xpos_pid_inst/sum1_inst/SLICE_202
+ROUTE         1   e 0.001 *SLICE_202.FCO to *SLICE_203.FCI xpos_pid_inst/sum1_inst/co2
+FCITOFCO_D  ---     0.081 *SLICE_203.FCI to *SLICE_203.FCO xpos_pid_inst/sum1_inst/SLICE_203
+ROUTE         1   e 0.001 *SLICE_203.FCO to *SLICE_204.FCI xpos_pid_inst/sum1_inst/co3
+FCITOFCO_D  ---     0.081 *SLICE_204.FCI to *SLICE_204.FCO xpos_pid_inst/sum1_inst/SLICE_204
+ROUTE         1   e 0.001 *SLICE_204.FCO to *SLICE_205.FCI xpos_pid_inst/sum1_inst/co4
+FCITOFCO_D  ---     0.081 *SLICE_205.FCI to *SLICE_205.FCO xpos_pid_inst/sum1_inst/SLICE_205
+ROUTE         1   e 0.001 *SLICE_205.FCO to *SLICE_206.FCI xpos_pid_inst/sum1_inst/co5
+FCITOF0_DE  ---     0.305 *SLICE_206.FCI to */SLICE_206.F0 xpos_pid_inst/sum1_inst/SLICE_206
+ROUTE         1   e 1.081 */SLICE_206.F0 to */SLICE_188.A0 xpos_pid_inst/sum1[11]
+C0TOFCO_DE  ---     0.790 */SLICE_188.A0 to *SLICE_188.FCO xpos_pid_inst/SLICE_188
+ROUTE         1   e 0.001 *SLICE_188.FCO to *SLICE_189.FCI xpos_pid_inst/sumall_inst/co6
+FCITOF1_DE  ---     0.393 *SLICE_189.FCI to */SLICE_189.F1 xpos_pid_inst/SLICE_189
+ROUTE         2   e 1.081 */SLICE_189.F1 to */SLICE_313.D0 xdac_data[14]
+CTOF_DEL    ---     0.260 */SLICE_313.D0 to */SLICE_313.F0 XDAC_INST/SLICE_313
+ROUTE         1   e 0.001 */SLICE_313.F0 to *SLICE_313.DI0 XDAC_INST/n7269 (to TEMP_CLK_c)
+                  --------
+                   16.931   (61.6% logic, 38.4% route), 19 logic levels.
+
+Report:   58.741MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk3" 5.000000 MHz ;
+            24 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 48.092ns (weighted slack = 192.368ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              sys_rst_66_rep_589  (from TEMP_CLK_c +)
+   Destination:    FF         Data in        clk_pid_cnt_5776__i2  (to clk3 +)
+                   FF                        clk_pid_cnt_5776__i1
+
+   Delay:               1.464ns  (26.2% logic, 73.8% route), 1 logic levels.
+
+ Constraint Details:
+
+      1.464ns physical path delay SLICE_492 to SLICE_466 meets
+     50.000ns delay constraint less
+      0.444ns LSR_SET requirement (totaling 49.556ns) by 48.092ns
+
+ Physical Path Details:
+
+      Data path SLICE_492 to SLICE_466:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.383  SLICE_492.CLK to   SLICE_492.Q0 SLICE_492 (from TEMP_CLK_c)
+ROUTE        31   e 1.081   SLICE_492.Q0 to  SLICE_466.LSR n25234 (to clk3)
+                  --------
+                    1.464   (26.2% logic, 73.8% route), 1 logic levels.
+
+Report:  131.027MHz is the maximum frequency for this preference.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_in_c" 20.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference                              |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk2" 50.000000 MHz ;    |   50.000 MHz|   87.245 MHz|   4  
+                                        |             |             |
+FREQUENCY NET "TEMP_CLK_c" 20.000000    |             |             |
+MHz ;                                   |   20.000 MHz|   58.741 MHz|  19  
+                                        |             |             |
+FREQUENCY NET "clk3" 5.000000 MHz ;     |    5.000 MHz|  131.027 MHz|   1  
+                                        |             |             |
+FREQUENCY NET "clk_in_c" 20.000000 MHz  |             |             |
+;                                       |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 8 clocks:
+
+Clock Domain: reveal_ist_33_N   Source: XIADC_Filter_Inst/SLICE_513.Q0   Loads: 78
+   No transfer within this clock domain is found
+
+Clock Domain: jtaghub16_jtck   Source: mg5ahub/genblk0_genblk5_jtage_u.JTCK   Loads: 269
+   No transfer within this clock domain is found
+
+Clock Domain: clk_in_c   Source: clk_in.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: XY_CLK_c   Source: XY_CLK.PAD   Loads: 18
+   No transfer within this clock domain is found
+
+Clock Domain: clk_pid   Source: SLICE_465.Q0   Loads: 29
+   No transfer within this clock domain is found
+
+Clock Domain: clk3   Source: pll_inst/PLLInst_0.CLKOK   Loads: 4
+   Covered under: FREQUENCY NET "clk3" 5.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: jtaghub16_jtck   Source: mg5ahub/genblk0_genblk5_jtage_u.JTCK
+
+   Clock Domain: TEMP_CLK_c   Source: pll_inst/PLLInst_0.CLKOS
+      Covered under: FREQUENCY NET "clk3" 5.000000 MHz ;   Transfers: 4
+
+Clock Domain: TEMP_CLK_c   Source: pll_inst/PLLInst_0.CLKOS   Loads: 395
+   Covered under: FREQUENCY NET "TEMP_CLK_c" 20.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reveal_ist_33_N   Source: XIADC_Filter_Inst/SLICE_513.Q0
+      Covered under: FREQUENCY NET "TEMP_CLK_c" 20.000000 MHz ;   Transfers: 16
+
+   Clock Domain: jtaghub16_jtck   Source: mg5ahub/genblk0_genblk5_jtage_u.JTCK
+
+   Clock Domain: clk_pid   Source: SLICE_465.Q0
+      Covered under: FREQUENCY NET "TEMP_CLK_c" 20.000000 MHz ;   Transfers: 49
+
+   Clock Domain: clk2   Source: pll_inst/PLLInst_0.CLKOP
+      Covered under: FREQUENCY NET "TEMP_CLK_c" 20.000000 MHz ;   Transfers: 64
+
+Clock Domain: clk2   Source: pll_inst/PLLInst_0.CLKOP   Loads: 322
+   Covered under: FREQUENCY NET "clk2" 50.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reveal_ist_33_N   Source: XIADC_Filter_Inst/SLICE_513.Q0
+      Covered under: FREQUENCY NET "clk2" 50.000000 MHz ;   Transfers: 16
+
+   Clock Domain: jtaghub16_jtck   Source: mg5ahub/genblk0_genblk5_jtage_u.JTCK
+
+   Clock Domain: TEMP_CLK_c   Source: pll_inst/PLLInst_0.CLKOS
+      Covered under: FREQUENCY NET "clk2" 50.000000 MHz ;   Transfers: 28
+
+
+Timing summary (Setup):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1091847 paths, 9 nets, and 10570 connections (89.02% coverage)
+
+--------------------------------------------------------------------------------
+Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.7.0.96.1
+Mon Jan 22 15:43:05 2018
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Command line:    trce -v 1 -gt -mapchkpnt 0 -sethld -o TEST_impl1.tw1 -gui -msgset D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_PID/promote.xml TEST_impl1_map.ncd TEST_impl1.prf 
+Design file:     test_impl1_map.ncd
+Preference file: test_impl1.prf
+Device,speed:    LFXP2-8E,M
+Report level:    verbose report, limited to 1 item per preference
+--------------------------------------------------------------------------------
+
+BLOCK ASYNCPATHS
+BLOCK RESETPATHS
+BLOCK JTAG PATHS
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Preference: FREQUENCY NET "clk2" 50.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.237ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              u0_msg_i0  (from clk2 +)
+   Destination:    FF         Data in        u0_msg_i0  (to clk2 +)
+
+   Delay:               0.223ns  (53.8% logic, 46.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.223ns physical path delay SLICE_899 to SLICE_899 meets
+     -0.014ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.014ns) by 0.237ns
+
+ Physical Path Details:
+
+      Data path SLICE_899 to SLICE_899:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.120  SLICE_899.CLK to   SLICE_899.Q0 SLICE_899 (from clk2)
+ROUTE         2   e 0.103   SLICE_899.Q0 to   SLICE_899.M0 u0_msg[0] (to clk2)
+                  --------
+                    0.223   (53.8% logic, 46.2% route), 1 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "TEMP_CLK_c" 20.000000 MHz ;
+            4096 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.237ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              XPADC_inst/recv_reg_i0_i0  (from TEMP_CLK_c +)
+   Destination:    FF         Data in        XPADC_inst/recv_reg_i0_i1  (to TEMP_CLK_c +)
+
+   Delay:               0.223ns  (53.8% logic, 46.2% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.223ns physical path delay XPADC_inst/SLICE_393 to XPADC_inst/SLICE_393 meets
+     -0.014ns M_HLD and
+      0.000ns delay constraint requirement (totaling -0.014ns) by 0.237ns
+
+ Physical Path Details:
+
+      Data path XPADC_inst/SLICE_393 to XPADC_inst/SLICE_393:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.120 *SLICE_393.CLK to */SLICE_393.Q0 XPADC_inst/SLICE_393 (from TEMP_CLK_c)
+ROUTE         1   e 0.103 */SLICE_393.Q0 to */SLICE_393.M1 XPADC_inst/recv_reg[0] (to TEMP_CLK_c)
+                  --------
+                    0.223   (53.8% logic, 46.2% route), 1 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk3" 5.000000 MHz ;
+            24 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Passed: The following path meets requirements by 0.282ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              clk_pid_68  (from clk3 +)
+   Destination:    FF         Data in        clk_pid_68  (to clk3 +)
+
+   Delay:               0.283ns  (63.3% logic, 36.7% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.283ns physical path delay SLICE_465 to SLICE_465 meets
+      0.001ns DIN_HLD and
+      0.000ns delay constraint requirement (totaling 0.001ns) by 0.282ns
+
+ Physical Path Details:
+
+      Data path SLICE_465 to SLICE_465:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.120  SLICE_465.CLK to   SLICE_465.Q0 SLICE_465 (from clk3)
+ROUTE        29   e 0.103   SLICE_465.Q0 to   SLICE_465.D0 clk_pid
+CTOF_DEL    ---     0.059   SLICE_465.D0 to   SLICE_465.F0 SLICE_465
+ROUTE         1   e 0.001   SLICE_465.F0 to  SLICE_465.DI0 clk_pid_N_410 (to clk3)
+                  --------
+                    0.283   (63.3% logic, 36.7% route), 2 logic levels.
+
+
+================================================================================
+Preference: FREQUENCY NET "clk_in_c" 20.000000 MHz ;
+            0 items scored, 0 timing errors detected.
+--------------------------------------------------------------------------------
+
+Report Summary
+--------------
+----------------------------------------------------------------------------
+Preference(MIN Delays)                  |   Constraint|       Actual|Levels
+----------------------------------------------------------------------------
+                                        |             |             |
+FREQUENCY NET "clk2" 50.000000 MHz ;    |     0.000 ns|     0.237 ns|   1  
+                                        |             |             |
+FREQUENCY NET "TEMP_CLK_c" 20.000000    |             |             |
+MHz ;                                   |     0.000 ns|     0.237 ns|   1  
+                                        |             |             |
+FREQUENCY NET "clk3" 5.000000 MHz ;     |     0.000 ns|     0.282 ns|   2  
+                                        |             |             |
+FREQUENCY NET "clk_in_c" 20.000000 MHz  |             |             |
+;                                       |            -|            -|   0  
+                                        |             |             |
+----------------------------------------------------------------------------
+
+
+All preferences were met.
+
+
+Clock Domains Analysis
+------------------------
+
+Found 8 clocks:
+
+Clock Domain: reveal_ist_33_N   Source: XIADC_Filter_Inst/SLICE_513.Q0   Loads: 78
+   No transfer within this clock domain is found
+
+Clock Domain: jtaghub16_jtck   Source: mg5ahub/genblk0_genblk5_jtage_u.JTCK   Loads: 269
+   No transfer within this clock domain is found
+
+Clock Domain: clk_in_c   Source: clk_in.PAD   Loads: 1
+   No transfer within this clock domain is found
+
+Clock Domain: XY_CLK_c   Source: XY_CLK.PAD   Loads: 18
+   No transfer within this clock domain is found
+
+Clock Domain: clk_pid   Source: SLICE_465.Q0   Loads: 29
+   No transfer within this clock domain is found
+
+Clock Domain: clk3   Source: pll_inst/PLLInst_0.CLKOK   Loads: 4
+   Covered under: FREQUENCY NET "clk3" 5.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: jtaghub16_jtck   Source: mg5ahub/genblk0_genblk5_jtage_u.JTCK
+
+   Clock Domain: TEMP_CLK_c   Source: pll_inst/PLLInst_0.CLKOS
+      Covered under: FREQUENCY NET "clk3" 5.000000 MHz ;   Transfers: 4
+
+Clock Domain: TEMP_CLK_c   Source: pll_inst/PLLInst_0.CLKOS   Loads: 395
+   Covered under: FREQUENCY NET "TEMP_CLK_c" 20.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reveal_ist_33_N   Source: XIADC_Filter_Inst/SLICE_513.Q0
+      Covered under: FREQUENCY NET "TEMP_CLK_c" 20.000000 MHz ;   Transfers: 16
+
+   Clock Domain: jtaghub16_jtck   Source: mg5ahub/genblk0_genblk5_jtage_u.JTCK
+
+   Clock Domain: clk_pid   Source: SLICE_465.Q0
+      Covered under: FREQUENCY NET "TEMP_CLK_c" 20.000000 MHz ;   Transfers: 49
+
+   Clock Domain: clk2   Source: pll_inst/PLLInst_0.CLKOP
+      Covered under: FREQUENCY NET "TEMP_CLK_c" 20.000000 MHz ;   Transfers: 64
+
+Clock Domain: clk2   Source: pll_inst/PLLInst_0.CLKOP   Loads: 322
+   Covered under: FREQUENCY NET "clk2" 50.000000 MHz ;
+
+   Data transfers from:
+   Clock Domain: reveal_ist_33_N   Source: XIADC_Filter_Inst/SLICE_513.Q0
+      Covered under: FREQUENCY NET "clk2" 50.000000 MHz ;   Transfers: 16
+
+   Clock Domain: jtaghub16_jtck   Source: mg5ahub/genblk0_genblk5_jtage_u.JTCK
+
+   Clock Domain: TEMP_CLK_c   Source: pll_inst/PLLInst_0.CLKOS
+      Covered under: FREQUENCY NET "clk2" 50.000000 MHz ;   Transfers: 28
+
+
+Timing summary (Hold):
+---------------
+
+Timing errors: 0  Score: 0
+Cumulative negative slack: 0
+
+Constraints cover 1091847 paths, 9 nets, and 10991 connections (92.56% coverage)
+
+
+
+Timing summary (Setup and Hold):
+---------------
+
+Timing errors: 0 (setup), 0 (hold)
+Score: 0 (setup), 0 (hold)
+Cumulative negative slack: 0 (0+0)
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+

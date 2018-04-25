@@ -1,0 +1,76 @@
+Results of NGD DRC are available in top_drc.log.
+Loading NGL library 'C:/lscc/diamond/3.7_x64/ispfpga/mg5a00/data/mg5alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.7_x64/ispfpga/ep5a00/data/ep5alib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.7_x64/ispfpga/ep5g00/data/ep5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.7_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.7_x64/ispfpga/data/neoprims.ngl'...
+Loading NGL library 'C:/lscc/diamond/3.7_x64/ispfpga/data/neomacro.ngl'...
+Loading NGO design 'lngotmp/pmi_distributed_dpramxbnoner2248b8aa2f.ngo'...
+Loading NGO design 'lngotmp/pmi_ram_dpxbnonesadr11910102411910102412180f38.ngo'...
+Logic has been added to the IP to support JTAG capability.
+Loading NGO design 'C:/lscc/diamond/3.7_x64/ispfpga/mg5a00/data/mg5ahub.ngl'...
+
+
+Running DRC...
+
+WARNING - synthesis: logical net 'YIADC_MDAT' has no load.
+WARNING - synthesis: input pad net 'YIADC_MDAT' has no legal load.
+WARNING - synthesis: logical net 'XPADC_SDO1' has no load.
+WARNING - synthesis: input pad net 'XPADC_SDO1' has no legal load.
+WARNING - synthesis: logical net 'XPADC_RVS' has no load.
+WARNING - synthesis: input pad net 'XPADC_RVS' has no legal load.
+WARNING - synthesis: logical net 'YPADC_SDO0' has no load.
+WARNING - synthesis: input pad net 'YPADC_SDO0' has no legal load.
+WARNING - synthesis: logical net 'YPADC_SDO1' has no load.
+WARNING - synthesis: input pad net 'YPADC_SDO1' has no legal load.
+WARNING - synthesis: logical net 'YPADC_RVS' has no load.
+WARNING - synthesis: input pad net 'YPADC_RVS' has no legal load.
+WARNING - synthesis: logical net 'XDAC_SDO' has no load.
+WARNING - synthesis: input pad net 'XDAC_SDO' has no legal load.
+WARNING - synthesis: logical net 'YDAC_SDO' has no load.
+WARNING - synthesis: input pad net 'YDAC_SDO' has no legal load.
+WARNING - synthesis: logical net 'uart_rx2' has no load.
+WARNING - synthesis: input pad net 'uart_rx2' has no legal load.
+WARNING - synthesis: logical net 'top_reveal_coretop_instance/jupdate[0]' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/bdcnt_bctr_cia/S0' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/bdcnt_bctr_cia/S1' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/e_cmp_ci_a/S0' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/e_cmp_ci_a/S1' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/a0/C1' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/a0/S1' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/g_cmp_ci_a/S0' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/g_cmp_ci_a/S1' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/a1/C1' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/a1/S1' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/w_ctr_cia/S0' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/w_ctr_cia/S1' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/r_ctr_cia/S0' has no load.
+WARNING - synthesis: logical net 'uart_inst/u1/r_ctr_cia/S1' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sumall_inst/addsub_8/C1' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sumall_inst/addsub_8/S1' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sumall_inst/addsub_0/S0' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sum2_inst/addsub_8/C1' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sum2_inst/addsub_8/S1' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sum2_inst/addsub_0/S0' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sum1_inst/addsub_8/C1' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sum1_inst/addsub_8/S1' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/sum1_inst/addsub_0/S0' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/ek_inst/precin_inst51/S0' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/ek_inst/precin_inst51/S1' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/delta_e1_inst/precin_inst51/S0' has no load.
+WARNING - synthesis: logical net 'xpos_pid_inst/delta_e1_inst/precin_inst51/S1' has no load.
+WARNING - synthesis: logical net 'mg5ahub/tdoa' has no load.
+WARNING - synthesis: logical net 'mg5ahub/cdn' has no load.
+WARNING - synthesis: logical net 'mg5ahub/ip_enable_15' has no load.
+WARNING - synthesis: logical net 'mg5ahub/genblk0_genblk5_un1_jtage_u_1' has no load.
+WARNING - synthesis: logical net 'mg5ahub/genblk0_genblk5_un1_jtage_u' has no load.
+WARNING - synthesis: logical net 'mg5ahub/rom_rd_addr_cry_0_S0_0' has no load.
+WARNING - synthesis: logical net 'mg5ahub/rom_rd_addr_s_0_S1_7' has no load.
+WARNING - synthesis: logical net 'mg5ahub/rom_rd_addr_s_0_COUT_7' has no load.
+WARNING - synthesis: DRC complete with 54 warnings.
+
+Design Results:
+   4023 blocks expanded
+completed the first expansion
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file TEST_impl1.ngd.

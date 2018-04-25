@@ -1,0 +1,29 @@
+Date and Time : 06/14/17 14:26:27
+
+--------------------------------------------------
+Checking Schematic: ADC_DAC
+--------------------------------------------------
+Checking Electrical Rules 
+
+Checking For Unconnected Bus Nets
+
+--------------------------------------------------
+Checking Schematic: FPGA
+--------------------------------------------------
+Checking Electrical Rules 
+
+Checking For Unconnected Bus Nets
+
+--------------------------------------------------
+Checking Schematic: ALL
+--------------------------------------------------
+Checking Electrical Rules 
+
+Checking For Unconnected Bus Nets
+
+--------------------------------------------------
+Checking Schematic: POWER
+--------------------------------------------------
+Checking Electrical Rules 
+
+Checking For Unconnected Bus Nets
