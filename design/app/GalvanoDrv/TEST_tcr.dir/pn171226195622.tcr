@@ -1,5 +1,0 @@
-#Start recording tcl command: 12/26/2017 19:55:56
-#Project Location: D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_IADC_UART_OK; Project name: TEST
-prj_project open "D:/Prog_Develop/LatticeFPGA/GalvanoDrv_PADC_DAC_IADC_UART_OK/TEST.ldf"
-prj_project close
-#Stop recording: 12/26/2017 19:56:22
