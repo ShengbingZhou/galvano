@@ -123,7 +123,7 @@
       (Path "Design Resources" ".\galvo_ctrl_brd.dsn" "ADC_DAC")
       (Path "Design Resources" ".\galvo_ctrl_brd.dsn" "FPGA")
       (Path "Design Resources" ".\galvo_ctrl_brd.dsn" "POWER")
-      (Select "Design Resources" ".\galvo_ctrl_brd.dsn" "POWER" "Power"))
+      (Select "Design Resources" ".\galvo_ctrl_brd.dsn" "ADC_DAC" "ADC_CURRENT"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -133,9 +133,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -31 260 1873 260 790")
-        (Scroll "-22 136")
-        (Zoom "100")
+        (Placement "44 2 3 -1 -1 -8 -31 260 1873 260 790")
+        (Scroll "-153 -6")
+        (Zoom "101")
         (Occurrence "/U1"))
       (Path "C:\_WORK\GALVANO\DESIGN\DIGDRV.V2\GALVO_CTRL_BRD.DSN")
       (Schematic "ADC_DAC")
@@ -143,8 +143,8 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -8 -31 0 1613 0 530")
-        (Scroll "-153 192")
+        (Placement "44 0 1 -1 -1 -8 -31 0 1613 0 530")
+        (Scroll "-15 0")
         (Zoom "101")
         (Occurrence "/U3"))
       (Path "C:\_WORK\GALVANO\DESIGN\DIGDRV.V2\GALVO_CTRL_BRD.DSN")
@@ -154,7 +154,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -31 130 1743 130 660")
-        (Scroll "-22 212")
+        (Scroll "-22 0")
         (Zoom "100")
         (Occurrence "/U2"))
       (Path "C:\_WORK\GALVANO\DESIGN\DIGDRV.V2\GALVO_CTRL_BRD.DSN")
@@ -164,7 +164,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -31 156 1769 156 686")
-        (Scroll "-22 212")
+        (Scroll "-22 0")
         (Zoom "100")
         (Occurrence "/U1"))
       (Path "C:\_WORK\GALVANO\DESIGN\DIGDRV.V2\GALVO_CTRL_BRD.DSN")
