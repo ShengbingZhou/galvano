@@ -1,0 +1,24 @@
+\t (00:00:14) allegro 16.6 P004 (v16-6-112G) Windows 32
+\t (00:00:14)     Journal start - Thu Jul 26 15:15:15 2018
+\t (00:00:14)         Host=LAPTOP-8VGV2OVS User=quentin Pid=13984 CPUs=8
+\t (00:00:14) 
+\d (00:00:14) Database opened: F:/ProductDesign/Galvano/驱动板电路/第四版设计/MOTOR_SENSOR/PCB/MOTOR_SENSOR.brd
+\i (00:00:14) etchedit 
+\i (00:00:15) zoom in 1 
+\i (00:00:15) setwindow pcb
+\i (00:00:15) zoom in -2.2731 4.1214
+\i (00:00:15) trapsize 724
+\i (00:00:16) zoom out 1 
+\i (00:00:16) setwindow pcb
+\i (00:00:16) zoom out -2.2731 4.1215
+\i (00:00:16) trapsize 1449
+\i (00:00:16) zoom out 1 
+\i (00:00:16) setwindow pcb
+\i (00:00:16) zoom out -2.3021 4.1214
+\i (00:00:16) trapsize 2898
+\i (00:00:17) zoom in 1 
+\i (00:00:17) setwindow pcb
+\i (00:00:17) zoom in 8.5346 5.4543
+\i (00:00:17) trapsize 1449
+\i (00:00:18) exit 
+\t (00:00:18)     Journal end - Thu Jul 26 15:15:20 2018

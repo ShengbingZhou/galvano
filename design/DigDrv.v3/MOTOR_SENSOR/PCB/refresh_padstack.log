@@ -1,0 +1,116 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Refresh Padstack                                                 )
+(                                                                     )
+(    Drawing          : MOTOR_SENSOR.brd                              )
+(    Software Version : 16.6P004                                      )
+(    Date/Time        : Wed Jun 13 22:43:21 2018                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Wed Jun 13 22:43:21 2018				Page     1
+
+
+------ Pad Stack Refresh Options ------
+
+Input design = 'F:/ProductDesign/Galvano/驱动板电路/第四版设计/MOTOR_SENSOR/PCB/MOTOR_SENSOR.brd'
+Output design = ''
+Reset symbol text and size locations = 'NO'
+
+
+------ Library Paths ------
+PSMPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           C:/Cadence/SPB_16.6/share/local/pcb/symbols 
+           C:/Cadence/SPB_16.6/share/pcb/pcb_lib/symbols 
+           C:/Cadence/SPB_16.6/share/pcb/allegrolib/symbols 
+           C:/Cadence/SPB_16.6/share/pcb/pcb_lib/symbols 
+
+PADPATH =  . 
+           symbols 
+           .. 
+           ../symbols 
+           C:/Cadence/SPB_16.6/share/local/pcb/padstacks 
+           C:/Cadence/SPB_16.6/share/pcb/pcb_lib/symbols 
+           C:/Cadence/SPB_16.6/share/pcb/allegrolib/symbols 
+           C:/Cadence/SPB_16.6/share/pcb/pcb_lib/symbols 
+
+
+------ Pad Stack Refresh Messages ------
+
+'SMD16CIR'  pad stack refresh starting.
+
+     'SMD16CIR'  pad stack refreshed successfully.
+     
+'SMD3X3MM'  pad stack refresh starting.
+
+     'SMD3X3MM'  pad stack refreshed successfully.
+     
+'PAD60CIR35H'  pad stack refresh starting.
+
+     'PAD60CIR35H'  pad stack refreshed successfully.
+     
+'PAD18_28X45'  pad stack refresh starting.
+
+     'PAD18_28X45'  pad stack refreshed successfully.
+     
+'SMD50_40'  pad stack refresh starting.
+
+     'SMD50_40'  pad stack refreshed successfully.
+     
+'PAD118CIR79'  pad stack refresh starting.
+
+     'PAD118CIR79'  pad stack refreshed successfully.
+     
+'VIA'  pad stack refresh starting.
+
+     'VIA'  pad stack refreshed successfully.
+     
+'PAD200CIR125'  pad stack refresh starting.
+
+     'PAD200CIR125'  pad stack refreshed successfully.
+     
+'PAD70CIR45D'  pad stack refresh starting.
+
+     'PAD70CIR45D'  pad stack refreshed successfully.
+     
+'60X100'  pad stack refresh starting.
+
+     '60X100'  pad stack refreshed successfully.
+     
+'PAD60CIR36D'  pad stack refresh starting.
+
+     'PAD60CIR36D'  pad stack refreshed successfully.
+     
+'PAD60SQ36D'  pad stack refresh starting.
+
+     'PAD60SQ36D'  pad stack refreshed successfully.
+     
+'PAD60CIR35'  pad stack refresh starting.
+
+     'PAD60CIR35'  pad stack refreshed successfully.
+     
+'PAD60SQR35'  pad stack refresh starting.
+
+     'PAD60SQR35'  pad stack refreshed successfully.
+     
+'SMD160_100'  pad stack refresh starting.
+
+     'SMD160_100'  pad stack refreshed successfully.
+     
+'SMD60SQR60'  pad stack refresh starting.
+
+     'SMD60SQR60'  pad stack refreshed successfully.
+     
+'SMD40_30'  pad stack refresh starting.
+
+     'SMD40_30'  pad stack refreshed successfully.
+     
+'VIA28CIR15'  pad stack refresh starting.
+
+     'VIA28CIR15'  pad stack refreshed successfully.
+     
+Completed refreshing all pad stacks successfully.

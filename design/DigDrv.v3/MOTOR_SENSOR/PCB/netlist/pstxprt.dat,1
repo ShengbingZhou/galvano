@@ -1,0 +1,90 @@
+FILE_TYPE = EXPANDEDPARTLIST;
+{ Using PSTWRITER 16.6.0 d001Jun-13-2018 at 22:23:01 }
+DIRECTIVES
+ PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
+ ROOT_DRAWING='MOTOR_SENSOR';
+ POST_TIME='Sep 10 2012 04:46:09';
+ SOURCE_TOOL='CAPTURE_WRITER';
+END_DIRECTIVES;
+
+PART_NAME
+ D1 'LED_TSMF1000_TSMF1000':;
+
+SECTION_NUMBER 1
+ '@MOTOR_SENSOR.MOTORSENSOR(SCH_1):INS137260@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@motor_sensor.motorsensor(sch_1):ins137260@discrete.\led.normal\(chips)',
+ P_PATH='@motor_sensor.motorsensor(sch_1):page1_ins137260@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D2 'LED_TSMF1000_TSMF1000':;
+
+SECTION_NUMBER 1
+ '@MOTOR_SENSOR.MOTORSENSOR(SCH_1):INS137276@DISCRETE.LED.NORMAL(CHIPS)':
+ C_PATH='@motor_sensor.motorsensor(sch_1):ins137276@discrete.\led.normal\(chips)',
+ P_PATH='@motor_sensor.motorsensor(sch_1):page1_ins137276@discrete.\led.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J1 'CON6_SIP6_1D27Z_TO_MOTOR':;
+
+SECTION_NUMBER 1
+ '@MOTOR_SENSOR.MOTORSENSOR(SCH_1):INS43584@CONNECTOR.CON6.NORMAL(CHIPS)':
+ C_PATH='@motor_sensor.motorsensor(sch_1):ins43584@connector.\con6.normal\(chips)',
+ P_PATH='@motor_sensor.motorsensor(sch_1):page1_ins43584@connector.\con6.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J2 'CON2_SIP2_CON2':;
+
+SECTION_NUMBER 1
+ '@MOTOR_SENSOR.MOTORSENSOR(SCH_1):INS138458@CONNECTOR.CON2.NORMAL(CHIPS)':
+ C_PATH='@motor_sensor.motorsensor(sch_1):ins138458@connector.\con2.normal\(chips)',
+ P_PATH='@motor_sensor.motorsensor(sch_1):page1_ins138458@connector.\con2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ P1 'PHOTODIODE_SIPHO3_3MM_LEFTUP':;
+
+SECTION_NUMBER 1
+ '@MOTOR_SENSOR.MOTORSENSOR(SCH_1):INS137589@DISCRETE.PHOTODIODE.NORMAL(CHIPS)':
+ C_PATH='@motor_sensor.motorsensor(sch_1):ins137589@discrete.\photodiode.normal\(chips)',
+ P_PATH='@motor_sensor.motorsensor(sch_1):page1_ins137589@discrete.\photodiode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ P2 'PHOTODIODE_SIPHO3_3MM_LEFTDOWN':;
+
+SECTION_NUMBER 1
+ '@MOTOR_SENSOR.MOTORSENSOR(SCH_1):INS137622@DISCRETE.PHOTODIODE.NORMAL(CHIPS)':
+ C_PATH='@motor_sensor.motorsensor(sch_1):ins137622@discrete.\photodiode.normal\(chips)',
+ P_PATH='@motor_sensor.motorsensor(sch_1):page1_ins137622@discrete.\photodiode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ P3 'PHOTODIODE_SIPHO3_3MM_RIGHTUP':;
+
+SECTION_NUMBER 1
+ '@MOTOR_SENSOR.MOTORSENSOR(SCH_1):INS137655@DISCRETE.PHOTODIODE.NORMAL(CHIPS)':
+ C_PATH='@motor_sensor.motorsensor(sch_1):ins137655@discrete.\photodiode.normal\(chips)',
+ P_PATH='@motor_sensor.motorsensor(sch_1):page1_ins137655@discrete.\photodiode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ P4 'PHOTODIODE_SIPHO3_3MM_RIGHTDOWN':;
+
+SECTION_NUMBER 1
+ '@MOTOR_SENSOR.MOTORSENSOR(SCH_1):INS137724@DISCRETE.PHOTODIODE.NORMAL(CHIPS)':
+ C_PATH='@motor_sensor.motorsensor(sch_1):ins137724@discrete.\photodiode.normal\(chips)',
+ P_PATH='@motor_sensor.motorsensor(sch_1):page1_ins137724@discrete.\photodiode.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+END.
