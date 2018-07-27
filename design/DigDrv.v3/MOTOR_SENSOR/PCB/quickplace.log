@@ -1,0 +1,27 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    QUICKPLACE LOG                                                   )
+(                                                                     )
+(    Drawing          : MOTOR_SENSOR.brd                              )
+(    Software Version : 16.6P004                                      )
+(    Date/Time        : Wed Jun 13 22:23:57 2018                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+State: Placing on layer TOP
+
+         Placed symbol:  J1 / CON6_SIP6_1D27Z_TO_MOTOR / SIP6_1D27Z at (-4.2288 24.2833)
+         Placed symbol:  D2 / LED_TSMF1000_TSMF1000 / TSMF1000 at (10.0708 8.4210)
+         Placed symbol:  D1 / LED_TSMF1000_TSMF1000 / TSMF1000 at (10.0708 5.5508)
+         Placed symbol:  J2 / CON2_SIP2_CON2 / SIP2 at (7.7340 1.3217)
+         Placed symbol:  P1 / PHOTODIODE_SIPHO3_3MM_LEFTUP / SIPHO3_3MM at (9.1056 -3.2517)
+         Placed symbol:  P2 / PHOTODIODE_SIPHO3_3MM_LEFTDOWN / SIPHO3_3MM at (-2.5016 27.9931)
+         Placed symbol:  P3 / PHOTODIODE_SIPHO3_3MM_RIGHTUP / SIPHO3_3MM at (17.0558 8.2037)
+         Placed symbol:  P4 / PHOTODIODE_SIPHO3_3MM_RIGHTDOWN / SIPHO3_3MM at (17.0558 4.8989)
+
+
+Placed 8 of 8 applicable (8 total) symbols.
+
+-----------------------------------------------------------------------
+

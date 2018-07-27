@@ -1,0 +1,222 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    ARTWORK LOG                                                      )
+(                                                                     )
+(    Drawing          : MOTOR_SENSOR.brd                              )
+(    Software Version : 16.6P004                                      )
+(    Date/Time        : Thu Jun 14 09:14:43 2018                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+ ---- Photoplot outline rectangle not found ... using drawing extents
+
+
+
+Results from parameter file ...
+    DEVICE-TYPE           GERBER_RS274X
+    OUTPUT-UNITS          MM
+    FILM-SIZE             2400000 1600000
+    FORMAT                2.5
+    ABORT-ON-ERROR        NO
+    SCALE                 1
+    SUPPRESS-LEAD-ZEROES  YES
+    SUPPRESS-TRAIL-ZEROES NO
+    SUPPRESS-EQUAL        YES
+    UNDEF-APT-CONT        NO
+
+
+================================================================
+     PROCESSING FILM < TOP >
+     TO FILE < F:/ProductDesign/Galvano/驱动板电路/第四版设计/MOTOR_SENSOR/PCB/TOP.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.0000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.25400                                  DARK 
+  CIRCLE     0.40000                                  DARK 
+  CIRCLE     0.40640                                  DARK 
+  CIRCLE     0.50000                                  DARK 
+  CIRCLE     0.71120                                  DARK 
+  CIRCLE     1.01600                                  DARK 
+  RECTANGLE  3.20000     x 3.20000       0.000 NO     DARK 
+  OBLONG     0.71120     x 1.14300       0.000 NO     DARK 
+
+     TOP created.
+
+
+================================================================
+     PROCESSING FILM < BOTTOM >
+     TO FILE < F:/ProductDesign/Galvano/驱动板电路/第四版设计/MOTOR_SENSOR/PCB/BOTTOM.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.0000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.25400                                  DARK 
+  CIRCLE     0.40000                                  DARK 
+  CIRCLE     0.50000                                  DARK 
+  CIRCLE     0.60000                                  DARK 
+  CIRCLE     0.71120                                  DARK 
+  CIRCLE     1.01600                                  DARK 
+  RECTANGLE  1.27000     x 1.01600       0.000 NO     DARK 
+  OBLONG     0.71120     x 1.14300       0.000 NO     DARK 
+
+     BOTTOM created.
+
+
+================================================================
+     PROCESSING FILM < SSB >
+     TO FILE < F:/ProductDesign/Galvano/驱动板电路/第四版设计/MOTOR_SENSOR/PCB/SSB.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.1524
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:  NONE
+     SSB created.
+
+
+================================================================
+     PROCESSING FILM < SST >
+     TO FILE < F:/ProductDesign/Galvano/驱动板电路/第四版设计/MOTOR_SENSOR/PCB/SST.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.1524
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+    WARNING: 0 width line found at (-4.0000 0.0000)
+           ... using undefined line width of 0.1524
+
+    WARNING: Multiple 0 width lines; all will be treated the same as the first.
+           ... using undefined line width of 0.1524
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.15240                                  DARK 
+
+     SST created with warnings
+
+
+================================================================
+     PROCESSING FILM < SMT >
+     TO FILE < F:/ProductDesign/Galvano/驱动板电路/第四版设计/MOTOR_SENSOR/PCB/SMT.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.0000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.50800                                  DARK 
+  CIRCLE     0.96520                                  DARK 
+  CIRCLE     1.27000                                  DARK 
+  RECTANGLE  3.20000     x 3.20000       0.000 NO     DARK 
+  OBLONG     0.96520     x 1.47320       0.000 NO     DARK 
+
+     SMT created.
+
+
+================================================================
+     PROCESSING FILM < SMB >
+     TO FILE < F:/ProductDesign/Galvano/驱动板电路/第四版设计/MOTOR_SENSOR/PCB/SMB.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                0.0000
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.0000
+  Offset y:                           0.0000
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+  Draw holes only                     NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.96520                                  DARK 
+  CIRCLE     1.27000                                  DARK 
+  RECTANGLE  1.52400     x 1.27000       0.000 NO     DARK 
+  OBLONG     0.96520     x 1.47320       0.000 NO     DARK 
+
+     SMB created.
+
+
+------------------------------------------------------
+ SUMMARY:
+        TOP created.
+        BOTTOM created.
+        SSB created.
+        SST created with warnings
+        SMT created.
+        SMB created.
+
+ ARTWORK finished

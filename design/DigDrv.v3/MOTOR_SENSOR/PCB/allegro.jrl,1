@@ -1,0 +1,18 @@
+\t (00:00:04) allegro 16.6 P004 (v16-6-112G) Windows 32
+\t (00:00:04)     Journal start - Fri Jun 15 17:28:07 2018
+\t (00:00:04)         Host=LAPTOP-8VGV2OVS User=quentin Pid=11496 CPUs=8
+\t (00:00:04) 
+\t (00:00:05) Opening existing design...
+\d (00:00:05) Database opened: F:/ProductDesign/Galvano/驱动板电路/第四版设计/MOTOR_SENSOR/PCB/MOTOR_SENSOR.brd
+\i (00:00:06) trapsize 1071
+\i (00:00:06) trapsize 1052
+\i (00:00:06) trapsize 1075
+\i (00:00:06) trapsize 1095
+\i (00:00:06) trapsize 1095
+\i (00:00:07) etchedit 
+\i (00:00:18) open 
+\i (00:00:24) fillin "D:\tms320c6678\电路图\sch_pcb_20160722\pcb\6678andvirtex5.brd"
+\i (00:00:24) cd "D:\tms320c6678\电路图\sch_pcb_20160722\pcb"
+\t (00:00:24) Opening existing design...
+\i (00:00:25) trapsize 5264
+\t (00:00:25)     Journal end - Fri Jun 15 17:28:27 2018
