@@ -1,0 +1,261 @@
+(ExpressProject ""
+  (ProjectVersion "19981106")
+  (ProjectType "PCB")
+  (Folder "Design Resources"
+    (Folder "Library"
+      (File ".\latticeplds.olb"
+        (Type "Schematic Library"))
+      (File ".\library1.olb"
+        (Type "Schematic Library")))
+    (File ".\galvo_ctrl_brd.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (NoModify)
+    (DRC_Scope "0")
+    (DRC_Action "0")
+    (DRC_Create_Warnings "FALSE")
+    (DRC_View_Output "FALSE")
+    (DRC_Run_Electrical_Rules "TRUE")
+    (DRC_Run_Physical_Rules "FALSE")
+    (DRC_Report_File
+       "F:\产品设计\振镜\驱动板电路\第三版设计\SCH_0510\GALVO_CTRL_BRD.DRC")
+    (DRC_Check_Ports "FALSE")
+    (DRC_Check_Off-Page_Connectors "FALSE")
+    (DRC_Report_Ports_and_Off-page_Connectors "FALSE")
+    (DRC_SDT_Compatibility "FALSE")
+    (DRC_Report_Off-grid_Objects "FALSE")
+    (DRC_Check_Unconnected_Nets "TRUE")
+    (DRC_Check_for_Misleading_TAP "FALSE")
+    (DRC_Report_Netnames "FALSE")
+    (DRC_Check_Single_Node_Nets "FALSE")
+    (DRC_Check_No_Driving_Source "TRUE")
+    (DRC_Check_Duplicate_NetNames "TRUE")
+    (DRC_Check_Floating_Pins "TRUE")
+    (DRC_Check_Physical_Power_Pins_Visibility "TRUE")
+    (DRC_Check_PCB_Footprint_Property "TRUE")
+    (DRC_Check_Normal_Convert_View_Sync "TRUE")
+    (DRC_Check_Incorrect_PinGroup_Assignment "TRUE")
+    (DRC_Check_High_Speed_Props_Syntax "TRUE")
+    (DRC_Check_Missing_Pin_Numbers "TRUE")
+    (DRC_Check_Device_With_No_Pins "TRUE")
+    (DRC_Check_Power_Ground_Short "TRUE")
+    (DRC_Identical_References "TRUE")
+    (DRC_Type_Mismatch "TRUE")
+    (DRC_Visible_Power_pins "FALSE")
+    (DRC_Report_Unused_Part_Packages "TRUE")
+    (DRC_Check_Name_Prop_For_HierBlocks "FALSE")
+    (ANNOTATE_Scope "0")
+    (ANNOTATE_Mode "1")
+    (ANNOTATE_Action "1")
+    (Annotate_Page_Order "0")
+    (ANNOTATE_Reset_References_to_1 "FALSE")
+    (ANNOTATE_No_Page_Number_Change "FALSE")
+    (ANNOTATE_Property_Combine "{Value}{Source Package}{POWER_GROUP}")
+    (ANNOTATE_IncludeNonPrimitive "FALSE")
+    (ANNOTATE_PreserveDesignator "FALSE")
+    (ANNOTATE_PreserveUserEdits "FALSE")
+    (ANNOTATE_Refdes_Control_Required "FALSE")
+    (Update_Instace_for_External_Design "FALSE")
+    (Annotate_type "Default")
+    (width_pages "100")
+    (width_start "80")
+    (width_End "80")
+    (Netlist_TAB "0")
+    ("Create Allegro Netlist" "TRUE")
+    ("Allegro Netlist Directory" "C:\_WORK\GALVANO\DESIGN\DIGDRV.V2\PCB")
+    ("View Allegro Netlist Files" "FALSE")
+    ("Allegro Netlist Create DCF File" "FALSE")
+    ("Update Allegro Board" "TRUE")
+    ("Allegro Netlist Output Board File"
+       "C:\_work\galvano\design\DigDrv.v2\PCB\GALVO_CTRL.brd")
+    ("Allegro Netlist Remove Etch" "FALSE")
+    ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
+    ("Allegro Netlist Open Board in Allegro" "NEITHER")
+    ("Allegro Setup Backup Versions" "3")
+    ("Allegro Setup Output Warnings" "TRUE")
+    ("Allegro Setup Ignore Constraints" "FALSE")
+    ("Allegro Setup Part Type Length" "31")
+    ("Allegro Netlist Combine Property String" "PCB Footprint")
+    ("Allegro Netlist Ignore Fixed Property" "FALSE")
+    ("Allegro Netlist User Defined Property" "FALSE")
+    (Board_sim_option "VHDL_flow")
+    ("Allegro Netlist Input Board File"
+       "C:\_work\galvano\design\DigDrv.v2\PCB\GALVO_CTRL.brd"))
+  (Folder "Outputs"
+    (File "..\sch\galvo_ctrl_brd.drc"
+      (Type "Report"))
+    (File ".\galvo_ctrl_brd.drc"
+      (Type "Report"))
+    (File ".\allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat"))
+    (File ".\galvo_ctrl_allegro\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\galvo_ctrl_allegro\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\galvo_ctrl_allegro\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat"))
+    (File ".\pcb\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\pcb\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\pcb\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat")))
+  (Folder "Referenced Projects")
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" "Library"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 2 3 -1 -1 -8 -31 198 1825 207 720"))
+      (Tab 0))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 130 1665 130 817")
+        (Scroll "0 0")
+        (Zoom "101")
+        (Occurrence "/"))
+      (Path
+         "C:\_WORK\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.DSN")
+      (Schematic "ALL")
+      (Page "TOP"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 156 1691 156 843")
+        (Scroll "0 0")
+        (Zoom "101")
+        (Occurrence "/U3"))
+      (Path
+         "C:\_WORK\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.DSN")
+      (Schematic "POWER")
+      (Page "POWER")))
+  (PartMRUSelector
+    (LTM4622
+      (FullPartName "LTM4622.Normal")
+      (LibraryName
+         "C:\_WORK\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (LTM8049
+      (FullPartName "LTM8049.Normal")
+      (LibraryName
+         "C:\_WORK\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (AD7403
+      (FullPartName "AD7403.Normal")
+      (LibraryName
+         "F:\产品设计\振镜\驱动板电路\第三版设计\SCH_0710\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    ("HEADER 15X2"
+      (FullPartName "HEADER 15X2.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    ("HEADER 14X2"
+      (FullPartName "HEADER 14X2.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (TPS7A88
+      (FullPartName "TPS7A88.Normal")
+      (LibraryName
+         "F:\产品设计\振镜\驱动板电路\第三版设计\SCH_0510\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (TPS4A33
+      (FullPartName "TPS4A33.Normal")
+      (LibraryName
+         "F:\产品设计\振镜\驱动板电路\第三版设计\SCH_0510\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (TPS7A4700
+      (FullPartName "TPS7A4700.Normal")
+      (LibraryName
+         "F:\产品设计\振镜\驱动板电路\第三版设计\SCH_0510\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (PORTLEFT-L
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (MAX3485ESA
+      (FullPartName "MAX3485ESA.Normal")
+      (LibraryName
+         "F:\产品设计\振镜\驱动板电路\第三版设计\SCH_0510\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (ELKE103FA
+      (FullPartName "ELKE103FA.Normal")
+      (LibraryName
+         "F:\产品设计\振镜\驱动板电路\第三版设计\SCH_0510\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (SMBJ6.0CA
+      (FullPartName "SMBJ6.0CA.Normal")
+      (LibraryName
+         "F:\产品设计\振镜\驱动板电路\第三版设计\SCH_0510\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (LFXP2-8E-T144/TN144
+      (FullPartName "LFXP2-8E-T144/TN144-5.Normal")
+      (LibraryName
+         "F:\产品设计\振镜\驱动板电路\第三版设计\SCH_0510\LATTICEPLDS.OLB")
+      (DeviceIndex "4"))
+    (R
+      (FullPartName "R.Normal")
+      (LibraryName "D:\HARD_WARE\20130522.OLB")
+      (DeviceIndex "0"))
+    (AD7405
+      (FullPartName "AD7405.Normal")
+      (LibraryName
+         "F:\产品设计\振镜\驱动板电路\第三版设计\SCH_0510\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (CON3
+      (FullPartName "CON3.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (PORTLEFT-R
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGELEFT-L
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (LM74CIM-3
+      (FullPartName "LM74CIM-3.Normal")
+      (LibraryName "F:\产品设计\振镜\驱动板电路\第三版设计\SCH\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    ("HEADER 16X2"
+      (FullPartName "HEADER 16X2.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (RESISTOR
+      (FullPartName "RESISTOR.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\DISCRETE.OLB")
+      (DeviceIndex "0"))
+    ("HEADER 4X2"
+      (FullPartName "HEADER 4X2.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0"))
+    (SN74LV4T125
+      (FullPartName "SN74LV4T125.Normal")
+      (LibraryName "F:\产品设计\振镜\驱动板电路\第三版设计\SCH\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (TPD4E1B06
+      (FullPartName "TPD4E1B06.Normal")
+      (LibraryName "F:\产品设计\振镜\驱动板电路\第三版设计\SCH\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    (CON6
+      (FullPartName "CON6.Normal")
+      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
+      (DeviceIndex "0")))
+  (LastUsedLibraryBrowseDirectory "C:\Cadence\SPB_16.6\tools\capture\library")
+  (ISPCBBASICLICENSE "false")
+  (MPSSessionName "Bing"))
