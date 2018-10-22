@@ -45,6 +45,9 @@
         <Source name="TEST.rvl" type="Reveal" type_short="Reveal">
             <Options/>
         </Source>
+        <Source name="untitled.rva" type="Reveal Analyzer Project File" type_short="RVA">
+            <Options/>
+        </Source>
     </Implementation>
     <Strategy name="Strategy1" file="TEST1.sty"/>
 </BaliProject>
