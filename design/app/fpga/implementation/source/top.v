@@ -88,7 +88,7 @@ always @(posedge clk_in) begin
             sys_rstn_cnt <= sys_rstn_cnt + 1;
             sys_rstn <= 1;
         end
-        if (sys_rstn_cnt < 4000000) begin // 200ms
+        if (sys_rstn_cnt < 4000000) begin // 200ms based on 20MHz
             sys_rstn_cnt <= sys_rstn_cnt + 1;
             sys_rstn <= 0;
         end
@@ -198,7 +198,7 @@ dac7731if ydac_u1
 pos_pid xpos_pid_u1
 (
     .sys_rstn(sys_rstn),
-    .clk_pid(),
+    .clk_pid(clk3),
     .kp(16'h3200),
     .ki(16'h0500),
     .kd(16'h0300),
@@ -259,10 +259,22 @@ always @(posedge clk2 or negedge sys_rstn) begin
                 u0_msg   <= {24'h000000, xp_data, 24'h000000};
 			end
         end
-        if (xi_data_en == 1) begin
+        if (yp_data_valid == 1) begin
             if (u_req[1] == 0) begin
                 u_req[1] <= 1;
-                u1_msg   <= {24'h000000, xi_data, 24'h000000};
+                u1_msg   <= {24'h000000, yp_data, 24'h000000};
+			end
+        end
+        if (xi_data_en == 1) begin
+            if (u_req[2] == 0) begin
+                u_req[2] <= 1;
+                u2_msg   <= {24'h000000, xi_data, 24'h000000};
+			end
+        end
+        if (yi_data_en == 1) begin
+            if (u_req[3] == 0) begin
+                u_req[3] <= 1;
+                u3_msg   <= {24'h000000, yi_data, 24'h000000};
 			end
         end
     end
