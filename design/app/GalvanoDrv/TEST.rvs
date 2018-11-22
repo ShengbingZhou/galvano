@@ -1,4 +1,4 @@
-<Project ModBy="Analyzer" Name="C:/Users/Bing/Downloads/GalvanoDrv_PADC_DAC_IADC_OK/TEST.rvs" Date="2017-12-24">
+<Project ModBy="Analyzer" Name="C:/#work/galvano/design/app/GalvanoDrv/TEST.rvs" Date="2018-10-14">
  <Core Name="top_LA0">
   <Setting>
    <Capture SamplesPerTrig="1024" NumTrigsCap="1"/>

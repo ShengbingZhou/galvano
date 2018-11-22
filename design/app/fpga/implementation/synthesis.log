@@ -1,0 +1,834 @@
+synthesis:  version Diamond (64-bit) 3.7.0.96.1
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2016 Lattice Semiconductor Corporation,  All rights reserved.
+Tue Oct 23 00:34:53 2018
+
+
+Command Line:  synthesis -f fpga_implementation_lattice.synproj -gui -msgset C:/#work/galvano/design/app/fpga/promote.xml 
+
+Synthesis options:
+The -a option is LatticeXP2.
+The -s option is 5.
+The -t option is TQFP144.
+The -d option is LFXP2-8E.
+Using package TQFP144.
+Using performance grade 5.
+                                                          
+
+##########################################################
+
+### Lattice Family : LatticeXP2
+
+### Device  : LFXP2-8E
+
+### Package : TQFP144
+
+### Speed   : 5
+
+##########################################################
+
+                                                          
+
+Optimization goal = Timing
+Top-level module name = top.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p C:/#work/galvano/design/app/fpga (searchpath added)
+-p C:/lSCC/diamond/3.7_x64/ispfpga/mg5a00/data (searchpath added)
+-p C:/#work/galvano/design/app/fpga/implementation (searchpath added)
+-p C:/#work/galvano/design/app/fpga (searchpath added)
+Mixed language design
+Verilog design file = C:/#work/galvano/design/app/fpga/implementation/source/top.v
+Verilog design file = C:/#work/galvano/design/app/fpga/implementation/source/ads8685.v
+Verilog design file = C:/#work/galvano/design/app/fpga/implementation/source/dec256sinc24b.v
+Verilog design file = C:/#work/galvano/design/app/fpga/implementation/source/uart.v
+Verilog design file = C:/#work/galvano/design/app/fpga/implementation/source/dac7731.v
+Verilog design file = C:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v
+Verilog design file = C:/#work/galvano/design/app/fpga/implementation/source/uart_fifo.v
+VHDL library = work
+VHDL design file = C:/#work/galvano/design/app/fpga/implementation/source/pll_module.vhd
+NGD file = fpga_implementation.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Analyzing Verilog file C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file c:/#work/galvano/design/app/fpga/implementation/source/top.v. VERI-1482
+Analyzing Verilog file c:/#work/galvano/design/app/fpga/implementation/source/ads8685.v. VERI-1482
+Analyzing Verilog file c:/#work/galvano/design/app/fpga/implementation/source/dec256sinc24b.v. VERI-1482
+Analyzing Verilog file c:/#work/galvano/design/app/fpga/implementation/source/uart.v. VERI-1482
+Analyzing Verilog file c:/#work/galvano/design/app/fpga/implementation/source/dac7731.v. VERI-1482
+Analyzing Verilog file c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v. VERI-1482
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(54): pos_pre_reg is already declared. VERI-1116
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(54): second declaration of pos_pre_reg ignored. VERI-1329
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(19): pos_pre_reg is declared here. VERI-1310
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(55): pos_adc_reg is already declared. VERI-1116
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(55): second declaration of pos_adc_reg ignored. VERI-1329
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(20): pos_adc_reg is declared here. VERI-1310
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(25): identifier ek_d1 is used before its declaration. VERI-1875
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(26): identifier ek_d2 is used before its declaration. VERI-1875
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(27): identifier pos_dac_reg_d1 is used before its declaration. VERI-1875
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(32): identifier ek_d1 is used before its declaration. VERI-1875
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(32): identifier ek is used before its declaration. VERI-1875
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(33): identifier ek_d2 is used before its declaration. VERI-1875
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(33): identifier ek_d1 is used before its declaration. VERI-1875
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(34): identifier pos_dac_reg_d1 is used before its declaration. VERI-1875
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(34): identifier pos_dac_reg is used before its declaration. VERI-1875
+Analyzing Verilog file c:/#work/galvano/design/app/fpga/implementation/source/uart_fifo.v. VERI-1482
+Analyzing VHDL file c:/#work/galvano/design/app/fpga/implementation/source/pll_module.vhd. VHDL-1481
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pll_module.vhd(14): analyzing entity pll_module. VHDL-1012
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pll_module.vhd(23): analyzing architecture structure. VHDL-1010
+INFO - synthesis: The default VHDL library search path is now "C:/#work/galvano/design/app/fpga/implementation". VHDL-1504
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): top
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/top.v(1): compiling module top. VERI-1018
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/top.v(74): going to vhdl side to elaborate module pll_module. VERI-1231
+c:/#work/galvano/design/app/fpga/implementation/source/pll_module.vhd(14): executing pll_module(Structure)
+
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pll_module.vhd(86): going to verilog side to elaborate module VLO. VHDL-1399
+INFO - synthesis: C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v(1274): compiling module VLO. VERI-1018
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pll_module.vhd(86): back to VHDL to continue elaboration. VHDL-1400
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pll_module.vhd(100): going to verilog side to elaborate module EPLLD1. VHDL-1399
+INFO - synthesis: C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v(263): compiling module EPLLD1. VERI-1018
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pll_module.vhd(100): back to VHDL to continue elaboration. VHDL-1400
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/top.v(74): back to verilog to continue elaboration. VERI-1232
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/dec256sinc24b.v(1): compiling module dec256sinc24b. VERI-1018
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/ads8685.v(5): compiling module ads8686if. VERI-1018
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/ads8685.v(84): expression size 32 truncated to fit in target size 16. VERI-1209
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/ads8685.v(93): expression size 32 truncated to fit in target size 16. VERI-1209
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/ads8685.v(101): expression size 32 truncated to fit in target size 4. VERI-1209
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/dac7731.v(5): compiling module dac7731if. VERI-1018
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/dac7731.v(32): expression size 32 truncated to fit in target size 2. VERI-1209
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/dac7731.v(42): expression size 34 truncated to fit in target size 3. VERI-1209
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/dac7731.v(56): expression size 32 truncated to fit in target size 4. VERI-1209
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/dac7731.v(63): expression size 32 truncated to fit in target size 4. VERI-1209
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(5): compiling module pos_pid. VERI-1018
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/uart.v(5): compiling module uart. VERI-1018
+INFO - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/uart_fifo.v(8): compiling module uart_fifo. VERI-1018
+INFO - synthesis: C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v(147): compiling module AND2. VERI-1018
+INFO - synthesis: C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v(797): compiling module INV. VERI-1018
+INFO - synthesis: C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v(1324): compiling module XOR2. VERI-1018
+INFO - synthesis: C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v(1214): compiling module ROM16X1. VERI-1018
+INFO - synthesis: C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v(1469): compiling module PDPW16KB. VERI-1018
+INFO - synthesis: C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v(391): compiling module FD1P3DX. VERI-1018
+INFO - synthesis: C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v(442): compiling module FD1S3BX. VERI-1018
+INFO - synthesis: C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v(452): compiling module FD1S3DX. VERI-1018
+INFO - synthesis: C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v(336): compiling module FADD2B. VERI-1018
+INFO - synthesis: C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v(106): compiling module CB2. VERI-1018
+INFO - synthesis: C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v(138): compiling module ALEB2. VERI-1018
+INFO - synthesis: C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v(128): compiling module AGEB2. VERI-1018
+INFO - synthesis: C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v(223): compiling module CU2. VERI-1018
+INFO - synthesis: C:/lSCC/diamond/3.7_x64/ispfpga/userware/NT/SYNTHESIS_HEADERS/xp2.v(1269): compiling module VHI. VERI-1018
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/uart.v(188): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/uart.v(191): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/uart.v(196): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/uart.v(246): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/uart.v(253): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/uart.v(256): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/uart.v(259): expression size 32 truncated to fit in target size 8. VERI-1209
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/uart.v(291): expression size 32 truncated to fit in target size 10. VERI-1209
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/uart.v(61): net rx_msg[63] does not have a driver. VDB-1002
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/top.v(232): actual bit length 1 differs from formal bit length 64 for port u6_msg. VERI-1330
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/top.v(182): net ydac_data[15] does not have a driver. VDB-1002
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/top.v(215): net u2_msg[63] does not have a driver. VDB-1002
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/top.v(216): net u3_msg[63] does not have a driver. VDB-1002
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/top.v(217): net u4_msg[63] does not have a driver. VDB-1002
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/top.v(218): net u5_msg[63] does not have a driver. VDB-1002
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/top.v(232): net u6_msg does not have a driver. VDB-1002
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/top.v(208): input port clk_pid is not connected on this instance. VDB-1013
+Loading NGL library 'C:/lSCC/diamond/3.7_x64/ispfpga/mg5a00/data/mg5alib.ngl'...
+Loading NGL library 'C:/lSCC/diamond/3.7_x64/ispfpga/ep5a00/data/ep5alib.ngl'...
+Loading NGL library 'C:/lSCC/diamond/3.7_x64/ispfpga/ep5g00/data/ep5glib.ngl'...
+Loading NGL library 'C:/lSCC/diamond/3.7_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'mg5a33x38.nph' in environment: C:/lSCC/diamond/3.7_x64/ispfpga.
+Package Status:                     Final          Version 1.47.
+Top-level module name = top.
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/top.v(127): Removing unused instance yi_adc_u1. VDB-5034
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(8): net \xpos_pid_u1/clk_pid does not have a driver. VDB-1002
+WARNING - synthesis: xy_status is not assigned a value (floating) -- simulation mismatch possible.
+WARNING - synthesis: xiadc_clkin is not assigned a value (floating) -- simulation mismatch possible.
+WARNING - synthesis: yiadc_clkin is not assigned a value (floating) -- simulation mismatch possible.
+WARNING - synthesis: ypadc_sdo1 is not assigned a value (floating) -- simulation mismatch possible.
+WARNING - synthesis: ypadc_rvs is not assigned a value (floating) -- simulation mismatch possible.
+WARNING - synthesis: temp_cs is not assigned a value (floating) -- simulation mismatch possible.
+WARNING - synthesis: temp_clk is not assigned a value (floating) -- simulation mismatch possible.
+WARNING - synthesis: uart_tx2 is not assigned a value (floating) -- simulation mismatch possible.
+######## Missing driver on net n1356. Patching with GND.
+######## Missing driver on net n1355. Patching with GND.
+######## Missing driver on net ypadc_sdo0. Patching with GND.
+######## Missing driver on net n1353. Patching with GND.
+######## Missing driver on net n1352. Patching with GND.
+######## Missing driver on net ydac_data[15]. Patching with GND.
+######## Missing driver on net ydac_data[14]. Patching with GND.
+######## Missing driver on net ydac_data[13]. Patching with GND.
+######## Missing driver on net ydac_data[12]. Patching with GND.
+######## Missing driver on net ydac_data[11]. Patching with GND.
+######## Missing driver on net ydac_data[10]. Patching with GND.
+######## Missing driver on net ydac_data[9]. Patching with GND.
+######## Missing driver on net ydac_data[8]. Patching with GND.
+######## Missing driver on net ydac_data[7]. Patching with GND.
+######## Missing driver on net ydac_data[6]. Patching with GND.
+######## Missing driver on net ydac_data[5]. Patching with GND.
+######## Missing driver on net ydac_data[4]. Patching with GND.
+######## Missing driver on net ydac_data[3]. Patching with GND.
+######## Missing driver on net ydac_data[2]. Patching with GND.
+######## Missing driver on net ydac_data[1]. Patching with GND.
+######## Missing driver on net ydac_data[0]. Patching with GND.
+######## Missing driver on net u2_msg[63]. Patching with GND.
+######## Missing driver on net u2_msg[62]. Patching with GND.
+######## Missing driver on net u2_msg[61]. Patching with GND.
+######## Missing driver on net u2_msg[60]. Patching with GND.
+######## Missing driver on net u2_msg[59]. Patching with GND.
+######## Missing driver on net u2_msg[58]. Patching with GND.
+######## Missing driver on net u2_msg[57]. Patching with GND.
+######## Missing driver on net u2_msg[56]. Patching with GND.
+######## Missing driver on net u2_msg[55]. Patching with GND.
+######## Missing driver on net u2_msg[54]. Patching with GND.
+######## Missing driver on net u2_msg[53]. Patching with GND.
+######## Missing driver on net u2_msg[52]. Patching with GND.
+######## Missing driver on net u2_msg[51]. Patching with GND.
+######## Missing driver on net u2_msg[50]. Patching with GND.
+######## Missing driver on net u2_msg[49]. Patching with GND.
+######## Missing driver on net u2_msg[48]. Patching with GND.
+######## Missing driver on net u2_msg[47]. Patching with GND.
+######## Missing driver on net u2_msg[46]. Patching with GND.
+######## Missing driver on net u2_msg[45]. Patching with GND.
+######## Missing driver on net u2_msg[44]. Patching with GND.
+######## Missing driver on net u2_msg[43]. Patching with GND.
+######## Missing driver on net u2_msg[42]. Patching with GND.
+######## Missing driver on net u2_msg[41]. Patching with GND.
+######## Missing driver on net u2_msg[40]. Patching with GND.
+######## Missing driver on net u2_msg[39]. Patching with GND.
+######## Missing driver on net u2_msg[38]. Patching with GND.
+######## Missing driver on net u2_msg[37]. Patching with GND.
+######## Missing driver on net u2_msg[36]. Patching with GND.
+######## Missing driver on net u2_msg[35]. Patching with GND.
+######## Missing driver on net u2_msg[34]. Patching with GND.
+######## Missing driver on net u2_msg[33]. Patching with GND.
+######## Missing driver on net u2_msg[32]. Patching with GND.
+######## Missing driver on net u2_msg[31]. Patching with GND.
+######## Missing driver on net u2_msg[30]. Patching with GND.
+######## Missing driver on net u2_msg[29]. Patching with GND.
+######## Missing driver on net u2_msg[28]. Patching with GND.
+######## Missing driver on net u2_msg[27]. Patching with GND.
+######## Missing driver on net u2_msg[26]. Patching with GND.
+######## Missing driver on net u2_msg[25]. Patching with GND.
+######## Missing driver on net u2_msg[24]. Patching with GND.
+######## Missing driver on net u3_msg[63]. Patching with GND.
+######## Missing driver on net u3_msg[62]. Patching with GND.
+######## Missing driver on net u3_msg[61]. Patching with GND.
+######## Missing driver on net u3_msg[60]. Patching with GND.
+######## Missing driver on net u3_msg[59]. Patching with GND.
+######## Missing driver on net u3_msg[58]. Patching with GND.
+######## Missing driver on net u3_msg[57]. Patching with GND.
+######## Missing driver on net u3_msg[56]. Patching with GND.
+######## Missing driver on net u3_msg[55]. Patching with GND.
+######## Missing driver on net u3_msg[54]. Patching with GND.
+######## Missing driver on net u3_msg[53]. Patching with GND.
+######## Missing driver on net u3_msg[52]. Patching with GND.
+######## Missing driver on net u3_msg[51]. Patching with GND.
+######## Missing driver on net u3_msg[50]. Patching with GND.
+######## Missing driver on net u3_msg[49]. Patching with GND.
+######## Missing driver on net u3_msg[48]. Patching with GND.
+######## Missing driver on net u3_msg[47]. Patching with GND.
+######## Missing driver on net u3_msg[46]. Patching with GND.
+######## Missing driver on net u3_msg[45]. Patching with GND.
+######## Missing driver on net u3_msg[44]. Patching with GND.
+######## Missing driver on net u3_msg[43]. Patching with GND.
+######## Missing driver on net u3_msg[42]. Patching with GND.
+######## Missing driver on net u3_msg[41]. Patching with GND.
+######## Missing driver on net u3_msg[40]. Patching with GND.
+######## Missing driver on net u3_msg[39]. Patching with GND.
+######## Missing driver on net u3_msg[38]. Patching with GND.
+######## Missing driver on net u3_msg[37]. Patching with GND.
+######## Missing driver on net u3_msg[36]. Patching with GND.
+######## Missing driver on net u3_msg[35]. Patching with GND.
+######## Missing driver on net u3_msg[34]. Patching with GND.
+######## Missing driver on net u3_msg[33]. Patching with GND.
+######## Missing driver on net u3_msg[32]. Patching with GND.
+######## Missing driver on net u3_msg[31]. Patching with GND.
+######## Missing driver on net u3_msg[30]. Patching with GND.
+######## Missing driver on net u3_msg[29]. Patching with GND.
+######## Missing driver on net u3_msg[28]. Patching with GND.
+######## Missing driver on net u3_msg[27]. Patching with GND.
+######## Missing driver on net u3_msg[26]. Patching with GND.
+######## Missing driver on net u3_msg[25]. Patching with GND.
+######## Missing driver on net u3_msg[24]. Patching with GND.
+######## Missing driver on net u4_msg[63]. Patching with GND.
+######## Missing driver on net u4_msg[62]. Patching with GND.
+######## Missing driver on net u4_msg[61]. Patching with GND.
+######## Missing driver on net u4_msg[60]. Patching with GND.
+######## Missing driver on net u4_msg[59]. Patching with GND.
+######## Missing driver on net u4_msg[58]. Patching with GND.
+######## Missing driver on net u4_msg[57]. Patching with GND.
+######## Missing driver on net u4_msg[56]. Patching with GND.
+######## Missing driver on net u4_msg[55]. Patching with GND.
+######## Missing driver on net u4_msg[54]. Patching with GND.
+######## Missing driver on net u4_msg[53]. Patching with GND.
+######## Missing driver on net u4_msg[52]. Patching with GND.
+######## Missing driver on net u4_msg[51]. Patching with GND.
+######## Missing driver on net u4_msg[50]. Patching with GND.
+######## Missing driver on net u4_msg[49]. Patching with GND.
+######## Missing driver on net u4_msg[48]. Patching with GND.
+######## Missing driver on net u4_msg[47]. Patching with GND.
+######## Missing driver on net u4_msg[46]. Patching with GND.
+######## Missing driver on net u4_msg[45]. Patching with GND.
+######## Missing driver on net u4_msg[44]. Patching with GND.
+######## Missing driver on net u4_msg[43]. Patching with GND.
+######## Missing driver on net u4_msg[42]. Patching with GND.
+######## Missing driver on net u4_msg[41]. Patching with GND.
+######## Missing driver on net u4_msg[40]. Patching with GND.
+######## Missing driver on net u4_msg[39]. Patching with GND.
+######## Missing driver on net u4_msg[38]. Patching with GND.
+######## Missing driver on net u4_msg[37]. Patching with GND.
+######## Missing driver on net u4_msg[36]. Patching with GND.
+######## Missing driver on net u4_msg[35]. Patching with GND.
+######## Missing driver on net u4_msg[34]. Patching with GND.
+######## Missing driver on net u4_msg[33]. Patching with GND.
+######## Missing driver on net u4_msg[32]. Patching with GND.
+######## Missing driver on net u4_msg[31]. Patching with GND.
+######## Missing driver on net u4_msg[30]. Patching with GND.
+######## Missing driver on net u4_msg[29]. Patching with GND.
+######## Missing driver on net u4_msg[28]. Patching with GND.
+######## Missing driver on net u4_msg[27]. Patching with GND.
+######## Missing driver on net u4_msg[26]. Patching with GND.
+######## Missing driver on net u4_msg[25]. Patching with GND.
+######## Missing driver on net u4_msg[24]. Patching with GND.
+######## Missing driver on net u5_msg[63]. Patching with GND.
+######## Missing driver on net u5_msg[62]. Patching with GND.
+######## Missing driver on net u5_msg[61]. Patching with GND.
+######## Missing driver on net u5_msg[60]. Patching with GND.
+######## Missing driver on net u5_msg[59]. Patching with GND.
+######## Missing driver on net u5_msg[58]. Patching with GND.
+######## Missing driver on net u5_msg[57]. Patching with GND.
+######## Missing driver on net u5_msg[56]. Patching with GND.
+######## Missing driver on net u5_msg[55]. Patching with GND.
+######## Missing driver on net u5_msg[54]. Patching with GND.
+######## Missing driver on net u5_msg[53]. Patching with GND.
+######## Missing driver on net u5_msg[52]. Patching with GND.
+######## Missing driver on net u5_msg[51]. Patching with GND.
+######## Missing driver on net u5_msg[50]. Patching with GND.
+######## Missing driver on net u5_msg[49]. Patching with GND.
+######## Missing driver on net u5_msg[48]. Patching with GND.
+######## Missing driver on net u5_msg[47]. Patching with GND.
+######## Missing driver on net u5_msg[46]. Patching with GND.
+######## Missing driver on net u5_msg[45]. Patching with GND.
+######## Missing driver on net u5_msg[44]. Patching with GND.
+######## Missing driver on net u5_msg[43]. Patching with GND.
+######## Missing driver on net u5_msg[42]. Patching with GND.
+######## Missing driver on net u5_msg[41]. Patching with GND.
+######## Missing driver on net u5_msg[40]. Patching with GND.
+######## Missing driver on net u5_msg[39]. Patching with GND.
+######## Missing driver on net u5_msg[38]. Patching with GND.
+######## Missing driver on net u5_msg[37]. Patching with GND.
+######## Missing driver on net u5_msg[36]. Patching with GND.
+######## Missing driver on net u5_msg[35]. Patching with GND.
+######## Missing driver on net u5_msg[34]. Patching with GND.
+######## Missing driver on net u5_msg[33]. Patching with GND.
+######## Missing driver on net u5_msg[32]. Patching with GND.
+######## Missing driver on net u5_msg[31]. Patching with GND.
+######## Missing driver on net u5_msg[30]. Patching with GND.
+######## Missing driver on net u5_msg[29]. Patching with GND.
+######## Missing driver on net u5_msg[28]. Patching with GND.
+######## Missing driver on net u5_msg[27]. Patching with GND.
+######## Missing driver on net u5_msg[26]. Patching with GND.
+######## Missing driver on net u5_msg[25]. Patching with GND.
+######## Missing driver on net u5_msg[24]. Patching with GND.
+######## Missing driver on net n1357. Patching with GND.
+######## Missing driver on net \xpos_pid_u1/clk_pid. Patching with GND.
+######## Missing driver on net n1351. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[63]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[62]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[61]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[60]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[59]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[58]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[57]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[56]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[55]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[54]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[53]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[52]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[51]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[50]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[49]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[48]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[47]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[46]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[45]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[44]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[43]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[42]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[41]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[40]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[39]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[38]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[37]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[36]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[35]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[34]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[33]. Patching with GND.
+######## Missing driver on net \uart_u1/rx_msg[32]. Patching with GND.
+######## Missing driver on net n1354. Patching with GND.
+######## Missing driver on net n1350. Patching with GND.
+INFO - synthesis: Extracted state machine for register '\xp_adc_u1/state' with one-hot encoding
+State machine has 3 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 001
+
+ 0001 -> 010
+
+ 0010 -> 100
+
+INFO - synthesis: Extracted state machine for register '\yp_adc_u1/state' with one-hot encoding
+State machine has 3 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 001
+
+ 0001 -> 010
+
+ 0010 -> 100
+
+INFO - synthesis: Extracted state machine for register '\uart_u1/u_state' with one-hot encoding
+State machine has 3 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 001
+
+ 0001 -> 010
+
+ 0010 -> 100
+
+INFO - synthesis: Extracted state machine for register '\uart_u1/tx_state' with one-hot encoding
+State machine has 3 reachable states with original encodings of:
+
+ 000 
+
+ 001 
+
+ 010 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 000 -> 001
+
+ 001 -> 010
+
+ 010 -> 100
+
+INFO - synthesis: Extracted state machine for register '\uart_u1/rx_state' with one-hot encoding
+State machine has 4 reachable states with original encodings of:
+
+ 0000 
+
+ 0001 
+
+ 0010 
+
+ 0011 
+
+original encoding -> new encoding (one-hot encoding)
+
+ 0000 -> 0001
+
+ 0001 -> 0010
+
+ 0010 -> 0100
+
+ 0011 -> 1000
+
+
+
+
+WARNING - synthesis: Bit 0 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 1 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 2 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 3 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 4 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 5 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 6 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 7 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 8 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 9 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 10 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 11 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 12 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 13 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 14 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 15 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 16 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 17 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 18 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 19 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 20 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 21 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 22 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 23 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 40 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 41 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 42 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 43 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 44 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 45 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 46 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 47 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 48 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 49 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 50 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 51 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 52 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 53 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 54 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 55 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 56 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 57 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 58 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 59 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 60 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 61 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 62 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 63 of Register u0_msg is stuck at Zero
+WARNING - synthesis: Bit 0 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 1 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 2 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 3 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 4 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 5 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 6 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 7 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 8 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 9 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 10 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 11 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 12 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 13 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 14 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 15 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 16 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 17 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 18 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 19 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 20 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 21 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 22 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 23 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 40 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 41 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 42 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 43 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 44 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 45 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 46 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 47 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 48 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 49 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 50 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 51 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 52 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 53 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 54 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 55 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 56 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 57 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 58 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 59 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 60 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 61 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 62 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 63 of Register u1_msg is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \xp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 2 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 5 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 6 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 7 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 8 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 9 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 10 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 14 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 15 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 16 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 17 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 18 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 19 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 20 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 21 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 22 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 23 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 24 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 25 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 26 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 27 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 28 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 29 of Register \yp_adc_u1/cfgdata is stuck at Zero
+WARNING - synthesis: Bit 30 of Register \yp_adc_u1/cfgdata is stuck at Zero
+######## Missing driver on net n8790. Patching with GND.
+######## Missing driver on net n8789. Patching with GND.
+######## Missing driver on net n8788. Patching with GND.
+######## Missing driver on net n8787. Patching with GND.
+######## Missing driver on net n8786. Patching with GND.
+######## Missing driver on net n8785. Patching with GND.
+######## Missing driver on net n8784. Patching with GND.
+######## Missing driver on net n8783. Patching with GND.
+######## Missing driver on net n8782. Patching with GND.
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/pos_pid.v(35): Register \xpos_pid_u1/pos_adc_reg_i0 clock is stuck at Zero. VDB-5035
+WARNING - synthesis: c:/#work/galvano/design/app/fpga/implementation/source/top.v(268): Register u_req_i6 is stuck at Zero. VDB-5013
+Duplicate register/latch removal. \yp_adc_u1/cfgdata_i8 is a one-to-one match with \yp_adc_u1/cfgdata_i7.
+Duplicate register/latch removal. \xp_adc_u1/cfgdata_i8 is a one-to-one match with \xp_adc_u1/cfgdata_i7.
+Optimizing instance due to enable/clock dependency i4342.
+GSR instance connected to net ydac_rst_c.
+######## Converted FF type for instance \uart_u1/u1/FF_30 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_29 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_28 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_27 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_26 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_25 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_24 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_23 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_22 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_21 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_20 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_19 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_18 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_17 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_16 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_15 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_14 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_13 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_12 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_11 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_10 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_9 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_8 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_7 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_6 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_5 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_4 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_3 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_2 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_1 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_0 due to shared LSR/GSR.
+######## Converted FF type for instance \uart_u1/u1/FF_31 due to shared LSR/GSR.
+Applying 1.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in top_drc.log.
+Loading NGL library 'C:/lSCC/diamond/3.7_x64/ispfpga/mg5a00/data/mg5alib.ngl'...
+Loading NGL library 'C:/lSCC/diamond/3.7_x64/ispfpga/ep5a00/data/ep5alib.ngl'...
+Loading NGL library 'C:/lSCC/diamond/3.7_x64/ispfpga/ep5g00/data/ep5glib.ngl'...
+Loading NGL library 'C:/lSCC/diamond/3.7_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: Port 'CLKOK' has no signal connected to it. Property 'FREQUENCY_PIN_CLKOK' is ignored for instance 'PLLInst_0'.
+WARNING - synthesis: logical net 'xy_sync' has no load.
+WARNING - synthesis: input pad net 'xy_sync' has no legal load.
+WARNING - synthesis: logical net 'xy_clk' has no load.
+WARNING - synthesis: input pad net 'xy_clk' has no legal load.
+WARNING - synthesis: logical net 'xy_x' has no load.
+WARNING - synthesis: input pad net 'xy_x' has no legal load.
+WARNING - synthesis: logical net 'xy_y' has no load.
+WARNING - synthesis: input pad net 'xy_y' has no legal load.
+WARNING - synthesis: logical net 'yiadc_mdat' has no load.
+WARNING - synthesis: input pad net 'yiadc_mdat' has no legal load.
+WARNING - synthesis: logical net 'xpadc_sdo1' has no load.
+WARNING - synthesis: input pad net 'xpadc_sdo1' has no legal load.
+WARNING - synthesis: logical net 'xpadc_rvs' has no load.
+WARNING - synthesis: input pad net 'xpadc_rvs' has no legal load.
+WARNING - synthesis: logical net 'xdac_sdo' has no load.
+WARNING - synthesis: input pad net 'xdac_sdo' has no legal load.
+WARNING - synthesis: logical net 'ydac_sdo' has no load.
+WARNING - synthesis: input pad net 'ydac_sdo' has no legal load.
+WARNING - synthesis: logical net 'temp_data' has no load.
+WARNING - synthesis: input pad net 'temp_data' has no legal load.
+WARNING - synthesis: logical net 'uart_rx2' has no load.
+WARNING - synthesis: input pad net 'uart_rx2' has no legal load.
+WARNING - synthesis: logical net 'uart_u1/u1/bdcnt_bctr_cia/S0' has no load.
+WARNING - synthesis: logical net 'uart_u1/u1/bdcnt_bctr_cia/S1' has no load.
+WARNING - synthesis: logical net 'uart_u1/u1/e_cmp_ci_a/S0' has no load.
+WARNING - synthesis: logical net 'uart_u1/u1/e_cmp_ci_a/S1' has no load.
+WARNING - synthesis: logical net 'uart_u1/u1/a0/C1' has no load.
+WARNING - synthesis: logical net 'uart_u1/u1/a0/S1' has no load.
+WARNING - synthesis: logical net 'uart_u1/u1/g_cmp_ci_a/S0' has no load.
+WARNING - synthesis: logical net 'uart_u1/u1/g_cmp_ci_a/S1' has no load.
+WARNING - synthesis: logical net 'uart_u1/u1/a1/C1' has no load.
+WARNING - synthesis: logical net 'uart_u1/u1/a1/S1' has no load.
+WARNING - synthesis: logical net 'uart_u1/u1/w_ctr_cia/S0' has no load.
+WARNING - synthesis: logical net 'uart_u1/u1/w_ctr_cia/S1' has no load.
+WARNING - synthesis: logical net 'uart_u1/u1/r_ctr_cia/S0' has no load.
+WARNING - synthesis: logical net 'uart_u1/u1/r_ctr_cia/S1' has no load.
+WARNING - synthesis: DRC complete with 36 warnings.
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file fpga_implementation.ngd.
+
+################### Begin Area Report (top)######################
+Number of register bits => 946 of 6564 (14 % )
+AGEB2 => 5
+ALEB2 => 5
+AND2 => 3
+CB2 => 5
+CCU2B => 171
+CU2 => 10
+EPLLD1 => 1
+FADD2B => 7
+FD1P3AX => 558
+FD1P3AY => 4
+FD1P3BX => 2
+FD1P3DX => 30
+FD1P3IX => 83
+FD1P3JX => 5
+FD1S3AX => 182
+FD1S3AY => 11
+FD1S3BX => 2
+FD1S3DX => 8
+FD1S3IX => 45
+FD1S3JX => 16
+GSR => 1
+IB => 4
+INV => 5
+L6MUX21 => 60
+MULT18X18B => 3
+OB => 23
+OBZ => 8
+ORCALUT4 => 795
+PDPW16KB => 2
+PFUMX => 97
+ROM16X1 => 2
+XOR2 => 1
+################### End Area Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 4
+  Net : pll_u1/clk2, loads : 518
+  Net : pll_u1/clk1, loads : 252
+  Net : xi_data_15__I_0/word_clk, loads : 113
+  Net : clk_in_c, loads : 40
+Clock Enable Nets
+Number of Clock Enables: 63
+Top 10 highest fanout Clock Enables:
+  Net : uart_u1/clk2_enable_366, loads : 64
+  Net : xdac_u1/clk1_enable_86, loads : 32
+  Net : clk_in_c_enable_28, loads : 27
+  Net : uart_u1/u1/wren_i, loads : 25
+  Net : xp_adc_u1/clk1_enable_131, loads : 20
+  Net : ydac_u1/clk1_enable_143, loads : 16
+  Net : clk2_enable_284, loads : 16
+  Net : uart_u1/u1/rden_i, loads : 16
+  Net : clk2_enable_377, loads : 16
+  Net : uart_u1/clk2_enable_428, loads : 11
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : uart_u1/rx_msg_31_N_1574_3, loads : 133
+  Net : xp_adc_u1/state_1, loads : 70
+  Net : uart_u1/rx_msg_31_N_1574_4, loads : 69
+  Net : uart_u1/clk2_enable_366, loads : 64
+  Net : xp_adc_u1/n4, loads : 57
+  Net : clk1_enable_64, loads : 51
+  Net : pll_u1/mclk1_N_406, loads : 47
+  Net : clk1_enable_115, loads : 47
+  Net : ydac_rst_c, loads : 45
+  Net : uart_u1/rx_msg_31_N_1574_5, loads : 45
+################### End Clock Report ##################
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk3 [get_nets clk1]                    |            -|            -|     0  
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk2 [get_nets                          |             |             |
+\xi_data_15__I_0/word_clk]              |  200.000 MHz|  199.243 MHz|     3 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk1 [get_nets clk_in_c]                |  200.000 MHz|  138.141 MHz|    14 *
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets clk2]                    |            -|            -|     0  
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+2 constraints not met.
+
+
+Peak Memory Usage: 227.734  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 50.094  secs
+--------------------------------------------------------------

@@ -1,0 +1,153 @@
+---------------------------------------------------
+Report for cell top
+   Instance path: top
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     897.00        100.0
+                                  LUT4	     798.00        100.0
+                                 IOBUF	         35        100.0
+                                PFUREG	        946        100.0
+                                RIPPLE	        203        100.0
+                                   EBR	          2        100.0
+                            MULT18X18B	          3        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                               pos_pid	          1         1.6
+                            pll_module	          1         0.0
+                                  uart	          1        52.0
+                          dac7731if_U1	          1         2.0
+                             dac7731if	          1         2.1
+                             ads8686if	          1         8.9
+                          ads8686if_U0	          1        14.7
+                         dec256sinc24b	          1        10.6
+---------------------------------------------------
+Report for cell pll_module
+   Instance path: top/pll_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+---------------------------------------------------
+Report for cell ads8686if_U0
+   Instance path: top/xp_adc_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     132.00        14.7
+                                  LUT4	     175.00        21.9
+                                PFUREG	        113        11.9
+                                RIPPLE	          9         4.4
+---------------------------------------------------
+Report for cell dac7731if_U1
+   Instance path: top/xdac_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      18.00         2.0
+                                  LUT4	      28.00         3.5
+                                PFUREG	         25         2.6
+---------------------------------------------------
+Report for cell pos_pid
+   Instance path: top/xpos_pid_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      14.00         1.6
+                                RIPPLE	         14         6.9
+                            MULT18X18B	          3        100.0
+---------------------------------------------------
+Report for cell dac7731if
+   Instance path: top/ydac_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      19.00         2.1
+                                  LUT4	      29.00         3.6
+                                PFUREG	         25         2.6
+---------------------------------------------------
+Report for cell uart
+   Instance path: top/uart_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     466.08        52.0
+                                  LUT4	     430.00        53.9
+                                PFUREG	        478        50.5
+                                RIPPLE	         74        36.5
+                                   EBR	          2        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                             uart_fifo	          1         4.1
+---------------------------------------------------
+Report for cell uart_fifo
+   Instance path: top/uart_u1/u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      37.00         4.1
+                                  LUT4	       6.00         0.8
+                                PFUREG	         32         3.4
+                                RIPPLE	         32        15.8
+                                   EBR	          2        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                                FADD2B	          7         0.8
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/uart_u1/u1/bdcnt_bctr_cia
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.5
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/uart_u1/u1/e_cmp_ci_a
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.5
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/uart_u1/u1/a0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.5
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/uart_u1/u1/g_cmp_ci_a
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.5
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/uart_u1/u1/a1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.5
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/uart_u1/u1/w_ctr_cia
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.5
+---------------------------------------------------
+Report for cell FADD2B
+   Instance path: top/uart_u1/u1/r_ctr_cia
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       1.00         0.1
+                                RIPPLE	          1         0.5
+---------------------------------------------------
+Report for cell dec256sinc24b
+   Instance path: top/xi_data_15__I_0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      95.00        10.6
+                                  LUT4	      14.00         1.8
+                                PFUREG	        168        17.8
+                                RIPPLE	         54        26.6
+---------------------------------------------------
+Report for cell ads8686if
+   Instance path: top/yp_adc_u1
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      79.50         8.9
+                                  LUT4	     107.00        13.4
+                                PFUREG	         64         6.8
+                                RIPPLE	          9         4.4
