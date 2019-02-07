@@ -1,5 +1,0 @@
--rem
--distrce
--log "fpga_implementation.log"
--o "fpga_implementation.csv"
--pr "fpga_implementation.prf"
