@@ -16,25 +16,8 @@ module pos_pid
     output wire [15:0] pos_dac
 );
 
-reg [15:0] pos_pre_reg;
-reg [15:0] pos_adc_reg;
-always @(negedge sys_rstn or posedge clk_pid) begin
-    if (!sys_rstn) begin
-        pos_pre_reg <= 0;
-        pos_adc_reg <= 0;
-        ek_d1 <= 0;
-        ek_d2 <= 0;
-        pos_dac_reg_d1 <= 0;
-    end
-    else if (clk_pid) begin
-        pos_pre_reg <= pos_pre;
-        pos_adc_reg <= pos_adc;
-        ek_d1 <= ek;
-        ek_d2 <= ek_d1;
-        pos_dac_reg_d1 <= pos_dac_reg;
-    end
-end
-
+reg  [15:0] pos_pre_reg;
+reg  [15:0] pos_adc_reg;
 wire [15:0] ek;
 reg  [15:0] ek_d1;
 reg  [15:0] ek_d2;
@@ -51,8 +34,23 @@ wire [15:0] sum2;
 
 wire [15:0] pos_dac_reg;
 reg  [15:0] pos_dac_reg_d1;
-reg  [15:0] pos_pre_reg;
-reg  [15:0] pos_adc_reg;
+
+always @(negedge sys_rstn or posedge clk_pid) begin
+    if (!sys_rstn) begin
+        pos_pre_reg <= 0;
+        pos_adc_reg <= 0;
+        ek_d1 <= 0;
+        ek_d2 <= 0;
+        pos_dac_reg_d1 <= 0;
+    end
+    else if (clk_pid) begin
+        pos_pre_reg <= pos_pre;
+        pos_adc_reg <= pos_adc;
+        ek_d1 <= ek;
+        ek_d2 <= ek_d1;
+        pos_dac_reg_d1 <= pos_dac_reg;
+    end
+end
 
 assign ek = pos_pre_reg - pos_adc_reg;
 assign delta_e1  = ek    - ek_d1;
