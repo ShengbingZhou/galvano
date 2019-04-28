@@ -1,7 +1,3 @@
-// @file  : PID module
-// @author: Shengbing Zhou
-// @date  : 2018/10/22
-
 module pos_pid
 (
     input  wire        sys_rstn,
