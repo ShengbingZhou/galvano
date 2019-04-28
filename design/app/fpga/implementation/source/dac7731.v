@@ -5,11 +5,11 @@
 module dac7731if
 (
     input  wire        sys_rstn,
-    input  wire        clk_ref,
+    input  wire        clk_ref,     // 20MHz
     input  wire [15:0] dac_data,
     output wire        dac_csn,
     output wire        dac_rstn,
-    output wire        dac_sck,   // max 20MHz, set to 10MHz
+    output wire        dac_sck,     // 5MHz
     output wire        dac_sdi,
     input  wire        dac_sdo,
     output wire        dac_lr,

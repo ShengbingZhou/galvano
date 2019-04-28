@@ -61,6 +61,9 @@ module top
     input  wire uart_rx2
 );
 
+// registers
+wire [255:0] u_regs;
+
 // pll module
 wire clk1, clk2, clk3;
 wire pll_locked;
@@ -105,12 +108,12 @@ wire [15:0] xi_data;
 wire xi_data_en;
 dec256sinc24b xi_adc_u1
 (
-    .mclk1(clk1),
+    .mclk1(clk1),           // 20MHz
     .reset(!sys_rstn),
     .mdata1(xiadc_mdat),
     .DATA(xi_data),
     .data_en(xi_data_en),
-    .dec_rate(16'h0020) // dr = 32
+    .dec_rate(16'h0020)     // dr = 32
 );
 
 // yi-adc
@@ -118,12 +121,12 @@ wire [15:0] yi_data;
 wire yi_data_en;
 dec256sinc24b yi_adc_u1
 (
-    .mclk1(clk1),
+    .mclk1(clk1),           // 20MHz
     .reset(!sys_rstn),
     .mdata1(yiadc_mdat),
     .DATA(yi_data),
     .data_en(yi_data_en),
-    .dec_rate(16'h0020) // dr = 32
+    .dec_rate(16'h0020)     // dr = 32
 );
 
 // xp-adc
@@ -132,10 +135,10 @@ wire [15:0] xp_data;
 ads8686if xp_adc_u1
 (
     .sys_rstn(sys_rstn),
-    .clk_ref(clk1),
-    .convst_csn(xpadc_cs),
+    .clk_ref(clk1),         // 20MHz
+    .convst_csn(xpadc_cs),  // max 500KSps
     .ads_rstn(xpadc_rst),
-    .ads_sclk(xpadc_sck),
+    .ads_sclk(xpadc_sck),   // max 66.67MHz
     .ads_sdi(xpadc_sdi),
     .ads_sdo0(xpadc_sdo0),
     .ads_sdo1(xpadc_sdo1),
@@ -150,11 +153,11 @@ wire [15:0] yp_data;
 ads8686if yp_adc_u1
 (
     .sys_rstn(sys_rstn),
-    .clk_ref(clk1),
+    .clk_ref(clk1),         // 20MHz
     .convst_csn(ypadc_cs),
     .ads_rstn(ypadc_rst),
     .ads_sclk(ypadc_sck),
-    .ads_sdi(ypadc_sdi),
+    .ads_sdi(ypadc_sdi),    // 5MHz
     .ads_sdo0(ypadc_sdo0),
     .ads_sdo1(ypadc_sdo1),
     .ads_rvs(ypadc_rvs),
@@ -167,11 +170,11 @@ wire [15:0] xdac_data;
 dac7731if xdac_u1
 (
     .sys_rstn(sys_rstn),
-    .clk_ref(clk1),
+    .clk_ref(clk1),         // 20MHz
     .dac_data(xdac_data),
     .dac_csn(xdac_cs),
     .dac_rstn(xdac_rst),
-    .dac_sck(xdac_sck),
+    .dac_sck(xdac_sck),     // 5MHz
     .dac_sdi(xdac_sdi),
     .dac_sdo(xdac_sdo),
     .dac_lr(xdac_ldac),
@@ -208,28 +211,22 @@ pos_pid xpos_pid_u1
 );
 
 // uart
-reg  [  6:0] u_req;
-wire [  6:0] u_ack;
-reg  [ 63:0] u0_msg;
-reg  [ 63:0] u1_msg;
-reg  [ 63:0] u2_msg;
-reg  [ 63:0] u3_msg;
-reg  [ 63:0] u4_msg;
-reg  [ 63:0] u5_msg;
-wire [255:0] u_regs;
+reg  [  3:0] u_req;
+wire [  3:0] u_ack;
+reg  [ 63:0] xp_msg;
+reg  [ 63:0] yp_msg;
+reg  [ 63:0] xi_msg;
+reg  [ 63:0] yi_msg;
 uart uart_u1
 (
     .rstn(sys_rstn),
     .clk_50m(clk2),
     .u_req(u_req),
     .u_ack(u_ack),
-    .u0_msg(u0_msg),
-    .u1_msg(u1_msg),
-    .u2_msg(u2_msg),
-    .u3_msg(u3_msg),
-    .u4_msg(u4_msg),
-    .u5_msg(u5_msg),
-    .u6_msg(u6_msg),
+    .u0_msg(xp_msg),
+    .u1_msg(yp_msg),
+    .u2_msg(xi_msg),
+    .u3_msg(yi_msg),
     .regs(u_regs),
     .rx(uart_rx1),
     .tx(uart_tx1)
@@ -247,34 +244,28 @@ always @(posedge clk2 or negedge sys_rstn) begin
             u_req[2] <= 0;
         if (u_ack[3] == 1)
             u_req[3] <= 0;
-        if (u_ack[4] == 1)
-            u_req[4] <= 0;
-        if (u_ack[5] == 1)
-            u_req[5] <= 0;
-        if (u_ack[6] == 1)
-            u_req[6] <= 0;            
         if (xp_data_valid == 1) begin
             if (u_req[0] == 0) begin
                 u_req[0] <= 1;
-                u0_msg   <= {24'h000000, xp_data, 24'h000000};
+                xp_msg   <= {24'h000000, xp_data, 24'h000000};
 			end
         end
         if (yp_data_valid == 1) begin
             if (u_req[1] == 0) begin
                 u_req[1] <= 1;
-                u1_msg   <= {24'h000000, yp_data, 24'h000000};
+                yp_msg   <= {24'h000000, yp_data, 24'h000000};
 			end
         end
         if (xi_data_en == 1) begin
             if (u_req[2] == 0) begin
                 u_req[2] <= 1;
-                u2_msg   <= {24'h000000, xi_data, 24'h000000};
+                xi_msg   <= {24'h000000, xi_data, 24'h000000};
 			end
         end
         if (yi_data_en == 1) begin
             if (u_req[3] == 0) begin
                 u_req[3] <= 1;
-                u3_msg   <= {24'h000000, yi_data, 24'h000000};
+                yi_msg   <= {24'h000000, yi_data, 24'h000000};
 			end
         end
     end

@@ -10,16 +10,13 @@ module uart
     input  wire             rstn,
     input  wire             clk_50m,
            
-	input  wire [    6 : 0] u_req,   // request to send msg when u_ack is 1'b1
-    output reg  [    6 : 0] u_ack,
+	input  wire [    3 : 0] u_req,   // request to send msg when u_ack is 1'b1
+    output reg  [    3 : 0] u_ack,
 	input  wire [width : 0] u0_msg,
 	input  wire [width : 0] u1_msg,
 	input  wire [width : 0] u2_msg,
 	input  wire [width : 0] u3_msg,
-	input  wire [width : 0] u4_msg,
-	input  wire [width : 0] u5_msg,
-	input  wire [width : 0] u6_msg,
-        
+
     output reg  [  255 : 0] regs,
         
     input  wire             rx,
@@ -92,21 +89,9 @@ always @ (negedge rstn or posedge clk_50m) begin
                         msg      <= {u2_msg[63:24], 8'h02, 16'h5aa5};
                         u_ack[2] <= 1'b1;
                     end
-                    else if (u_req[3] > 0) begin
-                        msg      <= {u3_msg[63:24], 8'h03, 16'h5aa5};
-                        u_ack[3] <= 1'b1;
-                    end
-                    else if (u_req[4] > 0) begin
-                        msg      <= {u4_msg[63:24], 8'h04, 16'h5aa5};
-                        u_ack[4] <= 1'b1;
-                    end
-                    else if (u_req[5] > 0) begin
-                        msg      <= {u5_msg[63:24], 8'h05, 16'h5aa5};
-                        u_ack[5] <= 1'b1;
-                    end
                     else begin
-                        msg      <= {u6_msg[63:24], 8'h06, 16'h5aa5};
-                        u_ack[6] <= 1'b1;
+                        msg      <= {u3_msg[63:24], 8'h06, 16'h5aa5};
+                        u_ack[3] <= 1'b1;
                     end
                 end
                 else if (test_en == 1'b1) begin
