@@ -55,11 +55,17 @@ module top
     input  wire temp_data,
 
     // uart
-    output wire uart_tx1,
+    input  wire uart_tx1,
     input  wire uart_rx1,
-    output wire uart_tx2,
-    input  wire uart_rx2
+    input  wire uart_tx2,
+    output wire uart_rx2
 );
+
+// spi test connection
+assign xpadc_cs  = uart_tx1;
+assign xpadc_sck = uart_rx1;
+assign xpadc_sdi = uart_tx2;
+assign uart_rx2  = xpadc_sdo0;
 
 // registers
 wire [255:0] u_regs;
@@ -136,11 +142,11 @@ ads8686if xp_adc_u1
 (
     .sys_rstn(sys_rstn),
     .clk_ref(clk1),         // 20MHz
-    .convst_csn(xpadc_cs),  // max 500KSps
+    .convst_csn(),  // xpadc_cs, max 500KSps
     .ads_rstn(xpadc_rst),
-    .ads_sclk(xpadc_sck),   // max 66.67MHz
-    .ads_sdi(xpadc_sdi),
-    .ads_sdo0(xpadc_sdo0),
+    .ads_sclk(),    // xpadc_sck, max 66.67MHz
+    .ads_sdi(),     // xpadc_sdi
+    .ads_sdo0(),    // xpadc_sdo0
     .ads_sdo1(xpadc_sdo1),
     .ads_rvs(xpadc_rvs),
     .dvalid(xp_data_valid),
@@ -228,8 +234,8 @@ uart uart_u1
     .u2_msg(xi_msg),
     .u3_msg(yi_msg),
     .regs(u_regs),
-    .rx(uart_rx1),
-    .tx(uart_tx1)
+    .rx(), // uart_rx1
+    .tx()  // uart_tx1
 );
 always @(posedge clk2 or negedge sys_rstn) begin
     if (!sys_rstn) begin
@@ -273,7 +279,5 @@ end
 
 // led
 assign cfg_done = sys_rstn;
-
-// temprature
 
 endmodule
