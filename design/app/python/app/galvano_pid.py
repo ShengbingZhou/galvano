@@ -9,13 +9,33 @@ import matplotlib.pyplot
 import matplotlib.animation
 import aardvark_py
 
-def main():
+def main():    
     pid = PidControl()
     
-    # read position adc data
-    data_out = array.array('B', [ 0x06 ])
+    # setup xp adc
+    data_out = array.array('B', [ 0xd0, 0x0c, 0x00, 0x00 ])
     aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)
+    data_out = array.array('B', [ 0xd0, 0x10, 0x00, 0x00 ])
+    aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)
+    data_out = array.array('B', [ 0xd0, 0x14, 0x00, 0x01 ])
+    aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)    
+
+    # read xp adc
+    xp_data = [0] * 1000
+    data_in = aardvark_py.array_u08(4)
+    for i in range(10):
+        data_out = array.array('B', [ 0xc8, 0x10, 0x00, 0x00 ])
+        (count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)        
+        xp_data[i] = (data_in[0] << 8) + data_in[1]
     
+    # draw data
+    fig = matplotlib.pyplot.figure(figsize=(7, 7))
+    ax = fig.add_subplot(1, 1, 1)
+    #ax.set_ylim(0, 50)    
+    line, = ax.plot(xp_data)
+    matplotlib.pyplot.show()
+    
+    # pid algorithm
     pid.setPoint(200)
     #for i in range(100):
         #out = pid.update(i) # update current value
@@ -39,7 +59,7 @@ class PidControl:
             self.aardvark = aardvark_py.aa_open(ports[0])
             aardvark_py.aa_configure(self.aardvark,  aardvark_py.AA_CONFIG_SPI_GPIO)
             aardvark_py.aa_target_power(self.aardvark, aardvark_py.AA_TARGET_POWER_BOTH)
-            aardvark_py.aa_spi_configure(self.aardvark, aardvark_py.AA_SPI_POL_RISING_FALLING, aardvark_py.AA_SPI_PHASE_SAMPLE_SETUP, aardvark_py.AA_SPI_BITORDER_MSB)
+            aardvark_py.aa_spi_configure(self.aardvark, aardvark_py.AA_SPI_POL_FALLING_RISING, aardvark_py.AA_SPI_PHASE_SAMPLE_SETUP, aardvark_py.AA_SPI_BITORDER_MSB)
             aardvark_py.aa_spi_bitrate(self.aardvark, 1000) #1Mbps
         else:
             raise Exception('Aardvark dongle not found.')
