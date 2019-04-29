@@ -3,6 +3,7 @@
 # @author:  shengbingzhou@outlook.com
 
 import sys
+import array
 import numpy
 import matplotlib.pyplot
 import matplotlib.animation
@@ -10,6 +11,11 @@ import aardvark_py
 
 def main():
     pid = PidControl()
+    
+    # read position adc data
+    data_out = array.array('B', [ 0x06 ])
+    aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)
+    
     pid.setPoint(200)
     #for i in range(100):
         #out = pid.update(i) # update current value
@@ -35,6 +41,8 @@ class PidControl:
             aardvark_py.aa_target_power(self.aardvark, aardvark_py.AA_TARGET_POWER_BOTH)
             aardvark_py.aa_spi_configure(self.aardvark, aardvark_py.AA_SPI_POL_RISING_FALLING, aardvark_py.AA_SPI_PHASE_SAMPLE_SETUP, aardvark_py.AA_SPI_BITORDER_MSB)
             aardvark_py.aa_spi_bitrate(self.aardvark, 1000) #1Mbps
+        else:
+            raise Exception('Aardvark dongle not found.')
 
     def update(self,current_value):
         self.error      = self.set_point - current_value
