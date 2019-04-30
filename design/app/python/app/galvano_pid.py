@@ -5,19 +5,35 @@
 import sys
 import array
 import numpy
+import scipy
+import scipy.signal
 import matplotlib.pyplot
 import matplotlib.animation
 import aardvark_py
 
 def update(frame_number):
-    global data_in
-    global xp_data
-    global line
+    global data_in, xp_data, line, xp_data_cnt
     data_out = array.array('B', [ 0x00, 0x00, 0x00, 0x00 ]) # nop command
-    (count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)    
-    xp_data = numpy.concatenate((xp_data[1:], (data_in[0] << 8) + data_in[1]), axis=None)
+    (count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)
+    new_data = (data_in[0] << 8) + data_in[1]
+    #new_data = numpy.random.uniform(0, 5000, 1)
+    xp_data = numpy.concatenate((xp_data[1:], new_data), axis=None)
     line.set_ydata(xp_data)
+    xp_data_cnt = xp_data_cnt + 1
+    if (xp_data_cnt == len(xp_data)): # show FFT
+        fft(xp_data)
 
+def fft(data):
+    w = scipy.signal.chebwin(data.shape[0], 200, False)    # Dolph-Chebyshev
+    w *= w.shape[0]/numpy.sum(w)
+    s = scipy.fft(data*w, data.shape[0]*4)
+    s = s/65535/len(s)*4
+    f = numpy.linspace(0, 500e3, len(s))
+    sdb = 20 * scipy.log10(scipy.absolute(s))
+    matplotlib.pyplot.figure(figsize=(7, 7))
+    matplotlib.pyplot.plot(f, sdb)
+    matplotlib.pyplot.show()
+        
 class PidControl:
     def __init__(self, P=2.0, I=0.0, D=1.0, Derivator=0, Integrator=0, Integrator_max=500, Integrator_min=-500):
         self.Kp = P
@@ -78,6 +94,7 @@ aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)
 
 # read xp adc
 xp_data = [0] * 1000
+xp_data_cnt = 0
 
 # draw data
 fig = matplotlib.pyplot.figure(figsize=(7, 7))
