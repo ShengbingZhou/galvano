@@ -14,10 +14,8 @@ def update(frame_number):
     global xp_data
     global line
     data_out = array.array('B', [ 0x00, 0x00, 0x00, 0x00 ]) # nop command
-    (count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)
-    xp_data[i] = (data_in[0] << 8) + data_in[1]    
-    data1 = numpy.concatenate((xp_data[1:], (data_in[0] << 8) + data_in[1]), axis=None)
-    xp_data = data1
+    (count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)    
+    xp_data = numpy.concatenate((xp_data[1:], (data_in[0] << 8) + data_in[1]), axis=None)
     line.set_ydata(xp_data)
 
 class PidControl:
@@ -80,16 +78,17 @@ aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)
 
 # read xp adc
 xp_data = [0] * 1000
-for i in range(1000):
-    data_out = array.array('B', [ 0x00, 0x00, 0x00, 0x00 ])
-    (count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)
-    xp_data[i] = (data_in[0] << 8) + data_in[1]
 
 # draw data
 fig = matplotlib.pyplot.figure(figsize=(7, 7))
 ax = fig.add_subplot(1, 1, 1)
 ax.set_ylim(0, 65535)
-line, = ax.plot(xp_data)    
+ax.set_ylabel('Data')
+line, = ax.plot(xp_data, 'g')
+ax2 = ax.twinx()
+ax2.set_ylim(-10.24, 10.24)
+ax2.set_ylabel('Value')
+
 matplotlib.pyplot.grid()
 animation = matplotlib.animation.FuncAnimation(fig, update, interval=10)
 matplotlib.pyplot.show()
