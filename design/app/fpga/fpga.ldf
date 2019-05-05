@@ -12,9 +12,6 @@
         <Source name="implementation/source/dec256sinc24b.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="implementation/source/uart.v" type="Verilog" type_short="Verilog">
-            <Options/>
-        </Source>
         <Source name="implementation/source/dac7731.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
@@ -22,9 +19,6 @@
             <Options/>
         </Source>
         <Source name="implementation/source/pll_module.ipx" type="IPX_Module" type_short="IPX">
-            <Options/>
-        </Source>
-        <Source name="implementation/source/uart_fifo.ipx" type="IPX_Module" type_short="IPX">
             <Options/>
         </Source>
         <Source name="fpga.lpf" type="Logic Preference" type_short="LPF">
