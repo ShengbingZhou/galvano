@@ -61,12 +61,6 @@ module top
     output wire uart_rx2
 );
 
-// spi test connection
-assign xpadc_cs  = uart_tx1;
-assign xpadc_sck = uart_rx1;
-assign xpadc_sdi = uart_tx2;
-assign uart_rx2  = xpadc_sdo0;
-
 // pll module
 wire clk1, clk2, clk3;
 wire pll_locked;
@@ -132,6 +126,96 @@ dec256sinc24b yi_adc_u1
     .dec_rate(16'h0020)     // dr = 32
 );
 
+// spi test fsm (1byte - spi cs#, following bytes for are devices, 4 for 8565, 2 for 7731)
+reg decoded_xp_spi_csn, decoded_xdac_spi_csn;
+reg spi_xdac_ldac;
+reg [7:0] spi_cs_data;
+reg [4:0] spi_cs_data_cnt;
+reg [1:0] spi_cs_delay_cnt;
+reg [1:0] spi_sclk_delay_cnt;
+reg [3:0] spi_cs_fsm;
+always @(negedge sys_rstn or posedge clk2) begin // only support cpol = cpha = 0
+    if (~sys_rstn) begin
+        decoded_xp_spi_csn <= 1;
+        decoded_xdac_spi_csn <= 1;
+        spi_xdac_ldac <= 1;
+        spi_cs_data <= 0;
+        spi_cs_data_cnt <= 0;
+        spi_cs_delay_cnt <= 0;
+        spi_sclk_delay_cnt <= 0;
+        spi_cs_fsm <= 0;
+    end
+    else if(clk2) begin
+       spi_cs_delay_cnt <= {spi_cs_delay_cnt[0],  spi_csn};
+       spi_sclk_delay_cnt <= {spi_sclk_delay_cnt[0], spi_sck};
+       case (spi_cs_fsm) begin
+           case 0: begin // idle
+               spi_xdac_ldac <= 1;
+               if (spi_cs_delay_cnt = 2'b10) begin // falling edge
+                   spi_cs_fsm <= 1;
+                   spi_cs_data_cnt <= 0;
+               end
+           end
+           case 1: begin // decode spi cs command
+               if (spi_sclk_delay_cnt == 2'b01) begin // rising edge                   
+                   spi_cs_data <= {spi_cs_data[7:1], spi_sdi};
+                   if (spi_cs_data_cnt == 7) begin
+                       if (spi_cs_data == 8'h01) begin                           
+                           decoded_xp_spi_csn <= 0; // xp
+                           spi_cs_fsm <= 2;
+                       end
+                       else if (spi_cs_data == 8'h02) begin                           
+                           decoded_xdac_spi_csn <= 0; // xdac
+                           spi_cs_fsm <= 3;
+                       end
+                       else begin
+                           spi_cs_fsm <= 0; // not valid spi cs commmand, return to idle
+                       end
+                   end
+                   spi_cs_data_cnt <= spi_cs_data_cnt + 1;
+               end
+           end
+           case 2: begin // xp
+               if (spi_cs_delay_cnt == 2'b01) begin
+                   decoded_xp_spi_csn <= 1;
+                   decoded_xdac_spi_csn <= 1;
+                   spi_cs_fsm <= 0;
+               end
+           end
+           case 3: begin // xdac
+               if (spi_cs_delay_cnt == 2'b01) begin
+                   decoded_xp_spi_csn <= 1;
+                   decoded_xdac_spi_csn <= 1;
+                   spi_xdac_ldac <= 0;
+                   spi_cs_fsm <= 0;
+               end
+           end           
+           default: begin
+               spi_cs_fsm <= 0;
+           end
+       endcase
+    end
+end
+
+// spi test connection
+wire spi_csn, spi_slk, spi_sdi, spi_sdo;
+assign spi_csn  = uart_tx1;
+assign spi_sck  = uart_rx1;
+assign spi_sdi  = uart_tx2;
+assign uart_rx2 = spi_sdo;
+
+assign xpadc_cs  = decoded_xp_spi_csn;
+assign xpadc_sck = spi_sck;
+assign xpadc_sdi = spi_sdi;
+
+assign xdac_cs   = decoded_xdac_spi_csn;
+assign xdac_sck  = spi_sck;
+assign xdac_sdi  = spi_sdi;
+
+assign spi_sdo   = xpadc_sdo0;
+
+assign xdac_ldac = spi_xdac_ldac;
+
 // xp-adc
 wire xp_data_valid;
 wire [15:0] xp_data;
@@ -175,12 +259,12 @@ dac7731if xdac_u1
     .sys_rstn(sys_rstn),
     .clk_ref(clk1),         // 20MHz
     .dac_data(xdac_data),
-    .dac_csn(xdac_cs),
+    .dac_csn(),
     .dac_rstn(xdac_rst),
-    .dac_sck(xdac_sck),     // 5MHz
-    .dac_sdi(xdac_sdi),
+    .dac_sck(),     // 5MHz
+    .dac_sdi(),
     .dac_sdo(xdac_sdo),
-    .dac_lr(xdac_ldac),
+    .dac_lr(),
     .ads_rstsel(xdac_rstsel)
 );
 
