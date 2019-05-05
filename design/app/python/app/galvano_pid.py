@@ -17,9 +17,9 @@ def update(frame_number):
     #if (xp_data_cnt == len(xp_data) + 100):
     #    hist(xp_data)
     #xp_data_cnt = xp_data_cnt + 1
-    data_out = array.array('B', [ 0x00, 0x00, 0x00, 0x00 ]) # nop command
+    data_out = array.array('B', [ 0x01, 0x00, 0x00, 0x00, 0x00 ]) # nop command
     (count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)
-    new_data = (data_in[0] << 8) + data_in[1]
+    new_data = (data_in[1] << 8) + data_in[2]
     xp_data = numpy.concatenate((xp_data[1:], new_data), axis=None)
     line.set_ydata(xp_data)
 
@@ -86,23 +86,23 @@ class PidControl:
         self.Integrator = 0
         self.Derivator  = 0
 
+# instantiate pid controller
 pid = PidControl()
         
 # read back data
-data_in = aardvark_py.array_u08(4)    
+data_in = aardvark_py.array_u08(5)
 
 # setup xp adc
 #data_out = array.array('B', [ 0xd0, 0x0c, 0x00, 0x00 ])
 #aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)
 #data_out = array.array('B', [ 0xd0, 0x10, 0x00, 0x00 ])
 #aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)
-data_out = array.array('B', [ 0xd0, 0x14, 0x00, 0x01 ]) #ADC range: +/-2.5Vref (2.5 * 4.096v)
+data_out = array.array('B', [ 0x01, 0xd0, 0x14, 0x00, 0x01 ]) #ADC range: +/-2.5Vref (2.5 * 4.096v)
 aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)    
-data_out = array.array('B', [ 0xc8, 0x10, 0x00, 0x00 ])
+data_out = array.array('B', [ 0x01, 0xc8, 0x10, 0x00, 0x00 ])
 aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)
-data_out = array.array('B', [ 0x00, 0x00, 0x00, 0x00 ]) # nop command
+data_out = array.array('B', [ 0x01, 0x00, 0x00, 0x00, 0x00 ]) # nop command
 (count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)
-
 # read xp adc
 xp_data = [0] * 1000
 xp_data_cnt = 0
@@ -118,16 +118,17 @@ line, = ax.plot(xp_data, 'g')
 ax2 = ax.twinx()
 ax2.set_ylim(-10.24, 10.24)
 ax2.set_ylabel('Value')
-
 matplotlib.pyplot.grid()
+
 #animation = matplotlib.animation.FuncAnimation(fig, update, interval=10)
 
 for i in range(1000):
-    data_out = array.array('B', [ 0x00, 0x00, 0x00, 0x00 ]) # nop command
+    data_out = array.array('B', [ 0x01, 0x00, 0x00, 0x00, 0x00 ]) # nop command
     (count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)
-    new_data = (data_in[0] << 8) + data_in[1]    
+    new_data = (data_in[1] << 8) + data_in[2]
     xp_data[i] = new_data
 line.set_ydata(xp_data)
+
 hist(xp_data)
 matplotlib.pyplot.show()
 

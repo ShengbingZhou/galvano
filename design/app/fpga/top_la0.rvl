@@ -1,0 +1,55 @@
+<Project ModBy="Inserter" SigType="0" Name="C:/Users/bzhou/Documents/repo/galvano/design/app/fpga/top_la0.rvl" Date="2019-05-05">
+    <IP Version="1_6_042617"/>
+    <Design DesignEntry="Schematic/Mixed HDL" Synthesis="lse" DeviceFamily="LatticeXP2" DesignName="fpga"/>
+    <Core InsertDataset="0" Insert="1" Reveal_sig="223041030" Name="top_LA0" ID="0">
+        <Setting>
+            <Clock SampleClk="clk2" SampleEnable="0" EnableClk="" EnableClk_Pri="0"/>
+            <TraceBuffer Implementation="0" BitTimeStamp="0" hasTimeStamp="0" IncTrigSig="1" BufferDepth="512"/>
+            <Capture Mode="0" MinSamplesPerTrig="8"/>
+            <Event CntEnable="0" MaxEventCnt="8"/>
+            <TrigOut Polarity="0" MinPulseWidth="0" TrigOutNetType="1" EnableTrigOut="0" TrigOutNet="reveal_debug_top_LA0_net"/>
+            <DistRAM Disable="0"/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trace>
+                <Bus Name="spi_cs_data_cnt">
+                    <Sig Type="SIG" Name="spi_cs_data_cnt:0"/>
+                    <Sig Type="SIG" Name="spi_cs_data_cnt:1"/>
+                    <Sig Type="SIG" Name="spi_cs_data_cnt:2"/>
+                    <Sig Type="SIG" Name="spi_cs_data_cnt:3"/>
+                    <Sig Type="SIG" Name="spi_cs_data_cnt:4"/>
+                </Bus>
+                <Bus Name="spi_cs_delay_cnt">
+                    <Sig Type="SIG" Name="spi_cs_delay_cnt:0"/>
+                    <Sig Type="SIG" Name="spi_cs_delay_cnt:1"/>
+                </Bus>
+                <Bus Name="spi_cs_fsm">
+                    <Sig Type="SIG" Name="spi_cs_fsm:0"/>
+                    <Sig Type="SIG" Name="spi_cs_fsm:1"/>
+                    <Sig Type="SIG" Name="spi_cs_fsm:2"/>
+                    <Sig Type="SIG" Name="spi_cs_fsm:3"/>
+                </Bus>
+                <Bus Name="spi_cs_data">
+                    <Sig Type="SIG" Name="spi_cs_data:0"/>
+                    <Sig Type="SIG" Name="spi_cs_data:1"/>
+                    <Sig Type="SIG" Name="spi_cs_data:2"/>
+                    <Sig Type="SIG" Name="spi_cs_data:3"/>
+                    <Sig Type="SIG" Name="spi_cs_data:4"/>
+                    <Sig Type="SIG" Name="spi_cs_data:5"/>
+                    <Sig Type="SIG" Name="spi_cs_data:6"/>
+                    <Sig Type="SIG" Name="spi_cs_data:7"/>
+                </Bus>
+                <Bus Name="spi_sck_delay_cnt">
+                    <Sig Type="SIG" Name="spi_sck_delay_cnt:0"/>
+                    <Sig Type="SIG" Name="spi_sck_delay_cnt:1"/>
+                </Bus>
+                <Sig Type="SIG" Name="decoded_xp_spi_csn"/>
+                <Sig Type="SIG" Name="decoded_xdac_spi_csn"/>
+            </Trace>
+            <Trigger>
+                <TU Serialbits="0" Type="0" ID="1" Sig="spi_csn,"/>
+                <TE MaxSequence="2" MaxEvnCnt="1" ID="1" Resource="0"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>
