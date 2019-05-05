@@ -67,9 +67,6 @@ assign xpadc_sck = uart_rx1;
 assign xpadc_sdi = uart_tx2;
 assign uart_rx2  = xpadc_sdo0;
 
-// registers
-wire [255:0] u_regs;
-
 // pll module
 wire clk1, clk2, clk3;
 wire pll_locked;
@@ -215,67 +212,6 @@ pos_pid xpos_pid_u1
     .pos_adc(xp_data),
     .pos_dac(xdac_data)
 );
-
-// uart
-reg  [  3:0] u_req;
-wire [  3:0] u_ack;
-reg  [ 63:0] xp_msg;
-reg  [ 63:0] yp_msg;
-reg  [ 63:0] xi_msg;
-reg  [ 63:0] yi_msg;
-uart uart_u1
-(
-    .rstn(sys_rstn),
-    .clk_50m(clk2),
-    .u_req(u_req),
-    .u_ack(u_ack),
-    .u0_msg(xp_msg),
-    .u1_msg(yp_msg),
-    .u2_msg(xi_msg),
-    .u3_msg(yi_msg),
-    .regs(u_regs),
-    .rx(), // uart_rx1
-    .tx()  // uart_tx1
-);
-always @(posedge clk2 or negedge sys_rstn) begin
-    if (!sys_rstn) begin
-        u_req <= 0;
-    end
-    else begin
-        if (u_ack[0] == 1)
-            u_req[0] <= 0;
-        if (u_ack[1] == 1)
-            u_req[1] <= 0;
-        if (u_ack[2] == 1)
-            u_req[2] <= 0;
-        if (u_ack[3] == 1)
-            u_req[3] <= 0;
-        if (xp_data_valid == 1) begin
-            if (u_req[0] == 0) begin
-                u_req[0] <= 1;
-                xp_msg   <= {24'h000000, xp_data, 24'h000000};
-			end
-        end
-        if (yp_data_valid == 1) begin
-            if (u_req[1] == 0) begin
-                u_req[1] <= 1;
-                yp_msg   <= {24'h000000, yp_data, 24'h000000};
-			end
-        end
-        if (xi_data_en == 1) begin
-            if (u_req[2] == 0) begin
-                u_req[2] <= 1;
-                xi_msg   <= {24'h000000, xi_data, 24'h000000};
-			end
-        end
-        if (yi_data_en == 1) begin
-            if (u_req[3] == 0) begin
-                u_req[3] <= 1;
-                yi_msg   <= {24'h000000, yi_data, 24'h000000};
-			end
-        end
-    end
-end
 
 // led
 assign cfg_done = sys_rstn;
