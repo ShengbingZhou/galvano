@@ -88,7 +88,7 @@ always @(posedge clk_in) begin
             sys_rstn_cnt <= sys_rstn_cnt + 1;
             sys_rstn <= 1;
         end
-        if (sys_rstn_cnt < 4000000) begin // 200ms based on 20MHz
+        else if (sys_rstn_cnt < 4000000) begin // 200ms based on 20MHz
             sys_rstn_cnt <= sys_rstn_cnt + 1;
             sys_rstn <= 0;
         end
@@ -158,14 +158,19 @@ always @(negedge sys_rstn or posedge clk2) begin // only support cpol = cpha = 0
                 end
             end
             1: begin // decode spi cs command
-                if (spi_sck_delay_cnt == 2'b01) begin // rising edge                   
-                    spi_cs_data <= {spi_cs_data[7:1], spi_sdi};
+                if (spi_cs_delay_cnt == 2'b01) begin  // rising edge (spi_csn)
+                    decoded_xp_spi_csn <= 1;
+                    decoded_xdac_spi_csn <= 1;
+                    spi_cs_fsm <= 0; // return to idle if unexpected csn risng edge found
+                end
+                else if (spi_sck_delay_cnt == 2'b01) begin // rising edge                   
+                    spi_cs_data <= {spi_cs_data[6:0], spi_sdi};
                     if (spi_cs_data_cnt == 7) begin
-                        if (spi_cs_data == 8'h01) begin                           
+                        if (spi_cs_data == 8'h80) begin
                             decoded_xp_spi_csn <= 0; // xp
                             spi_cs_fsm <= 2;
                         end
-                        else if (spi_cs_data == 8'h02) begin                           
+                        else if (spi_cs_data == 8'h40) begin                           
                             decoded_xdac_spi_csn <= 0; // xdac
                             spi_cs_fsm <= 3;
                         end
@@ -202,7 +207,7 @@ end
 assign spi_csn  = uart_tx1;
 assign spi_sck  = uart_rx1;
 assign spi_sdi  = uart_tx2;
-assign uart_rx2 = spi_sdo;
+assign uart_rx2 = xpadc_sdo0;
 
 assign xpadc_cs  = decoded_xp_spi_csn;
 assign xpadc_sck = spi_sck;
@@ -211,8 +216,6 @@ assign xpadc_sdi = spi_sdi;
 assign xdac_cs   = decoded_xdac_spi_csn;
 assign xdac_sck  = spi_sck;
 assign xdac_sdi  = spi_sdi;
-
-assign spi_sdo   = xpadc_sdo0;
 
 assign xdac_ldac = spi_xdac_ldac;
 

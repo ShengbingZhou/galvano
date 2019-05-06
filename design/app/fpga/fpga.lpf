@@ -1,4 +1,4 @@
-rvl_alias "clk2" "clk2";
+rvl_alias "clk1" "pll_u1/clkos";
 RVL_ALIAS "clk2" "pll_inst/clkop"; 
 RVL_ALIAS "clk2" "pll_inst/clkop"; 
 RVL_ALIAS "clk3" "pll_inst/clkos"; 

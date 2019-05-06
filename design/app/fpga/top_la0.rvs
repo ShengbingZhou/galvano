@@ -1,50 +1,48 @@
-<Project ModBy="Inserter" Name="C:/Users/bzhou/Documents/repo/galvano/design/app/fpga/top_la0.rvl" Date="2019-05-05">
-    <Core Name="top_LA0">
-        <Setting>
-            <Capture SamplesPerTrig="1" NumTrigsCap=""/>
-            <Event EventCnt="" CntEnableRun=""/>
-            <TrigSetting PreTrgSamples="" AND_ALL="" PostTrgSamples="" TURadix="0"/>
-        </Setting>
-        <Dataset Name="Base">
-            <Trace>
-                <Bus Name="spi_cs_data_cnt" Radix="0">
-                    <Sig Name="spi_cs_data_cnt:0"/>
-                    <Sig Name="spi_cs_data_cnt:1"/>
-                    <Sig Name="spi_cs_data_cnt:2"/>
-                    <Sig Name="spi_cs_data_cnt:3"/>
-                    <Sig Name="spi_cs_data_cnt:4"/>
-                </Bus>
-                <Bus Name="spi_cs_delay_cnt" Radix="0">
-                    <Sig Name="spi_cs_delay_cnt:0"/>
-                    <Sig Name="spi_cs_delay_cnt:1"/>
-                </Bus>
-                <Bus Name="spi_cs_fsm" Radix="0">
-                    <Sig Name="spi_cs_fsm:0"/>
-                    <Sig Name="spi_cs_fsm:1"/>
-                    <Sig Name="spi_cs_fsm:2"/>
-                    <Sig Name="spi_cs_fsm:3"/>
-                </Bus>
-                <Bus Name="spi_cs_data" Radix="0">
-                    <Sig Name="spi_cs_data:0"/>
-                    <Sig Name="spi_cs_data:1"/>
-                    <Sig Name="spi_cs_data:2"/>
-                    <Sig Name="spi_cs_data:3"/>
-                    <Sig Name="spi_cs_data:4"/>
-                    <Sig Name="spi_cs_data:5"/>
-                    <Sig Name="spi_cs_data:6"/>
-                    <Sig Name="spi_cs_data:7"/>
-                </Bus>
-                <Bus Name="spi_sck_delay_cnt" Radix="0">
-                    <Sig Name="spi_sck_delay_cnt:0"/>
-                    <Sig Name="spi_sck_delay_cnt:1"/>
-                </Bus>
-                <Sig Name="decoded_xp_spi_csn"/>
-                <Sig Name="decoded_xdac_spi_csn"/>
-            </Trace>
-            <Trigger>
-                <TU Operator="7" Name="TU1" ID="1" Value="0" Radix="0"/>
-                <TE Enable="1" Expression="TU1" Name="TE1" ID="1"/>
-            </Trigger>
-        </Dataset>
-    </Core>
+<Project ModBy="Analyzer" Name="C:/Users/bzhou/Documents/repo/galvano/design/app/fpga/top_la0.rvs" Date="2019-05-06">
+ <Core Name="top_LA0">
+  <Setting>
+   <Capture SamplesPerTrig="256" NumTrigsCap="1"/>
+   <Event EventCnt="0" CntEnableRun="0"/>
+   <TrigSetting PreTrgSamples="" AND_ALL="0" PostTrgSamples="" TURadix="0"/>
+  </Setting>
+  <Dataset Name="Base">
+   <Trace>
+    <Bus Name="spi_cs_data_cnt" Radix="0">
+     <Sig Name="spi_cs_data_cnt:0"/>
+     <Sig Name="spi_cs_data_cnt:1"/>
+     <Sig Name="spi_cs_data_cnt:2"/>
+     <Sig Name="spi_cs_data_cnt:3"/>
+     <Sig Name="spi_cs_data_cnt:4"/>
+    </Bus>
+    <Bus Name="spi_cs_fsm" Radix="0">
+     <Sig Name="spi_cs_fsm:0"/>
+     <Sig Name="spi_cs_fsm:1"/>
+     <Sig Name="spi_cs_fsm:2"/>
+     <Sig Name="spi_cs_fsm:3"/>
+    </Bus>
+    <Bus Name="spi_cs_delay_cnt" Radix="0">
+     <Sig Name="spi_cs_delay_cnt:0"/>
+     <Sig Name="spi_cs_delay_cnt:1"/>
+    </Bus>
+    <Bus Name="spi_cs_data" Radix="0">
+     <Sig Name="spi_cs_data:0"/>
+     <Sig Name="spi_cs_data:1"/>
+     <Sig Name="spi_cs_data:2"/>
+     <Sig Name="spi_cs_data:3"/>
+     <Sig Name="spi_cs_data:4"/>
+     <Sig Name="spi_cs_data:5"/>
+     <Sig Name="spi_cs_data:6"/>
+     <Sig Name="spi_cs_data:7"/>
+    </Bus>
+    <Bus Name="spi_sck_delay_cnt" Radix="0">
+     <Sig Name="spi_sck_delay_cnt:0"/>
+     <Sig Name="spi_sck_delay_cnt:1"/>
+    </Bus>
+   </Trace>
+   <Trigger>
+    <TU Operator="7" Name="TU1" ID="1" Value="1" Radix="0"/>
+    <TE Enable="1" Expression="TU1" Name="TE1" ID="1"/>
+   </Trigger>
+  </Dataset>
+ </Core>
 </Project>
