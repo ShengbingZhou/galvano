@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<DiamondModule name="uart_fifo" module="uart_fifo" VendorName="Lattice Semiconductor Corporation" generator="IPexpress" date="2017 10 08 21:45:05.631" version="5.1" type="Module" synthesis="lse" source_format="Verilog HDL">
-  <Package>
-		<File name="tb_uart_fifo_tmpl.v" type="testbench_verilog" modified="2017 10 08 21:45:03.426"/>
-		<File name="uart_fifo.lpc" type="lpc" modified="2017 10 08 21:45:03.340"/>
-		<File name="uart_fifo.v" type="top_level_verilog" modified="2017 10 08 21:45:03.423"/>
-		<File name="uart_fifo_tmpl.v" type="template_verilog" modified="2017 10 08 21:45:03.424"/>
-  </Package>
-</DiamondModule>
