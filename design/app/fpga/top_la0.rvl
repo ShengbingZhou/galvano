@@ -1,0 +1,23 @@
+<Project ModBy="Inserter" SigType="0" Name="C:/Users/bzhou/Documents/repo/galvano/design/app/fpga/top_la0.rvl" Date="2019-05-06">
+    <IP Version="1_6_042617"/>
+    <Design DesignEntry="Schematic/Mixed HDL" Synthesis="lse" DeviceFamily="LatticeXP2" DesignName="fpga"/>
+    <Core InsertDataset="0" Insert="1" Reveal_sig="223164899" Name="top_LA1" ID="0">
+        <Setting>
+            <Clock SampleClk="clk_in" SampleEnable="0" EnableClk="" EnableClk_Pri="0"/>
+            <TraceBuffer Implementation="0" BitTimeStamp="0" hasTimeStamp="0" IncTrigSig="0" BufferDepth="256"/>
+            <Capture Mode="0" MinSamplesPerTrig="8"/>
+            <Event CntEnable="0" MaxEventCnt="8"/>
+            <TrigOut Polarity="0" MinPulseWidth="0" TrigOutNetType="1" EnableTrigOut="0" TrigOutNet="reveal_debug_top_LA1_net"/>
+            <DistRAM Disable="0"/>
+        </Setting>
+        <Dataset Name="Base">
+            <Trace>
+                <Sig Type="SIG" Name="pll_locked"/>
+            </Trace>
+            <Trigger>
+                <TU Serialbits="0" Type="0" ID="1" Sig="cfg_done,"/>
+                <TE MaxSequence="2" MaxEvnCnt="1" ID="1" Resource="0"/>
+            </Trigger>
+        </Dataset>
+    </Core>
+</Project>
