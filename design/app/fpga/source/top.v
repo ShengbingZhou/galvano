@@ -151,51 +151,53 @@ always @(negedge sys_rstn or posedge clk2) begin // only support cpol = cpha = 0
         spi_sck_delay_cnt <= {spi_sck_delay_cnt[0], spi_sck};
         case(spi_cs_fsm)
             0: begin // idle
-                spi_xdac_ldac <= 1;
-                if (spi_cs_delay_cnt == 2'b10) begin // falling edge
+                spi_xdac_ldac <= 1;              
+                if (spi_cs_delay_cnt == 2'b10) begin // falling edge of CSn
                     spi_cs_fsm <= 1;
                     spi_cs_data_cnt <= 0;
                 end
             end
-            1: begin // decode spi cs command
-                if (spi_cs_delay_cnt == 2'b01) begin  // rising edge (spi_csn)
-                    decoded_xp_spi_csn <= 1;
-                    decoded_xdac_spi_csn <= 1;
-                    spi_cs_fsm <= 0; // return to idle if unexpected csn risng edge found
+            1: begin // decode spi cs command                
+                if (spi_cs_data_cnt == 8) begin
+                    spi_cs_fsm <= 2;
                 end
-                else if (spi_sck_delay_cnt == 2'b01) begin // rising edge                   
+                if (spi_sck_delay_cnt == 2'b01) begin // rising edge of SCK                
                     spi_cs_data <= {spi_cs_data[6:0], spi_sdi};
-                    if (spi_cs_data_cnt == 7) begin
-                        if (spi_cs_data == 8'h80) begin
-                            decoded_xp_spi_csn <= 0; // xp
-                            spi_cs_fsm <= 2;
-                        end
-                        else if (spi_cs_data == 8'h40) begin                           
-                            decoded_xdac_spi_csn <= 0; // xdac
-                            spi_cs_fsm <= 3;
-                        end
-                        else begin
-                            spi_cs_fsm <= 0; // not valid spi cs commmand, return to idle
-                        end
-                    end
                     spi_cs_data_cnt <= spi_cs_data_cnt + 1;
                 end
             end
-            2: begin // xp
-                if (spi_cs_delay_cnt == 2'b01) begin
-                    decoded_xp_spi_csn <= 1;
-                    decoded_xdac_spi_csn <= 1;
-                    spi_cs_fsm <= 0;
+            2: begin // decode spi csn
+                if (spi_cs_data == 8'h01) begin
+                    decoded_xp_spi_csn <= 0;    // xp
+                    spi_cs_fsm <= 3;
+                end
+                else if (spi_cs_data == 8'h02) begin
+                    decoded_xdac_spi_csn <= 0; // xdac                    
+                    spi_xdac_ldac <= 0;
+                    spi_cs_fsm <= 4;
+                end
+                else begin
+                    spi_cs_fsm <= 0; // not valid spi cs commmand, return to idle
                 end
             end
-            3: begin // xdac
+            3: begin // xp
                 if (spi_cs_delay_cnt == 2'b01) begin
                     decoded_xp_spi_csn <= 1;
-                    decoded_xdac_spi_csn <= 1;
-                    spi_xdac_ldac <= 0;
-                    spi_cs_fsm <= 0;
+                    spi_cs_fsm <= 5;
                 end
-            end           
+            end
+            4: begin // xdac                
+                if ((spi_cs_delay_cnt == 2'b01) || (spi_sck_delay_cnt == 24)) begin
+                    decoded_xdac_spi_csn <= 1;
+                    spi_cs_fsm <= 5;
+                end
+                if (spi_sck_delay_cnt == 2'b01) begin // rising edge of SCK                    
+                    spi_cs_data_cnt <= spi_cs_data_cnt + 1;
+                end
+            end
+            5: begin // delay
+                spi_cs_fsm <= 0;
+            end
             default: begin
                 spi_cs_fsm <= 0;
             end

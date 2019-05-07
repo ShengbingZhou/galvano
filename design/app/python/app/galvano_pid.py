@@ -13,10 +13,7 @@ import aardvark_py
 import cheetah_py
 
 def update(frame_number):
-    global data_in, xp_data, line, xp_data_cnt    
-    #if (xp_data_cnt == len(xp_data) + 100):
-    #    hist(xp_data)
-    #xp_data_cnt = xp_data_cnt + 1
+    global data_in, xp_data, line    
     data_out = array.array('B', [ 0x01, 0x00, 0x00, 0x00, 0x00 ]) # nop command
     (count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)
     new_data = (data_in[1] << 8) + data_in[2]
@@ -38,7 +35,7 @@ def hist(data):
     matplotlib.pyplot.figure(figsize=(7, 7))
     matplotlib.pyplot.hist(data)
     matplotlib.pyplot.show()
-    
+
 class PidControl:
     def __init__(self, P=2.0, I=0.0, D=1.0, Derivator=0, Integrator=0, Integrator_max=500, Integrator_min=-500):
         self.Kp = P
@@ -93,18 +90,15 @@ pid = PidControl()
 data_in = aardvark_py.array_u08(5)
 
 # setup xp adc
-#data_out = array.array('B', [ 0xd0, 0x0c, 0x00, 0x00 ])
-#aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)
-#data_out = array.array('B', [ 0xd0, 0x10, 0x00, 0x00 ])
-#aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)
-data_out = array.array('B', [ 0x01, 0xd0, 0x14, 0x00, 0x01 ]) #ADC range: +/-2.5Vref (2.5 * 4.096v)
+data_out = array.array('B', [ 0x01, 0xd0, 0x14, 0x00, 0x01 ]) # adc range: +/-2.5Vref (2.5 * 4.096v)
 aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)    
-data_out = array.array('B', [ 0x01, 0xc8, 0x10, 0x00, 0x00 ])
+data_out = array.array('B', [ 0x01, 0xc8, 0x10, 0x00, 0x00 ]) # start to read data
 aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)
 data_out = array.array('B', [ 0x01, 0x00, 0x00, 0x00, 0x00 ]) # nop command
 (count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)
+
 # read xp adc
-xp_data = [0] * 1000
+xp_data = [0] * 2000
 xp_data_cnt = 0
 
 # draw data
@@ -120,9 +114,9 @@ ax2.set_ylim(-10.24, 10.24)
 ax2.set_ylabel('Value')
 matplotlib.pyplot.grid()
 
-#animation = matplotlib.animation.FuncAnimation(fig, update, interval=10)
+#animation = matplotlib.animation.FuncAnimation(fig, update, interval=10) # show adc data waveform
 
-for i in range(1000):
+for i in range(len(xp_data)):
     data_out = array.array('B', [ 0x01, 0x00, 0x00, 0x00, 0x00 ]) # nop command
     (count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)
     new_data = (data_in[1] << 8) + data_in[2]
@@ -130,10 +124,19 @@ for i in range(1000):
 line.set_ydata(xp_data)
 
 hist(xp_data)
-matplotlib.pyplot.show()
+#matplotlib.pyplot.show()
+
+# write data to dac
+for i in range(0xff):
+    aardvark_py.aa_spi_write(pid.aardvark, array.array('B', [ 0x02, i / 2, 0 ]), 0)
+# aardvark_py.aa_spi_write(pid.aardvark, array.array('B', [ 0x02, 0x00, 0 ]), 0) # 300us
+# aardvark_py.aa_spi_write(pid.aardvark, array.array('B', [ 0x02, 0x20, 0 ]), 0)
+# aardvark_py.aa_spi_write(pid.aardvark, array.array('B', [ 0x02, 0x4f, 0 ]), 0)
+# aardvark_py.aa_spi_write(pid.aardvark, array.array('B', [ 0x02, 0x7f, 0 ]), 0)
 
 # pid algorithm
 pid.setPoint(200)
 #for i in range(100):
     #out = pid.update(i) # update current value
-    
+
+

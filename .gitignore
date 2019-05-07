@@ -1,18 +1,21 @@
 *.pyc
-design/app/fpga/implementation/.vdbs
-design/app/fpga/implementation/*.html
-design/app/fpga/implementation/.ltmp*
-design/app/fpga/implementation/reveal*
+
+design/app/fpga/implementation/
+
+design/app/fpga/fpga_tcr\.dir/
+
 design/DigDrv\.v2/PCB/allegro_free_viewer\.jrl
 
-design/app/fpga/implementation/\.build_status
+design/app/fpga/\.ncd_editor\.ini
 
-design/app/fpga/implementation/automake\.log
+design/app/fpga/\.recovery
 
-design/app/fpga/implementation/__tsef\.v
+design/app/fpga/\.setting\.ini
 
-design/app/fpga/implementation/fpga_implementation\.alt
+design/app/fpga/fpga_tcl\.html
 
-design/app/fpga/implementation/fpga_implementation\.arearep
+design/app/fpga/promote\.xml
 
-design/app/fpga/implementation/fpga_implementation\.bgn
+design/app/fpga/reportview\.xml
+
+design/app/fpga/\.run_manager\.ini

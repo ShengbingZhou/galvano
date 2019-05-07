@@ -3,22 +3,22 @@
     <Options/>
     <Implementation title="implementation" dir="implementation" description="implementation" synthesis="lse" default_strategy="Strategy1">
         <Options def_top="top" top="top"/>
-        <Source name="implementation/source/top.v" type="Verilog" type_short="Verilog">
+        <Source name="source/top.v" type="Verilog" type_short="Verilog">
             <Options top_module="top"/>
         </Source>
-        <Source name="implementation/source/ads8685.v" type="Verilog" type_short="Verilog">
+        <Source name="source/ads8685.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="implementation/source/dec256sinc24b.v" type="Verilog" type_short="Verilog">
+        <Source name="source/dec256sinc24b.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="implementation/source/dac7731.v" type="Verilog" type_short="Verilog">
+        <Source name="source/dac7731.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="implementation/source/pos_pid.v" type="Verilog" type_short="Verilog">
+        <Source name="source/pos_pid.v" type="Verilog" type_short="Verilog">
             <Options/>
         </Source>
-        <Source name="implementation/source/pll_module.ipx" type="IPX_Module" type_short="IPX">
+        <Source name="source/pll_module.ipx" type="IPX_Module" type_short="IPX">
             <Options/>
         </Source>
         <Source name="fpga.lpf" type="Logic Preference" type_short="LPF">
