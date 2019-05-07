@@ -13,12 +13,13 @@ import aardvark_py
 import cheetah_py
 
 def update(frame_number):
-    global data_in, xp_data, line    
+    global xp_data, line_data_bin
+    data_in = aardvark_py.array_u08(5)    
     data_out = array.array('B', [ 0x01, 0x00, 0x00, 0x00, 0x00 ]) # nop command
     (count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)
     new_data = (data_in[1] << 8) + data_in[2]
     xp_data = numpy.concatenate((xp_data[1:], new_data), axis=None)
-    line.set_ydata(xp_data)
+    line_data_bin.set_ydata(xp_data)
 
 def fft(data):
     w = scipy.signal.chebwin(data.shape[0], 200, False)    # Dolph-Chebyshev
@@ -29,24 +30,38 @@ def fft(data):
     sdb = 20 * scipy.log10(scipy.absolute(s))
     matplotlib.pyplot.figure(figsize=(7, 7))
     matplotlib.pyplot.plot(f, sdb)
-    matplotlib.pyplot.show()
+    matplotlib.pyplot.show()    
 
-def hist(data):
-    matplotlib.pyplot.figure(figsize=(7, 7))
-    matplotlib.pyplot.hist(data)
-    matplotlib.pyplot.show()
+def init_xp_adc():
+    data_in = aardvark_py.array_u08(5)
+    data_out = array.array('B', [ 0x01, 0xd0, 0x14, 0x00, 0x01 ]) # adc range: +/-2.5Vref (2.5 * 4.096v)
+    aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)    
+    data_out = array.array('B', [ 0x01, 0xc8, 0x10, 0x00, 0x00 ]) # start to read data
+    aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)
+    data_out = array.array('B', [ 0x01, 0x00, 0x00, 0x00, 0x00 ]) # nop command
+    (count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)
 
-class PidControl:
-    def __init__(self, P=2.0, I=0.0, D=1.0, Derivator=0, Integrator=0, Integrator_max=500, Integrator_min=-500):
+def get_xp_adc():
+    data_in = aardvark_py.array_u08(5)
+    data_out = array.array('B', [ 0x01, 0x00, 0x00, 0x00, 0x00 ]) # nop command
+    (count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)
+    return (data_in[1] << 8) + data_in[2]
+    
+def set_xi_dac(value):
+    value = (value / 2) & 0xffff
+    aardvark_py.aa_spi_write(pid.aardvark, array.array('B', [ 0x02, (value >> 8), (value & 0xff) ]), 0) # 300us
+
+class pid_control:
+    def __init__(self, P=200.0, I=15.0, D=200.0, derivator=0, integrator=0, integrator_max=3000, integrator_min=-3000):
         self.Kp = P
         self.Ki = I
         self.Kd = D
-        self.Derivator  = Derivator
-        self.Integrator = Integrator
-        self.Integrator_max = Integrator_max
-        self.Integrator_min = Integrator_min
-        self.set_point = 0.0
-        self.error = 0.0  
+        self.derivator  = derivator
+        self.integrator = integrator
+        self.integrator_max = integrator_max
+        self.integrator_min = integrator_min
+        self.setpoint = 0.0
+        self.error = 0.0
 
         # Find all the attached devices
         (a_num, a_ports, a_ids) = aardvark_py.aa_find_devices_ext(16, 16)
@@ -66,77 +81,76 @@ class PidControl:
             raise Exception('USB->SPI dongle not found.')
 
     def update(self,current_value):
-        self.error      = self.set_point - current_value
-        self.P_value    = self.Kp * self.error
-        self.D_value    = self.Kd * ( self.error - self.Derivator)
-        self.Derivator  = self.error
-        self.Integrator = self.Integrator + self.error
-        if self.Integrator > self.Integrator_max:
-            self.Integrator = self.Integrator_max
-        elif self.Integrator < self.Integrator_min:
-            self.Integrator = self.Integrator_min
-        self.I_value = self.Integrator * self.Ki
+        self.error = self.setpoint - current_value
+        self.P_value = self.Kp * self.error
+        self.D_value = self.Kd * ( self.error - self.derivator)
+        self.derivator = self.error
+        self.integrator = self.integrator + self.error
+        self.integrator = self.integrator_max if self.integrator > self.integrator_max else self.integrator
+        self.integrator = self.integrator_min if self.integrator < self.integrator_min else self.integrator
+        self.I_value = self.integrator * self.Ki
         return self.P_value + self.I_value + self.D_value
 
-    def setPoint(self,set_point):
-        self.set_point  = set_point
-        self.Integrator = 0
-        self.Derivator  = 0
+    def set_point(self, point):
+        self.setpoint  = point
+        self.integrator = 0
+        self.derivator  = 0
 
 # instantiate pid controller
-pid = PidControl()
-        
-# read back data
-data_in = aardvark_py.array_u08(5)
+pid = pid_control()
 
-# setup xp adc
-data_out = array.array('B', [ 0x01, 0xd0, 0x14, 0x00, 0x01 ]) # adc range: +/-2.5Vref (2.5 * 4.096v)
-aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)    
-data_out = array.array('B', [ 0x01, 0xc8, 0x10, 0x00, 0x00 ]) # start to read data
-aardvark_py.aa_spi_write(pid.aardvark, data_out, 0)
-data_out = array.array('B', [ 0x01, 0x00, 0x00, 0x00, 0x00 ]) # nop command
-(count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)
+# init xp adc
+init_xp_adc()
 
-# read xp adc
+# xp data and current array
 xp_data = [0] * 2000
-xp_data_cnt = 0
+xi_dac  = [0] * 2000
 
-# draw data
+# draw xp adc data
 fig = matplotlib.pyplot.figure(figsize=(7, 7))
-ax = fig.add_subplot(1, 1, 1)
-ax.set_ylim(0, 65535)
-ax.set_ylabel('Data')
-line, = ax.plot(xp_data, 'g')
-
-# show another Y-axis (voltage value)
-ax2 = ax.twinx()
-ax2.set_ylim(-10.24, 10.24)
-ax2.set_ylabel('Value')
-matplotlib.pyplot.grid()
-
+ax_data_bin = fig.add_subplot(2, 1, 1)
+ax_data_bin.grid()
+ax_data_bin.set_ylim(0, 65535)
+ax_data_bin.set_ylabel('Data')
+line_data_bin, = ax_data_bin.plot(xp_data, 'g')
+ax_data_value = ax_data_bin.twinx()                # show another Y-axis (voltage value)
+ax_data_value.set_ylim(-10.24, 10.24)
+ax_data_value.set_ylabel('Value')
 #animation = matplotlib.animation.FuncAnimation(fig, update, interval=10) # show adc data waveform
 
-for i in range(len(xp_data)):
-    data_out = array.array('B', [ 0x01, 0x00, 0x00, 0x00, 0x00 ]) # nop command
-    (count, data_in) = aardvark_py.aa_spi_write(pid.aardvark, data_out, data_in)
-    new_data = (data_in[1] << 8) + data_in[2]
-    xp_data[i] = new_data
-line.set_ydata(xp_data)
+# get xp adc data (test)
+# for i in range(len(xp_data)): 
+    # xp_data[i] = get_xp_adc() 
+# line.set_ydata(xp_data) 
 
-hist(xp_data)
-#matplotlib.pyplot.show()
+# draw xp adc data histogram
+#ax_data_hist = fig.add_subplot(2, 1, 2)
+#ax_data_hist.grid()
+#ax_data_hist.hist(xp_data)
 
-# write data to dac
-for i in range(0xff):
-    aardvark_py.aa_spi_write(pid.aardvark, array.array('B', [ 0x02, i / 2, 0 ]), 0)
-# aardvark_py.aa_spi_write(pid.aardvark, array.array('B', [ 0x02, 0x00, 0 ]), 0) # 300us
-# aardvark_py.aa_spi_write(pid.aardvark, array.array('B', [ 0x02, 0x20, 0 ]), 0)
-# aardvark_py.aa_spi_write(pid.aardvark, array.array('B', [ 0x02, 0x4f, 0 ]), 0)
-# aardvark_py.aa_spi_write(pid.aardvark, array.array('B', [ 0x02, 0x7f, 0 ]), 0)
+# write data to dac (test)
+#for i in range(0xff):
+#    set_xi_dac(i << 8)
+
+# release motor
+set_xi_dac(0x8000)
 
 # pid algorithm
-pid.setPoint(200)
-#for i in range(100):
-    #out = pid.update(i) # update current value
+pid.set_point(10)
+for i in range(len(xp_data)):
+    xp_data[i] = get_xp_adc()
+    out = pid.update(xp_data[i])
+    xi_dac[i] = int(out)
+    set_xi_dac(xi_dac[i])
 
+# show x motor position waveform
+line_data_bin.set_ydata(xp_data)
 
+# show dac's output waveform
+ax_dac_out = fig.add_subplot(2, 1, 2)
+ax_dac_out.grid()
+ax_dac_out.set_ylim(0, 65535)
+ax_dac_out.plot(xi_dac)
+
+# show xp adc figure
+matplotlib.pyplot.show()
