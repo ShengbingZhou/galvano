@@ -48,15 +48,16 @@ def set_xi_dac(value):
     value = (value / 2) & 0xffff # cover fpga bug: dac will shift 1 more bit when loading data
     aardvark_py.aa_spi_write(pid.aardvark, array.array('B', [ 0x02, (value >> 8), (value & 0xff) ]), 0) # 300us
 
-def move_x_motor(pid, target):
+def move_x_motor(pid, target, init_xidac):
     global xp_data, xi_dac, xp_data_total, xi_dac_total
     pid.set_point(target)
     for i in range(single_step_points):
         xp_data[i] = get_xp_adc()
         out = pid.update(xp_data[i])
-        out = int(out) + 0x8000
-        out = (0x8000 + 6500) if out > (0x8000 + 6500) else out
-        out = (0x0000 + 6500) if out < (0x0000 + 6500) else out
+        out = int(out) + init_xidac
+        max_dac_offset = 6500
+        out = (0x8000 + max_dac_offset) if out > (0x8000 + max_dac_offset) else out
+        out = (0x0000 + max_dac_offset) if out < (0x0000 + max_dac_offset) else out
         xi_dac[i] = out
         set_xi_dac(xi_dac[i]) # 300us
         xp_data_total.append(xp_data[i])
@@ -116,11 +117,11 @@ time.sleep(1)
 init_xp_adc()
 
 # xp data and current array
-single_step_points = 500 # points to finish single step move to target
+single_step_points = 250 #points to finish single step move to target
 xp_data = [0] * single_step_points
 xi_dac  = [0] * single_step_points
 xp_data_total = []
-xi_dac_total = []
+xi_dac_total  = []
 
 # draw xp adc data
 fig = matplotlib.pyplot.figure(figsize=(7, 7))
@@ -134,6 +135,7 @@ ax_data_value = ax_data_bin.twinx()                # show another Y-axis (voltag
 ax_data_value.set_ylim(-10.24 - offset * 0.0003125, 10.24 + offset * 0.0003125)
 ax_data_value.set_ylabel('V (xp)')
 
+# show xp adc data in realtime (test)
 #animation = matplotlib.animation.FuncAnimation(fig, update, interval=10) # show adc data waveform like oscilloscope
 #matplotlib.pyplot.show()
 
@@ -142,7 +144,7 @@ ax_data_value.set_ylabel('V (xp)')
     # xp_data[i] = get_xp_adc()
 # line.set_ydata(xp_data)
 
-# draw xp adc data histogram
+# draw xp adc data histogram (test)
 #ax_data_hist = fig.add_subplot(2, 1, 2)
 #ax_data_hist.grid()
 #ax_data_hist.hist(xp_data)
@@ -154,23 +156,25 @@ ax_data_value.set_ylabel('V (xp)')
 xp_limit = [35000, 39600] # (32700, 39700)
 xp_center= (xp_limit[0] + xp_limit[1]) / 2
 
-# step0: move to center slowly
-pid.set_gain(P=0.10, I=0.001, D=0.001)
-move_x_motor(pid, xp_center)
+# step0: move to center
+pid.set_gain(P=0.100, I=0.010, D=0.010)
+move_x_motor(pid, xp_center, 0x8000)
 
 # step1: working - pid controlled moving 
-pid.set_gain(P=0.18, I=0.004, D=0.001)
-moving_test_loop = 0
+pid.set_gain(P=0.200, I=0.010, D=0.200)
+moving_test_loop = 5
 if moving_test_loop > 0:
-    for j in range(moving_test_loop):
-        move_x_motor(pid, xp_center)
-        move_x_motor(pid, xp_center + 1500)
-        move_x_motor(pid, xp_center - 1500)
+    for j in range(moving_test_loop):        
+        move_x_motor(pid, xp_center + 1500, xi_dac[single_step_points - 1])
+        #move_x_motor(pid, xp_center - 1500, xi_dac[single_step_points - 1])
+        move_x_motor(pid, xp_center       , xi_dac[single_step_points - 1])
+        move_x_motor(pid, xp_center - 1500, xi_dac[single_step_points - 1])
+        move_x_motor(pid, xp_center       , xi_dac[single_step_points - 1])
 
 # step 2: move to center before releasing motor
-restore_to_center = 0
+restore_to_center = 1
 if restore_to_center > 0:
-    move_x_motor(pid, xp_center)          
+    move_x_motor(pid, xp_center, xi_dac[single_step_points - 1])
 
 # release motor
 set_xi_dac(0x8000)
@@ -181,7 +185,7 @@ ax_data_bin.plot([xp_center]   * single_step_points, 'g-.')
 ax_data_bin.plot([xp_limit[1]] * single_step_points, 'g-.')
 
 # draw zero line for both xpadc and xdac out
-ax_data_bin.plot([32768] * single_step_points, 'g')
+ax_data_bin.plot([32768] * single_step_points, 'g--')
 
 # draw xp adc track waveform
 line_data_bin.set_ydata(xp_data)
@@ -199,11 +203,11 @@ ax_data_bin.plot(xp_data_total, 'b')
 ax_data_value = ax_data_bin.twinx()                # show another Y-axis (voltage value)
 ax_data_value.set_ylim(-10.24 - offset * 0.0003125, 10.24 + offset * 0.0003125)
 ax_data_value.set_ylabel('V (xp)')
-ax_data_bin.plot(xi_dac_total, 'g')
+ax_data_bin.plot(xi_dac_total, 'r')
 ax_data_bin.plot([xp_limit[0]] * len(xi_dac_total), 'g-.')
 ax_data_bin.plot([xp_center]   * len(xi_dac_total), 'g-.')
 ax_data_bin.plot([xp_limit[1]] * len(xi_dac_total), 'g-.')
-ax_data_bin.plot([32768]       * len(xi_dac_total), 'g')
+ax_data_bin.plot([32768]       * len(xi_dac_total), 'g--')
 
 # show figure
 matplotlib.pyplot.show()
