@@ -55,7 +55,7 @@ def move_x_motor(pid, target, init_xidac):
         xp_data[i] = get_xp_adc()
         out = pid.update(xp_data[i])
         out = int(out) + init_xidac
-        max_dac_offset = 6500
+        max_dac_offset = 10000
         out = (0x8000 + max_dac_offset) if out > (0x8000 + max_dac_offset) else out
         out = (0x0000 + max_dac_offset) if out < (0x0000 + max_dac_offset) else out
         xi_dac[i] = out
@@ -81,16 +81,12 @@ class pid_control:
         else:
             raise Exception('USB->SPI dongle not found.')
 
-    def set_gain(self, P=0.0, I=0.0, D=0.0, derivator=0, integrator=0, integrator_max=3000, integrator_min=-3000):
+    def set_gain(self, P=0.0, I=0.0, D=0.0, integrator_max=3000, integrator_min=-3000):
         self.Kp = P
         self.Ki = I
         self.Kd = D
-        self.derivator  = derivator
-        self.integrator = integrator
         self.integrator_max = integrator_max
         self.integrator_min = integrator_min
-        self.setpoint = 0.0
-        self.error = 0.0
 
     def update(self,current_value):
         self.error      = self.setpoint - current_value
@@ -104,7 +100,10 @@ class pid_control:
         return self.P_value + self.I_value + self.D_value
 
     def set_point(self, point):
-        self.setpoint   = point
+        self.setpoint = point
+        self.error = 0.0 
+        self.derivator = 0.0
+        self.integrator = 0.0
 
 # instantiate pid controller
 pid = pid_control()
@@ -117,7 +116,7 @@ time.sleep(1)
 init_xp_adc()
 
 # xp data and current array
-single_step_points = 250 #points to finish single step move to target
+single_step_points = 60 #points to finish single step move to target
 xp_data = [0] * single_step_points
 xi_dac  = [0] * single_step_points
 xp_data_total = []
@@ -156,20 +155,23 @@ ax_data_value.set_ylabel('V (xp)')
 xp_limit = [35000, 39600] # (32700, 39700)
 xp_center= (xp_limit[0] + xp_limit[1]) / 2
 
+# set gain
+pid.set_gain(P=0.350, I=0.035, D=0.350)
+
 # step0: move to center
-pid.set_gain(P=0.100, I=0.010, D=0.010)
 move_x_motor(pid, xp_center, 0x8000)
 
 # step1: working - pid controlled moving 
-pid.set_gain(P=0.200, I=0.010, D=0.200)
 moving_test_loop = 5
 if moving_test_loop > 0:
-    for j in range(moving_test_loop):        
+    for j in range(moving_test_loop):
         move_x_motor(pid, xp_center + 1500, xi_dac[single_step_points - 1])
-        #move_x_motor(pid, xp_center - 1500, xi_dac[single_step_points - 1])
+        move_x_motor(pid, xp_center - 1500, xi_dac[single_step_points - 1])
+        move_x_motor(pid, xp_center + 1500, xi_dac[single_step_points - 1])
         move_x_motor(pid, xp_center       , xi_dac[single_step_points - 1])
         move_x_motor(pid, xp_center - 1500, xi_dac[single_step_points - 1])
-        move_x_motor(pid, xp_center       , xi_dac[single_step_points - 1])
+        move_x_motor(pid, xp_center       , xi_dac[single_step_points - 1])        
+        #move_x_motor(pid, xp_center + j * 50, xi_dac[single_step_points - 1]) # line test
 
 # step 2: move to center before releasing motor
 restore_to_center = 1
