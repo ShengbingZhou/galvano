@@ -6,6 +6,8 @@
       (File ".\latticeplds.olb"
         (Type "Schematic Library"))
       (File ".\library1.olb"
+        (Type "Schematic Library"))
+      (File ".\10m02sc.olb"
         (Type "Schematic Library")))
     (File ".\galvo_ctrl_brd.dsn"
       (Type "Schematic Design"))
@@ -79,9 +81,9 @@
     ("Allegro Netlist Combine Property String" "PCB Footprint")
     ("Allegro Netlist Ignore Fixed Property" "FALSE")
     ("Allegro Netlist User Defined Property" "FALSE")
-    (Board_sim_option "VHDL_flow")
     ("Allegro Netlist Input Board File"
-       "C:\_work\galvano\design\DigDrv.v2\PCB\GALVO_CTRL.brd"))
+       "C:\_work\galvano\design\DigDrv.v2\PCB\GALVO_CTRL.brd")
+    (Board_sim_option "VHDL_flow"))
   (Folder "Outputs"
     (File "..\sch\galvo_ctrl_brd.drc"
       (Type "Report"))
@@ -119,51 +121,66 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources" ".\galvo_ctrl_brd.dsn")
-      (Path "Design Resources" ".\galvo_ctrl_brd.dsn" "ALL")
-      (Path "Design Resources" ".\galvo_ctrl_brd.dsn" "ADC_DAC")
-      (Path "Design Resources" ".\galvo_ctrl_brd.dsn" "FPGA")
-      (Path "Design Resources" ".\galvo_ctrl_brd.dsn" "POWER")
-      (Path "Design Resources" "Library"))
+      (Path "Design Resources" ".\galvo_ctrl_brd.dsn" "SCHEMATIC1")
+      (Path "Design Resources" "Library")
+      (Select "Design Resources" ".\galvo_ctrl_brd.dsn" "SCHEMATIC1"
+         "PAGE3 : FPGA"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -31 198 1584 207 720"))
+        (Placement "44 2 3 -1 -1 -4 -23 198 1576 207 720"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -31 130 1516 130 817")
-        (Scroll "-190 -2")
-        (Zoom "63")
+        (Placement "44 0 1 -1 -1 -4 -23 264 1642 264 854")
+        (Scroll "0 0")
+        (Zoom "102")
         (Occurrence "/"))
       (Path
-         "C:\_WORK\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.DSN")
-      (Schematic "ALL")
-      (Page "TOP"))
+         "C:\USERS\BING\DOCUMENTS\BZHOU\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE2 : ADC.DAC"))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -31 156 1542 156 843")
-        (Scroll "172 289")
-        (Zoom "100")
-        (Occurrence "/U3"))
+        (Placement "44 0 1 -1 -1 -4 -23 286 1827 286 989")
+        (Scroll "0 0")
+        (Zoom "102")
+        (Occurrence "/"))
       (Path
-         "C:\_WORK\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.DSN")
-      (Schematic "POWER")
-      (Page "POWER"))
+         "C:\USERS\BING\DOCUMENTS\BZHOU\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE4 : POWER"))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -31 0 1160 0 270")
-        (Scroll "0 30")
-        (Zoom "100")
-        (Occurrence "/U1"))
+        (Placement "44 0 1 -1 -1 -4 -23 330 1871 330 1033")
+        (Scroll "-91 117")
+        (Zoom "136")
+        (Occurrence "/"))
       (Path
-         "C:\_WORK\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.DSN")
-      (Schematic "ADC_DAC")
-      (Page "DAC")))
+         "C:\USERS\BING\DOCUMENTS\BZHOU\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1 : INTERFACE")))
   (PartMRUSelector
+    (CON10
+      (FullPartName "CON10.Normal")
+      (LibraryName
+         "C:\USERS\BING\DOCUMENTS\BZHOU\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\LIBRARY1.OLB")
+      (DeviceIndex "0"))
+    ("10M02SC U169"
+      (FullPartName "10M02SC U169-10.Normal")
+      (LibraryName
+         "C:\USERS\BING\DOCUMENTS\BZHOU\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\10M02SC.OLB")
+      (DeviceIndex "10"))
+    (OFFPAGELEFT-L
+      (LibraryName "C:\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
+    (OFFPAGELEFT-R
+      (LibraryName "C:\CADENCE\SPB_16.5\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
     (LTM4622
       (FullPartName "LTM4622.Normal")
       (LibraryName
@@ -241,9 +258,6 @@
     (PORTLEFT-R
       (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
-    (OFFPAGELEFT-L
-      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
-      (DeviceIndex "0"))
     (LM74CIM-3
       (FullPartName "LM74CIM-3.Normal")
       (LibraryName "F:\产品设计\振镜\驱动板电路\第三版设计\SCH\LIBRARY1.OLB")
@@ -259,19 +273,6 @@
     ("HEADER 4X2"
       (FullPartName "HEADER 4X2.Normal")
       (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
-      (DeviceIndex "0"))
-    (SN74LV4T125
-      (FullPartName "SN74LV4T125.Normal")
-      (LibraryName "F:\产品设计\振镜\驱动板电路\第三版设计\SCH\LIBRARY1.OLB")
-      (DeviceIndex "0"))
-    (TPD4E1B06
-      (FullPartName "TPD4E1B06.Normal")
-      (LibraryName "F:\产品设计\振镜\驱动板电路\第三版设计\SCH\LIBRARY1.OLB")
-      (DeviceIndex "0"))
-    (CON6
-      (FullPartName "CON6.Normal")
-      (LibraryName "C:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CONNECTOR.OLB")
       (DeviceIndex "0")))
   (LastUsedLibraryBrowseDirectory "C:\Cadence\SPB_16.6\tools\capture\library")
-  (ISPCBBASICLICENSE "false")
-  (MPSSessionName "Bing"))
+  (ISPCBBASICLICENSE "false"))
