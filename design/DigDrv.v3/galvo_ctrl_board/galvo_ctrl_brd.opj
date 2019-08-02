@@ -65,15 +65,16 @@
     (width_End "80")
     (Netlist_TAB "0")
     ("Create Allegro Netlist" "TRUE")
-    ("Allegro Netlist Directory" "C:\_WORK\GALVANO\DESIGN\DIGDRV.V2\PCB")
+    ("Allegro Netlist Directory"
+       "C:\USERS\BING\DOCUMENTS\BZHOU\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD")
     ("View Allegro Netlist Files" "FALSE")
     ("Allegro Netlist Create DCF File" "FALSE")
     ("Update Allegro Board" "TRUE")
     ("Allegro Netlist Output Board File"
-       "C:\_work\galvano\design\DigDrv.v2\PCB\GALVO_CTRL.brd")
+       "C:\Users\Bing\Documents\bzhou\galvano\design\DigDrv.v3\galvo_ctrl_board\galvo_ctrl_brd.brd")
     ("Allegro Netlist Remove Etch" "FALSE")
     ("Allegro Netlist Place Changed Component" "ALWAYS_REPLACE")
-    ("Allegro Netlist Open Board in Allegro" "NEITHER")
+    ("Allegro Netlist Open Board in Allegro" "ALLEGRO")
     ("Allegro Setup Backup Versions" "3")
     ("Allegro Setup Output Warnings" "TRUE")
     ("Allegro Setup Ignore Constraints" "FALSE")
@@ -82,8 +83,23 @@
     ("Allegro Netlist Ignore Fixed Property" "FALSE")
     ("Allegro Netlist User Defined Property" "FALSE")
     ("Allegro Netlist Input Board File"
-       "C:\_work\galvano\design\DigDrv.v2\PCB\GALVO_CTRL.brd")
-    (Board_sim_option "VHDL_flow"))
+       "C:\Users\Bing\Documents\bzhou\galvano\design\DigDrv.v3\galvo_ctrl_board\galvo_ctrl_brd.brd")
+    (Board_sim_option "VHDL_flow")
+    ("Allegro Setup Configuration File"
+       "C:\Cadence\SPB_16.5\tools\capture\allegro.cfg")
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File
+       "C:\USERS\BING\DOCUMENTS\BZHOU\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_Header "Item\tQuantity\tReference\tPart")
+    (BOM_Include_File
+       "C:\USERS\BING\DOCUMENTS\BZHOU\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "TRUE")
+    (BOM_View_Output "FALSE"))
   (Folder "Outputs"
     (File "..\sch\galvo_ctrl_brd.drc"
       (Type "Report"))
@@ -115,16 +131,24 @@
       (DisplayName "pstxprt.dat"))
     (File ".\pcb\pstchip.dat"
       (Type "Report")
-      (DisplayName "pstchip.dat")))
+      (DisplayName "pstchip.dat"))
+    (File ".\pstxnet.dat"
+      (Type "Report")
+      (DisplayName "pstxnet.dat"))
+    (File ".\pstxprt.dat"
+      (Type "Report")
+      (DisplayName "pstxprt.dat"))
+    (File ".\pstchip.dat"
+      (Type "Report")
+      (DisplayName "pstchip.dat"))
+    (File ".\galvo_ctrl_brd.bom"
+      (Type "Report")))
   (Folder "Referenced Projects")
   (GlobalState
     (FileView
       (Path "Design Resources")
       (Path "Design Resources" ".\galvo_ctrl_brd.dsn")
-      (Path "Design Resources" ".\galvo_ctrl_brd.dsn" "SCHEMATIC1")
-      (Path "Design Resources" "Library")
-      (Select "Design Resources" ".\galvo_ctrl_brd.dsn" "SCHEMATIC1"
-         "PAGE3 : FPGA"))
+      (Path "Design Resources" ".\galvo_ctrl_brd.dsn" "SCHEMATIC1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -145,7 +169,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -4 -23 286 1827 286 989")
+        (Placement "44 0 1 -1 -1 -4 -23 286 1664 286 989")
         (Scroll "0 0")
         (Zoom "102")
         (Occurrence "/"))
@@ -156,14 +180,25 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -4 -23 330 1871 330 1033")
-        (Scroll "-91 117")
+        (Placement "44 0 1 -1 -1 -4 -23 330 1708 330 1033")
+        (Scroll "-9 117")
         (Zoom "136")
         (Occurrence "/"))
       (Path
          "C:\USERS\BING\DOCUMENTS\BZHOU\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "PAGE1 : INTERFACE")))
+      (Page "PAGE1 : INTERFACE"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 220 1805 220 847")
+        (Scroll "0 0")
+        (Zoom "102")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\BING\DOCUMENTS\BZHOU\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE3 : FPGA")))
   (PartMRUSelector
     (CON10
       (FullPartName "CON10.Normal")
