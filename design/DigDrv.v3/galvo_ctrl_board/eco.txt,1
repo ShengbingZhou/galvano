@@ -1,0 +1,29 @@
+|------------------------------------------------------------------------------|
+|                                 ECO   REPORT                                 |
+|                                                                    Page   1  |
+|------------------------------------------------------------------------------|
+|  C:.../bzhou/galvano/design/DigDrv.v3/galvo_ctrl_board/galvo_ctrl_brd.brd    |
+|                                                    Mon Jul 29 09:18:08 2019  |
+|------------------------------------------------------------------------------|
+| NET CHANGES                                                                  |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+|   net  name |  type of change |    pin_id     |   x   |   y   |   to  net    |
+|- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - |
+  XPADC_CS     pins MOVED FROM this net (to net name listed on right)
+                                 P1.B5            137.01  -42.52
+                                                                      XPADC_SCK
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  XPADC_SCK    pins MOVED FROM this net (to net name listed on right)
+                                 P1.A5            137.01  -11.02
+                                                                       XPADC_CS
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  XPADC_SDO0   pins MOVED FROM this net (to net name listed on right)
+                                 P1.B4            105.51  -42.52
+                                                                     XPADC_SDO1
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  
+  XPADC_SDO1   pins MOVED FROM this net (to net name listed on right)
+                                 P1.A4            105.51  -11.02
+                                                                     XPADC_SDO0
+|------------------------------------------------------------------------------|
+|   total ECO changes reported  4                                              |
+|------------------------------------------------------------------------------|

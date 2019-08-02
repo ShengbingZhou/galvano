@@ -1,0 +1,29 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    QUICKPLACE LOG                                                   )
+(                                                                     )
+(    Drawing          : galvo_ctrl_brd.brd                            )
+(    Software Version : 16.5P003                                      )
+(    Date/Time        : Sat Jul 27 23:58:02 2019                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+State: Placing on layer TOP
+
+         Placed symbol:  C67 / C_0603C_0.1UF / 0603C at (1250.42 1024.99)
+         Placed symbol:  C68 / C_0603C_0.1UF / 0603C at (1250.42 956.99)
+         Placed symbol:  C69 / C_0603C_0.1UF / 0603C at (1250.42 888.99)
+         Placed symbol:  C70 / C_0603C_0.1UF / 0603C at (1250.42 820.99)
+         Placed symbol:  C71 / C_0603C_0.1UF / 0603C at (1250.42 752.99)
+         Placed symbol:  C72 / C_0603C_0.1UF / 0603C at (1250.42 684.99)
+         Placed symbol:  C73 / C_0603C_0.1UF / 0603C at (1250.42 616.99)
+         Placed symbol:  C74 / C_0603C_0.1UF / 0603C at (1250.42 548.99)
+         Placed symbol:  C75 / C_0603C_0.1UF / 0603C at (1250.42 480.99)
+         Placed symbol:  C76 / C_0603C_0.1UF / 0603C at (1250.42 412.99)
+
+
+Placed 10 of 10 applicable (10 total) symbols.
+
+-----------------------------------------------------------------------
+

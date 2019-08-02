@@ -1,0 +1,1310 @@
+FILE_TYPE = EXPANDEDPARTLIST;
+{ Using PSTWRITER 16.5.0 p001Jul-29-2019 at 09:03:27 }
+DIRECTIVES
+ PST_VERSION='PST_HDL_CENTRIC_VERSION_0';
+ ROOT_DRAWING='GALVO_CTRL_BRD';
+ POST_TIME='Apr 21 2011 10:02:30';
+ SOURCE_TOOL='CAPTURE_WRITER';
+END_DIRECTIVES;
+
+PART_NAME
+ C102 'C_0805C_47UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS240651@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins240651@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins240651@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C103 'C_0805C_47UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS240667@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins240667@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins240667@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C104 'C_0603C_4.7UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS240707@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins240707@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins240707@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C108 'C_0603C_4.7UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS241341@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins241341@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins241341@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C109 'C_0603C_4.7UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS241385@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins241385@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins241385@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C110 'C_0805C_22UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS241825@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins241825@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins241825@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C111 'C_0805C_47UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS241907@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins241907@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins241907@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C21 'CAP NP_0603C_220PF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS227146@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins227146@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins227146@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C22 'CAP NP_0603C_4.7UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226252@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226252@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226252@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C23 'CAP NP_0603C_10UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226236@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226236@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226236@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C24 'CAP NP_0603C_1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226268@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226268@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226268@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C25 'CAP NP_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226154@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226154@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226154@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C26 'CAP NP_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226106@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226106@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226106@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C27 'CAP NP_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226968@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226968@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226968@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C28 'CAP NP_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226984@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226984@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226984@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C29 'CAP NP_0603C_220PF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS227210@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins227210@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins227210@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C30 'CAP NP_0603C_4.7UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226672@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226672@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226672@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C31 'CAP NP_0603C_10UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226656@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226656@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226656@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C32 'CAP NP_0603C_1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226688@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226688@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226688@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C33 'CAP NP_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226362@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226362@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226362@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C34 'CAP NP_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226382@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226382@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226382@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C35 'CAP NP_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226586@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226586@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226586@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C36 'CAP NP_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226544@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226544@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226544@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C37 'CAP NP_0603C_1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS229323@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins229323@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins229323@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C38 'CAP NP_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS229165@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins229165@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins229165@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C39 'CAP NP_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS228947@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins228947@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins228947@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C40 'CAP NP_0603C_10UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS228975@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins228975@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins228975@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C41 'CAP NP_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS229015@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins229015@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins229015@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C42 'CAP NP_0603C_10UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS229031@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins229031@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins229031@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C43 'CAP NP_0603C_1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS229707@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins229707@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins229707@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C44 'CAP NP_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS229601@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins229601@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins229601@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C45 'CAP NP_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS229405@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins229405@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins229405@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C46 'CAP NP_0603C_10UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS229425@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins229425@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins229425@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C47 'CAP NP_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS229469@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins229469@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins229469@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C48 'CAP NP_0603C_10UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS229491@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins229491@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins229491@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C49 'CAP NP_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS253069@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins253069@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins253069@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C50 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS248801@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins248801@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins248801@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C59 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS296757@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins296757@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins296757@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C61 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS244236@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins244236@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins244236@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C62 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS244140@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins244140@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins244140@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C63 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS244252@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins244252@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins244252@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C64 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS243934@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins243934@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins243934@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C65 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS243954@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins243954@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins243954@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C66 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS243982@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins243982@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins243982@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C67 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS316139@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins316139@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins316139@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C68 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS316187@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins316187@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins316187@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C69 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS244086@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins244086@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins244086@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C70 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS244102@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins244102@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins244102@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C71 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS244172@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins244172@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins244172@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C72 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS244208@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins244208@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins244208@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C73 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS244284@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins244284@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins244284@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C74 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS244456@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins244456@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins244456@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C75 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS244472@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins244472@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins244472@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C76 'C_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS244516@DISCRETE.C.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins244516@discrete.\c.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins244516@discrete.\c.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ C97 'CAP NP_0603C_0.1UF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS243133@DISCRETE.CAP NP.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins243133@discrete.\cap np.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins243133@discrete.\cap np.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D1 'LED_0_1206_LED_LED':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS298915@GALVO_CTRL_BRD.LED_0.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins298915@galvo_ctrl_brd.\led_0.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins298915@galvo_ctrl_brd.\led_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ D2 'LED_0_1206_LED_LED':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS299686@GALVO_CTRL_BRD.LED_0.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins299686@galvo_ctrl_brd.\led_0.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins299686@galvo_ctrl_brd.\led_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J1 'HEADER 6X2_IDC12_X_DRV_IF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS133161@CONNECTOR.HEADER 6X2.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins133161@connector.\header 6x2.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins133161@connector.\header 6x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J2 'HEADER 6X2_IDC12_Y_DRV_IF':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS132965@CONNECTOR.HEADER 6X2.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins132965@connector.\header 6x2.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins132965@connector.\header 6x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J3 'HEADER 15X2_IDC30_HEADER 15X2':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS193581@CONNECTOR.HEADER 15X2.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins193581@connector.\header 15x2.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins193581@connector.\header 15x2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J5 'CON3_SIP3_UART1':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS244364@CONNECTOR.CON3.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins244364@connector.\con3.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins244364@connector.\con3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J6 'CON3_SIP3_UART2':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS244382@CONNECTOR.CON3.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins244382@connector.\con3.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins244382@connector.\con3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ J7 'CON10_IDC10_CON10':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS285973@LIBRARY1.CON10.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins285973@library1.\con10.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins285973@library1.\con10.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L1 'INDUCTOR_2412L_FB':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS183114@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins183114@discrete.\inductor.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins183114@discrete.\inductor.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L2 'INDUCTOR_2412L_FB':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS134647@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins134647@discrete.\inductor.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins134647@discrete.\inductor.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ L3 'INDUCTOR_2412L_FB':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS134663@DISCRETE.INDUCTOR.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins134663@discrete.\inductor.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins134663@discrete.\inductor.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ P1 '10M02SC U169_15_UBGA169_(S1+S2+':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS260704@GALVO_CTRL_BRD.10M02SC U169_15-1.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins260704@galvo_ctrl_brd.\10m02sc u169_15-1.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins260704@galvo_ctrl_brd.\10m02sc u169_15-1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='-1';
+
+SECTION_NUMBER 10
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS273893@GALVO_CTRL_BRD.10M02SC U169_15-10.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins273893@galvo_ctrl_brd.\10m02sc u169_15-10.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins273893@galvo_ctrl_brd.\10m02sc u169_15-10.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='-10';
+
+SECTION_NUMBER 11
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS273937@GALVO_CTRL_BRD.10M02SC U169_15-11.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins273937@galvo_ctrl_brd.\10m02sc u169_15-11.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins273937@galvo_ctrl_brd.\10m02sc u169_15-11.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='-11';
+
+SECTION_NUMBER 2
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS261162@GALVO_CTRL_BRD.10M02SC U169_15-2.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins261162@galvo_ctrl_brd.\10m02sc u169_15-2.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins261162@galvo_ctrl_brd.\10m02sc u169_15-2.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='-2';
+
+SECTION_NUMBER 3
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS261219@10M02SC.10M02SC U169_15-3.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins261219@\10m02sc\.\10m02sc u169_15-3.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins261219@\10m02sc\.\10m02sc u169_15-3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='-3';
+
+SECTION_NUMBER 4
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS261373@GALVO_CTRL_BRD.10M02SC U169_15-4.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins261373@galvo_ctrl_brd.\10m02sc u169_15-4.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins261373@galvo_ctrl_brd.\10m02sc u169_15-4.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='-4';
+
+SECTION_NUMBER 5
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS261511@GALVO_CTRL_BRD.10M02SC U169_15-5.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins261511@galvo_ctrl_brd.\10m02sc u169_15-5.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins261511@galvo_ctrl_brd.\10m02sc u169_15-5.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='-5';
+
+SECTION_NUMBER 6
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS270404@GALVO_CTRL_BRD.10M02SC U169_15-6.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins270404@galvo_ctrl_brd.\10m02sc u169_15-6.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins270404@galvo_ctrl_brd.\10m02sc u169_15-6.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='-6';
+
+SECTION_NUMBER 7
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS270482@GALVO_CTRL_BRD.10M02SC U169_15-7.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins270482@galvo_ctrl_brd.\10m02sc u169_15-7.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins270482@galvo_ctrl_brd.\10m02sc u169_15-7.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='-7';
+
+SECTION_NUMBER 8
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS270570@GALVO_CTRL_BRD.10M02SC U169_15-8.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins270570@galvo_ctrl_brd.\10m02sc u169_15-8.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins270570@galvo_ctrl_brd.\10m02sc u169_15-8.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='-8';
+
+SECTION_NUMBER 9
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS269313@GALVO_CTRL_BRD.10M02SC U169_15-9.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins269313@galvo_ctrl_brd.\10m02sc u169_15-9.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins269313@galvo_ctrl_brd.\10m02sc u169_15-9.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='-9';
+
+PART_NAME
+ R31 'R_0603R_100':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS227110@20130522.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins227110@\20130522\.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins227110@\20130522\.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R32 'R_0603R_220':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS227064@20130522.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins227064@\20130522\.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins227064@\20130522\.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R33 'R_0603R_NC':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226026@20130522.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226026@\20130522\.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226026@\20130522\.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R34 'R_0603R_100':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS227170@20130522.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins227170@\20130522\.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins227170@\20130522\.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R35 'R_0603R_220':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226462@20130522.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226462@\20130522\.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226462@\20130522\.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R36 'R_0603R_NC':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226058@20130522.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226058@\20130522\.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226058@\20130522\.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R38 'R_0603R_100K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS229299@20130522.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins229299@\20130522\.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins229299@\20130522\.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R40 'R_0603R_100K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS229675@20130522.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins229675@\20130522\.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins229675@\20130522\.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R41 'R_0603R_100':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS248917@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins248917@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins248917@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R42 'R_0603R_100':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS248933@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins248933@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins248933@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R43 'R_0603R_100':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS248949@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins248949@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins248949@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R44 'R_0603R_120':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS250801@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins250801@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins250801@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R45 'R_0603R_100':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS248973@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins248973@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins248973@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R46 'R_0603R_10K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS294502@20130522.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins294502@\20130522\.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins294502@\20130522\.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R47 'R_0603R_10K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS294571@20130522.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins294571@\20130522\.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins294571@\20130522\.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R48 'R_0603R_1K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS285305@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins285305@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins285305@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R49 'R_0603R_10K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS284106@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins284106@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins284106@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R50 'R_0603R_10K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS284148@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins284148@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins284148@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R51 'R_0603R_10K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS284186@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins284186@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins284186@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R52 'R_0603R_10K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS284615@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins284615@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins284615@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R53 'R_0603R_10K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS286469@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins286469@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins286469@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R54 'R_0603R_10K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS286485@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins286485@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins286485@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R55 'R_0603R_10K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS294751@20130522.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins294751@\20130522\.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins294751@\20130522\.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R56 'R_0603R_10K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS294775@20130522.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins294775@\20130522\.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins294775@\20130522\.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R57 'R_0603R_13.3K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS240563@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins240563@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins240563@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R58 'R_0603R_8.25K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS240591@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins240591@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins240591@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R59 'R_0603R_1K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS298931@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins298931@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins298931@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R60 'R_0603R_1K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS299702@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins299702@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins299702@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R61 'R_0603R_80.6K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS241405@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins241405@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins241405@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R62 'R_0603R_80.6K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS241425@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins241425@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins241425@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R63 'R_0603R_130K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS241639@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins241639@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins241639@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R64 'R_0603R_143K':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS241655@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins241655@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins241655@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R65 'R_0603R_0':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS314712@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins314712@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins314712@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ R66 'R_0603R_0':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS314738@DISCRETE.R.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins314738@discrete.\r.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins314738@discrete.\r.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T1 'CON1_MOUNT-HOLE-79_HOLE':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS240469@CONNECTOR.CON1.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins240469@connector.\con1.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins240469@connector.\con1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T2 'CON1_MOUNT-HOLE-79_HOLE':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS240497@CONNECTOR.CON1.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins240497@connector.\con1.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins240497@connector.\con1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T3 'CON1_MOUNT-HOLE-79_HOLE':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS240483@CONNECTOR.CON1.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins240483@connector.\con1.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins240483@connector.\con1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ T4 'CON1_MOUNT-HOLE-79_HOLE':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS240511@CONNECTOR.CON1.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins240511@connector.\con1.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins240511@connector.\con1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP2 'CON1_TP_P':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS259955@CONNECTOR.CON1.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins259955@connector.\con1.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins259955@connector.\con1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP3 'CON1_TP_VAA12VP':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS241981@CONNECTOR.CON1.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins241981@connector.\con1.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins241981@connector.\con1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP4 'CON1_TP_VCC12VN':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS242035@CONNECTOR.CON1.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins242035@connector.\con1.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins242035@connector.\con1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP5 'CON1_TP_VDD3V3':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS253240@CONNECTOR.CON1.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins253240@connector.\con1.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins253240@connector.\con1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP6 'CON1_TP_N':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS259977@CONNECTOR.CON1.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins259977@connector.\con1.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins259977@connector.\con1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ TP7 'CON1_TP_VAA5V':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS253303@CONNECTOR.CON1.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins253303@connector.\con1.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins253303@connector.\con1.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U10 'DAC7731E_SSOP24_DAC7731E':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS229747@LIBRARY1.DAC7731E.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins229747@library1.\dac7731e.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins229747@library1.\dac7731e.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U11 'AM26C32_SO16_AM26LV32E':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS248817@LIBRARY1.AM26C32.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins248817@library1.\am26c32.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins248817@library1.\am26c32.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U12 'MAX3485ESA_SO8_MAX3485ESA':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS250717@LIBRARY1.MAX3485ESA.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins250717@library1.\max3485esa.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins250717@library1.\max3485esa.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U25 'LM74CIM-3_SO8_LM74CIM-3':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS243097@LIBRARY1.LM74CIM-3.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins243097@library1.\lm74cim-3.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins243097@library1.\lm74cim-3.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U27 'LTM8049_BGA77_LTM8049':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS241461@LIBRARY1.LTM8049.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins241461@library1.\ltm8049.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins241461@library1.\ltm8049.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U28 'LTM4622_BGA25_LTM4622':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS240377@LIBRARY1.LTM4622.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins240377@library1.\ltm4622.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins240377@library1.\ltm4622.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U5 'ADS8685IPW_TSSOP16_ADS8685IPW':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS227230@LIBRARY1.ADS8685IPW.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins227230@library1.\ads8685ipw.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins227230@library1.\ads8685ipw.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U6 'AD8421_SO8_AD8421ARZ':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226940@LIBRARY1.AD8421.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226940@library1.\ad8421.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226940@library1.\ad8421.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U7 'AD8421_SO8_AD8421ARZ':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226334@LIBRARY1.AD8421.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226334@library1.\ad8421.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226334@library1.\ad8421.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U8 'ADS8685IPW_TSSOP16_ADS8685IPW':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS226748@LIBRARY1.ADS8685IPW.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins226748@library1.\ads8685ipw.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins226748@library1.\ads8685ipw.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ U9 'DAC7731E_SSOP24_DAC7731E':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS229925@LIBRARY1.DAC7731E.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins229925@library1.\dac7731e.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins229925@library1.\dac7731e.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+PART_NAME
+ Y1 'OSC4/SM_0_XTAL_OSC4_20M':;
+
+SECTION_NUMBER 1
+ '@GALVO_CTRL_BRD.SCHEMATIC1(SCH_1):INS296737@GALVOSERVODRV.OSC4/SM_0.NORMAL(CHIPS)':
+ C_PATH='@galvo_ctrl_brd.schematic1(sch_1):ins296737@galvoservodrv.\osc4/sm_0.normal\(chips)',
+ P_PATH='@galvo_ctrl_brd.schematic1(sch_1):page1_ins296737@galvoservodrv.\osc4/sm_0.normal\(chips)',
+ PRIM_FILE='.\pstchip.dat',
+ SECTION='';
+
+END.
