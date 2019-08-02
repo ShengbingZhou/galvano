@@ -5460,4 +5460,122 @@
 \i (00:21:52) trapsize 1099
 \i (00:21:54) roam start
 \i (00:21:54) roam x -16
-\i 
+\i (00:21:54) roam x -80
+\i (00:21:54) roam y 16
+\i (00:21:54) roam x -80
+\i (00:21:54) roam y 16
+\i (00:21:54) roam x -64
+\i (00:21:54) roam y 16
+\i (00:21:54) roam end
+\i (00:21:54) zoom in 1 
+\i (00:21:54) setwindow pcb
+\i (00:21:54) zoom in -1250.44 8.71
+\i (00:21:54) trapsize 550
+\i (00:21:54) zoom in 1 
+\i (00:21:54) setwindow pcb
+\i (00:21:54) zoom in -1250.44 8.71
+\i (00:21:54) trapsize 275
+\i (00:21:55) zoom in 1 
+\i (00:21:55) setwindow pcb
+\i (00:21:55) zoom in -1178.99 -0.63
+\i (00:21:55) trapsize 137
+\i (00:21:55) zoom out 1 
+\i (00:21:55) setwindow pcb
+\i (00:21:55) zoom out -1177.89 -1.45
+\i (00:21:55) trapsize 275
+\i (00:21:56) zoom out 1 
+\i (00:21:56) setwindow pcb
+\i (00:21:56) zoom out -1176.79 -3.11
+\i (00:21:56) trapsize 550
+\i (00:21:56) zoom in 1 
+\i (00:21:56) setwindow pcb
+\i (00:21:56) zoom in -1159.19 -3.10
+\i (00:21:56) trapsize 275
+\i (00:21:56) zoom in 1 
+\i (00:21:56) setwindow pcb
+\i (00:21:56) zoom in -1159.19 -3.10
+\i (00:21:56) trapsize 137
+\i (00:21:56) zoom in 1 
+\i (00:21:56) setwindow pcb
+\i (00:21:56) zoom in -1159.19 -3.10
+\i (00:21:56) trapsize 69
+\i (00:21:57) zoom out 1 
+\i (00:21:57) setwindow pcb
+\i (00:21:57) zoom out -1158.78 -2.95
+\i (00:21:57) trapsize 137
+\i (00:21:57) zoom out 1 
+\i (00:21:57) setwindow pcb
+\i (00:21:57) zoom out -1158.78 -2.96
+\i (00:21:57) trapsize 275
+\i (00:21:57) zoom out 1 
+\i (00:21:57) setwindow pcb
+\i (00:21:57) zoom out -1158.78 -2.95
+\i (00:21:57) trapsize 550
+\i (00:21:57) zoom in 1 
+\i (00:21:57) setwindow pcb
+\i (00:21:57) zoom in -1155.49 4.74
+\i (00:21:57) trapsize 275
+\i (00:21:57) zoom in 1 
+\i (00:21:57) setwindow pcb
+\i (00:21:57) zoom in -1155.48 4.75
+\i (00:21:57) trapsize 137
+\i (00:21:57) zoom in 1 
+\i (00:21:57) setwindow pcb
+\i (00:21:57) zoom in -1155.48 4.75
+\i (00:21:57) trapsize 69
+\i (00:21:58) zoom out 1 
+\i (00:21:58) setwindow pcb
+\i (00:21:58) zoom out -1155.48 4.75
+\i (00:21:58) trapsize 137
+\i (00:21:58) zoom out 1 
+\i (00:21:58) setwindow pcb
+\i (00:21:58) zoom out -1155.48 4.47
+\i (00:21:58) trapsize 275
+\i (00:21:58) zoom out 1 
+\i (00:21:58) setwindow pcb
+\i (00:21:58) zoom out -1154.92 3.93
+\i (00:21:58) trapsize 550
+\i (00:21:58) zoom out 1 
+\i (00:21:58) setwindow pcb
+\i (00:21:58) zoom out -1152.73 -0.47
+\i (00:21:58) trapsize 1099
+\i (00:21:59) zoom fit 
+\i (00:21:59) trapsize 1099
+\i (00:22:04) artwork 
+\w (00:22:04) Artwork output type (GERBER_RS274X) does not match the format used in dynamic shapes parameters (GERBER4X00). Use Global shape parameter dialog, tab Void Controls to change format type.
+\i (00:22:07) setwindow form.film_control
+\i (00:22:07) FORM film_control filmtree popup Cut 'BOARD GEOMETRY/OUTLINE' L2 
+\i (00:22:08) FORM film_control filmtree 'MULTISEL YES' L2 
+\i (00:22:08) FORM film_control filmtree  L2 
+\i (00:22:10) FORM film_control filmtree  'BOARD GEOMETRY/OUTLINE' BOTTOM 
+\i (00:22:11) FORM film_control filmtree popup Cut 'BOARD GEOMETRY/OUTLINE' BOTTOM 
+\i (00:22:12) FORM film_control filmtree  BOTTOM 
+\i (00:22:14) FORM film_control filmtree popup Cut 'BOARD GEOMETRY/OUTLINE' L3 
+\i (00:22:15) FORM film_control filmtree  L3 
+\i (00:22:16) FORM film_control filmtree popup Cut 'BOARD GEOMETRY/OUTLINE' L4 
+\i (00:22:17) FORM film_control filmtree  L4 
+\i (00:22:18) FORM film_control filmtree popup Cut 'BOARD GEOMETRY/OUTLINE' L5 
+\i (00:22:19) FORM film_control filmtree  L5 
+\i (00:22:21) FORM film_control filmtree popup Cut 'BOARD GEOMETRY/OUTLINE' TOP 
+\i (00:22:22) FORM film_control filmtree  TOP 
+\i (00:22:31) FORM film_control ok  
+\i (00:22:31) setwindow pcb
+\i (00:22:31) generaledit 
+\i (00:22:32) save 
+\i (00:22:32) generaledit 
+\i (00:22:33) zoom fit 
+\i (00:22:33) trapsize 1099
+\i (00:22:37) save 
+\i (00:22:37) generaledit 
+\i (00:22:38) save 
+\i (00:22:38) generaledit 
+\i (00:22:38) save 
+\i (00:22:38) generaledit 
+\i (00:22:38) save 
+\i (00:22:38) generaledit 
+\i (00:22:38) save 
+\i (00:22:38) generaledit 
+\i (00:22:38) save 
+\i (00:22:38) generaledit 
+\i (00:26:46) exit 
+\t (00:26:47)     Journal end - Fri Aug 02 20:58:14 2019

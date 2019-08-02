@@ -148,8 +148,7 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources" ".\galvo_ctrl_brd.dsn")
-      (Path "Design Resources" ".\galvo_ctrl_brd.dsn" "SCHEMATIC1")
-      (Select "Design Resources" ".\galvo_ctrl_brd.dsn"))
+      (Path "Design Resources" ".\galvo_ctrl_brd.dsn" "SCHEMATIC1"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
