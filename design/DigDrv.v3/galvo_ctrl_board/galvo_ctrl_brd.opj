@@ -148,7 +148,9 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources" ".\galvo_ctrl_brd.dsn")
-      (Path "Design Resources" ".\galvo_ctrl_brd.dsn" "SCHEMATIC1"))
+      (Path "Design Resources" ".\galvo_ctrl_brd.dsn" "SCHEMATIC1")
+      (Select "Design Resources" ".\galvo_ctrl_brd.dsn" "SCHEMATIC1"
+         "PAGE2 : ADC.DAC"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -160,7 +162,7 @@
       (Frame
         (Placement "44 0 1 -1 -1 -4 -23 264 1642 264 854")
         (Scroll "0 0")
-        (Zoom "102")
+        (Zoom "90")
         (Occurrence "/"))
       (Path
          "C:\USERS\BING\DOCUMENTS\BZHOU\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.DSN")
@@ -169,7 +171,7 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -4 -23 286 1664 286 989")
+        (Placement "44 0 1 -1 -1 -4 -23 201 1579 258 961")
         (Scroll "0 0")
         (Zoom "102")
         (Occurrence "/"))
@@ -181,7 +183,7 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -4 -23 330 1708 330 1033")
-        (Scroll "-9 117")
+        (Scroll "-9 0")
         (Zoom "136")
         (Occurrence "/"))
       (Path
