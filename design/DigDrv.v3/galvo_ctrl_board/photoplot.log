@@ -1,0 +1,421 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    ARTWORK LOG                                                      )
+(                                                                     )
+(    Drawing          : galvo_ctrl_brd.brd                            )
+(    Software Version : 16.5P002                                      )
+(    Date/Time        : Mon Aug 05 09:54:01 2019                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+
+ ******************************************
+ WARNING: DRC OUT OF DATE on this layout.
+ ******************************************
+
+ ---- Photoplot outline rectangle not found ... using drawing extents
+
+
+
+Results from parameter file ...
+    DEVICE-TYPE           GERBER_RS274X
+    OUTPUT-UNITS          INCHES
+    FILM-SIZE             2400000 1600000
+    FORMAT                2.5
+    ABORT-ON-ERROR        NO
+    SCALE                 1
+    SUPPRESS-LEAD-ZEROES  YES
+    SUPPRESS-TRAIL-ZEROES NO
+    SUPPRESS-EQUAL        YES
+    UNDEF-APT-CONT        NO
+
+
+================================================================
+     PROCESSING FILM < TOP >
+     TO FILE < C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v3/galvo_ctrl_board/TOP.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.01000                                  DARK 
+  CIRCLE     0.01400                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.01800                                  DARK 
+  CIRCLE     0.02400                                  DARK 
+  CIRCLE     0.02480                                  DARK 
+  CIRCLE     0.04000                                  DARK 
+  CIRCLE     0.06000                                  DARK 
+  CIRCLE     0.12000                                  DARK 
+  SQUARE     0.06000                     0.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.03000       0.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.03000      90.000 NO     DARK 
+  RECTANGLE  0.06000     x 0.06000       0.000 NO     DARK 
+  RECTANGLE  0.08000     x 0.05500       0.000 NO     DARK 
+  RECTANGLE  0.11000     x 0.12500       0.000 NO     DARK 
+
+     TOP created with warnings
+
+
+================================================================
+     PROCESSING FILM < L2 >
+     TO FILE < C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v3/galvo_ctrl_board/L2.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.01000                                  DARK 
+  CIRCLE     0.01400                                  DARK 
+  CIRCLE     0.01800                                  DARK 
+  CIRCLE     0.02000                                  DARK 
+  CIRCLE     0.02400                                  DARK 
+  CIRCLE     0.04000                                  DARK 
+  CIRCLE     0.06000                                  DARK 
+  CIRCLE     0.12000                                  DARK 
+  SQUARE     0.06000                     0.000 NO     DARK 
+
+     L2 created with warnings
+
+
+================================================================
+     PROCESSING FILM < L3 >
+     TO FILE < C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v3/galvo_ctrl_board/L3.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.01400                                  DARK 
+  CIRCLE     0.01800                                  DARK 
+  CIRCLE     0.02000                                  DARK 
+  CIRCLE     0.02400                                  DARK 
+  CIRCLE     0.02500                                  DARK 
+  CIRCLE     0.04000                                  DARK 
+  CIRCLE     0.06000                                  DARK 
+  CIRCLE     0.12000                                  DARK 
+  SQUARE     0.06000                     0.000 NO     DARK 
+
+     L3 created with warnings
+
+
+================================================================
+     PROCESSING FILM < L4 >
+     TO FILE < C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v3/galvo_ctrl_board/L4.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.01400                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.01800                                  DARK 
+  CIRCLE     0.02000                                  DARK 
+  CIRCLE     0.02400                                  DARK 
+  CIRCLE     0.02500                                  DARK 
+  CIRCLE     0.04000                                  DARK 
+  CIRCLE     0.06000                                  DARK 
+  CIRCLE     0.12000                                  DARK 
+  SQUARE     0.06000                     0.000 NO     DARK 
+
+     L4 created with warnings
+
+
+================================================================
+     PROCESSING FILM < L5 >
+     TO FILE < C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v3/galvo_ctrl_board/L5.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.01400                                  DARK 
+  CIRCLE     0.01800                                  DARK 
+  CIRCLE     0.02000                                  DARK 
+  CIRCLE     0.02400                                  DARK 
+  CIRCLE     0.02500                                  DARK 
+  CIRCLE     0.04000                                  DARK 
+  CIRCLE     0.06000                                  DARK 
+  CIRCLE     0.12000                                  DARK 
+  SQUARE     0.06000                     0.000 NO     DARK 
+
+     L5 created with warnings
+
+
+================================================================
+     PROCESSING FILM < BOTTOM >
+     TO FILE < C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v3/galvo_ctrl_board/BOTTOM.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.00800                                  DARK 
+  CIRCLE     0.01000                                  DARK 
+  CIRCLE     0.01200                                  DARK 
+  CIRCLE     0.01400                                  DARK 
+  CIRCLE     0.01500                                  DARK 
+  CIRCLE     0.01800                                  DARK 
+  CIRCLE     0.02000                                  DARK 
+  CIRCLE     0.02400                                  DARK 
+  CIRCLE     0.02500                                  DARK 
+  CIRCLE     0.03000                                  DARK 
+  CIRCLE     0.04000                                  DARK 
+  CIRCLE     0.06000                                  DARK 
+  CIRCLE     0.12000                                  DARK 
+  SQUARE     0.06000                     0.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.03000       0.000 NO     DARK 
+  RECTANGLE  0.04000     x 0.03000      90.000 NO     DARK 
+  RECTANGLE  0.05000     x 0.01000      90.000 NO     DARK 
+  RECTANGLE  0.06000     x 0.05000       0.000 NO     DARK 
+  RECTANGLE  0.06000     x 0.05000      90.000 NO     DARK 
+  RECTANGLE  0.06400     x 0.01300      90.000 NO     DARK 
+  RECTANGLE  0.07500     x 0.02400       0.000 NO     DARK 
+  RECTANGLE  0.07500     x 0.02500      90.000 NO     DARK 
+
+     BOTTOM created with warnings
+
+
+================================================================
+     PROCESSING FILM < SilkScreenTop >
+     TO FILE < C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v3/galvo_ctrl_board/SilkScreenTop.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+    WARNING: text composed 0 width line found at (-1150.00 812.50)
+           ... using undefined line width of 6.00
+
+    WARNING: 0 width line found at (-1118.31 -1019.88)
+           ... using undefined line width of 6.00
+
+    WARNING: text having Multiple 0 width lines; all will be treated the same as the first.
+           ... using undefined line width of 6.00
+
+    WARNING: Multiple 0 width lines; all will be treated the same as the first.
+           ... using undefined line width of 6.00
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.00800                                  DARK 
+  CIRCLE     0.01000                                  DARK 
+
+     SilkScreenTop created with warnings
+
+
+================================================================
+     PROCESSING FILM < SilkScreenBottom >
+     TO FILE < C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v3/galvo_ctrl_board/SilkScreenBottom.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+
+     SilkScreenBottom created with warnings
+
+
+================================================================
+     PROCESSING FILM < SolderMaskTop >
+     TO FILE < C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v3/galvo_ctrl_board/SolderMaskTop.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.01400                                  DARK 
+  CIRCLE     0.02000                                  DARK 
+  CIRCLE     0.02400                                  DARK 
+  CIRCLE     0.02880                                  DARK 
+  CIRCLE     0.03400                                  DARK 
+  CIRCLE     0.05000                                  DARK 
+  CIRCLE     0.07000                                  DARK 
+  CIRCLE     0.13000                                  DARK 
+  SQUARE     0.07000                     0.000 NO     DARK 
+  RECTANGLE  0.04500     x 0.03500       0.000 NO     DARK 
+  RECTANGLE  0.04500     x 0.03500      90.000 NO     DARK 
+  RECTANGLE  0.06500     x 0.06500       0.000 NO     DARK 
+  RECTANGLE  0.08500     x 0.06000       0.000 NO     DARK 
+  RECTANGLE  0.11500     x 0.13000       0.000 NO     DARK 
+
+     SolderMaskTop created with warnings
+
+
+================================================================
+     PROCESSING FILM < SolderMaskBottom >
+     TO FILE < C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v3/galvo_ctrl_board/SolderMaskBottom.art > ...
+================================================================
+
+  FILM PARAMETERS :
+  ---------------------------------------------------------
+  Undefined line width                6.00
+  Mirror code                         NONE
+  Rotate angle                        NONE
+  Offset x:                           0.00
+  Offset y:                           0.00
+  Plot negative                       NO
+  Suppress unconnected internal pads  NO
+
+
+
+  APERTURES USED:
+  ---------------------------------------------------------
+  TYPE       SIZE/NAME                   ROT   MIRROR MODE 
+  ---------------------------------------------------------
+  CIRCLE     0.00600                                  DARK 
+  CIRCLE     0.01400                                  DARK 
+  CIRCLE     0.02400                                  DARK 
+  CIRCLE     0.03400                                  DARK 
+  CIRCLE     0.05000                                  DARK 
+  CIRCLE     0.07000                                  DARK 
+  CIRCLE     0.13000                                  DARK 
+  SQUARE     0.07000                     0.000 NO     DARK 
+  RECTANGLE  0.04500     x 0.03500       0.000 NO     DARK 
+  RECTANGLE  0.04500     x 0.03500      90.000 NO     DARK 
+  RECTANGLE  0.05500     x 0.01500      90.000 NO     DARK 
+  RECTANGLE  0.06500     x 0.05500       0.000 NO     DARK 
+  RECTANGLE  0.06500     x 0.05500      90.000 NO     DARK 
+  RECTANGLE  0.06900     x 0.01800      90.000 NO     DARK 
+  RECTANGLE  0.08000     x 0.02900       0.000 NO     DARK 
+  RECTANGLE  0.08000     x 0.03000      90.000 NO     DARK 
+
+     SolderMaskBottom created with warnings
+
+
+------------------------------------------------------
+ SUMMARY:
+        TOP created with warnings
+        L2 created with warnings
+        L3 created with warnings
+        L4 created with warnings
+        L5 created with warnings
+        BOTTOM created with warnings
+        SilkScreenTop created with warnings
+        SilkScreenBottom created with warnings
+        SolderMaskTop created with warnings
+        SolderMaskBottom created with warnings
+
+ ARTWORK had warnings
