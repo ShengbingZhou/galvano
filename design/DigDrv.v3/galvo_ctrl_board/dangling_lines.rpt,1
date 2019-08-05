@@ -1,0 +1,305 @@
+(---------------------------------------------------------------------)
+(                                                                     )
+(    Dangling Line, Via and Antenna Report                            )
+(                                                                     )
+(    Drawing          : galvo_ctrl_brd.brd                            )
+(    Software Version : 16.5P003                                      )
+(    Date/Time        : Sat Aug 03 15:51:17 2019                      )
+(                                                                     )
+(---------------------------------------------------------------------)
+
+
+Report methodology:
+  - Dangling lines have at least one end not connected.
+  - Dangling vias have one or no connection
+      - Plus are not a test, thieving or netshort property via.
+  - Antenna vias do not have connections on their start and end layers.
+      - Plus they are not a thieving vias.
+      - Optionally, VOLTAGE nets, testvias and through vias can be suppressed with
+        the environment variable report_antennavia.
+      - Section may be suppressed by variable report_noantennavia.
+  - In all cases output is suppressed if an object has the OK_DANGLE
+    property or is not part of the current partition.
+
+
+<< Dangling Lines >>  - Location marked with a star (*) is dangling.
+  Net                 Layer                  Length       Location
+  ------------------------------------------------------------------------------------------
+  Dummy Net            TOP                     0.01      (388.98 -294.49) to *(388.99 -294.49)
+
+
+<< Dangling Vias >>
+  Net                  Padstack               Location            Layers
+  ---------------------------------------------------------------------------
+  DGND                 PAD24CIR13           (555.36 -968.50) TOP/BOTTOM 
+
+
+<< Antenna Vias >>
+  Net                  Padstack               Location            Layers
+  ---------------------------------------------------------------------------
+  VCCO                 PAD14CIR8            (184.27 -152.77) TOP/BOTTOM 
+  VCCO                 PAD14CIR8            (215.77 -152.77) TOP/BOTTOM 
+  VCCO                 PAD14CIR8            (152.77 -184.27) TOP/BOTTOM 
+  VCCO                 PAD14CIR8            (215.77 -247.27) TOP/BOTTOM 
+  VCCO                 PAD14CIR8            (247.27 -184.27) TOP/BOTTOM 
+  VCCO                 PAD14CIR8            (184.27 -247.27) TOP/BOTTOM 
+  VCCO                 PAD40CIR20           (237.50 -449.00) TOP/BOTTOM 
+  VCCA                 PAD40CIR20           (175.00 -449.00) TOP/BOTTOM 
+  VCCA                 PAD14CIR8            (89.77 -310.27)  TOP/BOTTOM 
+  VCCA                 PAD14CIR8            (121.27 -310.27) TOP/BOTTOM 
+  VCCA                 PAD14CIR8            (89.77 -89.77)   TOP/BOTTOM 
+  VCCA                 PAD14CIR8            (89.77 -121.27)  TOP/BOTTOM 
+  VCCA                 PAD14CIR8            (278.77 -278.77) TOP/BOTTOM 
+  VCCA                 PAD14CIR8            (278.77 -310.27) TOP/BOTTOM 
+  VCCA                 PAD14CIR8            (310.27 -89.77)  TOP/BOTTOM 
+  VCCA                 PAD14CIR8            (310.27 -121.27) TOP/BOTTOM 
+  FPGA_SIG1            PAD14CIR8            (-4.73 -89.77)   TOP/BOTTOM 
+  FPGA_MISO            PAD14CIR8            (-4.73 -121.27)  TOP/BOTTOM 
+  FPGA_SS              PAD14CIR8            (-4.73 -26.77)   TOP/BOTTOM 
+  FPGA_SCLK            PAD14CIR8            (-4.73 -58.27)   TOP/BOTTOM 
+  GND                  PAD24CIR13           (-206.00 577.12) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-275.00 675.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-225.00 675.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-125.00 625.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-125.00 675.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-75.00 675.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (-25.00 625.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (25.00 625.00)   TOP/BOTTOM 
+  GND                  PAD18CIR10           (75.00 675.00)   TOP/BOTTOM 
+  GND                  PAD18CIR10           (25.00 675.00)   TOP/BOTTOM 
+  GND                  PAD14CIR8            (450.00 681.50)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (675.00 675.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (625.00 675.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (525.00 675.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (575.00 675.00)  TOP/BOTTOM 
+  GND                  PAD14CIR8            (761.50 681.50)  TOP/BOTTOM 
+  GND                  PAD24CIR13           (-537.50 818.75) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-275.00 725.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-225.00 725.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-175.00 725.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (25.00 725.00)   TOP/BOTTOM 
+  GND                  PAD18CIR10           (-25.00 725.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (-75.00 725.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (-125.00 725.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (75.00 725.00)   TOP/BOTTOM 
+  GND                  PAD18CIR10           (-375.00 775.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-325.00 775.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-275.00 775.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-225.00 775.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-175.00 775.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-125.00 775.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-375.00 925.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-375.00 875.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-325.00 925.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-325.00 875.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-275.00 875.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-375.00 825.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-325.00 825.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-275.00 825.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-225.00 825.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-175.00 825.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (-125.00 825.00) TOP/BOTTOM 
+  GND                  PAD18CIR10           (25.00 925.00)   TOP/BOTTOM 
+  GND                  PAD18CIR10           (-25.00 925.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (-75.00 925.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (-75.00 775.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (175.00 775.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (-25.00 775.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (25.00 775.00)   TOP/BOTTOM 
+  GND                  PAD18CIR10           (75.00 775.00)   TOP/BOTTOM 
+  GND                  PAD18CIR10           (125.00 775.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (75.00 875.00)   TOP/BOTTOM 
+  GND                  PAD18CIR10           (25.00 875.00)   TOP/BOTTOM 
+  GND                  PAD18CIR10           (-25.00 875.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (-75.00 875.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (-75.00 825.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (175.00 825.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (-25.00 825.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (25.00 825.00)   TOP/BOTTOM 
+  GND                  PAD18CIR10           (75.00 825.00)   TOP/BOTTOM 
+  GND                  PAD24CIR13           (262.50 743.50)  TOP/BOTTOM 
+  GND                  PAD24CIR13           (368.75 843.75)  TOP/BOTTOM 
+  GND                  PAD24CIR13           (250.00 881.25)  TOP/BOTTOM 
+  GND                  PAD24CIR13           (675.00 990.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (575.00 875.00)  TOP/BOTTOM 
+  GND                  PAD18CIR10           (625.00 875.00)  TOP/BOTTOM 
+  VAA12VN              PAD24CIR13           (-488.75 970.00) TOP/BOTTOM 
+  VAA12VN              PAD18CIR10           (-125.00 925.00) TOP/BOTTOM 
+  VAA12VN              PAD18CIR10           (-125.00 875.00) TOP/BOTTOM 
+  VAA12VN              PAD18CIR10           (-125.00 975.00) TOP/BOTTOM 
+  VAA12VN              PAD18CIR10           (-175.00 925.00) TOP/BOTTOM 
+  VAA12VN              PAD18CIR10           (-175.00 875.00) TOP/BOTTOM 
+  VAA12VN              PAD18CIR10           (-225.00 875.00) TOP/BOTTOM 
+  VAA12VN              PAD24CIR13           (765.75 -402.00) TOP/BOTTOM 
+  VAA12VN              PAD24CIR13           (-31.00 -494.00) TOP/BOTTOM 
+  VAA12VN              PAD24CIR13           (-84.25 -559.25) TOP/BOTTOM 
+  JTAGEN               PAD14CIR8            (121.27 -121.27) TOP/BOTTOM 
+  JTAGEN               PAD24CIR13           (536.64 593.75)  TOP/BOTTOM 
+  NSTATUS              PAD14CIR8            (89.77 -58.27)   TOP/BOTTOM 
+  NSTATUS              PAD24CIR13           (536.14 471.86)  TOP/BOTTOM 
+  FPGA_MOSI            PAD14CIR8            (26.77 -58.27)   TOP/BOTTOM 
+  NCONFIG              PAD14CIR8            (215.77 -121.27) TOP/BOTTOM 
+  NCONFIG              PAD24CIR13           (536.64 534.36)  TOP/BOTTOM 
+  JTAG_TCK             PAD14CIR8            (26.77 -184.27)  TOP/BOTTOM 
+  JTAG_TCK             PAD24CIR13           (439.50 -768.50) TOP/BOTTOM 
+  JTAG_TMS             PAD14CIR8            (-4.73 -184.27)  TOP/BOTTOM 
+  JTAG_TDI             PAD14CIR8            (121.27 -152.77) TOP/BOTTOM 
+  JTAG_TDO             PAD14CIR8            (152.77 -152.77) TOP/BOTTOM 
+  AGND                 PAD24CIR13           (0.00 574.08)    TOP/BOTTOM 
+  YMOTOR_DRV           PAD24CIR13           (509.84 -700.72) TOP/BOTTOM 
+  XDAC_SDO             PAD14CIR8            (26.77 -373.27)  TOP/BOTTOM 
+  XDAC_SDO             PAD24CIR13           (-212.20 -595.88) TOP/BOTTOM 
+  XDAC_LDAC            PAD24CIR13           (-263.39 -422.51) TOP/BOTTOM 
+  XDAC_LDAC            PAD14CIR8            (58.27 -341.77)  TOP/BOTTOM 
+  XDAC_SDI             PAD14CIR8            (-4.73 -373.27)  TOP/BOTTOM 
+  XDAC_SDI             PAD24CIR13           (-237.80 -564.04) TOP/BOTTOM 
+  XDAC_SCK             PAD14CIR8            (58.27 -404.77)  TOP/BOTTOM 
+  XDAC_SCK             PAD24CIR13           (-161.02 -594.02) TOP/BOTTOM 
+  XDAC_RSTSEL          PAD24CIR13           (125.00 -662.50) TOP/BOTTOM 
+  XDAC_RSTSEL          PAD24CIR13           (-134.16 -561.60) TOP/BOTTOM 
+  XDAC_RSTSEL          PAD14CIR8            (89.77 -404.77)  TOP/BOTTOM 
+  VPP                  PAD18CIR10           (-375.00 675.00) TOP/BOTTOM 
+  VPP                  PAD18CIR10           (-325.00 675.00) TOP/BOTTOM 
+  VPP                  PAD18CIR10           (-375.00 625.00) TOP/BOTTOM 
+  VPP                  PAD18CIR10           (-325.00 625.00) TOP/BOTTOM 
+  VPP                  PAD18CIR10           (-275.00 625.00) TOP/BOTTOM 
+  VPP                  PAD18CIR10           (-375.00 725.00) TOP/BOTTOM 
+  VPP                  PAD18CIR10           (-325.00 725.00) TOP/BOTTOM 
+  VPP                  PAD18CIR10           (125.00 625.00)  TOP/BOTTOM 
+  VPP                  PAD18CIR10           (75.00 625.00)   TOP/BOTTOM 
+  VPP                  PAD18CIR10           (175.00 625.00)  TOP/BOTTOM 
+  VPP                  PAD18CIR10           (125.00 675.00)  TOP/BOTTOM 
+  VPP                  PAD18CIR10           (175.00 675.00)  TOP/BOTTOM 
+  VPP                  PAD24CIR13           (265.00 681.50)  TOP/BOTTOM 
+  VPP                  PAD18CIR10           (125.00 725.00)  TOP/BOTTOM 
+  VPP                  PAD18CIR10           (175.00 725.00)  TOP/BOTTOM 
+  YDAC_SDO             PAD24CIR13           (637.80 -564.72) TOP/BOTTOM 
+  YDAC_SDO             PAD14CIR8            (404.77 -278.77) TOP/BOTTOM 
+  YDAC_SDI             PAD14CIR8            (373.27 -310.27) TOP/BOTTOM 
+  YDAC_SDI             PAD24CIR13           (612.20 -533.52) TOP/BOTTOM 
+  YDAC_SCK             PAD24CIR13           (688.98 -564.18) TOP/BOTTOM 
+  YDAC_SCK             PAD14CIR8            (404.77 -247.27) TOP/BOTTOM 
+  YDAC_RSTSEL          PAD14CIR8            (404.77 -184.27) TOP/BOTTOM 
+  YDAC_LDAC            PAD24CIR13           (586.61 -564.72) TOP/BOTTOM 
+  YDAC_LDAC            PAD14CIR8            (373.27 -341.77) TOP/BOTTOM 
+  YDAC_CS#             PAD14CIR8            (373.27 -278.77) TOP/BOTTOM 
+  YDAC_CS#             PAD24CIR13           (663.39 -533.52) TOP/BOTTOM 
+  YDAC_RST#            PAD24CIR13           (561.02 -533.52) TOP/BOTTOM 
+  YDAC_RST#            PAD14CIR8            (404.77 -341.77) TOP/BOTTOM 
+  XDAC_RST#            PAD14CIR8            (26.77 -341.77)  TOP/BOTTOM 
+  XDAC_RST#            PAD24CIR13           (62.50 -662.50)  TOP/BOTTOM 
+  XDAC_RST#            PAD24CIR13           (-288.98 -564.04) TOP/BOTTOM 
+  XDAC_CS#             PAD14CIR8            (26.77 -404.77)  TOP/BOTTOM 
+  XDAC_CS#             PAD24CIR13           (-186.61 -562.19) TOP/BOTTOM 
+  DGND                 PAD24CIR13           (-365.75 -421.75) TOP/BOTTOM 
+  DGND                 PAD24CIR13           (-1112.50 -525.94) TOP/BOTTOM 
+  DGND                 PAD24CIR13           (-960.00 -625.00) TOP/BOTTOM 
+  DGND                 PAD24CIR13           (-740.00 -775.00) TOP/BOTTOM 
+  DGND                 PAD24CIR13           (-443.50 -981.00) TOP/BOTTOM 
+  DGND                 PAD24CIR13           (484.25 -533.52) TOP/BOTTOM 
+  DGND                 PAD24CIR13           (685.80 -375.00) TOP/BOTTOM 
+  DGND                 PAD24CIR13           (-150.00 -199.68) TOP/BOTTOM 
+  DGND                 PAD24CIR13           (-109.84 -423.68) TOP/BOTTOM 
+  DGND                 PAD14CIR8            (404.77 -404.77) TOP/BOTTOM 
+  DGND                 PAD14CIR8            (184.27 -373.27) TOP/BOTTOM 
+  DGND                 PAD24CIR13           (300.00 -600.00) TOP/BOTTOM 
+  DGND                 PAD24CIR13           (362.50 -600.00) TOP/BOTTOM 
+  DGND                 PAD24CIR13           (400.00 -662.50) TOP/BOTTOM 
+  DGND                 PAD14CIR8            (-4.73 -404.77)  TOP/BOTTOM 
+  DGND                 PAD14CIR8            (278.77 -341.77) TOP/BOTTOM 
+  DGND                 PAD14CIR8            (341.77 -121.27) TOP/BOTTOM 
+  DGND                 PAD14CIR8            (373.27 -247.27) TOP/BOTTOM 
+  DGND                 PAD14CIR8            (405.27 5.23)    TOP/BOTTOM 
+  DGND                 PAD14CIR8            (58.27 -152.77)  TOP/BOTTOM 
+  DGND                 PAD14CIR8            (121.27 -89.77)  TOP/BOTTOM 
+  DGND                 PAD14CIR8            (58.27 -58.27)   TOP/BOTTOM 
+  DGND                 PAD14CIR8            (215.77 -184.27) TOP/BOTTOM 
+  DGND                 PAD14CIR8            (247.27 -26.77)  TOP/BOTTOM 
+  DGND                 PAD24CIR13           (670.80 40.00)   TOP/BOTTOM 
+  DGND                 PAD24CIR13           (-90.48 199.68)  TOP/BOTTOM 
+  DGND                 PAD24CIR13           (180.96 199.68)  TOP/BOTTOM 
+  DGND                 PAD24CIR13           (386.88 200.00)  TOP/BOTTOM 
+  DGND                 PAD24CIR13           (112.32 200.00)  TOP/BOTTOM 
+  DGND                 PAD24CIR13           (62.50 -812.50)  TOP/BOTTOM 
+  DGND                 PAD24CIR13           (337.50 -812.50) TOP/BOTTOM 
+  DGND                 PAD24CIR13           (975.00 -737.50) TOP/BOTTOM 
+  DGND                 PAD24CIR13           (1061.00 -417.25) TOP/BOTTOM 
+  DGND                 PAD24CIR13           (969.00 787.25)  TOP/BOTTOM 
+  DGND                 PAD24CIR13           (555.36 -968.50) TOP/BOTTOM 
+  VAA12VP              PAD24CIR13           (765.75 -703.25) TOP/BOTTOM 
+  VAA12VP              PAD24CIR13           (-84.25 -715.75) TOP/BOTTOM 
+  VAA12VP              PAD18CIR10           (175.00 925.00)  TOP/BOTTOM 
+  VAA12VP              PAD18CIR10           (175.00 875.00)  TOP/BOTTOM 
+  VAA12VP              PAD18CIR10           (175.00 975.00)  TOP/BOTTOM 
+  VAA12VP              PAD18CIR10           (125.00 875.00)  TOP/BOTTOM 
+  VAA12VP              PAD24CIR13           (368.75 906.25)  TOP/BOTTOM 
+  VAA12VP              PAD24CIR13           (250.00 968.75)  TOP/BOTTOM 
+  VAA12VP              PAD18CIR10           (475.00 825.00)  TOP/BOTTOM 
+  VAA12VP              PAD18CIR10           (525.00 825.00)  TOP/BOTTOM 
+  VAA12VP              PAD18CIR10           (575.00 825.00)  TOP/BOTTOM 
+  VAA12VP              PAD18CIR10           (725.00 825.00)  TOP/BOTTOM 
+  VAA12VP              PAD18CIR10           (675.00 825.00)  TOP/BOTTOM 
+  VAA12VP              PAD18CIR10           (625.00 825.00)  TOP/BOTTOM 
+  VAA12VP              PAD18CIR10           (675.00 775.00)  TOP/BOTTOM 
+  VAA12VP              PAD18CIR10           (625.00 775.00)  TOP/BOTTOM 
+  VAA12VP              PAD18CIR10           (575.00 775.00)  TOP/BOTTOM 
+  VAA12VP              PAD18CIR10           (525.00 775.00)  TOP/BOTTOM 
+  VDD3V3               PAD24CIR13           (-443.04 -919.00) TOP/BOTTOM 
+  VDD3V3               PAD24CIR13           (-300.00 -199.68) TOP/BOTTOM 
+  VDD3V3               PAD14CIR8            (184.27 -341.77) TOP/BOTTOM 
+  VDD3V3               PAD14CIR8            (215.77 -341.77) TOP/BOTTOM 
+  VDD3V3               PAD14CIR8            (247.27 -341.77) TOP/BOTTOM 
+  VDD3V3               PAD14CIR8            (58.27 -310.27)  TOP/BOTTOM 
+  VDD3V3               PAD14CIR8            (58.27 -278.77)  TOP/BOTTOM 
+  VDD3V3               PAD24CIR13           (-75.00 -274.44) TOP/BOTTOM 
+  VDD3V3               PAD14CIR8            (341.77 -278.77) TOP/BOTTOM 
+  VDD3V3               PAD14CIR8            (341.77 -247.27) TOP/BOTTOM 
+  VDD3V3               PAD24CIR13           (362.50 -450.00) TOP/BOTTOM 
+  VDD3V3               PAD24CIR13           (527.88 -375.00) TOP/BOTTOM 
+  VDD3V3               PAD14CIR8            (26.77 -152.77)  TOP/BOTTOM 
+  VDD3V3               PAD14CIR8            (58.27 -184.27)  TOP/BOTTOM 
+  VDD3V3               PAD24CIR13           (-75.00 -87.24)  TOP/BOTTOM 
+  VDD3V3               PAD14CIR8            (152.77 -58.27)  TOP/BOTTOM 
+  VDD3V3               PAD14CIR8            (184.27 -58.27)  TOP/BOTTOM 
+  VDD3V3               PAD14CIR8            (215.77 -58.27)  TOP/BOTTOM 
+  VDD3V3               PAD14CIR8            (247.27 -58.27)  TOP/BOTTOM 
+  VDD3V3               PAD14CIR8            (341.77 -152.77) TOP/BOTTOM 
+  VDD3V3               PAD14CIR8            (341.77 -184.27) TOP/BOTTOM 
+  VDD3V3               PAD24CIR13           (527.28 40.00)   TOP/BOTTOM 
+  VDD3V3               PAD40CIR20           (175.00 -601.00) TOP/BOTTOM 
+  VDD3V3               PAD24CIR13           (0.00 -662.50)   TOP/BOTTOM 
+  VDD3V3               PAD24CIR13           (212.50 -812.50) TOP/BOTTOM 
+  VDD3V3               PAD24CIR13           (125.00 -812.50) TOP/BOTTOM 
+  VDD3V3               PAD24CIR13           (1031.00 469.00) TOP/BOTTOM 
+  VDD3V3               PAD18CIR10           (625.00 925.00)  TOP/BOTTOM 
+  VDD3V3               PAD18CIR10           (675.00 925.00)  TOP/BOTTOM 
+  VDD3V3               PAD18CIR10           (725.00 925.00)  TOP/BOTTOM 
+  VDD3V3               PAD18CIR10           (675.00 875.00)  TOP/BOTTOM 
+  VDD3V3               PAD18CIR10           (725.00 875.00)  TOP/BOTTOM 
+  VDD3V3               PAD24CIR13           (555.36 -906.50) TOP/BOTTOM 
+  XY_STATUS            PAD14CIR8            (-4.73 -152.77)  TOP/BOTTOM 
+  XY_STATUS            PAD24CIR13           (-149.76 -124.80) TOP/BOTTOM 
+  C_DONE               PAD14CIR8            (121.27 -58.27)  TOP/BOTTOM 
+  XY_Y                 PAD24CIR13           (-960.00 -675.00) TOP/BOTTOM 
+  XY_Y                 PAD14CIR8            (-4.73 -278.77)  TOP/BOTTOM 
+  XY_CLK               PAD24CIR13           (-960.00 -575.00) TOP/BOTTOM 
+  XY_CLK               PAD14CIR8            (26.77 -247.27)  TOP/BOTTOM 
+  XY_X                 PAD24CIR13           (-740.00 -625.00) TOP/BOTTOM 
+  XY_X                 PAD14CIR8            (-4.73 -310.27)  TOP/BOTTOM 
+  XY_SYNC              PAD24CIR13           (-740.00 -525.00) TOP/BOTTOM 
+  XY_SYNC              PAD14CIR8            (26.77 -278.77)  TOP/BOTTOM 
+  VAA5V                PAD18CIR10           (475.00 925.00)  TOP/BOTTOM 
+  VAA5V                PAD18CIR10           (575.00 925.00)  TOP/BOTTOM 
+  VAA5V                PAD18CIR10           (475.00 875.00)  TOP/BOTTOM 
+  VAA5V                PAD18CIR10           (525.00 875.00)  TOP/BOTTOM 
+  PGND                 PAD24CIR13           (-31.00 -556.00) TOP/BOTTOM 
+  PGND                 PAD24CIR13           (-237.80 -718.28) TOP/BOTTOM 
+  PGND                 PAD24CIR13           (-75.00 -981.25) TOP/BOTTOM 
+  PGND                 PAD24CIR13           (818.50 -556.00) TOP/BOTTOM 
+  PGND                 PAD24CIR13           (612.20 -701.32) TOP/BOTTOM 
+  PGND                 PAD24CIR13           (881.66 -968.50) TOP/BOTTOM 
+
+<< Summary >>
+  Total dangling lines:       1
+  Total dangling vias:        1
+  Total antenna vias:       261
