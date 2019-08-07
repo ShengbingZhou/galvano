@@ -4,10 +4,15 @@
 (                                                                     )
 (    Drawing          : galvo_ctrl_brd.brd                            )
 (    Software Version : 16.5P002                                      )
-(    Date/Time        : Wed Aug 07 23:28:53 2019                      )
+(    Date/Time        : Mon Aug 05 09:54:01 2019                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
+
+
+ ******************************************
+ WARNING: DRC OUT OF DATE on this layout.
+ ******************************************
 
  ---- Photoplot outline rectangle not found ... using drawing extents
 
@@ -52,7 +57,6 @@ Results from parameter file ...
   CIRCLE     0.01400                                  DARK 
   CIRCLE     0.01500                                  DARK 
   CIRCLE     0.01800                                  DARK 
-  CIRCLE     0.02000                                  DARK 
   CIRCLE     0.02400                                  DARK 
   CIRCLE     0.02480                                  DARK 
   CIRCLE     0.04000                                  DARK 
@@ -65,7 +69,7 @@ Results from parameter file ...
   RECTANGLE  0.08000     x 0.05500       0.000 NO     DARK 
   RECTANGLE  0.11000     x 0.12500       0.000 NO     DARK 
 
-     TOP created.
+     TOP created with warnings
 
 
 ================================================================
@@ -100,7 +104,7 @@ Results from parameter file ...
   CIRCLE     0.12000                                  DARK 
   SQUARE     0.06000                     0.000 NO     DARK 
 
-     L2 created.
+     L2 created with warnings
 
 
 ================================================================
@@ -134,7 +138,7 @@ Results from parameter file ...
   CIRCLE     0.12000                                  DARK 
   SQUARE     0.06000                     0.000 NO     DARK 
 
-     L3 created.
+     L3 created with warnings
 
 
 ================================================================
@@ -169,7 +173,7 @@ Results from parameter file ...
   CIRCLE     0.12000                                  DARK 
   SQUARE     0.06000                     0.000 NO     DARK 
 
-     L4 created.
+     L4 created with warnings
 
 
 ================================================================
@@ -203,7 +207,7 @@ Results from parameter file ...
   CIRCLE     0.12000                                  DARK 
   SQUARE     0.06000                     0.000 NO     DARK 
 
-     L5 created.
+     L5 created with warnings
 
 
 ================================================================
@@ -251,7 +255,7 @@ Results from parameter file ...
   RECTANGLE  0.07500     x 0.02400       0.000 NO     DARK 
   RECTANGLE  0.07500     x 0.02500      90.000 NO     DARK 
 
-     BOTTOM created.
+     BOTTOM created with warnings
 
 
 ================================================================
@@ -269,10 +273,10 @@ Results from parameter file ...
   Plot negative                       NO
   Suppress unconnected internal pads  NO
 
-    WARNING: 0 width line found at (-1118.31 -1019.88)
+    WARNING: text composed 0 width line found at (-1150.00 812.50)
            ... using undefined line width of 6.00
 
-    WARNING: text composed 0 width line found at (-1112.50 -706.25)
+    WARNING: 0 width line found at (-1118.31 -1019.88)
            ... using undefined line width of 6.00
 
     WARNING: text having Multiple 0 width lines; all will be treated the same as the first.
@@ -317,7 +321,7 @@ Results from parameter file ...
   ---------------------------------------------------------
   CIRCLE     0.00600                                  DARK 
 
-     SilkScreenBottom created.
+     SilkScreenBottom created with warnings
 
 
 ================================================================
@@ -357,7 +361,7 @@ Results from parameter file ...
   RECTANGLE  0.08500     x 0.06000       0.000 NO     DARK 
   RECTANGLE  0.11500     x 0.13000       0.000 NO     DARK 
 
-     SolderMaskTop created.
+     SolderMaskTop created with warnings
 
 
 ================================================================
@@ -398,20 +402,20 @@ Results from parameter file ...
   RECTANGLE  0.08000     x 0.02900       0.000 NO     DARK 
   RECTANGLE  0.08000     x 0.03000      90.000 NO     DARK 
 
-     SolderMaskBottom created.
+     SolderMaskBottom created with warnings
 
 
 ------------------------------------------------------
  SUMMARY:
-        TOP created.
-        L2 created.
-        L3 created.
-        L4 created.
-        L5 created.
-        BOTTOM created.
+        TOP created with warnings
+        L2 created with warnings
+        L3 created with warnings
+        L4 created with warnings
+        L5 created with warnings
+        BOTTOM created with warnings
         SilkScreenTop created with warnings
-        SilkScreenBottom created.
-        SolderMaskTop created.
-        SolderMaskBottom created.
+        SilkScreenBottom created with warnings
+        SolderMaskTop created with warnings
+        SolderMaskBottom created with warnings
 
- ARTWORK finished
+ ARTWORK had warnings

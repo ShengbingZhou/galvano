@@ -3,8 +3,8 @@
 (    DRC Update                                                       )
 (                                                                     )
 (    Drawing          : galvo_ctrl_brd.brd                            )
-(    Software Version : 16.5P003                                      )
-(    Date/Time        : Wed Aug 07 23:28:36 2019                      )
+(    Software Version : 16.5P002                                      )
+(    Date/Time        : Fri Jul 26 21:52:03 2019                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -20,7 +20,7 @@
  ========= check standalone text              0:00:00
  ========= check standalone rectangles        0:00:00
 
- ..... Total number of DRC errors  2
+ ..... Total number of DRC errors  4
 
  ..... DRC update completed, total CPU time   0:00:00
  *************************************************************************
