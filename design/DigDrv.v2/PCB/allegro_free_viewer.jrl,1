@@ -1,0 +1,70 @@
+\t (00:00:00) allegro_free_viewer 17.2 S001 Windows SPB 64-bit Edition
+\t (00:00:00)     Journal start - Sat Aug 03 15:00:54 2019
+\t (00:00:00)         Host=BINGPC User=Bing Pid=6872 CPUs=4
+\t (00:00:00) CmdLine= C:\Users\Bing\AppData\Local\Programs\Cadence Design Systems\17.2\tools\bin\allegro_free_viewer.exe
+\t (00:00:00) 
+\t (00:00:00) Starting new design...
+\i (00:00:00) trapsize 641
+\i (00:00:00) trapsize 630
+\i (00:00:00) trapsize 641
+\i (00:00:00) trapsize 873
+\i (00:01:01) open 
+\i (00:01:08) fillin "GALVO_DRV.brd"
+\t (00:01:08) Opening existing design...
+\i (00:01:08) trapsize 3263
+\d (00:01:08) Design opened: C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v2/PCB/GALVO_DRV.brd
+\i (00:01:10) open 
+\i (00:01:11) fillin "GALVO_CTRL.brd"
+\t (00:01:11) Opening existing design...
+\i (00:01:11) trapsize 11007
+\d (00:01:11) Design opened: C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v2/PCB/GALVO_CTRL.brd
+\i (00:02:22) zoom in 1 
+\i (00:02:22) setwindow pcb
+\i (00:02:22) zoom in 272.237 52.835
+\i (00:02:22) trapsize 5504
+\i (00:02:24) zoom in 1 
+\i (00:02:24) setwindow pcb
+\i (00:02:24) zoom in 195.186 55.036
+\i (00:02:24) trapsize 2752
+\i (00:02:24) roam start
+\i (00:02:24) roam x -32
+\i (00:02:24) roam y 96
+\i (00:02:24) roam x -32
+\i (00:02:24) roam y 48
+\i (00:02:25) roam x -16
+\i (00:02:25) roam y 32
+\i (00:02:25) roam end
+\i (00:02:25) zoom out 1 
+\i (00:02:25) setwindow pcb
+\i (00:02:25) zoom out 240.177 -48.886
+\i (00:02:25) trapsize 5504
+\i (00:02:26) roam start
+\i (00:02:26) roam x -160
+\i (00:02:26) roam y 32
+\i (00:02:26) roam x -176
+\i (00:02:26) roam y 16
+\i (00:02:26) roam x -128
+\i (00:02:26) roam x -16
+\i (00:02:26) roam end
+\i (00:02:26) zoom in 1 
+\i (00:02:26) setwindow pcb
+\i (00:02:26) zoom in -622.241 91.456
+\i (00:02:26) trapsize 2752
+\i (00:02:27) roam start
+\i (00:02:27) roam x 48
+\i (00:02:27) roam y -96
+\i (00:02:27) roam y -16
+\i (00:02:27) roam y -64
+\i (00:02:27) roam end
+\i (00:02:30) roam start
+\i (00:02:30) roam x 48
+\i (00:02:30) roam y 128
+\i (00:02:30) roam x 32
+\i (00:02:30) roam y 96
+\i (00:02:30) roam x 32
+\i (00:02:30) roam y 64
+\i (00:02:30) roam end
+\i (00:26:59) zoom fit 
+\i (00:26:59) trapsize 11003
+\i (00:46:36) exit 
+\t (00:46:36)     Journal end - Sat Aug 03 15:47:31 2019
