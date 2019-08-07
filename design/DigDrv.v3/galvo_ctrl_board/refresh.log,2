@@ -1,9 +1,9 @@
-Wed Aug 07 23:01:41 2019				Page     1
+Sat Jul 27 02:14:13 2019				Page     1
 
 
  
 Update Symbols/Modules Logfile
-	Wed Aug 07 23:01:41 2019
+	Sat Jul 27 02:14:13 2019
 
 ------ Module Refresh Messages ------
 
@@ -19,12 +19,12 @@ SUMMARY:    Updated 0 out of 0 modules
 (                                                                     )
 (    Drawing          : galvo_ctrl_brd.brd                            )
 (    Software Version : 16.5P002                                      )
-(    Date/Time        : Wed Aug 07 23:01:41 2019                      )
+(    Date/Time        : Sat Jul 27 02:14:13 2019                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
 
-Wed Aug 07 23:01:41 2019				Page     1
+Sat Jul 27 02:14:13 2019				Page     1
 
 
 ------ Symbol Refresh Directives ------
@@ -40,7 +40,7 @@ Reset symbol text and size locations = 'NO'
 Reset Pin Escapes (fanouts) = 'NO'
 Ripup Etch = 'NO'
 Reset custom drill data = 'NO'
-Symbol list file = 'C:/Users/Bing/AppData/Local/Temp/#Taaaadb04952.tmp'
+Symbol list file = 'C:/Users/Bing/AppData/Local/Temp/#Taaaaac02420.tmp'
 
 
 ------ Library Paths ------
@@ -63,7 +63,7 @@ PADPATH =  .
 
 ------ Symbol Refresh Messages ------
 
-'IDC12'  symbol refreshed successfully.
+'SSOP24'  symbol refreshed successfully.
 
 
 ----- Symbol Update Summary ----

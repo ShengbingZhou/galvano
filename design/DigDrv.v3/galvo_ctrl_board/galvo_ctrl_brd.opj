@@ -150,19 +150,19 @@
       (Path "Design Resources" ".\galvo_ctrl_brd.dsn")
       (Path "Design Resources" ".\galvo_ctrl_brd.dsn" "SCHEMATIC1")
       (Select "Design Resources" ".\galvo_ctrl_brd.dsn" "SCHEMATIC1"
-         "PAGE2 : ADC.DAC"))
+         "PAGE4 : POWER"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -4 -23 198 1576 207 720"))
+        (Placement "44 0 1 -1 -1 -4 -23 198 1576 207 720"))
       (Tab 0))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -4 -23 264 1642 264 854")
         (Scroll "0 0")
-        (Zoom "90")
+        (Zoom "102")
         (Occurrence "/"))
       (Path
          "C:\USERS\BING\DOCUMENTS\BZHOU\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.DSN")
@@ -171,25 +171,14 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -4 -23 201 1579 258 961")
-        (Scroll "0 0")
+        (Placement "44 2 3 -1 -1 -4 -23 201 1579 258 961")
+        (Scroll "-145 -6")
         (Zoom "102")
         (Occurrence "/"))
       (Path
          "C:\USERS\BING\DOCUMENTS\BZHOU\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.DSN")
       (Schematic "SCHEMATIC1")
       (Page "PAGE4 : POWER"))
-    (Doc
-      (Type "COrSchematicDoc")
-      (Frame
-        (Placement "44 0 1 -1 -1 -4 -23 330 1708 330 1033")
-        (Scroll "-9 0")
-        (Zoom "136")
-        (Occurrence "/"))
-      (Path
-         "C:\USERS\BING\DOCUMENTS\BZHOU\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.DSN")
-      (Schematic "SCHEMATIC1")
-      (Page "PAGE1 : INTERFACE"))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
@@ -200,7 +189,18 @@
       (Path
          "C:\USERS\BING\DOCUMENTS\BZHOU\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "PAGE3 : FPGA")))
+      (Page "PAGE3 : FPGA"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -4 -23 110 1651 110 813")
+        (Scroll "-91 117")
+        (Zoom "136")
+        (Occurrence "/"))
+      (Path
+         "C:\USERS\BING\DOCUMENTS\BZHOU\GALVANO\DESIGN\DIGDRV.V3\GALVO_CTRL_BOARD\GALVO_CTRL_BRD.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "PAGE1 : INTERFACE")))
   (PartMRUSelector
     (CON10
       (FullPartName "CON10.Normal")

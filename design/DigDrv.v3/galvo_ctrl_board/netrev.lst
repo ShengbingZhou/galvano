@@ -4,7 +4,7 @@
 (                                                                     )
 (    Drawing          : galvo_ctrl_brd.brd                            )
 (    Software Version : 16.5P002                                      )
-(    Date/Time        : Thu Aug 01 22:56:13 2019                      )
+(    Date/Time        : Wed Aug 07 21:22:44 2019                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -59,7 +59,7 @@ PADPATH =  .
 ------ Summary Statistics ------
 
 
-netrev run on Aug 1 22:56:13 2019
+netrev run on Aug 7 21:22:44 2019
    DESIGN NAME : 'GALVO_CTRL_BRD'
    PACKAGING ON Apr 21 2011 10:02:30
 
@@ -84,6 +84,6 @@ netrev run on Aug 1 22:56:13 2019
  No oversight detected
  No warning detected
 
-cpu time      0:00:30
+cpu time      0:00:46
 elapsed time  0:00:00
 

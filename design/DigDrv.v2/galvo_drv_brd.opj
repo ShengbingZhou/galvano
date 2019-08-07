@@ -114,7 +114,6 @@
     (Doc
       (Type "COrCapturePMDoc")
       (Frame
-        (Placement "44 2 3 -1 -1 -9 -38 0 200 0 443"))
+        (Placement "44 0 1 -1 -1 -4 -23 0 200 0 443"))
       (Tab 0)))
-  (MPSSessionName "quentin")
   (ISPCBBASICLICENSE "false"))
