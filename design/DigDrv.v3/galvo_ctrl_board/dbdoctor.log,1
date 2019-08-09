@@ -1203,6 +1203,8 @@ ERROR IN RATSNEST
   POINTER TO RATSNEST INVALID
    Error was fixed.
 
-WARNING   WARNING(SPMHDB-42): Run batch DRC to correctly regenerate DRC errs.
+Regenerating DRC
+  2 original DRC errors replaced by
+  2 current DRC errors.
 
-1 warnings, 300 errors detected, 300 errors  fixed.
+0 warnings, 300 errors detected, 300 errors  fixed.
