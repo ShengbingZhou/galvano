@@ -4,7 +4,7 @@
 (                                                                     )
 (    Drawing          : galvo_ctrl_brd.brd                            )
 (    Software Version : 16.5P002                                      )
-(    Date/Time        : Mon Aug 05 09:54:01 2019                      )
+(    Date/Time        : Wed Aug 07 23:28:11 2019                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -57,6 +57,7 @@ Results from parameter file ...
   CIRCLE     0.01400                                  DARK 
   CIRCLE     0.01500                                  DARK 
   CIRCLE     0.01800                                  DARK 
+  CIRCLE     0.02000                                  DARK 
   CIRCLE     0.02400                                  DARK 
   CIRCLE     0.02480                                  DARK 
   CIRCLE     0.04000                                  DARK 
@@ -273,10 +274,10 @@ Results from parameter file ...
   Plot negative                       NO
   Suppress unconnected internal pads  NO
 
-    WARNING: text composed 0 width line found at (-1150.00 812.50)
+    WARNING: 0 width line found at (-1118.31 -1019.88)
            ... using undefined line width of 6.00
 
-    WARNING: 0 width line found at (-1118.31 -1019.88)
+    WARNING: text composed 0 width line found at (-1112.50 -706.25)
            ... using undefined line width of 6.00
 
     WARNING: text having Multiple 0 width lines; all will be treated the same as the first.
