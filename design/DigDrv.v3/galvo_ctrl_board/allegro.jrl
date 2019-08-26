@@ -1,6 +1,6 @@
 \t (00:00:01) allegro 16.5 P003 (v16-5-13C) i86
-\t (00:00:01)     Journal start - Mon Aug 26 09:32:22 2019
-\t (00:00:01)         Host=BINGPC User=Bing Pid=8108 CPUs=4
+\t (00:00:01)     Journal start - Mon Aug 26 09:37:59 2019
+\t (00:00:01)         Host=BINGPC User=Bing Pid=4800 CPUs=4
 \t (00:00:01) 
 \t (00:00:03) Opening existing design...
 \d (00:00:03) Database opened: C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v3/galvo_ctrl_board/galvo_ctrl_brd.brd
@@ -10,182 +10,79 @@
 \i (00:00:03) trapsize 1264
 \i (00:00:03) trapsize 1264
 \i (00:00:04) generaledit 
-\i (00:00:05) zoom in 1 
-\i (00:00:05) setwindow pcb
-\i (00:00:05) zoom in 180.88 -223.70
-\i (00:00:05) trapsize 632
-\i (00:00:05) zoom in 1 
-\i (00:00:05) setwindow pcb
-\i (00:00:05) zoom in 179.62 -223.70
-\i (00:00:05) trapsize 316
-\i (00:00:08) setwindow form.vf_vis
-\i (00:00:08) FORM vf_vis colorview_list Film: SolderMaskTop 
-\i (00:00:09) setwindow pcb
-\i (00:00:09) roam start
-\i (00:00:09) roam x -64
-\i (00:00:09) roam y 32
-\i (00:00:09) roam x -96
-\i (00:00:09) roam y 32
-\i (00:00:09) roam x -64
-\i (00:00:09) roam y 16
-\i (00:00:09) roam end
-\i (00:00:10) setwindow form.vf_vis
-\i (00:00:10) FORM vf_vis 1 via_colorvisible 1 
-\i (00:00:11) FORM vf_vis 1 via_colorvisible 0 
-\i (00:00:11) FORM vf_vis 1 via_colorvisible 1 
-\i (00:00:12) FORM vf_vis 1 via_colorvisible 0 
-\i (00:00:12) setwindow pcb
-\i (00:00:12) zoom out 1 
-\i (00:00:12) setwindow pcb
-\i (00:00:12) zoom out 382.49 -226.72
-\i (00:00:12) trapsize 632
-\i (00:00:12) zoom out 1 
-\i (00:00:12) setwindow pcb
-\i (00:00:12) zoom out 390.07 -238.09
-\i (00:00:12) trapsize 1264
-\i (00:00:13) roam start
-\i (00:00:13) roam x 16
-\i (00:00:13) roam y -64
-\i (00:00:13) roam x 16
-\i (00:00:13) roam y -48
-\i (00:00:14) roam x 16
-\i (00:00:14) roam y -16
-\i (00:00:14) roam end
-\i (00:00:15) setwindow form.vf_vis
-\i (00:00:15) FORM vf_vis 1 via_colorvisible 1 
-\i (00:00:16) FORM vf_vis 1 via_colorvisible 0 
-\i (00:00:16) FORM vf_vis 1 via_colorvisible 1 
-\i (00:00:17) FORM vf_vis 1 via_colorvisible 0 
-\i (00:00:17) FORM vf_vis 1 via_colorvisible 1 
-\i (00:00:17) FORM vf_vis 1 via_colorvisible 0 
-\i (00:00:18) FORM vf_vis 1 via_colorvisible 1 
-\i (00:00:18) FORM vf_vis 1 via_colorvisible 0 
-\i (00:00:19) FORM vf_vis 1 via_colorvisible 1 
-\i (00:00:19) FORM vf_vis 1 via_colorvisible 0 
-\i (00:00:20) FORM vf_vis 1 via_colorvisible 1 
-\i (00:00:20) FORM vf_vis 1 via_colorvisible 0 
-\i (00:00:21) setwindow pcb
-\i (00:00:21) zoom in 1 
-\i (00:00:21) setwindow pcb
-\i (00:00:21) zoom in -877.56 748.34
-\i (00:00:21) trapsize 632
-\i (00:00:21) zoom in 1 
-\i (00:00:21) setwindow pcb
-\i (00:00:21) zoom in -859.86 707.90
-\i (00:00:21) trapsize 316
-\i (00:00:21) zoom in 1 
-\i (00:00:21) setwindow pcb
-\i (00:00:21) zoom in -859.86 707.90
-\i (00:00:21) trapsize 158
-\i (00:00:22) zoom out 1 
+\i (00:00:09) artwork 
+\w (00:00:09) Artwork output type (GERBER_RS274X) does not match the format used in dynamic shapes parameters (GERBER4X00). Use Global shape parameter dialog, tab Void Controls to change format type.
+\i (00:00:11) setwindow form.film_control
+\i (00:00:11) FORM film_control filmtree  SolderMaskBottom 
+\i (00:00:11) FORM film_control filmtree  SolderMaskTop 
+\i (00:00:12) FORM film_control filmtree  SolderMaskBottom 
+\i (00:00:18) FORM film_control filmtree  'BOARD GEOMETRY/OUTLINE' SolderMaskBottom 
+\i (00:00:18) FORM film_control filmtree  PIN/SOLDERMASK_BOTTOM SolderMaskBottom 
+\i (00:00:19) FORM film_control filmtree  'VIA CLASS/SOLDERMASK_BOTTOM' SolderMaskBottom 
+\i (00:00:20) FORM film_control filmtree popup Cut 'VIA CLASS/SOLDERMASK_BOTTOM' SolderMaskBottom 
+\i (00:00:20) FORM film_control filmtree  SolderMaskBottom 
+\i (00:00:21) FORM film_control filmtree  PIN/SOLDERMASK_BOTTOM SolderMaskBottom 
+\i (00:00:21) FORM film_control filmtree  'BOARD GEOMETRY/OUTLINE' SolderMaskBottom 
+\i (00:00:21) FORM film_control filmtree  PIN/SOLDERMASK_BOTTOM SolderMaskBottom 
+\i (00:00:22) FORM film_control ok  
 \i (00:00:22) setwindow pcb
-\i (00:00:22) zoom out -854.49 697.15
-\i (00:00:22) trapsize 316
-\i (00:00:22) zoom out 1 
-\i (00:00:22) setwindow pcb
-\i (00:00:22) zoom out -846.26 683.26
-\i (00:00:22) trapsize 632
-\i (00:00:23) roam start
-\i (00:00:23) roam x 128
-\i (00:00:23) roam x 80
-\i (00:00:23) roam x 80
-\i (00:00:23) roam x 80
-\i (00:00:23) roam x 80
-\i (00:00:23) roam x 48
-\i (00:00:23) roam end
-\i (00:00:23) zoom out 1 
-\i (00:00:23) setwindow pcb
-\i (00:00:23) zoom out -20.68 535.39
-\i (00:00:23) trapsize 1264
-\i (00:00:24) zoom in 1 
-\i (00:00:24) setwindow pcb
-\i (00:00:24) zoom in -680.40 601.12
-\i (00:00:24) trapsize 632
-\i (00:00:24) zoom in 1 
-\i (00:00:24) setwindow pcb
-\i (00:00:24) zoom in -681.67 602.39
-\i (00:00:24) trapsize 316
-\i (00:00:24) zoom out 1 
-\i (00:00:24) setwindow pcb
-\i (00:00:24) zoom out -472.50 556.89
-\i (00:00:24) trapsize 632
-\i (00:00:26) setwindow form.vf_vis
-\i (00:00:26) FORM vf_vis 1 via_colorvisible 1 
-\i (00:00:26) FORM vf_vis 1 via_colorvisible 0 
-\i (00:00:26) FORM vf_vis 1 via_colorvisible 1 
-\i (00:00:27) FORM vf_vis 1 via_colorvisible 0 
-\i (00:00:28) setwindow pcb
-\i (00:00:28) roam start
-\i (00:00:28) roam x 16
-\i (00:00:28) roam x 64
-\i (00:00:28) roam x 16
-\i (00:00:28) roam x 16
-\i (00:00:28) roam x 64
-\i (00:00:28) roam x 64
-\i (00:00:28) roam x 64
-\i (00:00:28) roam x 64
-\i (00:00:28) roam x 48
-\i (00:00:28) roam x 32
-\i (00:00:29) roam end
-\i (00:00:29) zoom out 1 
-\i (00:00:29) setwindow pcb
-\i (00:00:29) zoom out 601.13 561.95
-\i (00:00:29) trapsize 1264
-\i (00:00:30) setwindow form.vf_vis
+\i (00:00:22) generaledit 
+\i (00:00:24) save 
+\i (00:00:24) generaledit 
+\i (00:00:27) setwindow form.vf_vis
+\i (00:00:27) FORM vf_vis colorview_list Film: SolderMaskBottom 
+\i (00:00:28) FORM vf_vis 1 via_colorvisible 1 
+\i (00:00:29) FORM vf_vis 1 via_colorvisible 0 
+\i (00:00:29) FORM vf_vis 1 via_colorvisible 1 
+\i (00:00:30) FORM vf_vis 1 via_colorvisible 0 
+\i (00:00:30) FORM vf_vis 1 via_colorvisible 1 
+\i (00:00:30) FORM vf_vis 1 via_colorvisible 0 
 \i (00:00:30) FORM vf_vis 1 via_colorvisible 1 
 \i (00:00:31) FORM vf_vis 1 via_colorvisible 0 
 \i (00:00:31) FORM vf_vis 1 via_colorvisible 1 
+\i (00:00:31) FORM vf_vis 1 via_colorvisible 0 
+\i (00:00:31) FORM vf_vis 1 via_colorvisible 1 
 \i (00:00:32) FORM vf_vis 1 via_colorvisible 0 
-\i (00:00:32) setwindow pcb
-\i (00:00:32) roam start
-\i (00:00:32) roam x 16
-\i (00:00:33) roam x 64
-\i (00:00:33) roam y 16
-\i (00:00:33) roam x 96
-\i (00:00:33) roam y 48
-\i (00:00:33) roam x 64
-\i (00:00:33) roam y 96
-\i (00:00:33) roam x 16
-\i (00:00:33) roam y 96
-\i (00:00:33) roam x 16
-\i (00:00:33) roam y 32
-\i (00:00:33) roam end
-\i (00:00:33) zoom in 1 
-\i (00:00:33) setwindow pcb
-\i (00:00:33) zoom in 330.67 -265.27
-\i (00:00:33) trapsize 632
-\i (00:00:33) zoom in 1 
-\i (00:00:33) setwindow pcb
-\i (00:00:33) zoom in 258.63 -264.00
-\i (00:00:33) trapsize 316
-\i (00:00:34) zoom out 1 
-\i (00:00:34) setwindow pcb
-\i (00:00:34) zoom out 219.45 -258.31
-\i (00:00:34) trapsize 632
-\i (00:00:34) zoom out 1 
-\i (00:00:34) setwindow pcb
-\i (00:00:34) zoom out 219.45 -258.31
-\i (00:00:34) trapsize 1264
-\i (00:00:34) roam start
-\i (00:00:34) roam x -96
-\i (00:00:35) roam x -64
-\i (00:00:35) roam x -64
-\i (00:00:35) roam y -16
-\i (00:00:35) roam end
-\i (00:00:36) setwindow form.vf_vis
+\i (00:00:32) FORM vf_vis 1 via_colorvisible 1 
+\i (00:00:32) FORM vf_vis 1 via_colorvisible 0 
+\i (00:00:33) FORM vf_vis 1 via_colorvisible 1 
+\i (00:00:35) FORM vf_vis 1 via_colorvisible 0 
+\i (00:00:36) FORM vf_vis 1 via_colorvisible 1 
+\i (00:00:36) FORM vf_vis 1 via_colorvisible 0 
 \i (00:00:36) FORM vf_vis 1 via_colorvisible 1 
 \i (00:00:36) FORM vf_vis 1 via_colorvisible 0 
 \i (00:00:37) FORM vf_vis 1 via_colorvisible 1 
 \i (00:00:37) FORM vf_vis 1 via_colorvisible 0 
 \i (00:00:37) FORM vf_vis 1 via_colorvisible 1 
 \i (00:00:38) FORM vf_vis 1 via_colorvisible 0 
-\i (00:00:39) setwindow pcb
-\i (00:00:39) roam start
-\i (00:00:39) roam x 32
-\i (00:00:39) roam y -96
-\i (00:00:39) roam y -64
-\i (00:00:39) roam end
-\i (00:00:41) zoom fit 
-\i (00:00:41) trapsize 1264
-\i (00:00:42) exit 
-\t (00:00:42)     Journal end - Mon Aug 26 09:33:03 2019
+\i (00:00:38) FORM vf_vis 1 via_colorvisible 1 
+\i (00:00:38) FORM vf_vis 1 via_colorvisible 0 
+\i (00:00:39) FORM vf_vis 1 via_colorvisible 1 
+\i (00:00:39) FORM vf_vis 1 via_colorvisible 0 
+\i (00:00:39) FORM vf_vis 1 via_colorvisible 1 
+\i (00:00:40) FORM vf_vis 1 via_colorvisible 0 
+\i (00:00:40) FORM vf_vis 1 via_colorvisible 1 
+\i (00:00:40) FORM vf_vis 1 via_colorvisible 0 
+\i (00:00:42) setwindow pcb
+\i (00:00:42) zoom fit 
+\i (00:00:42) trapsize 1264
+\i (00:00:44) artwork 
+\w (00:00:44) Artwork output type (GERBER_RS274X) does not match the format used in dynamic shapes parameters (GERBER4X00). Use Global shape parameter dialog, tab Void Controls to change format type.
+\i (00:00:47) setwindow form.film_control
+\i (00:00:47) FORM film_control filmtree 'MULTISEL YES' SolderMaskBottom 
+\i (00:00:47) FORM film_control filmtree  SolderMaskBottom 
+\i (00:00:48) FORM film_control create  
+\t (00:00:48) Checking db records
+\t (00:00:48)     checking for orphans...
+\t (00:00:48)     Checked  89 percent
+\t (00:00:48)     Checked 100 percent
+\t (00:00:48) Done dbdoctor.
+\t (00:00:48) Starting Create artwork films...
+\t (00:00:50) Plot generated.
+\i (00:00:54) FORM film_control ok  
+\i (00:00:54) setwindow pcb
+\i (00:00:54) generaledit 
+\i (00:00:55) save 
+\i (00:00:55) generaledit 
+\i (00:00:56) exit 
+\t (00:00:56)     Journal end - Mon Aug 26 09:38:55 2019

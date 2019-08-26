@@ -4,7 +4,7 @@
 (                                                                     )
 (    Drawing          : galvo_ctrl_brd.brd                            )
 (    Software Version : 16.5P002                                      )
-(    Date/Time        : Mon Aug 26 09:27:06 2019                      )
+(    Date/Time        : Mon Aug 26 09:38:47 2019                      )
 (                                                                     )
 (---------------------------------------------------------------------)
 
@@ -27,8 +27,8 @@ Results from parameter file ...
 
 
 ================================================================
-     PROCESSING FILM < SolderMaskTop >
-     TO FILE < C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v3/galvo_ctrl_board/SolderMaskTop.art > ...
+     PROCESSING FILM < SolderMaskBottom >
+     TO FILE < C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v3/galvo_ctrl_board/SolderMaskBottom.art > ...
 ================================================================
 
   FILM PARAMETERS :
@@ -48,22 +48,23 @@ Results from parameter file ...
   TYPE       SIZE/NAME                   ROT   MIRROR MODE 
   ---------------------------------------------------------
   CIRCLE     0.00600                                  DARK 
-  CIRCLE     0.02000                                  DARK 
-  CIRCLE     0.02880                                  DARK 
   CIRCLE     0.07000                                  DARK 
   CIRCLE     0.13000                                  DARK 
   SQUARE     0.07000                     0.000 NO     DARK 
   RECTANGLE  0.04500     x 0.03500       0.000 NO     DARK 
   RECTANGLE  0.04500     x 0.03500      90.000 NO     DARK 
-  RECTANGLE  0.06500     x 0.06500       0.000 NO     DARK 
-  RECTANGLE  0.08500     x 0.06000       0.000 NO     DARK 
-  RECTANGLE  0.11500     x 0.13000       0.000 NO     DARK 
+  RECTANGLE  0.05500     x 0.01500      90.000 NO     DARK 
+  RECTANGLE  0.06500     x 0.05500       0.000 NO     DARK 
+  RECTANGLE  0.06500     x 0.05500      90.000 NO     DARK 
+  RECTANGLE  0.06900     x 0.01800      90.000 NO     DARK 
+  RECTANGLE  0.08000     x 0.02900       0.000 NO     DARK 
+  RECTANGLE  0.08000     x 0.03000      90.000 NO     DARK 
 
-     SolderMaskTop created.
+     SolderMaskBottom created.
 
 
 ------------------------------------------------------
  SUMMARY:
-        SolderMaskTop created.
+        SolderMaskBottom created.
 
  ARTWORK finished
