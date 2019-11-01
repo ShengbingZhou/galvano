@@ -53,11 +53,92 @@ set_global_assignment -name POWER_DEFAULT_INPUT_IO_TOGGLE_RATE "12.5 %"
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
+set_global_assignment -name QIP_FILE source/internal_osc/synthesis/internal_osc.qip
 set_global_assignment -name VERILOG_FILE source/pos_pid.v
 set_global_assignment -name VERILOG_FILE source/dec256sinc24b.v
 set_global_assignment -name VERILOG_FILE source/dac7731.v
 set_global_assignment -name VERILOG_FILE source/ads8685.v
 set_global_assignment -name VERILOG_FILE source/top.v
 set_global_assignment -name QIP_FILE source/pll.qip
-set_global_assignment -name DEVICE_FILTER_SPEED_GRADE 7
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to fpga_miso
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to fpga_mosi
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to fpga_sclk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to fpga_ss
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to temp_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to temp_cs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to temp_data
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xdac_cs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xdac_ldac
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xdac_rst
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xdac_rstsel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xdac_sck
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xdac_sdi
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xdac_sdo
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xpadc_cs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xpadc_rst
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xpadc_rvs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xpadc_sck
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xpadc_sdi
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xpadc_sdo0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xpadc_sdo1
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xy_clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xy_status
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xy_sync
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xy_x
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to xy_y
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ydac_cs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ydac_ldac
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ydac_rst
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ydac_rstsel
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ydac_sck
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ydac_sdi
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ydac_sdo
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ypadc_cs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ypadc_rst
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ypadc_rvs
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ypadc_sck
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ypadc_sdi
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ypadc_sdo0
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to ypadc_sdo1
+set_location_assignment PIN_E1 -to fpga_miso
+set_location_assignment PIN_C2 -to fpga_mosi
+set_location_assignment PIN_C1 -to fpga_sclk
+set_location_assignment PIN_B1 -to fpga_ss
+set_location_assignment PIN_C13 -to temp_clk
+set_location_assignment PIN_D12 -to temp_cs
+set_location_assignment PIN_B13 -to temp_data
+set_location_assignment PIN_N2 -to xdac_cs
+set_location_assignment PIN_L3 -to xdac_ldac
+set_location_assignment PIN_L2 -to xdac_rst
+set_location_assignment PIN_N4 -to xdac_rstsel
+set_location_assignment PIN_N3 -to xdac_sck
+set_location_assignment PIN_M1 -to xdac_sdi
+set_location_assignment PIN_M2 -to xdac_sdo
+set_location_assignment PIN_A5 -to xpadc_cs
+set_location_assignment PIN_A6 -to xpadc_rst
+set_location_assignment PIN_A3 -to xpadc_rvs
+set_location_assignment PIN_B5 -to xpadc_sck
+set_location_assignment PIN_B6 -to xpadc_sdi
+set_location_assignment PIN_A4 -to xpadc_sdo0
+set_location_assignment PIN_B4 -to xpadc_sdo1
+set_location_assignment PIN_H2 -to xy_clk
+set_location_assignment PIN_F1 -to xy_status
+set_location_assignment PIN_J2 -to xy_sync
+set_location_assignment PIN_K1 -to xy_x
+set_location_assignment PIN_J1 -to xy_y
+set_location_assignment PIN_J12 -to ydac_cs
+set_location_assignment PIN_L12 -to ydac_ldac
+set_location_assignment PIN_L13 -to ydac_rst
+set_location_assignment PIN_G13 -to ydac_rstsel
+set_location_assignment PIN_H13 -to ydac_sck
+set_location_assignment PIN_K12 -to ydac_sdi
+set_location_assignment PIN_J13 -to ydac_sdo
+set_location_assignment PIN_B10 -to ypadc_cs
+set_location_assignment PIN_A11 -to ypadc_rst
+set_location_assignment PIN_A7 -to ypadc_rvs
+set_location_assignment PIN_A9 -to ypadc_sck
+set_location_assignment PIN_A10 -to ypadc_sdi
+set_location_assignment PIN_C9 -to ypadc_sdo0
+set_location_assignment PIN_A8 -to ypadc_sdo1
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

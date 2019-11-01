@@ -26,15 +26,13 @@
  -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
  -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
  --                 of its bank.
- --                  Bank 1A:       2.5V
- --                  Bank 1B:       2.5V
- --                  Bank 2:       2.5V
- --                  Bank 3:       2.5V
- --                  Bank 4:       2.5V
- --                  Bank 5:       2.5V
- --                  Bank 6:       2.5V
- --                  Bank 7:       2.5V
- --                  Bank 8:       2.5V
+ --                  Bank 1A:       3.3V
+ --                  Bank 1B:       3.3V
+ --                  Bank 2:       3.3V
+ --                  Bank 3:       3.3V
+ --                  Bank 5:       3.3V
+ --                  Bank 6:       3.3V
+ --                  Bank 8:       3.3V
  -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
  --                  It can also be used to report unused dedicated pins. The connection
  --                  on the board for unused dedicated pins depends on whether this will
@@ -65,151 +63,176 @@
  ---------------------------------------------------------------------------------
 
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-CHIP  "max10_galvano"  ASSIGNED TO AN: 10M04SAE144I7G
+CHIP  "max10_galvano"  ASSIGNED TO AN: 10M02SCU169I7G
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-VCC_ONE                      : 1         : power  :                   : 3.0V/3.3V :           :                
-VCCA6                        : 2         : power  :                   : 3.0V/3.3V :           :                
-ANAIN1                       : 3         :        :                   :         :           :                
-REFGND                       : 4         :        :                   :         :           :                
-ADC_VREF                     : 5         :        :                   :         :           :                
-xdac_cs                      : 6         : output : 2.5 V             :         : 1A        : N              
-xpadc_sck                    : 7         : output : 2.5 V             :         : 1A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 8         :        :                   :         : 1A        :                
-VCCIO1A                      : 9         : power  :                   : 2.5V    : 1A        :                
-uart_rx1                     : 10        : input  : 2.5 V             :         : 1A        : N              
-xdac_sck                     : 11        : output : 2.5 V             :         : 1A        : N              
-xdac_rst                     : 12        : output : 2.5 V             :         : 1A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 13        :        :                   :         : 1A        :                
-xpadc_cs                     : 14        : output : 2.5 V             :         : 1A        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 15        :        :                   :         : 1B        :                
-~ALTERA_TMS~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 16        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 17        :        :                   :         : 1B        :                
-~ALTERA_TCK~ / RESERVED_INPUT : 18        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
-~ALTERA_TDI~ / RESERVED_INPUT_WITH_WEAK_PULLUP : 19        : input  : 2.5 V Schmitt Trigger :         : 1B        : N              
-~ALTERA_TDO~                 : 20        : output : 2.5 V             :         : 1B        : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 21        :        :                   :         : 1B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 22        :        :                   :         : 1B        :                
-VCCIO1B                      : 23        : power  :                   : 2.5V    : 1B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 24        :        :                   :         : 1B        :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 25        :        :                   :         : 1B        :                
-xy_sync                      : 26        : input  : 2.5 V             :         : 2         : N              
-uart_rx2                     : 27        : output : 2.5 V             :         : 2         : N              
-clk_in                       : 28        : input  : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 29        :        :                   :         : 2         :                
-xpadc_sdo0                   : 30        : input  : 2.5 V             :         : 2         : N              
-VCCIO2                       : 31        : power  :                   : 2.5V    : 2         :                
-temp_cs                      : 32        : output : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 33        :        :                   :         : 2         :                
-VCCA2                        : 34        : power  :                   : 3.0V/3.3V :           :                
-VCCA1                        : 35        : power  :                   : 3.0V/3.3V :           :                
-VCC_ONE                      : 36        : power  :                   : 3.0V/3.3V :           :                
-VCC_ONE                      : 37        : power  :                   : 3.0V/3.3V :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 38        :        :                   :         : 3         :                
-xy_clk                       : 39        : input  : 2.5 V             :         : 3         : N              
-VCCIO3                       : 40        : power  :                   : 2.5V    : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 41        :        :                   :         : 3         :                
-GND                          : 42        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 43        :        :                   :         : 3         :                
-xy_x                         : 44        : input  : 2.5 V             :         : 3         : N              
-ypadc_sdo1                   : 45        : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 46        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 47        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 48        :        :                   :         : 3         :                
-VCCIO3                       : 49        : power  :                   : 2.5V    : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 50        :        :                   :         : 3         :                
-VCC_ONE                      : 51        : power  :                   : 3.0V/3.3V :           :                
-ydac_rstsel                  : 52        : output : 2.5 V             :         : 3         : N              
-GND                          : 53        : gnd    :                   :         :           :                
-ypadc_rst                    : 54        : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 55        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 56        :        :                   :         : 3         :                
-xy_status                    : 57        : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 58        :        :                   :         : 3         :                
-xiadc_mdat                   : 59        : input  : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 60        :        :                   :         : 3         :                
-xdac_sdo                     : 61        : input  : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 62        :        :                   :         : 4         :                
-GND                          : 63        : gnd    :                   :         :           :                
-xpadc_rvs                    : 64        : input  : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 65        :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 66        :        :                   :         : 4         :                
-VCCIO4                       : 67        : power  :                   : 2.5V    : 4         :                
-GND                          : 68        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 69        :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 70        :        :                   :         : 4         :                
-VCCA5                        : 71        : power  :                   : 3.0V/3.3V :           :                
-VCC_ONE                      : 72        : power  :                   : 3.0V/3.3V :           :                
-VCC_ONE                      : 73        : power  :                   : 3.0V/3.3V :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 74        :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 75        :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 76        :        :                   :         : 5         :                
-xpadc_rst                    : 77        : output : 2.5 V             :         : 5         : N              
-xiadc_clkin                  : 78        : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 79        :        :                   :         : 5         :                
-temp_clk                     : 80        : output : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 81        :        :                   :         : 5         :                
-VCCIO5                       : 82        : power  :                   : 2.5V    : 5         :                
-GND                          : 83        : gnd    :                   :         :           :                
-xy_y                         : 84        : input  : 2.5 V             :         : 5         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 85        :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 86        :        :                   :         : 5         :                
-ypadc_rvs                    : 87        : output : 2.5 V             :         : 5         : N              
-yiadc_clkin                  : 88        : output : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 89        :        :                   :         : 6         :                
-ydac_rst                     : 90        : output : 2.5 V             :         : 6         : N              
-ypadc_sdo0                   : 91        : output : 2.5 V             :         : 6         : N              
-ypadc_cs                     : 92        : output : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 93        :        :                   :         : 6         :                
-VCCIO6                       : 94        : power  :                   : 2.5V    : 6         :                
-GND                          : 95        : gnd    :                   :         :           :                
-cfg_done                     : 96        : output : 2.5 V             :         : 6         : N              
-ydac_sck                     : 97        : output : 2.5 V             :         : 6         : N              
-ydac_sdi                     : 98        : output : 2.5 V             :         : 6         : N              
-ydac_ldac                    : 99        : output : 2.5 V             :         : 6         : N              
-ypadc_sck                    : 100       : output : 2.5 V             :         : 6         : N              
-ydac_sdo                     : 101       : input  : 2.5 V             :         : 6         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 102       :        :                   :         : 6         :                
-VCCIO6                       : 103       : power  :                   : 2.5V    : 6         :                
-GND                          : 104       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 105       :        :                   :         : 6         :                
-ypadc_sdi                    : 106       : output : 2.5 V             :         : 6         : N              
-VCCA3                        : 107       : power  :                   : 3.0V/3.3V :           :                
-VCC_ONE                      : 108       : power  :                   : 3.0V/3.3V :           :                
-VCC_ONE                      : 109       : power  :                   : 3.0V/3.3V :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 110       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 111       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 112       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 113       :        :                   :         : 7         :                
-ydac_cs                      : 114       : output : 2.5 V             :         : 7         : N              
-VCC_ONE                      : 115       : power  :                   : 3.0V/3.3V :           :                
-GND                          : 116       : gnd    :                   :         :           :                
-VCCIO7                       : 117       : power  :                   : 2.5V    : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 118       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 119       :        :                   :         : 7         :                
-xdac_rstsel                  : 120       : output : 2.5 V             :         : 8         : N              
-xdac_ldac                    : 121       : output : 2.5 V             :         : 8         : N              
-uart_tx1                     : 122       : input  : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 123       :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : 124       :        :                   :         : 8         :                
-GND                          : 125       : gnd    :                   :         :           :                
-~ALTERA_CONFIG_SEL~ / RESERVED_INPUT : 126       : input  : 2.5 V             :         : 8         : N              
-yiadc_mdat                   : 127       : input  : 2.5 V             :         : 8         : N              
-VCCIO8                       : 128       : power  :                   : 2.5V    : 8         :                
-~ALTERA_nCONFIG~ / RESERVED_INPUT : 129       : input  : 2.5 V Schmitt Trigger :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 130       :        :                   :         : 8         :                
-xdac_sdi                     : 131       : output : 2.5 V             :         : 8         : N              
-xpadc_sdi                    : 132       : output : 2.5 V             :         : 8         : N              
-GND                          : 133       : gnd    :                   :         :           :                
-uart_tx2                     : 134       : input  : 2.5 V             :         : 8         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : 135       :        :                   :         : 8         :                
-~ALTERA_nSTATUS~ / RESERVED_INPUT : 136       : input  : 2.5 V Schmitt Trigger :         : 8         : N              
-GND                          : 137       : gnd    :                   :         :           :                
-~ALTERA_CONF_DONE~ / RESERVED_INPUT : 138       : input  : 2.5 V Schmitt Trigger :         : 8         : N              
-VCCIO8                       : 139       : power  :                   : 2.5V    : 8         :                
-xpadc_sdo1                   : 140       : input  : 2.5 V             :         : 8         : N              
-temp_data                    : 141       : input  : 2.5 V             :         : 8         : N              
-GND                          : 142       : gnd    :                   :         :           :                
-VCCA4                        : 143       : power  :                   : 3.0V/3.3V :           :                
-VCC_ONE                      : 144       : power  :                   : 3.0V/3.3V :           :                
+GND                          : A1        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A2        :        :                   :         : 8         :                
+xpadc_rvs                    : A3        : input  : 3.3-V LVTTL       :         : 8         : Y              
+xpadc_sdo0                   : A4        : input  : 3.3-V LVTTL       :         : 8         : Y              
+xpadc_cs                     : A5        : output : 3.3-V LVTTL       :         : 8         : Y              
+xpadc_rst                    : A6        : output : 3.3-V LVTTL       :         : 8         : Y              
+ypadc_rvs                    : A7        : output : 3.3-V LVTTL       :         : 8         : Y              
+ypadc_sdo1                   : A8        : output : 3.3-V LVTTL       :         : 8         : Y              
+ypadc_sck                    : A9        : output : 3.3-V LVTTL       :         : 8         : Y              
+ypadc_sdi                    : A10       : output : 3.3-V LVTTL       :         : 8         : Y              
+ypadc_rst                    : A11       : output : 3.3-V LVTTL       :         : 8         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 6         :                
+GND                          : A13       : gnd    :                   :         :           :                
+fpga_ss                      : B1        : input  : 3.3-V LVTTL       :         : 1A        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B2        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 8         :                
+xpadc_sdo1                   : B4        : input  : 3.3-V LVTTL       :         : 8         : Y              
+xpadc_sck                    : B5        : output : 3.3-V LVTTL       :         : 8         : Y              
+xpadc_sdi                    : B6        : output : 3.3-V LVTTL       :         : 8         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8         :                
+GND                          : B8        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B9        :        :                   :         : 8         :                
+ypadc_cs                     : B10       : output : 3.3-V LVTTL       :         : 8         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B11       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B12       :        :                   :         : 6         :                
+temp_data                    : B13       : input  : 3.3-V LVTTL       :         : 6         : Y              
+fpga_sclk                    : C1        : input  : 3.3-V LVTTL       :         : 1A        : Y              
+fpga_mosi                    : C2        : output : 3.3-V LVTTL       :         : 1A        : Y              
+GND                          : C3        : gnd    :                   :         :           :                
+~ALTERA_nSTATUS~ / RESERVED_INPUT : C4        : input  : 3.3 V Schmitt Trigger :         : 8         : N              
+~ALTERA_CONF_DONE~ / RESERVED_INPUT : C5        : input  : 3.3 V Schmitt Trigger :         : 8         : N              
+VCCIO8                       : C6        : power  :                   : 3.3V    : 8         :                
+VCCIO8                       : C7        : power  :                   : 3.3V    : 8         :                
+VCCIO8                       : C8        : power  :                   : 3.3V    : 8         :                
+ypadc_sdo0                   : C9        : output : 3.3-V LVTTL       :         : 8         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C10       :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C12       :        :                   :         : 6         :                
+temp_clk                     : C13       : output : 3.3-V LVTTL       :         : 6         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D1        :        :                   :         : 1A        :                
+NC                           : D2        :        :                   :         :           :                
+NC                           : D3        :        :                   :         :           :                
+VCCA3                        : D4        : power  :                   : 3.0V/3.3V :           :                
+GND                          : D5        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 8         :                
+~ALTERA_CONFIG_SEL~ / RESERVED_INPUT : D7        : input  : 3.3-V LVTTL       :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D8        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :         : 6         :                
+VCCA2                        : D10       : power  :                   : 3.0V/3.3V :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D11       :        :                   :         : 6         :                
+temp_cs                      : D12       : output : 3.3-V LVTTL       :         : 6         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D13       :        :                   :         : 6         :                
+fpga_miso                    : E1        : input  : 3.3-V LVTTL       :         : 1A        : Y              
+NC                           : E2        :        :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E3        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E4        :        :                   :         : 1A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E5        :        :                   :         : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E6        :        :                   :         : 8         :                
+~ALTERA_nCONFIG~ / RESERVED_INPUT : E7        : input  : 3.3 V Schmitt Trigger :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E9        :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 6         :                
+GND                          : E11       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E12       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E13       :        :                   :         : 6         :                
+xy_status                    : F1        : output : 3.3-V LVTTL       :         : 1A        : Y              
+VCCIO1                       : F2        : power  :                   : 3.3V    : 1A, 1B    :                
+GND                          : F3        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F4        :        :                   :         : 1B        :                
+~ALTERA_TDI~ / RESERVED_INPUT_WITH_WEAK_PULLUP : F5        : input  : 3.3 V Schmitt Trigger :         : 1B        : N              
+~ALTERA_TDO~                 : F6        : output : 3.3-V LVTTL       :         : 1B        : N              
+VCC_ONE                      : F7        : power  :                   : 3.0V/3.3V :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F8        :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F9        :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F10       :        :                   :         : 6         :                
+VCCIO6                       : F11       : power  :                   : 3.3V    : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F12       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F13       :        :                   :         : 6         :                
+~ALTERA_TMS~ / RESERVED_INPUT_WITH_WEAK_PULLUP : G1        : input  : 3.3 V Schmitt Trigger :         : 1B        : N              
+~ALTERA_TCK~ / RESERVED_INPUT : G2        : input  : 3.3 V Schmitt Trigger :         : 1B        : N              
+VCCIO1                       : G3        : power  :                   : 3.3V    : 1A, 1B    :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G4        :        :                   :         : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G5        :        :                   :         : 2         :                
+VCC_ONE                      : G6        : power  :                   : 3.0V/3.3V :           :                
+GND                          : G7        : gnd    :                   :         :           :                
+VCC_ONE                      : G8        : power  :                   : 3.0V/3.3V :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G9        :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G10       :        :                   :         : 6         :                
+VCCIO6                       : G11       : power  :                   : 3.3V    : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G12       :        :                   :         : 5         :                
+ydac_rstsel                  : G13       : output : 3.3-V LVTTL       :         : 5         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H1        :        :                   :         : 1B        :                
+xy_clk                       : H2        : input  : 3.3-V LVTTL       :         : 1B        : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H3        :        :                   :         : 1B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H4        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H5        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H6        :        :                   :         : 2         :                
+VCC_ONE                      : H7        : power  :                   : 3.0V/3.3V :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H8        :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H9        :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : H10       :        :                   :         : 5         :                
+VCCIO5                       : H11       : power  :                   : 3.3V    : 5         :                
+GND                          : H12       : gnd    :                   :         :           :                
+ydac_sck                     : H13       : output : 3.3-V LVTTL       :         : 5         : Y              
+xy_y                         : J1        : input  : 3.3-V LVTTL       :         : 2         : Y              
+xy_sync                      : J2        : input  : 3.3-V LVTTL       :         : 2         : Y              
+VCCIO2                       : J3        : power  :                   : 3.3V    : 2         :                
+GND                          : J4        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J5        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J6        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J7        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J8        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J9        :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : J10       :        :                   :         : 5         :                
+VCCIO5                       : J11       : power  :                   : 3.3V    : 5         :                
+ydac_cs                      : J12       : output : 3.3-V LVTTL       :         : 5         : Y              
+ydac_sdo                     : J13       : input  : 3.3-V LVTTL       :         : 5         : Y              
+xy_x                         : K1        : input  : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K2        :        :                   :         : 2         :                
+VCCIO2                       : K3        : power  :                   : 3.3V    : 2         :                
+VCCA1                        : K4        : power  :                   : 3.0V/3.3V :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K5        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K6        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K7        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K8        :        :                   :         : 3         :                
+VCCA4                        : K9        : power  :                   : 3.0V/3.3V :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K10       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K11       :        :                   :         : 5         :                
+ydac_sdi                     : K12       : output : 3.3-V LVTTL       :         : 5         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : K13       :        :                   :         : 5         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L1        :        :                   :         : 2         :                
+xdac_rst                     : L2        : output : 3.3-V LVTTL       :         : 2         : Y              
+xdac_ldac                    : L3        : output : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : L4        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L5        :        :                   :         : 3         :                
+VCCIO3                       : L6        : power  :                   : 3.3V    : 3         :                
+VCCIO3                       : L7        : power  :                   : 3.3V    : 3         :                
+VCCIO3                       : L8        : power  :                   : 3.3V    : 3         :                
+GND                          : L9        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L10       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : L11       :        :                   :         : 3         :                
+ydac_ldac                    : L12       : output : 3.3-V LVTTL       :         : 5         : Y              
+ydac_rst                     : L13       : output : 3.3-V LVTTL       :         : 5         : Y              
+xdac_sdi                     : M1        : output : 3.3-V LVTTL       :         : 2         : Y              
+xdac_sdo                     : M2        : input  : 3.3-V LVTTL       :         : 2         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : M3        :        :                   :         : 2         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M4        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M5        :        :                   :         : 3         :                
+GND                          : M6        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M7        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M8        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M9        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M10       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M11       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M12       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M13       :        :                   :         : 3         :                
+GND                          : N1        : gnd    :                   :         :           :                
+xdac_cs                      : N2        : output : 3.3-V LVTTL       :         : 2         : Y              
+xdac_sck                     : N3        : output : 3.3-V LVTTL       :         : 2         : Y              
+xdac_rstsel                  : N4        : output : 3.3-V LVTTL       :         : 3         : Y              
+RESERVED_INPUT_WITH_WEAK_PULLUP : N5        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N6        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N7        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N8        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N9        :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N10       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N11       :        :                   :         : 3         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N12       :        :                   :         : 3         :                
+GND                          : N13       : gnd    :                   :         :           :                
