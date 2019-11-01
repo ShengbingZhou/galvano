@@ -102,20 +102,20 @@ module pll (
 				.vcounderrange ());
 	defparam
 		altpll_component.bandwidth_type = "AUTO",
-		altpll_component.clk0_divide_by = 2,
+		altpll_component.clk0_divide_by = 11,
 		altpll_component.clk0_duty_cycle = 50,
-		altpll_component.clk0_multiply_by = 5,
+		altpll_component.clk0_multiply_by = 10,
 		altpll_component.clk0_phase_shift = "0",
-		altpll_component.clk1_divide_by = 1,
+		altpll_component.clk1_divide_by = 11,
 		altpll_component.clk1_duty_cycle = 50,
-		altpll_component.clk1_multiply_by = 1,
+		altpll_component.clk1_multiply_by = 4,
 		altpll_component.clk1_phase_shift = "0",
-		altpll_component.clk2_divide_by = 4,
+		altpll_component.clk2_divide_by = 11,
 		altpll_component.clk2_duty_cycle = 50,
 		altpll_component.clk2_multiply_by = 1,
 		altpll_component.clk2_phase_shift = "0",
 		altpll_component.compensate_clock = "CLK0",
-		altpll_component.inclk0_input_frequency = 50000,
+		altpll_component.inclk0_input_frequency = 18181,
 		altpll_component.intended_device_family = "MAX 10",
 		altpll_component.lpm_hint = "CBX_MODULE_PREFIX=pll",
 		altpll_component.lpm_type = "altpll",
@@ -203,7 +203,7 @@ endmodule
 // Retrieval info: PRIVATE: GLOCKED_MODE_CHECK STRING "0"
 // Retrieval info: PRIVATE: GLOCK_COUNTER_EDIT NUMERIC "1048575"
 // Retrieval info: PRIVATE: HAS_MANUAL_SWITCHOVER STRING "1"
-// Retrieval info: PRIVATE: INCLK0_FREQ_EDIT STRING "20.000"
+// Retrieval info: PRIVATE: INCLK0_FREQ_EDIT STRING "55.000"
 // Retrieval info: PRIVATE: INCLK0_FREQ_UNIT_COMBO STRING "MHz"
 // Retrieval info: PRIVATE: INCLK1_FREQ_EDIT STRING "100.000"
 // Retrieval info: PRIVATE: INCLK1_FREQ_EDIT_CHANGED STRING "1"
@@ -283,20 +283,20 @@ endmodule
 // Retrieval info: PRIVATE: ZERO_DELAY_RADIO STRING "0"
 // Retrieval info: LIBRARY: altera_mf altera_mf.altera_mf_components.all
 // Retrieval info: CONSTANT: BANDWIDTH_TYPE STRING "AUTO"
-// Retrieval info: CONSTANT: CLK0_DIVIDE_BY NUMERIC "2"
+// Retrieval info: CONSTANT: CLK0_DIVIDE_BY NUMERIC "11"
 // Retrieval info: CONSTANT: CLK0_DUTY_CYCLE NUMERIC "50"
-// Retrieval info: CONSTANT: CLK0_MULTIPLY_BY NUMERIC "5"
+// Retrieval info: CONSTANT: CLK0_MULTIPLY_BY NUMERIC "10"
 // Retrieval info: CONSTANT: CLK0_PHASE_SHIFT STRING "0"
-// Retrieval info: CONSTANT: CLK1_DIVIDE_BY NUMERIC "1"
+// Retrieval info: CONSTANT: CLK1_DIVIDE_BY NUMERIC "11"
 // Retrieval info: CONSTANT: CLK1_DUTY_CYCLE NUMERIC "50"
-// Retrieval info: CONSTANT: CLK1_MULTIPLY_BY NUMERIC "1"
+// Retrieval info: CONSTANT: CLK1_MULTIPLY_BY NUMERIC "4"
 // Retrieval info: CONSTANT: CLK1_PHASE_SHIFT STRING "0"
-// Retrieval info: CONSTANT: CLK2_DIVIDE_BY NUMERIC "4"
+// Retrieval info: CONSTANT: CLK2_DIVIDE_BY NUMERIC "11"
 // Retrieval info: CONSTANT: CLK2_DUTY_CYCLE NUMERIC "50"
 // Retrieval info: CONSTANT: CLK2_MULTIPLY_BY NUMERIC "1"
 // Retrieval info: CONSTANT: CLK2_PHASE_SHIFT STRING "0"
 // Retrieval info: CONSTANT: COMPENSATE_CLOCK STRING "CLK0"
-// Retrieval info: CONSTANT: INCLK0_INPUT_FREQUENCY NUMERIC "50000"
+// Retrieval info: CONSTANT: INCLK0_INPUT_FREQUENCY NUMERIC "18181"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "MAX 10"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "altpll"
 // Retrieval info: CONSTANT: OPERATION_MODE STRING "NORMAL"
