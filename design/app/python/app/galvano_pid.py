@@ -1,4 +1,4 @@
-# @file:    simulation script for galvano pid
+# @brief:   simulation script for galvano pid
 # @version: v0.0.1
 # @author:  shengbingzhou@outlook.com
 

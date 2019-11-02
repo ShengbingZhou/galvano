@@ -1,4 +1,4 @@
-// @file  : 7731 module
+// @brief : 7731 module
 // @author: Shengbing Zhou
 // @date  : 2018/10/22
 
