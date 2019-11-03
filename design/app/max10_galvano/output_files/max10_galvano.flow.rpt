@@ -1,5 +1,5 @@
 Flow report for max10_galvano
-Fri Nov 01 21:45:30 2019
+Sat Nov 02 18:34:55 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Nov 01 21:45:27 2019       ;
+; Flow Status                        ; Successful - Sat Nov 02 18:34:51 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; max10_galvano                               ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M02SCU169I7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 195 / 2,304 ( 8 % )                         ;
-;     Total combinational functions  ; 191 / 2,304 ( 8 % )                         ;
+; Total logic elements               ; 197 / 2,304 ( 9 % )                         ;
+;     Total combinational functions  ; 190 / 2,304 ( 8 % )                         ;
 ;     Dedicated logic registers      ; 149 / 2,304 ( 6 % )                         ;
 ; Total registers                    ; 149                                         ;
 ; Total pins                         ; 40 / 130 ( 31 % )                           ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/01/2019 21:45:00 ;
+; Start date & time ; 11/02/2019 18:34:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; max10_galvano       ;
 +-------------------+---------------------+
@@ -77,14 +77,12 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------------------+---------------+--------------+------------+
 ; Assignment Name                     ; Value                                                          ; Default Value ; Entity Name  ; Section Id ;
 +-------------------------------------+----------------------------------------------------------------+---------------+--------------+------------+
-; COMPILER_SIGNATURE_ID               ; 240778338477992.157261590004604                                ; --            ; --           ; --         ;
+; COMPILER_SIGNATURE_ID               ; 240778338477992.157269086402616                                ; --            ; --           ; --         ;
 ; FLOW_ENABLE_POWER_ANALYZER          ; On                                                             ; Off           ; --           ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 100                                                            ; --            ; --           ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; -40                                                            ; --            ; --           ; --         ;
 ; MISC_FILE                           ; source/internal_osc/synthesis/../internal_osc.cmp              ; --            ; --           ; --         ;
 ; MISC_FILE                           ; source/internal_osc/synthesis/../../internal_osc.qsys          ; --            ; --           ; --         ;
-; MISC_FILE                           ; source/pll_bb.v                                                ; --            ; --           ; --         ;
-; MISC_FILE                           ; source/pll.ppf                                                 ; --            ; --           ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family)                         ; --            ; top          ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                         ; --            ; top          ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                         ; --            ; top          ; Top        ;
@@ -105,12 +103,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 595 MB              ; 00:00:36                           ;
-; Fitter               ; 00:00:06     ; 1.1                     ; 1077 MB             ; 00:00:06                           ;
+; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 594 MB              ; 00:00:34                           ;
+; Fitter               ; 00:00:06     ; 1.0                     ; 1077 MB             ; 00:00:07                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 531 MB              ; 00:00:01                           ;
-; Power Analyzer       ; 00:00:02     ; 1.1                     ; 622 MB              ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 594 MB              ; 00:00:03                           ;
-; Total                ; 00:00:26     ; --                      ; --                  ; 00:00:48                           ;
+; Power Analyzer       ; 00:00:02     ; 1.0                     ; 623 MB              ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.1                     ; 597 MB              ; 00:00:03                           ;
+; Total                ; 00:00:27     ; --                      ; --                  ; 00:00:47                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

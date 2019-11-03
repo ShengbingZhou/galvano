@@ -1,5 +1,5 @@
 Analysis & Synthesis report for max10_galvano
-Fri Nov 01 21:45:16 2019
+Sat Nov 02 18:34:39 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -56,13 +56,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 01 21:45:16 2019       ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 02 18:34:39 2019       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; max10_galvano                               ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 203                                         ;
-;     Total combinational functions  ; 190                                         ;
+; Total logic elements               ; 202                                         ;
+;     Total combinational functions  ; 189                                         ;
 ;     Dedicated logic registers      ; 149                                         ;
 ; Total registers                    ; 149                                         ;
 ; Total pins                         ; 40                                          ;
@@ -197,16 +197,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 203        ;
+; Estimated Total logic elements              ; 202        ;
 ;                                             ;            ;
-; Total combinational functions               ; 190        ;
+; Total combinational functions               ; 189        ;
 ; Logic element usage by number of LUT inputs ;            ;
 ;     -- 4 input functions                    ; 54         ;
-;     -- 3 input functions                    ; 42         ;
+;     -- 3 input functions                    ; 41         ;
 ;     -- <=2 input functions                  ; 94         ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 140        ;
+;     -- normal mode                          ; 139        ;
 ;     -- arithmetic mode                      ; 50         ;
 ;                                             ;            ;
 ; Total registers                             ; 149        ;
@@ -219,7 +219,7 @@ refer to the applicable agreement for further details.
 ;                                             ;            ;
 ; Maximum fan-out node                        ; clk_div[1] ;
 ; Maximum fan-out                             ; 122        ;
-; Total fan-out                               ; 1072       ;
+; Total fan-out                               ; 1069       ;
 ; Average fan-out                             ; 2.55       ;
 +---------------------------------------------+------------+
 
@@ -229,7 +229,7 @@ refer to the applicable agreement for further details.
 +----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                               ; Entity Name    ; Library Name ;
 +----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------------------------------------+----------------+--------------+
-; |top                             ; 190 (82)            ; 149 (61)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 40   ; 0            ; 0          ; |top                                              ; top            ; work         ;
+; |top                             ; 189 (81)            ; 149 (61)                  ; 0           ; 0          ; 0            ; 0       ; 0         ; 40   ; 0            ; 0          ; |top                                              ; top            ; work         ;
 ;    |ads8686if:yp_adc_u1|         ; 81 (81)             ; 63 (63)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|ads8686if:yp_adc_u1                          ; ads8686if      ; work         ;
 ;    |dac7731if:ydac_u1|           ; 27 (27)             ; 25 (25)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dac7731if:ydac_u1                            ; dac7731if      ; work         ;
 ;    |internal_osc:osc_u1|         ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|internal_osc:osc_u1                          ; internal_osc   ; internal_osc ;
@@ -461,19 +461,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA CLR            ; 27                         ;
 ;     ENA CLR SCLR       ; 5                          ;
 ;     plain              ; 6                          ;
-; cycloneiii_lcell_comb  ; 198                        ;
+; cycloneiii_lcell_comb  ; 197                        ;
 ;     arith              ; 50                         ;
 ;         2 data inputs  ; 50                         ;
-;     normal             ; 148                        ;
+;     normal             ; 147                        ;
 ;         0 data inputs  ; 2                          ;
 ;         1 data inputs  ; 14                         ;
 ;         2 data inputs  ; 36                         ;
-;         3 data inputs  ; 42                         ;
+;         3 data inputs  ; 41                         ;
 ;         4 data inputs  ; 54                         ;
 ; fiftyfivenm_oscillator ; 1                          ;
 ;                        ;                            ;
 ; Max LUT depth          ; 6.00                       ;
-; Average LUT depth      ; 2.58                       ;
+; Average LUT depth      ; 2.59                       ;
 +------------------------+----------------------------+
 
 
@@ -482,7 +482,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -492,8 +492,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 01 21:45:00 2019
+    Info: Processing started: Sat Nov 02 18:34:24 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off max10_galvano -c max10_galvano
+Warning (125092): Tcl Script File source/pll.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE source/pll.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file source/internal_osc/synthesis/internal_osc.v
@@ -508,66 +510,64 @@ Info (12021): Found 1 design units, including 1 entities, in source file source/
 Info (12021): Found 1 design units, including 1 entities, in source file source/ads8685.v
     Info (12023): Found entity 1: ads8686if File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/ads8685.v Line: 5
 Info (12021): Found 1 design units, including 1 entities, in source file source/top.v
-    Info (12023): Found entity 1: top File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file source/pll.v
-    Info (12023): Found entity 1: pll File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/pll.v Line: 39
-Warning (10236): Verilog HDL Implicit Net warning at top.v(266): created implicit net for "clk3" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 266
+    Info (12023): Found entity 1: top File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at top.v(268): created implicit net for "clk3" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 268
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top.v(67): object "clk_5mhz" assigned a value but never read File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 67
-Warning (10230): Verilog HDL assignment warning at top.v(64): truncated value with size 32 to match size of target (4) File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 64
-Warning (10230): Verilog HDL assignment warning at top.v(136): truncated value with size 32 to match size of target (5) File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 136
-Warning (10230): Verilog HDL assignment warning at top.v(165): truncated value with size 32 to match size of target (5) File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 165
-Warning (10034): Output port "xy_status" at top.v(8) has no driver File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 8
-Warning (10034): Output port "temp_cs" at top.v(43) has no driver File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 43
-Warning (10034): Output port "temp_clk" at top.v(44) has no driver File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 44
-Info (12128): Elaborating entity "internal_osc" for hierarchy "internal_osc:osc_u1" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 60
+Warning (10036): Verilog HDL or VHDL warning at top.v(69): object "clk_5mhz" assigned a value but never read File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 69
+Warning (10230): Verilog HDL assignment warning at top.v(66): truncated value with size 32 to match size of target (4) File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 66
+Warning (10230): Verilog HDL assignment warning at top.v(138): truncated value with size 32 to match size of target (5) File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 138
+Warning (10230): Verilog HDL assignment warning at top.v(167): truncated value with size 32 to match size of target (5) File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 167
+Warning (10034): Output port "xy_status" at top.v(10) has no driver File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 10
+Warning (10034): Output port "temp_cs" at top.v(45) has no driver File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 45
+Warning (10034): Output port "temp_clk" at top.v(46) has no driver File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 46
+Info (12128): Elaborating entity "internal_osc" for hierarchy "internal_osc:osc_u1" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 62
 Info (12128): Elaborating entity "altera_int_osc" for hierarchy "internal_osc:osc_u1|altera_int_osc:int_osc_0" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/internal_osc/synthesis/internal_osc.v Line: 18
-Info (12128): Elaborating entity "ads8686if" for hierarchy "ads8686if:xp_adc_u1" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 210
+Info (12128): Elaborating entity "ads8686if" for hierarchy "ads8686if:xp_adc_u1" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 212
 Warning (10230): Verilog HDL assignment warning at ads8685.v(84): truncated value with size 32 to match size of target (16) File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/ads8685.v Line: 84
 Warning (10230): Verilog HDL assignment warning at ads8685.v(93): truncated value with size 32 to match size of target (16) File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/ads8685.v Line: 93
 Warning (10230): Verilog HDL assignment warning at ads8685.v(101): truncated value with size 32 to match size of target (4) File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/ads8685.v Line: 101
-Info (12128): Elaborating entity "dac7731if" for hierarchy "dac7731if:xdac_u1" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 244
+Info (12128): Elaborating entity "dac7731if" for hierarchy "dac7731if:xdac_u1" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 246
 Warning (10230): Verilog HDL assignment warning at dac7731.v(32): truncated value with size 32 to match size of target (2) File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/dac7731.v Line: 32
 Warning (10230): Verilog HDL assignment warning at dac7731.v(42): truncated value with size 34 to match size of target (3) File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/dac7731.v Line: 42
 Warning (10230): Verilog HDL assignment warning at dac7731.v(56): truncated value with size 32 to match size of target (4) File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/dac7731.v Line: 56
 Warning (10230): Verilog HDL assignment warning at dac7731.v(63): truncated value with size 32 to match size of target (4) File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/dac7731.v Line: 63
-Info (12128): Elaborating entity "pos_pid" for hierarchy "pos_pid:xpos_pid_u1" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 273
+Info (12128): Elaborating entity "pos_pid" for hierarchy "pos_pid:xpos_pid_u1" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 275
 Warning (10036): Verilog HDL or VHDL warning at pos_pid.v(22): object "delta_e12" assigned a value but never read File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/pos_pid.v Line: 22
-Info (13000): Registers with preset signals will power-up high File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 119
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 121
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "xy_status" is stuck at GND File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 8
-    Warning (13410): Pin "xpadc_rst" is stuck at VCC File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 12
-    Warning (13410): Pin "ypadc_rst" is stuck at VCC File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 19
-    Warning (13410): Pin "ypadc_sdo0" is stuck at GND File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 22
-    Warning (13410): Pin "ypadc_sdo1" is stuck at GND File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 23
-    Warning (13410): Pin "ypadc_rvs" is stuck at GND File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 24
-    Warning (13410): Pin "xdac_rstsel" is stuck at VCC File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 30
-    Warning (13410): Pin "ydac_rstsel" is stuck at VCC File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 37
-    Warning (13410): Pin "temp_cs" is stuck at GND File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 43
-    Warning (13410): Pin "temp_clk" is stuck at GND File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 44
+    Warning (13410): Pin "xy_status" is stuck at GND File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 10
+    Warning (13410): Pin "xpadc_rst" is stuck at VCC File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 14
+    Warning (13410): Pin "ypadc_rst" is stuck at VCC File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 21
+    Warning (13410): Pin "ypadc_sdo0" is stuck at GND File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 24
+    Warning (13410): Pin "ypadc_sdo1" is stuck at GND File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 25
+    Warning (13410): Pin "ypadc_rvs" is stuck at GND File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 26
+    Warning (13410): Pin "xdac_rstsel" is stuck at VCC File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 32
+    Warning (13410): Pin "ydac_rstsel" is stuck at VCC File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 39
+    Warning (13410): Pin "temp_cs" is stuck at GND File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 45
+    Warning (13410): Pin "temp_clk" is stuck at GND File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 46
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 29 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 9 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "xy_sync" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 4
-    Warning (15610): No output dependent on input pin "xy_clk" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 5
-    Warning (15610): No output dependent on input pin "xy_x" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 6
-    Warning (15610): No output dependent on input pin "xy_y" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 7
-    Warning (15610): No output dependent on input pin "xpadc_sdo1" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 16
-    Warning (15610): No output dependent on input pin "xpadc_rvs" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 17
-    Warning (15610): No output dependent on input pin "xdac_sdo" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 33
-    Warning (15610): No output dependent on input pin "ydac_sdo" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 40
-    Warning (15610): No output dependent on input pin "temp_data" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 45
-Info (21057): Implemented 245 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "xy_sync" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 6
+    Warning (15610): No output dependent on input pin "xy_clk" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 7
+    Warning (15610): No output dependent on input pin "xy_x" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 8
+    Warning (15610): No output dependent on input pin "xy_y" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 9
+    Warning (15610): No output dependent on input pin "xpadc_sdo1" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 18
+    Warning (15610): No output dependent on input pin "xpadc_rvs" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 19
+    Warning (15610): No output dependent on input pin "xdac_sdo" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 35
+    Warning (15610): No output dependent on input pin "ydac_sdo" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 42
+    Warning (15610): No output dependent on input pin "temp_data" File: C:/Users/Bing/Documents/bzhou/galvano/design/app/max10_galvano/source/top.v Line: 47
+Info (21057): Implemented 244 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 13 input pins
     Info (21059): Implemented 27 output pins
-    Info (21061): Implemented 204 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 601 megabytes
-    Info: Processing ended: Fri Nov 01 21:45:16 2019
-    Info: Elapsed time: 00:00:16
-    Info: Total CPU time (on all processors): 00:00:37
+    Info (21061): Implemented 203 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 600 megabytes
+    Info: Processing ended: Sat Nov 02 18:34:39 2019
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:34
 
 

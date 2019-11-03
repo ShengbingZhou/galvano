@@ -19,7 +19,7 @@
 ## PROGRAM "Quartus Prime"
 ## VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-## DATE    "Fri Nov 01 21:28:29 2019"
+## DATE    "Sat Nov 02 17:28:33 2019"
 
 ##
 ## DEVICE  "10M02SCU169I7G"
@@ -39,7 +39,7 @@ set_time_format -unit ns -decimal_places 3
 #**************************************************************
 
 create_clock -name {int_osc_clk} -period 8.620 -waveform { 0.000 4.310 } [get_pins -compatibility_mode {*oscillator_dut|clkout}]
-create_clock -name {clk_div[1]} -period 50.000 -waveform { 0.000 25.000 } 
+create_clock -name {clk_20mhz} -period 20.000 -waveform { 0.000 10.000 } [get_registers {clk_div[1]}]
 
 
 #**************************************************************
