@@ -136,8 +136,8 @@ xy_status                    : F1        : output : 3.3-V LVTTL       :         
 VCCIO1                       : F2        : power  :                   : 3.3V    : 1A, 1B    :                
 GND                          : F3        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F4        :        :                   :         : 1B        :                
-~ALTERA_TDI~ / RESERVED_INPUT_WITH_WEAK_PULLUP : F5        : input  : 3.3 V Schmitt Trigger :         : 1B        : N              
-~ALTERA_TDO~                 : F6        : output : 3.3-V LVTTL       :         : 1B        : N              
+altera_reserved_tdi          : F5        : input  : 3.3 V Schmitt Trigger :         : 1B        : N              
+altera_reserved_tdo          : F6        : output : 3.3-V LVTTL       :         : 1B        : N              
 VCC_ONE                      : F7        : power  :                   : 3.0V/3.3V :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F8        :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F9        :        :                   :         : 6         :                
@@ -145,8 +145,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : F10       :        :                   :      
 VCCIO6                       : F11       : power  :                   : 3.3V    : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F12       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F13       :        :                   :         : 6         :                
-~ALTERA_TMS~ / RESERVED_INPUT_WITH_WEAK_PULLUP : G1        : input  : 3.3 V Schmitt Trigger :         : 1B        : N              
-~ALTERA_TCK~ / RESERVED_INPUT : G2        : input  : 3.3 V Schmitt Trigger :         : 1B        : N              
+altera_reserved_tms          : G1        : input  : 3.3 V Schmitt Trigger :         : 1B        : N              
+altera_reserved_tck          : G2        : input  : 3.3 V Schmitt Trigger :         : 1B        : N              
 VCCIO1                       : G3        : power  :                   : 3.3V    : 1A, 1B    :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G4        :        :                   :         : 1B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G5        :        :                   :         : 2         :                

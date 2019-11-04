@@ -66,8 +66,9 @@ always @(posedge clk_in) begin
 	clk_div <= clk_div + 1;
 end
 
-wire clk_80mhz, clk_20mhz, clk_5mhz;
+wire clk_80mhz, clk_40mhz, clk_20mhz, clk_5mhz;
 assign clk_80mhz = clk_in;
+assign clk_40mhz = clk_div[0];
 assign clk_20mhz = clk_div[1];
 assign clk_5mhz  = clk_div[3];
 
@@ -107,7 +108,7 @@ reg [4:0] spi_cs_data_cnt;
 reg [1:0] spi_cs_delay_cnt;
 reg [1:0] spi_sck_delay_cnt;
 reg [3:0] spi_cs_fsm;
-always @(negedge sys_rstn or posedge clk_80mhz) begin // only support cpol = cpha = 0
+always @(negedge sys_rstn or posedge clk_40mhz) begin // only support cpol = cpha = 0
     if (~sys_rstn) begin
         decoded_xp_spi_csn <= 1;
         decoded_xdac_spi_csn <= 1;
@@ -118,7 +119,7 @@ always @(negedge sys_rstn or posedge clk_80mhz) begin // only support cpol = cph
         spi_sck_delay_cnt <= 0;
         spi_cs_fsm <= 0;
     end
-    else if(clk_80mhz) begin
+    else if(clk_40mhz) begin
         spi_cs_delay_cnt  <= {spi_cs_delay_cnt[0],  spi_csn};
         spi_sck_delay_cnt <= {spi_sck_delay_cnt[0], spi_sck};
         case(spi_cs_fsm)

@@ -105,111 +105,112 @@ class pid_control:
         self.derivator = 0.0
         self.integrator = 0.0
 
-# instantiate pid controller
-pid = pid_control()
+if __name__ == '__main__':
+    # instantiate pid controller
+    pid = pid_control()
 
-# release motor
-set_xi_dac(0x8000)
-time.sleep(1)
+    # release motor
+    set_xi_dac(0x8000)
+    time.sleep(1)
 
-# init xp adc
-init_xp_adc()
+    # init xp adc
+    init_xp_adc()
 
-# xp data and current array
-single_step_points = 60 #points to finish single step move to target
-xp_data = [0] * single_step_points
-xi_dac  = [0] * single_step_points
-xp_data_total = []
-xi_dac_total  = []
+    # xp data and current array
+    single_step_points = 60 #points to finish single step move to target
+    xp_data = [0] * single_step_points
+    xi_dac  = [0] * single_step_points
+    xp_data_total = []
+    xi_dac_total  = []
 
-# draw xp adc data
-fig = matplotlib.pyplot.figure(figsize=(7, 7))
-ax_data_bin = fig.add_subplot(1, 1, 1)
-ax_data_bin.grid(antialiased=True)
-offset = 500
-ax_data_bin.set_ylim(-offset, 65636 + offset)
-ax_data_bin.set_ylabel('Data')
-line_data_bin, = ax_data_bin.plot(xp_data, 'b')
-ax_data_value = ax_data_bin.twinx()                # show another Y-axis (voltage value)
-ax_data_value.set_ylim(-10.24 - offset * 0.0003125, 10.24 + offset * 0.0003125)
-ax_data_value.set_ylabel('V (xp)')
+    # draw xp adc data
+    fig = matplotlib.pyplot.figure(figsize=(7, 7))
+    ax_data_bin = fig.add_subplot(1, 1, 1)
+    ax_data_bin.grid(antialiased=True)
+    offset = 0
+    ax_data_bin.set_ylim(-offset, 65636 + offset)
+    ax_data_bin.set_ylabel('Data')
+    line_data_bin, = ax_data_bin.plot(xp_data, 'b')
+    ax_data_value = ax_data_bin.twinx()                # show another Y-axis (voltage value)
+    ax_data_value.set_ylim(-10.24 - offset * 0.0003125, 10.24 + offset * 0.0003125)
+    ax_data_value.set_ylabel('V (xp)')
 
-# show xp adc data in realtime (test)
-#animation = matplotlib.animation.FuncAnimation(fig, update, interval=10) # show adc data waveform like oscilloscope
-#matplotlib.pyplot.show()
+    # show xp adc data in realtime (test)
+    #animation = matplotlib.animation.FuncAnimation(fig, update, interval=10) # show adc data waveform like oscilloscope
+    #matplotlib.pyplot.show()
 
-# get xp adc data (test)
-# for i in range(single_step_points): 
-    # xp_data[i] = get_xp_adc()
-# line.set_ydata(xp_data)
+    # get xp adc data (test)
+    # for i in range(single_step_points): 
+        # xp_data[i] = get_xp_adc()
+    # line.set_ydata(xp_data)
 
-# draw xp adc data histogram (test)
-#ax_data_hist = fig.add_subplot(2, 1, 2)
-#ax_data_hist.grid()
-#ax_data_hist.hist(xp_data)
+    # draw xp adc data histogram (test)
+    #ax_data_hist = fig.add_subplot(2, 1, 2)
+    #ax_data_hist.grid()
+    #ax_data_hist.hist(xp_data)
 
-# write data to dac (test)
-#for i in range(0xff):
-#    set_xi_dac(i << 8)
+    # write data to dac (test)
+    #for i in range(0xff):
+    #    set_xi_dac(i << 8)
 
-xp_limit = [35000, 39600] # (32700, 39700)
-xp_center= (xp_limit[0] + xp_limit[1]) / 2
+    xp_limit = [35000, 39600] # (32700, 39700)
+    xp_center= (xp_limit[0] + xp_limit[1]) / 2
 
-# set gain
-pid.set_gain(P=0.350, I=0.035, D=0.350)
+    # set gain
+    pid.set_gain(P=0.350, I=0.035, D=0.350)
 
-# step0: move to center
-move_x_motor(pid, xp_center, 0x8000)
+    # step0: move to center
+    move_x_motor(pid, xp_center, 0x8000)
 
-# step1: working - pid controlled moving 
-moving_test_loop = 5
-if moving_test_loop > 0:
-    for j in range(moving_test_loop):
-        move_x_motor(pid, xp_center + 1500, xi_dac[single_step_points - 1])
-        move_x_motor(pid, xp_center - 1500, xi_dac[single_step_points - 1])
-        move_x_motor(pid, xp_center + 1500, xi_dac[single_step_points - 1])
-        move_x_motor(pid, xp_center       , xi_dac[single_step_points - 1])
-        move_x_motor(pid, xp_center - 1500, xi_dac[single_step_points - 1])
-        move_x_motor(pid, xp_center       , xi_dac[single_step_points - 1])        
-        #move_x_motor(pid, xp_center + j * 50, xi_dac[single_step_points - 1]) # line test
+    # step1: working - pid controlled moving 
+    moving_test_loop = 5
+    if moving_test_loop > 0:
+        for j in range(moving_test_loop):
+            move_x_motor(pid, xp_center + 1500, xi_dac[single_step_points - 1])
+            move_x_motor(pid, xp_center - 1500, xi_dac[single_step_points - 1])
+            move_x_motor(pid, xp_center + 1500, xi_dac[single_step_points - 1])
+            move_x_motor(pid, xp_center       , xi_dac[single_step_points - 1])
+            move_x_motor(pid, xp_center - 1500, xi_dac[single_step_points - 1])
+            move_x_motor(pid, xp_center       , xi_dac[single_step_points - 1])        
+            #move_x_motor(pid, xp_center + j * 50, xi_dac[single_step_points - 1]) # line test
 
-# step 2: move to center before releasing motor
-restore_to_center = 1
-if restore_to_center > 0:
-    move_x_motor(pid, xp_center, xi_dac[single_step_points - 1])
+    # step 2: move to center before releasing motor
+    restore_to_center = 1
+    if restore_to_center > 0:
+        move_x_motor(pid, xp_center, xi_dac[single_step_points - 1])
 
-# release motor
-set_xi_dac(0x8000)
+    # release motor
+    set_xi_dac(0x8000)
 
-# draw x motor max/center/min line
-ax_data_bin.plot([xp_limit[0]] * single_step_points, 'g-.')
-ax_data_bin.plot([xp_center]   * single_step_points, 'g-.')
-ax_data_bin.plot([xp_limit[1]] * single_step_points, 'g-.')
+    # draw x motor max/center/min line
+    ax_data_bin.plot([xp_limit[0]] * single_step_points, 'g-.')
+    ax_data_bin.plot([xp_center]   * single_step_points, 'g-.')
+    ax_data_bin.plot([xp_limit[1]] * single_step_points, 'g-.')
 
-# draw zero line for both xpadc and xdac out
-ax_data_bin.plot([32768] * single_step_points, 'g--')
+    # draw zero line for both xpadc and xdac out
+    ax_data_bin.plot([32768] * single_step_points, 'g--')
 
-# draw xp adc track waveform
-line_data_bin.set_ydata(xp_data)
+    # draw xp adc track waveform
+    line_data_bin.set_ydata(xp_data)
 
-# draw xi dac track waveform
-ax_data_bin.plot(xi_dac, 'r') # red line
+    # draw xi dac track waveform
+    ax_data_bin.plot(xi_dac, 'r') # red line
 
-# draw all the time waveform
-fig = matplotlib.pyplot.figure(figsize=(7, 7))
-ax_data_bin = fig.add_subplot(1, 1, 1)
-ax_data_bin.grid(antialiased=True)
-ax_data_bin.set_ylim(-offset, 65636 + offset)
-ax_data_bin.set_ylabel('Data')
-ax_data_bin.plot(xp_data_total, 'b')
-ax_data_value = ax_data_bin.twinx()                # show another Y-axis (voltage value)
-ax_data_value.set_ylim(-10.24 - offset * 0.0003125, 10.24 + offset * 0.0003125)
-ax_data_value.set_ylabel('V (xp)')
-ax_data_bin.plot(xi_dac_total, 'r')
-ax_data_bin.plot([xp_limit[0]] * len(xi_dac_total), 'g-.')
-ax_data_bin.plot([xp_center]   * len(xi_dac_total), 'g-.')
-ax_data_bin.plot([xp_limit[1]] * len(xi_dac_total), 'g-.')
-ax_data_bin.plot([32768]       * len(xi_dac_total), 'g--')
+    # draw all the time waveform
+    fig = matplotlib.pyplot.figure(figsize=(7, 7))
+    ax_data_bin = fig.add_subplot(1, 1, 1)
+    ax_data_bin.grid(antialiased=True)
+    ax_data_bin.set_ylim(-offset, 65636 + offset)
+    ax_data_bin.set_ylabel('Data')
+    ax_data_bin.plot(xp_data_total, 'b')
+    ax_data_value = ax_data_bin.twinx()                # show another Y-axis (voltage value)
+    ax_data_value.set_ylim(-10.24 - offset * 0.0003125, 10.24 + offset * 0.0003125)
+    ax_data_value.set_ylabel('V (xp)')
+    ax_data_bin.plot(xi_dac_total, 'r')
+    ax_data_bin.plot([xp_limit[0]] * len(xi_dac_total), 'g-.')
+    ax_data_bin.plot([xp_center]   * len(xi_dac_total), 'g-.')
+    ax_data_bin.plot([xp_limit[1]] * len(xi_dac_total), 'g-.')
+    ax_data_bin.plot([32768]       * len(xi_dac_total), 'g--')
 
-# show figure
-matplotlib.pyplot.show()
+    # show figure
+    matplotlib.pyplot.show()
