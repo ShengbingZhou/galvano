@@ -47,10 +47,10 @@ module top
     input  wire temp_data,
 
     // uart
-    input  wire fpga_ss,
-    input  wire fpga_sclk,
-    input  wire fpga_miso,
-    output wire fpga_mosi
+    input  wire host_ss,
+    input  wire host_sclk,
+    input  wire host_mosi,
+    output wire host_miso
 );
 
 // internal osc
@@ -61,7 +61,7 @@ internal_osc osc_u1
     .clkout(clk_in) // 82MHz
 );
 
-reg [3:0] clk_div;
+reg [5:0] clk_div;
 always @(posedge clk_in) begin
 	clk_div <= clk_div + 1;
 end
@@ -70,30 +70,23 @@ wire clk_80mhz, clk_40mhz, clk_20mhz, clk_5mhz;
 assign clk_80mhz = clk_in;
 assign clk_40mhz = clk_div[0];
 assign clk_20mhz = clk_div[1];
-assign clk_5mhz  = clk_div[3];
+assign clk_5mhz  = clk_div[3]; // 5.4MHz (measured)
+assign temp_cs   = clk_5mhz;
 
 // generate reset using latch
 reg sys_rstn;
-reg [ 1:0] pll_locked_dly;
 reg [31:0] sys_rstn_cnt;
 always @(posedge clk_20mhz) begin
-    pll_locked_dly <= {pll_locked_dly[0], 1'b1};
-    if (pll_locked_dly == 2'b00) begin
-        sys_rstn_cnt <= 0;
+    if (sys_rstn_cnt < 400) begin
+        sys_rstn_cnt <= sys_rstn_cnt + 1;
         sys_rstn <= 1;
     end
-    else if (pll_locked_dly == 2'b11) begin
-        if (sys_rstn_cnt < 400) begin            
-            sys_rstn_cnt <= sys_rstn_cnt + 1;
-            sys_rstn <= 1;
-        end
-        else if (sys_rstn_cnt < 4000000) begin // 200ms based on 20MHz
-            sys_rstn_cnt <= sys_rstn_cnt + 1;
-            sys_rstn <= 0;
-        end
-        else begin
-            sys_rstn <= 1;
-        end
+    else if (sys_rstn_cnt < 4000000) begin // 200ms based on 20MHz
+        sys_rstn_cnt <= sys_rstn_cnt + 1;
+        sys_rstn <= 0;
+    end
+    else begin
+        sys_rstn <= 1;
     end
 end
 
@@ -101,30 +94,34 @@ end
 
 // spi test fsm (1byte - spi cs#, following bytes for are devices (4bytes for 8565, 2bytes for 7731))
 wire spi_csn, spi_sck, spi_sdi, spi_sdo;
-reg decoded_xp_spi_csn, decoded_xdac_spi_csn;
+reg decoded_xp_spi_cs, decoded_xdac_spi_cs;
 reg spi_xdac_ldac;
 reg [7:0] spi_cs_data;
+reg [7:0] host_miso_data;
+reg [7:0] host_mosi_data;
 reg [4:0] spi_cs_data_cnt;
 reg [1:0] spi_cs_delay_cnt;
 reg [1:0] spi_sck_delay_cnt;
 reg [3:0] spi_cs_fsm;
-always @(negedge sys_rstn or posedge clk_40mhz) begin // only support cpol = cpha = 0
+always @(negedge sys_rstn or posedge clk_20mhz) begin // only support cpol = cpha = 0
     if (~sys_rstn) begin
-        decoded_xp_spi_csn <= 1;
-        decoded_xdac_spi_csn <= 1;
-        spi_xdac_ldac <= 1;
+        decoded_xp_spi_cs <= 0;
+        decoded_xdac_spi_cs <= 0;
+        spi_xdac_ldac <= 0;
         spi_cs_data <= 0;
+        host_miso_data <= 0;
+        host_mosi_data <= 0;
         spi_cs_data_cnt <= 0;
         spi_cs_delay_cnt <= 0;
         spi_sck_delay_cnt <= 0;
         spi_cs_fsm <= 0;
     end
-    else if(clk_40mhz) begin
+    else if(clk_20mhz) begin
         spi_cs_delay_cnt  <= {spi_cs_delay_cnt[0],  spi_csn};
         spi_sck_delay_cnt <= {spi_sck_delay_cnt[0], spi_sck};
         case(spi_cs_fsm)
             0: begin // idle
-                spi_xdac_ldac <= 1;              
+                spi_xdac_ldac <= 0;              
                 if (spi_cs_delay_cnt == 2'b10) begin // falling edge of CSn
                     spi_cs_fsm <= 1;
                     spi_cs_data_cnt <= 0;
@@ -140,32 +137,43 @@ always @(negedge sys_rstn or posedge clk_40mhz) begin // only support cpol = cph
                 end
             end
             2: begin // decode spi csn
-                if (spi_cs_data == 8'h01) begin
-                    decoded_xp_spi_csn <= 0;    // xp
-                    spi_cs_fsm <= 3;
-                end
-                else if (spi_cs_data == 8'h02) begin
-                    decoded_xdac_spi_csn <= 0; // xdac                    
-                    spi_xdac_ldac <= 0;
-                    spi_cs_fsm <= 4;
-                end
-                else begin
-                    spi_cs_fsm <= 0; // not valid spi cs commmand, return to idle
+                if (spi_sck_delay_cnt == 2'b10) begin
+                    if (spi_cs_data == 8'h01) begin
+                        decoded_xp_spi_cs <= 1;    // xp
+                        spi_cs_fsm <= 3;
+                    end
+                    else if (spi_cs_data == 8'h02) begin
+                        decoded_xdac_spi_cs <= 1; // xdac
+                        spi_xdac_ldac <= 1;
+                        spi_cs_fsm <= 4;
+                    end
+                    else begin
+                        spi_cs_fsm <= 0; // not valid spi cs commmand, return to idle
+                    end
                 end
             end
             3: begin // xp
                 if (spi_cs_delay_cnt == 2'b01) begin
-                    decoded_xp_spi_csn <= 1;
+                    decoded_xp_spi_cs <= 0;
                     spi_cs_fsm <= 5;
                 end
+                if (spi_sck_delay_cnt <= 2'b01) begin
+                    host_mosi_data <= {host_mosi_data[6:0], host_mosi};
+                end
+                if (spi_sck_delay_cnt <= 2'b10) begin
+                    host_miso_data <= {host_miso_data[6:0], host_miso};
+                end                
             end
             4: begin // xdac                
-                if ((spi_cs_delay_cnt == 2'b01) || (spi_sck_delay_cnt == 24)) begin
-                    decoded_xdac_spi_csn <= 1;
+                if (spi_cs_delay_cnt == 2'b01) begin
+                    decoded_xdac_spi_cs <= 0;
                     spi_cs_fsm <= 5;
                 end
-                if (spi_sck_delay_cnt == 2'b01) begin // rising edge of SCK                    
-                    spi_cs_data_cnt <= spi_cs_data_cnt + 1;
+                if (spi_sck_delay_cnt <= 2'b01) begin
+                    host_mosi_data <= {host_mosi_data[6:0], host_mosi};
+                end                
+                if (spi_sck_delay_cnt == 2'b10) begin
+                    host_miso_data <= {host_miso_data[6:0], host_miso};
                 end
             end
             5: begin // delay
@@ -179,20 +187,20 @@ always @(negedge sys_rstn or posedge clk_40mhz) begin // only support cpol = cph
 end
 
 // spi test connection
-assign spi_csn  = fpga_ss;
-assign spi_sck  = fpga_sclk;
-assign spi_sdi  = fpga_miso;
-assign fpga_mosi = xpadc_sdo0;
+assign spi_csn  = host_ss;
+assign spi_sck  = host_sclk;
+assign spi_sdi  = host_mosi;
+assign host_miso = xpadc_sdo0;
 
-assign xpadc_cs  = decoded_xp_spi_csn;
+assign xpadc_cs  = ~decoded_xp_spi_cs;
 assign xpadc_sck = spi_sck;
 assign xpadc_sdi = spi_sdi;
 
-assign xdac_cs   = decoded_xdac_spi_csn;
+assign xdac_cs   = ~decoded_xdac_spi_cs;
 assign xdac_sck  = spi_sck;
 assign xdac_sdi  = spi_sdi;
 
-assign xdac_ldac = spi_xdac_ldac;
+assign xdac_ldac = ~spi_xdac_ldac;
 
 // xp-adc
 wire xp_data_valid;
