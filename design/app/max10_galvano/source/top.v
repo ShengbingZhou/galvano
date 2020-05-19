@@ -28,15 +28,13 @@ module top
     // dac (dac7731e)
     output wire xdac_rst,
     output wire xdac_cs,
-    output wire xdac_ldac,
-    output wire xdac_rstsel, 
+    output wire xdac_ldac, 
     output wire xdac_sck,
     output wire xdac_sdi,
     input  wire xdac_sdo,
     output wire ydac_rst,
     output wire ydac_cs,
     output wire ydac_ldac,
-    output wire ydac_rstsel,
     output wire ydac_sck,
     output wire ydac_sdi,
     input  wire ydac_sdo,    
@@ -47,10 +45,10 @@ module top
     input  wire temp_data,
 
     // uart
-    input  wire fpga_ss,
-    input  wire fpga_sclk,
-    input  wire fpga_miso,
-    output wire fpga_mosi
+    input  wire aardvark_ss,
+    input  wire aardvark_sclk,
+    input  wire aardvark_mosi,
+    output wire aardvark_miso
 );
 
 // internal osc
@@ -96,6 +94,7 @@ always @(posedge clk_20mhz) begin
     end
 end
 
+// TODO:
 // xy2_100 interface
 
 // spi test fsm (1byte - spi cs#, following bytes for are devices (4bytes for 8565, 2bytes for 7731))
@@ -104,67 +103,74 @@ reg decoded_xp_spi_csn, decoded_xdac_spi_csn;
 reg spi_xdac_ldac;
 reg [7:0] spi_cs_data;
 reg [4:0] spi_cs_data_cnt;
-reg [1:0] spi_cs_delay_cnt;
-reg [1:0] spi_sck_delay_cnt;
+reg [1:0] spi_cs_delay;
+reg [1:0] spi_sck_delay;
 reg [3:0] spi_cs_fsm;
-always @(negedge sys_rstn or posedge clk_80mhz) begin // only support cpol = cpha = 0
+reg [15:0] spi_data;
+always @(negedge sys_rstn or posedge clk_20mhz) begin // only support cpol = cpha = 0
     if (~sys_rstn) begin
         decoded_xp_spi_csn <= 1;
         decoded_xdac_spi_csn <= 1;
         spi_xdac_ldac <= 1;
         spi_cs_data <= 0;
         spi_cs_data_cnt <= 0;
-        spi_cs_delay_cnt <= 0;
-        spi_sck_delay_cnt <= 0;
+        spi_cs_delay <= 0;
+        spi_sck_delay <= 0;
         spi_cs_fsm <= 0;
+        spi_data <= 0;
     end
-    else if(clk_80mhz) begin
-        spi_cs_delay_cnt  <= {spi_cs_delay_cnt[0],  spi_csn};
-        spi_sck_delay_cnt <= {spi_sck_delay_cnt[0], spi_sck};
+    else if(clk_20mhz) begin
+        spi_cs_delay  <= {spi_cs_delay[0],  spi_csn};
+        spi_sck_delay <= {spi_sck_delay[0], spi_sck};
         case(spi_cs_fsm)
             0: begin // idle
                 spi_xdac_ldac <= 1;              
-                if (spi_cs_delay_cnt == 2'b10) begin // falling edge of CSn
+                if (spi_cs_delay == 2'b10) begin // falling edge of CSn
                     spi_cs_fsm <= 1;
                     spi_cs_data_cnt <= 0;
+                    spi_cs_data <= 0;
+                    spi_data <= 0;
                 end
             end
             1: begin // decode spi cs command                
                 if (spi_cs_data_cnt == 8) begin
                     spi_cs_fsm <= 2;
                 end
-                if (spi_sck_delay_cnt == 2'b01) begin // rising edge of SCK                
+                if (spi_sck_delay == 2'b01) begin // rising edge of SCK                
                     spi_cs_data <= {spi_cs_data[6:0], spi_sdi};
                     spi_cs_data_cnt <= spi_cs_data_cnt + 1;
                 end
             end
             2: begin // decode spi csn
-                if (spi_cs_data == 8'h01) begin
-                    decoded_xp_spi_csn <= 0;    // xp
-                    spi_cs_fsm <= 3;
-                end
-                else if (spi_cs_data == 8'h02) begin
-                    decoded_xdac_spi_csn <= 0; // xdac                    
-                    spi_xdac_ldac <= 0;
-                    spi_cs_fsm <= 4;
-                end
-                else begin
-                    spi_cs_fsm <= 0; // not valid spi cs commmand, return to idle
+                spi_cs_data_cnt <= spi_cs_data_cnt + 1;
+                if (spi_cs_data_cnt >= 30) begin
+                    if (spi_cs_data == 8'h01) begin
+                        decoded_xp_spi_csn <= 0;    // xp
+                        spi_cs_fsm <= 3;
+                    end
+                    else if (spi_cs_data == 8'h02) begin
+                        decoded_xdac_spi_csn <= 0; // xdac
+                        spi_xdac_ldac <= 0;
+                        spi_cs_fsm <= 4;
+                    end
+                    else begin
+                        spi_cs_fsm <= 0; // not valid spi cs commmand, return to idle
+                    end
                 end
             end
             3: begin // xp
-                if (spi_cs_delay_cnt == 2'b01) begin
+                if (spi_cs_delay == 2'b01) begin
                     decoded_xp_spi_csn <= 1;
                     spi_cs_fsm <= 5;
                 end
+                if (spi_sck_delay == 2'b01) begin
+                    spi_data <= {spi_data[14:0], xpadc_sdo0};
+                end
             end
             4: begin // xdac                
-                if ((spi_cs_delay_cnt == 2'b01) || (spi_sck_delay_cnt == 24)) begin
+                if (spi_cs_delay == 2'b01) begin
                     decoded_xdac_spi_csn <= 1;
                     spi_cs_fsm <= 5;
-                end
-                if (spi_sck_delay_cnt == 2'b01) begin // rising edge of SCK                    
-                    spi_cs_data_cnt <= spi_cs_data_cnt + 1;
                 end
             end
             5: begin // delay
@@ -178,10 +184,10 @@ always @(negedge sys_rstn or posedge clk_80mhz) begin // only support cpol = cph
 end
 
 // spi test connection
-assign spi_csn  = fpga_ss;
-assign spi_sck  = fpga_sclk;
-assign spi_sdi  = fpga_miso;
-assign fpga_mosi = xpadc_sdo0;
+assign spi_csn  = aardvark_ss;
+assign spi_sck  = aardvark_sclk;
+assign spi_sdi  = aardvark_mosi;
+assign aardvark_miso = xpadc_sdo0;
 
 assign xpadc_cs  = decoded_xp_spi_csn;
 assign xpadc_sck = spi_sck;
@@ -242,7 +248,7 @@ dac7731if xdac_u1
     .dac_sdi(),             // 5mhz
     .dac_sdo(xdac_sdo),
     .dac_lr(),
-    .ads_rstsel(xdac_rstsel)
+    .ads_rstsel()
 );
 
 // y-dac
@@ -258,7 +264,7 @@ dac7731if ydac_u1
     .dac_sdi(ydac_sdi),     // 5mhz
     .dac_sdo(ydac_sdo),
     .dac_lr(ydac_ldac),
-    .ads_rstsel(ydac_rstsel)
+    .ads_rstsel()
 );
 
 // pos pid
