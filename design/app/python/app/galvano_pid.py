@@ -76,7 +76,7 @@ class pid_control:
         else:
             raise Exception('USB dongle not found.')
 
-    def set_gain(self, P=0.0, I=0.0, D=0.0, integrator_max=1000, integrator_min=-1000):
+    def set_gain(self, P=0.0, I=0.0, D=0.0, integrator_max=100, integrator_min=-100):
         self.Kp = P
         self.Ki = I
         self.Kd = D
@@ -145,7 +145,7 @@ ax_data_value.set_ylim(-10.24, 10.24)
 ax_data_value.set_ylabel('V (xp)')
 
 # set gain
-pid.set_gain(P=0.08, I=0.04, D=0.04)
+pid.set_gain(P=0.08, I=0.06, D=0.00, integrator_max=3000, integrator_min=-3000)
 
 # pid controlled moving 
 moving_test_loop = 5
