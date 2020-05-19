@@ -111,7 +111,7 @@ time.sleep(1)
 init_xp_adc()
 
 # xp data and current array
-single_step_points = 100 #points to finish single step move to target
+single_step_points = 50 #points to finish single step move to target
 xp_data = [0] * single_step_points
 xi_dac  = [32768] * single_step_points
 xp_data_total = []
@@ -148,18 +148,21 @@ ax_data_value.set_ylabel('V (xp)')
 pid.set_gain(P=0.08, I=0.06, D=0.00, integrator_max=3000, integrator_min=-3000)
 
 # pid controlled moving 
-moving_test_loop = 5
+moving_test_loop = 1
 if moving_test_loop > 0:
     for j in range(moving_test_loop):
-        move_x_motor(pid, xp_limit[1] - 200, xi_dac[-1])
-        move_x_motor(pid, xp_limit[0] + 200, xi_dac[-1])
+        move_x_motor(pid, xp_limit[1]-200, xi_dac[-1])
+        move_x_motor(pid, xp_limit[0]+200, xi_dac[-1])
+if moving_test_loop > 0:
+    for j in range(xp_limit[0]+200, xp_limit[1]-200, 200):
+        move_x_motor(pid, j, xi_dac[-1])
 
 # release motor
 set_xi_dac(32768)
 
 # draw test waveform
 if moving_test_loop == 0:
-    # get xp adc data (test)
+    # get xp adc data
     for i in range(single_step_points):
         xp_data[i] = get_xp_adc()
     # write data to dac (test)
