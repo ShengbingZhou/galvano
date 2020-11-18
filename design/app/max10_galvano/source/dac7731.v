@@ -9,73 +9,67 @@ module dac7731if
     input  wire [15:0] dac_data,
     output wire        dac_csn,
     output wire        dac_rstn,
-    output wire        dac_sck,     // 5MHz
+    output wire        dac_sck,     // 10MHz
     output wire        dac_sdi,
     input  wire        dac_sdo,
     output wire        dac_lr,
-    output wire        ads_rstsel
+    output wire        ads_rstsel,
+    input  wire        adc_dvalid
 );
 
-wire reg_clk;
-reg reg_lr;
-reg [ 2:0] reg_csn;
-reg [ 3:0] bit_cnt;
-reg [ 1:0] refclk_cnt;
+reg        reg_clk;
+reg        reg_csn;
+reg        reg_lr;
 reg [15:0] reg_data;
-
-// dac clk = clk_ref / 4
+reg [15:0] clk_cnt;
+reg [ 1:0] adc_dvalid_dly;
+localparam IDLE  = 0;
+localparam WRITE = 1;
+reg [ 3:0] state;
 always @(negedge sys_rstn or posedge clk_ref) begin
     if (!sys_rstn) begin
-        refclk_cnt <= 0;
-    end
-    else if (clk_ref)
-        refclk_cnt <= refclk_cnt + 1;
-end
-assign reg_clk = refclk_cnt[1];
-
-// generate cs#
-always @(negedge sys_rstn or posedge clk_ref) begin
-    if (!sys_rstn) begin
-        reg_csn <= 3'b111;
-    end
-    else if (clk_ref) begin        
-        reg_csn <= {reg_csn[1], reg_csn[0], (refclk_cnt == 3) ? 0 :reg_csn[0]};
-    end
-end
-
-// output dac data
-always @(negedge sys_rstn or posedge reg_csn[2] or posedge clk_ref) begin
-    if ((!sys_rstn) || reg_csn[2]) begin
         reg_lr <= 1;
-        bit_cnt <= 0;
-        reg_data <= 16'h8000;
+        reg_data <= 32768;
+        reg_csn <= 1;
+        clk_cnt <= 0;
+        adc_dvalid_dly <= 2'b00;
+        state <= IDLE;
     end
-    else if (clk_ref) begin
-        if (bit_cnt < 15) begin
-            if (refclk_cnt == 1) begin
-                bit_cnt <= bit_cnt + 1;
-                reg_data <= {reg_data[14:0], reg_data[15]};
+    else begin
+        adc_dvalid_dly <= {adc_dvalid_dly[0], adc_dvalid};
+        case(state)
+            IDLE: begin
+                if (adc_dvalid_dly == 2'b01) begin
+                    state <= WRITE;
+                    clk_cnt <= 0;
+                    reg_csn <= 0;
+                    reg_clk <= 0;
+                    reg_lr  <= 0;
+                    reg_data <= dac_data;
+                end
             end
-            reg_lr <= 1;
-        end
-        else begin
-            if (refclk_cnt == 1) begin
-                bit_cnt <= bit_cnt + 1;
-                reg_data <= dac_data;
-                reg_lr <= 1;
+            WRITE: begin
+                clk_cnt <= clk_cnt + 1;
+                reg_clk <= ~reg_clk;
+                if (reg_clk)
+                    reg_data <= {reg_data[14:0], 1'b0};
+                if (clk_cnt == 31) begin
+                    state   <= IDLE;
+                    reg_csn <= 1;
+                    reg_lr  <= 1;
+                end
             end
-            else if (refclk_cnt == 3)
-                reg_lr <= 0;
-            else
-                reg_lr <= 1;
-        end
+            default: begin
+                state <= IDLE;           
+            end
+        endcase
     end
 end
 
 // ports
 assign ads_rstsel = 1;
 assign dac_rstn = sys_rstn;
-assign dac_csn  = reg_csn[0];
+assign dac_csn  = reg_csn;
 assign dac_sck  = reg_clk;
 assign dac_sdi  = reg_data[15];
 assign dac_lr   = reg_lr;

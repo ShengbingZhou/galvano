@@ -1,0 +1,43 @@
+module pos_pid
+(
+    input  wire        sys_rstn,
+    input  wire        clk_pid,
+    
+    input  wire [15:0] kp,
+    input  wire [15:0] ki,
+    input  wire [15:0] kd,
+    
+    input  wire [15:0] pos_target,
+    input  wire [15:0] pos_adc,
+    output reg  [15:0] pos_dac
+);
+
+reg signed [63:0] error, P, I, D, integrator, derivator;
+
+always @(negedge sys_rstn or posedge clk_pid) begin
+    if (!sys_rstn) begin
+        error <= 0;
+        derivator <= 0;
+        integrator <= 0;
+        pos_dac <= 32768;
+    end
+    else if (clk_pid) begin
+        error <= pos_target - pos_adc;
+        integrator <= integrator + error;
+        P <= kp * error;
+        I <= Ki * integrator;
+        D <= Kd * (error - derivator);
+        derivator <= error;
+        if (8000 < (P + I + D)) begin
+            pos_dac <= 32768 + 8000;
+        end
+        else if (-8000 > (P + I + D)) begin
+            pos_dac <= 32768 - 8000;
+        end
+        else begin
+            pos_dac <= (P + I + D) + 32768;
+        end
+    end
+end
+
+endmodule

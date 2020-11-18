@@ -7,59 +7,51 @@ module pos_pid
     input  wire [15:0] ki,
     input  wire [15:0] kd,
     
-    input  wire [15:0] pos_pre,
+    input  wire [15:0] dac_limit,
+    input  wire [23:0] pid_i_saturation,
+    input  wire [15:0] pos_target,
     input  wire [15:0] pos_adc,
-    output wire [15:0] pos_dac
+    output reg  [15:0] pos_dac
 );
 
-reg  [15:0] pos_pre_reg;
-reg  [15:0] pos_adc_reg;
-wire [15:0] ek;
-reg  [15:0] ek_d1;
-reg  [15:0] ek_d2;
-wire [15:0] delta_e1;
-wire [15:0] delta_e2;
-wire [15:0] delta_e12;
+reg signed [31:0] P, I, D, error, integrator, derivator;
+reg signed [31:0] pid;
+wire [15:0] limit0;
+wire [15:0] limit1;
 
-wire [31:0] mp_delta_e1;
-wire [31:0] mi_e;
-wire [31:0] md_delta_e12;
-
-wire [15:0] sum1;
-wire [15:0] sum2;
-
-wire [15:0] pos_dac_reg;
-reg  [15:0] pos_dac_reg_d1;
+assign limit0 = 32768 - dac_limit;
+assign limit1 = 32768 + dac_limit;
 
 always @(negedge sys_rstn or posedge clk_pid) begin
     if (!sys_rstn) begin
-        pos_pre_reg <= 0;
-        pos_adc_reg <= 0;
-        ek_d1 <= 0;
-        ek_d2 <= 0;
-        pos_dac_reg_d1 <= 0;
+        error <= 0;
+        derivator <= 0;
+        integrator <= 0;
+        pid <= 0;
+        pos_dac <= 32768;
     end
     else if (clk_pid) begin
-        pos_pre_reg <= pos_pre;
-        pos_adc_reg <= pos_adc;
-        ek_d1 <= ek;
-        ek_d2 <= ek_d1;
-        pos_dac_reg_d1 <= pos_dac_reg;
+        P <= ($signed(kp) * error) >>> 10;
+        I <= ($signed(ki) * integrator) >>> 10;
+        D <= ($signed(kd) * (error - derivator)) >>> 10;
+        pid <= (P + I + D);
+
+        error <= $signed({1'b0, pos_target}) - $signed({1'b0, pos_adc});
+        if ((-(integrator + error) < $signed({1'b0, pid_i_saturation})) && 
+            ( (integrator + error) < $signed({1'b0, pid_i_saturation})))
+            integrator <= integrator + error;
+        derivator <= error;
+        
+        if (pid > $signed({1'b0, dac_limit})) begin
+            pos_dac <= limit1;
+        end
+        else if (-pid > $signed({1'b0, dac_limit})) begin
+            pos_dac <= limit0;
+        end
+        else begin
+            pos_dac <= $unsigned($signed(32768) + pid);
+        end
     end
 end
-
-assign ek = pos_pre_reg - pos_adc_reg;
-assign delta_e1  = ek    - ek_d1;
-assign delta_e2  = ek_d2 - ek_d1;
-assign delta_e12 = delta_e1 + delta_e2;
-
-assign mp_delta_e1  = kp * delta_e1;
-assign mi_e         = ki * ek;
-assign md_delta_e12 = kd * ek;
-
-assign sum1 = pos_dac_reg_d1 + mp_delta_e1[31:16];
-assign sum2 = mi_e[31:16] + md_delta_e12[31:16];
-assign pos_dac_reg = sum1 + sum2;
-assign pos_dac = pos_dac_reg;
 
 endmodule

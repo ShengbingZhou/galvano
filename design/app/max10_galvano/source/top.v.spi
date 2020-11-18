@@ -28,15 +28,13 @@ module top
     // dac (dac7731e)
     output wire xdac_rst,
     output wire xdac_cs,
-    output wire xdac_ldac,
-    output wire xdac_rstsel, 
+    output wire xdac_ldac, 
     output wire xdac_sck,
     output wire xdac_sdi,
     input  wire xdac_sdo,
     output wire ydac_rst,
     output wire ydac_cs,
     output wire ydac_ldac,
-    output wire ydac_rstsel,
     output wire ydac_sck,
     output wire ydac_sdi,
     input  wire ydac_sdo,    
@@ -73,33 +71,47 @@ assign clk_5mhz  = clk_div[3];
 
 // generate reset using latch
 reg sys_rstn;
+reg [ 1:0] pll_locked_dly;
 reg [31:0] sys_rstn_cnt;
-always @(posedge clk_5mhz) begin
-    if (sys_rstn_cnt < 400) begin            
-        sys_rstn_cnt <= sys_rstn_cnt + 1;
-        sys_rstn <= 1;
-    end
-    else if (sys_rstn_cnt < 1000) begin // 200us based on 5MHz
-        sys_rstn_cnt <= sys_rstn_cnt + 1;
+always @(posedge clk_20mhz) begin
+    pll_locked_dly <= {pll_locked_dly[0], 1'b1};
+    if (pll_locked_dly == 2'b00) begin
+        sys_rstn_cnt <= 0;
         sys_rstn <= 0;
     end
-    else begin
-        sys_rstn <= 1;
+    else if (pll_locked_dly == 2'b11) begin
+        if (sys_rstn_cnt < 400) begin            
+            sys_rstn_cnt <= sys_rstn_cnt + 1;
+            sys_rstn <= 0;
+        end
+        else if (sys_rstn_cnt < 4000000) begin // 200ms based on 20MHz
+            sys_rstn_cnt <= sys_rstn_cnt + 1;
+            sys_rstn <= 0;
+        end
+        else begin
+            sys_rstn <= 1;
+        end
     end
 end
 
-// registers
-reg [63:0][15:0] spi_regs;
+// TODO:
+// xy2_100 interface
 
-// spi reg fsm (1byte address + 2bytes value, write only)
-reg [7:0]  spi_cs_data;
-reg [31:0] spi_cs_data_cnt;
-reg [1:0]  spi_cs_delay;
-reg [1:0]  spi_sck_delay;
-reg [3:0]  spi_cs_fsm;
-reg [31:0] spi_data;
+// spi test fsm (1byte - spi cs#, following bytes for are devices (4bytes for 8565, 2bytes for 7731))
+wire spi_csn, spi_sck, spi_sdi, spi_sdo;
+reg decoded_xp_spi_csn, decoded_xdac_spi_csn;
+reg spi_xdac_ldac;
+reg [7:0] spi_cs_data;
+reg [4:0] spi_cs_data_cnt;
+reg [1:0] spi_cs_delay;
+reg [1:0] spi_sck_delay;
+reg [3:0] spi_cs_fsm;
+reg [15:0] spi_data;
 always @(negedge sys_rstn or posedge clk_20mhz) begin // only support cpol = cpha = 0
     if (~sys_rstn) begin
+        decoded_xp_spi_csn <= 1;
+        decoded_xdac_spi_csn <= 1;
+        spi_xdac_ldac <= 1;
         spi_cs_data <= 0;
         spi_cs_data_cnt <= 0;
         spi_cs_delay <= 0;
@@ -108,10 +120,11 @@ always @(negedge sys_rstn or posedge clk_20mhz) begin // only support cpol = cph
         spi_data <= 0;
     end
     else if(clk_20mhz) begin
-        spi_cs_delay  <= {spi_cs_delay[0],  aardvark_ss};
-        spi_sck_delay <= {spi_sck_delay[0], aardvark_sclk};
+        spi_cs_delay  <= {spi_cs_delay[0],  spi_csn};
+        spi_sck_delay <= {spi_sck_delay[0], spi_sck};
         case(spi_cs_fsm)
-            0: begin // idle           
+            0: begin // idle
+                spi_xdac_ldac <= 1;              
                 if (spi_cs_delay == 2'b10) begin // falling edge of CSn
                     spi_cs_fsm <= 1;
                     spi_cs_data_cnt <= 0;
@@ -119,65 +132,49 @@ always @(negedge sys_rstn or posedge clk_20mhz) begin // only support cpol = cph
                     spi_data <= 0;
                 end
             end
-            1: begin // decode spi cs command
+            1: begin // decode spi cs command                
                 if (spi_cs_data_cnt == 8) begin
                     spi_cs_fsm <= 2;
                 end
                 if (spi_sck_delay == 2'b01) begin // rising edge of SCK                
-                    spi_cs_data <= {spi_cs_data[6:0], aardvark_mosi};
+                    spi_cs_data <= {spi_cs_data[6:0], spi_sdi};
                     spi_cs_data_cnt <= spi_cs_data_cnt + 1;
                 end
             end
             2: begin // decode spi csn
                 spi_cs_data_cnt <= spi_cs_data_cnt + 1;
                 if (spi_cs_data_cnt >= 30) begin
-                    if (spi_cs_data == 8'h03) begin
-                        spi_cs_fsm <= 6; // regs write
+                    if (spi_cs_data == 8'h01) begin
+                        decoded_xp_spi_csn <= 0;    // xp
+                        spi_cs_fsm <= 3;
                     end
-                    else if (spi_cs_data == 8'h04) begin
-                        spi_cs_fsm <= 7; // regs read
-                        spi_cs_data_cnt <= 1;
-                        aardvark_miso <= spi_data[0][0];
-                    end
-                    else if (spi_cs_data == 8'h05) begin
-                        spi_cs_fsm <= 8; // regs read
-                        spi_cs_data_cnt <= 1;
-                        aardvark_miso <= spi_data[1][0];
+                    else if (spi_cs_data == 8'h02) begin
+                        decoded_xdac_spi_csn <= 0; // xdac
+                        spi_xdac_ldac <= 0;
+                        spi_cs_fsm <= 4;
                     end
                     else begin
                         spi_cs_fsm <= 0; // not valid spi cs commmand, return to idle
                     end
                 end
             end
-            5: begin // delay
-                spi_cs_fsm <= 0;
-            end
-            6: begin // regs write
+            3: begin // xp
                 if (spi_cs_delay == 2'b01) begin
+                    decoded_xp_spi_csn <= 1;
                     spi_cs_fsm <= 5;
-                    spi_regs[spi_data[7:0]] <= spi_data[23:8];
                 end
                 if (spi_sck_delay == 2'b01) begin
-                    spi_data <= {spi_data[30:0], aardvark_mosi};
+                    spi_data <= {spi_data[14:0], xpadc_sdo0};
                 end
             end
-            7: begin // reg0 read
+            4: begin // xdac                
                 if (spi_cs_delay == 2'b01) begin
+                    decoded_xdac_spi_csn <= 1;
                     spi_cs_fsm <= 5;
-                end
-                if (spi_sck_delay == 2'b10) begin
-                    aardvark_miso <= spi_data[0][spi_cs_data_cnt];
-                    spi_cs_data_cnt <= spi_cs_data_cnt + 1;
                 end
             end
-            8: begin // reg1 read
-                if (spi_cs_delay == 2'b01) begin
-                    spi_cs_fsm <= 5;
-                end
-                if (spi_sck_delay == 2'b10) begin
-                    aardvark_miso <= spi_data[1][spi_cs_data_cnt];
-                    spi_cs_data_cnt <= spi_cs_data_cnt + 1;
-                end
+            5: begin // delay
+                spi_cs_fsm <= 0;
             end
             default: begin
                 spi_cs_fsm <= 0;
@@ -186,7 +183,21 @@ always @(negedge sys_rstn or posedge clk_20mhz) begin // only support cpol = cph
     end
 end
 
-// xy2_100 interface
+// spi test connection
+assign spi_csn  = aardvark_ss;
+assign spi_sck  = aardvark_sclk;
+assign spi_sdi  = aardvark_mosi;
+assign aardvark_miso = xpadc_sdo0;
+
+assign xpadc_cs  = decoded_xp_spi_csn;
+assign xpadc_sck = spi_sck;
+assign xpadc_sdi = spi_sdi;
+
+assign xdac_cs   = decoded_xdac_spi_csn;
+assign xdac_sck  = spi_sck;
+assign xdac_sdi  = spi_sdi;
+
+assign xdac_ldac = spi_xdac_ldac;
 
 // xp-adc
 wire xp_data_valid;
@@ -195,44 +206,15 @@ ads8686if xp_adc_u1
 (
     .sys_rstn(sys_rstn),
     .clk_ref(clk_20mhz),
-    .convst_csn(xpadc_cs),           // xpadc_cs, max 500KSps
+    .convst_csn(),          // xpadc_cs, max 500KSps
     .ads_rstn(xpadc_rst),
-    .ads_sclk(xpadc_sck),            // xpadc_sck, <= 66.67mhz
-    .ads_sdi(xpadc_sdi),             // xpadc_sdi, 5mhz
-    .ads_sdo0(xpadc_sdo0),           // xpadc_sdo0
+    .ads_sclk(),            // xpadc_sck, <= 66.67mhz
+    .ads_sdi(),             // xpadc_sdi, 5mhz
+    .ads_sdo0(),            // xpadc_sdo0
     .ads_sdo1(xpadc_sdo1),
     .ads_rvs(xpadc_rvs),
     .dvalid(xp_data_valid),
     .dout(xp_data)
-);
-
-// x-dac
-wire [15:0] xdac_data;
-dac7731if xdac_u1
-(
-    .sys_rstn(sys_rstn),
-    .clk_ref(clk_20mhz),
-    .dac_data(xdac_data),
-    .dac_csn(xdac_cs),
-    .dac_rstn(xdac_rst),
-    .dac_sck(xdac_sck),             // <= 66.67mhz
-    .dac_sdi(xdac_sdi),             // 5mhz
-    .dac_sdo(xdac_sdo),
-    .dac_lr(xdac_ldac),
-    .ads_rstsel(xdac_rstsel)
-);
-
-// pos pid
-pos_pid xpos_pid_u1
-(
-    .sys_rstn(sys_rstn & spi_regs[2][0]),
-    .clk_pid(xp_data_valid),
-    .kp(16'h0030),
-    .ki(16'h0001),
-    .kd(16'h0030),
-    .pos_target(spi_regs[3]),
-    .pos_adc(xp_data),
-    .pos_dac(xdac_data)
 );
 
 // yp-adc
@@ -253,6 +235,22 @@ ads8686if yp_adc_u1
     .dout(yp_data)
 );
 
+// x-dac
+wire [15:0] xdac_data;
+dac7731if xdac_u1
+(
+    .sys_rstn(sys_rstn),
+    .clk_ref(clk_20mhz),
+    .dac_data(xdac_data),
+    .dac_csn(),
+    .dac_rstn(xdac_rst),
+    .dac_sck(),             // <= 66.67mhz
+    .dac_sdi(),             // 5mhz
+    .dac_sdo(xdac_sdo),
+    .dac_lr(),
+    .ads_rstsel()
+);
+
 // y-dac
 wire [15:0] ydac_data;
 dac7731if ydac_u1
@@ -266,7 +264,21 @@ dac7731if ydac_u1
     .dac_sdi(ydac_sdi),     // 5mhz
     .dac_sdo(ydac_sdo),
     .dac_lr(ydac_ldac),
-    .ads_rstsel(ydac_rstsel)
+    .ads_rstsel()
 );
+
+// pos pid
+pos_pid xpos_pid_u1
+(
+    .sys_rstn(sys_rstn),
+    .clk_pid(clk3),
+    .kp(16'h3200),
+    .ki(16'h0500),
+    .kd(16'h0300),
+    .pos_pre(16'h0000),
+    .pos_adc(xp_data),
+    .pos_dac(xdac_data)
+);
+
 
 endmodule

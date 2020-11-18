@@ -1,70 +1,126 @@
-\t (00:00:00) allegro_free_viewer 17.2 S001 Windows SPB 64-bit Edition
-\t (00:00:00)     Journal start - Sat Aug 03 15:00:54 2019
-\t (00:00:00)         Host=BINGPC User=Bing Pid=6872 CPUs=4
-\t (00:00:00) CmdLine= C:\Users\Bing\AppData\Local\Programs\Cadence Design Systems\17.2\tools\bin\allegro_free_viewer.exe
-\t (00:00:00) 
-\t (00:00:00) Starting new design...
-\i (00:00:00) trapsize 641
-\i (00:00:00) trapsize 630
-\i (00:00:00) trapsize 641
-\i (00:00:00) trapsize 873
-\i (00:01:01) open 
-\i (00:01:08) fillin "GALVO_DRV.brd"
-\t (00:01:08) Opening existing design...
-\i (00:01:08) trapsize 3263
-\d (00:01:08) Design opened: C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v2/PCB/GALVO_DRV.brd
-\i (00:01:10) open 
-\i (00:01:11) fillin "GALVO_CTRL.brd"
-\t (00:01:11) Opening existing design...
-\i (00:01:11) trapsize 11007
-\d (00:01:11) Design opened: C:/Users/Bing/Documents/bzhou/galvano/design/DigDrv.v2/PCB/GALVO_CTRL.brd
-\i (00:02:22) zoom in 1 
-\i (00:02:22) setwindow pcb
-\i (00:02:22) zoom in 272.237 52.835
-\i (00:02:22) trapsize 5504
-\i (00:02:24) zoom in 1 
-\i (00:02:24) setwindow pcb
-\i (00:02:24) zoom in 195.186 55.036
-\i (00:02:24) trapsize 2752
-\i (00:02:24) roam start
-\i (00:02:24) roam x -32
-\i (00:02:24) roam y 96
-\i (00:02:24) roam x -32
-\i (00:02:24) roam y 48
-\i (00:02:25) roam x -16
-\i (00:02:25) roam y 32
-\i (00:02:25) roam end
-\i (00:02:25) zoom out 1 
-\i (00:02:25) setwindow pcb
-\i (00:02:25) zoom out 240.177 -48.886
-\i (00:02:25) trapsize 5504
-\i (00:02:26) roam start
-\i (00:02:26) roam x -160
-\i (00:02:26) roam y 32
-\i (00:02:26) roam x -176
-\i (00:02:26) roam y 16
-\i (00:02:26) roam x -128
-\i (00:02:26) roam x -16
-\i (00:02:26) roam end
-\i (00:02:26) zoom in 1 
-\i (00:02:26) setwindow pcb
-\i (00:02:26) zoom in -622.241 91.456
-\i (00:02:26) trapsize 2752
-\i (00:02:27) roam start
-\i (00:02:27) roam x 48
-\i (00:02:27) roam y -96
-\i (00:02:27) roam y -16
-\i (00:02:27) roam y -64
-\i (00:02:27) roam end
-\i (00:02:30) roam start
-\i (00:02:30) roam x 48
-\i (00:02:30) roam y 128
-\i (00:02:30) roam x 32
-\i (00:02:30) roam y 96
-\i (00:02:30) roam x 32
-\i (00:02:30) roam y 64
-\i (00:02:30) roam end
-\i (00:26:59) zoom fit 
-\i (00:26:59) trapsize 11003
-\i (00:46:36) exit 
-\t (00:46:36)     Journal end - Sat Aug 03 15:47:31 2019
+\t (00:00:01) allegro_free_viewer 17.2 S015 Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Tue Nov 17 19:43:46 2020
+\t (00:00:01)         Host=BZHOU-L02 User=BZhou Pid=14792 CPUs=12
+\t (00:00:01) CmdLine= C:\Program Files (x86)\Cadence Design Systems\17.2\tools\bin\allegro_free_viewer.exe
+\t (00:00:01) 
+\t (00:00:01) Starting new design...
+\i (00:00:02) trapsize 461
+\i (00:00:02) trapsize 455
+\i (00:00:02) trapsize 704
+\i (00:00:04) open 
+\i (00:00:08) fillin "GALVO_DRV.brd"
+\t (00:00:08) Opening existing design...
+\i (00:00:08) trapsize 2314
+\d (00:00:08) Design opened: C:/bzhou/repo/github/galvano/design/DigDrv.v2/PCB/GALVO_DRV.brd
+\i (00:00:10) roam start
+\i (00:00:10) roam y 64
+\i (00:00:10) roam x -48
+\i (00:00:10) roam y 160
+\i (00:00:10) roam x -16
+\i (00:00:10) roam y 64
+\i (00:00:10) roam x -32
+\i (00:00:10) roam y 48
+\i (00:00:10) roam end
+\i (00:00:14) show element 
+\i (00:00:16) prepopup 20.7464 -14.0002
+\i (00:00:17) done 
+\i (00:12:54) show element 
+\i (00:12:55) pick grid -11.9323 8.5879
+\t (00:12:55) last pick:  -11.9380 8.6360
+\i (00:12:56) setwindow text
+\i (00:12:56) close 
+\i (00:12:57) setwindow form.find
+\i (00:12:57) FORM find all_off  
+\i (00:12:58) FORM find nets YES 
+\i (00:13:00) setwindow pcb
+\i (00:13:00) pick grid -12.1637 8.1713
+\t (00:13:00) last pick:  -12.1920 8.1280
+\i (00:13:00) pick grid -11.4231 5.9496
+\t (00:13:00) last pick:  -11.4300 5.8420
+\i (00:13:03) pick grid -11.7009 3.7741
+\t (00:13:03) last pick:  -11.6840 3.8100
+\i (00:13:04) pick grid -11.5620 1.2283
+\t (00:13:04) last pick:  -11.6840 1.2700
+\i (00:13:05) pick grid -14.6170 0.7654
+\t (00:13:05) last pick:  -14.7320 0.7620
+\i (00:13:06) pick grid -11.3306 1.1357
+\t (00:13:06) last pick:  -11.4300 1.0160
+\i (00:13:07) pick grid -14.1541 0.9968
+\t (00:13:07) last pick:  -14.2240 1.0160
+\i (00:13:07) pick grid -12.5803 1.1357
+\t (00:13:07) last pick:  -12.7000 1.0160
+\i (00:13:08) pick grid -14.1078 1.0431
+\t (00:13:08) last pick:  -14.2240 1.0160
+\i (00:13:08) pick grid -14.1078 -1.3638
+\t (00:13:08) last pick:  -14.2240 -1.2700
+\i (00:13:09) pick grid -11.2843 -1.5953
+\t (00:13:09) last pick:  -11.1760 -1.5240
+\i (00:13:10) pick grid -13.5986 -1.7804
+\t (00:13:10) last pick:  -13.7160 -1.7780
+\i (00:13:37) pick grid -11.9786 8.4491
+\t (00:13:37) last pick:  -11.9380 8.3820
+\i (00:13:41) pick grid -11.7934 -4.0948
+\t (00:13:41) last pick:  -11.6840 -4.0640
+\i (00:13:42) pick grid -14.5244 -4.4188
+\t (00:13:42) last pick:  -14.4780 -4.3180
+\i (00:13:42) pick grid -11.3769 -4.6039
+\t (00:13:42) last pick:  -11.4300 -4.5720
+\i (00:13:43) pick grid -14.7095 -4.2799
+\t (00:13:43) last pick:  -14.7320 -4.3180
+\i (00:13:44) pick grid -14.1078 -1.8730
+\t (00:13:44) last pick:  -14.2240 -1.7780
+\i (00:13:47) pick grid -11.3769 -1.5027
+\t (00:13:47) last pick:  -11.4300 -1.5240
+\i (00:13:48) pick grid -14.4318 -1.4101
+\t (00:13:48) last pick:  -14.4780 -1.5240
+\i (00:13:48) pick grid -11.9323 -1.6878
+\t (00:13:48) last pick:  -11.9380 -1.7780
+\i (00:13:49) prepopup -19.2920 8.4954
+\i (00:13:49) done 
+\i (00:13:53) show element 
+\i (00:13:55) prepopup 21.3945 -11.1767
+\i (00:13:55) done 
+\i (00:14:24) open 
+\i (00:14:25) fillin "GALVO_IF.brd"
+\t (00:14:25) Opening existing design...
+\i (00:14:25) trapsize 1048
+\d (00:14:25) Design opened: C:/bzhou/repo/github/galvano/design/DigDrv.v2/PCB/GALVO_IF.brd
+\i (00:14:27) zoom fit 
+\i (00:14:27) trapsize 1174
+\i (00:14:28) zoom out 1 
+\i (00:14:28) setwindow pcb
+\i (00:14:28) zoom out -11.5981 3.9326
+\i (00:14:28) trapsize 2348
+\i (00:14:31) zoom in 1 
+\i (00:14:31) setwindow pcb
+\i (00:14:31) zoom in 1.0799 -0.9038
+\i (00:14:31) trapsize 1174
+\i (00:14:32) roam start
+\i (00:14:32) roam x -64
+\i (00:14:32) roam y 16
+\i (00:14:32) roam x -96
+\i (00:14:32) roam y 32
+\i (00:14:32) roam x -64
+\i (00:14:32) roam x -64
+\i (00:14:32) roam y 16
+\i (00:14:32) roam x -32
+\i (00:14:32) roam y 16
+\i (00:14:32) roam end
+\i (00:14:33) zoom out 1 
+\i (00:14:33) setwindow pcb
+\i (00:14:33) zoom out -5.8952 0.1140
+\i (00:14:33) trapsize 2348
+\i (00:14:33) roam start
+\i (00:14:33) roam y -64
+\i (00:14:33) roam y -80
+\i (00:14:34) roam x 16
+\i (00:14:34) roam y -16
+\i (00:14:34) roam end
+\i (00:14:36) zoom fit 
+\i (00:14:36) trapsize 1174
+\i (00:15:14) open 
+\i (00:15:23) fillin "C:\bzhou\repo\github\galvano\design\DigDrv.v3\motor_sensor\PCB\MOTOR_SENSOR.brd"
+\i (00:15:23) cd "C:\bzhou\repo\github\galvano\design\DigDrv.v3\motor_sensor\PCB"
+\t (00:15:23) Opening existing design...
+\i (00:15:23) trapsize 747
+\t (00:15:23)     Journal end - Tue Nov 17 19:59:08 2020
