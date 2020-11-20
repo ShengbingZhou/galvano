@@ -95,9 +95,14 @@ always @(negedge sys_rstn or posedge clk_ref) begin
                 if (clk_cnt >= 133) begin
                     state <= IDLE;
                     ads_csn <= 1;
-                    //dout <= readout[31:16];
-                    dout_last <= readout[31:16];
-                    dout <= {1'b0, readout[31:17]} + {1'b0, dout_last[15:1]};
+
+                    // current value
+                    dout <= readout[31:16];
+
+                    // average of 2
+                    //dout_last <= readout[31:16];
+                    //dout <= {1'b0, readout[31:17]} + {1'b0, dout_last[15:1]};
+                    
                     ads_sclk <= 0;
                     if (cfg_cnt <= 5)
                         cfg_cnt <= cfg_cnt + 1;
@@ -108,7 +113,7 @@ always @(negedge sys_rstn or posedge clk_ref) begin
                     ads_sclk <= ~ads_sclk;
                     if (ads_sclk) begin                 // prepare data on falling edge
                         ads_sdi <= reg_cfg_data[31];
-                        reg_cfg_data <= {reg_cfg_data[30:0], 1'b0};                    
+                        reg_cfg_data <= {reg_cfg_data[30:0], 1'b0};
                     end
                     else begin
                         readout <= {readout[30:0], ads_sdo0};

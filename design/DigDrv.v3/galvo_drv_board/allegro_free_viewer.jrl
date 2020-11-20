@@ -1,0 +1,120 @@
+\t (00:00:01) allegro_free_viewer 17.2 S015 Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Thu Nov 19 21:26:43 2020
+\t (00:00:01)         Host=BZHOU-L02 User=BZhou Pid=22020 CPUs=12
+\t (00:00:01) CmdLine= C:\Program Files (x86)\Cadence Design Systems\17.2\tools\bin\allegro_free_viewer.exe
+\t (00:00:01) 
+\t (00:00:01) Starting new design...
+\i (00:00:02) trapsize 641
+\i (00:00:02) trapsize 629
+\i (00:00:03) trapsize 1004
+\i (00:00:05) open 
+\i (00:00:08) fillin "GALVO_DRV.brd"
+\t (00:00:08) Opening existing design...
+\i (00:00:08) trapsize 8882
+\d (00:00:08) Design opened: C:/bzhou/repo/github/galvano/design/DigDrv.v3/galvo_drv_board/GALVO_DRV.brd
+\i (00:00:10) zoom in 1 
+\i (00:00:10) setwindow pcb
+\i (00:00:10) zoom in -520.385 -161.014
+\i (00:00:10) trapsize 4441
+\i (00:00:10) zoom in 1 
+\i (00:00:10) setwindow pcb
+\i (00:00:10) zoom in -520.386 -161.014
+\i (00:00:10) trapsize 2221
+\i (00:00:11) zoom out 1 
+\i (00:00:11) setwindow pcb
+\i (00:00:11) zoom out -500.844 -173.449
+\i (00:00:11) trapsize 4441
+\i (00:00:12) zoom in 1 
+\i (00:00:12) setwindow pcb
+\i (00:00:12) zoom in -389.815 -55.313
+\i (00:00:12) trapsize 2221
+\i (00:00:13) zoom out 1 
+\i (00:00:13) setwindow pcb
+\i (00:00:13) zoom out -392.035 -62.863
+\i (00:00:13) trapsize 4441
+\i (00:00:14) show element 
+\i (00:00:15) roam start
+\i (00:00:15) roam x 64
+\i (00:00:15) roam y -64
+\i (00:00:15) roam x 256
+\i (00:00:15) roam y -96
+\i (00:00:15) roam x 208
+\i (00:00:15) roam y -80
+\i (00:00:15) roam x 112
+\i (00:00:15) roam y -64
+\i (00:00:15) roam x 32
+\i (00:00:15) roam y -64
+\i (00:00:15) roam y -80
+\i (00:00:15) roam x 16
+\i (00:00:15) roam y -16
+\i (00:00:15) roam y -32
+\i (00:00:15) roam x 32
+\i (00:00:15) roam y -16
+\i (00:00:15) roam y -32
+\i (00:00:15) roam y -32
+\i (00:00:15) roam end
+\i (00:00:16) roam start
+\i (00:00:16) roam x -64
+\i (00:00:16) roam y -48
+\i (00:00:16) roam x -64
+\i (00:00:16) roam y -112
+\i (00:00:16) roam x -32
+\i (00:00:16) roam y -48
+\i (00:00:16) roam x -16
+\i (00:00:16) roam y -32
+\i (00:00:16) roam y -32
+\i (00:00:17) roam end
+\i (00:00:17) zoom in 1 
+\i (00:00:17) setwindow pcb
+\i (00:00:17) zoom in 316.139 660.643
+\i (00:00:17) trapsize 2221
+\i (00:00:17) zoom in 1 
+\i (00:00:17) setwindow pcb
+\i (00:00:17) zoom in 313.919 655.758
+\i (00:00:17) trapsize 1110
+\i (00:00:18) zoom out 1 
+\i (00:00:18) setwindow pcb
+\i (00:00:18) zoom out 312.142 655.092
+\i (00:00:18) trapsize 2221
+\i (00:00:18) zoom out 1 
+\i (00:00:18) setwindow pcb
+\i (00:00:18) zoom out 312.142 653.759
+\i (00:00:18) trapsize 4441
+\i (00:00:18) zoom out 1 
+\i (00:00:18) setwindow pcb
+\i (00:00:18) zoom out 312.142 652.871
+\i (00:00:18) trapsize 8882
+\i (00:00:19) zoom out 1 
+\i (00:00:19) setwindow pcb
+\i (00:00:19) zoom out 313.918 652.871
+\i (00:00:19) trapsize 17765
+\i (00:00:19) zoom in 1 
+\i (00:00:19) setwindow pcb
+\i (00:00:19) zoom in 292.601 542.731
+\i (00:00:19) trapsize 8882
+\i (00:00:20) pick grid 267.731 654.648
+\t (00:00:20) last pick:  268.000 654.000
+\i (00:00:21) setwindow form.find
+\i (00:00:21) FORM find pins NO 
+\i (00:00:21) FORM find nets YES 
+\i (00:00:22) setwindow pcb
+\i (00:00:22) pick grid 212.660 677.742
+\t (00:00:22) last pick:  212.000 678.000
+\i (00:00:23) roam start
+\i (00:00:23) roam y 80
+\i (00:00:23) roam x -48
+\i (00:00:23) roam y 208
+\i (00:00:23) roam x -16
+\i (00:00:23) roam y 80
+\i (00:00:23) roam y 32
+\i (00:00:23) roam y 16
+\i (00:00:23) roam end
+\i (00:00:24) roam start
+\i (00:00:24) roam y -96
+\i (00:00:24) roam y -144
+\i (00:00:24) roam x 16
+\i (00:00:24) roam y -80
+\i (00:00:24) roam y -16
+\i (00:00:25) roam end
+\i (01:11:21) exit 
+\t (01:11:21)     Journal end - Thu Nov 19 22:38:02 2020

@@ -1,0 +1,94 @@
+\t (00:00:11) allegro_free_viewer 17.2 S015 Windows SPB 64-bit Edition
+\t (00:00:11)     Journal start - Tue Nov 17 21:11:38 2020
+\t (00:00:11)         Host=BZHOU-L02 User=BZhou Pid=5080 CPUs=12
+\t (00:00:11) CmdLine= C:\Program Files (x86)\Cadence Design Systems\17.2\tools\bin\allegro_free_viewer.exe
+\t (00:00:11) 
+\d (00:00:11) Design opened: C:/bzhou/repo/github/galvano/design/DigDrv.v3/galvo_drv_board/GALVO_DRV.brd
+\i (00:00:13) roam start
+\i (00:00:13) roam x -96
+\i (00:00:13) roam x -80
+\i (00:00:13) roam y 16
+\i (00:00:13) roam x -48
+\i (00:00:13) roam y 16
+\i (00:00:13) roam end
+\i (00:00:14) zoom in 1 
+\i (00:00:14) setwindow pcb
+\i (00:00:14) zoom in 175.786 -824.492
+\i (00:00:14) trapsize 4441
+\i (00:00:14) zoom in 1 
+\i (00:00:14) setwindow pcb
+\i (00:00:14) zoom in 169.568 -825.379
+\i (00:00:14) trapsize 2221
+\i (00:00:14) roam start
+\i (00:00:14) roam x -32
+\i (00:00:14) roam y 64
+\i (00:00:14) roam x -48
+\i (00:00:14) roam y 112
+\i (00:00:15) roam x -48
+\i (00:00:15) roam y 112
+\i (00:00:15) roam x -32
+\i (00:00:15) roam y 64
+\i (00:00:15) roam x -16
+\i (00:00:15) roam y 16
+\i (00:00:15) roam x -16
+\i (00:00:15) roam y 16
+\i (00:00:15) roam end
+\i (00:00:16) roam start
+\i (00:00:16) roam x -64
+\i (00:00:16) roam x -80
+\i (00:00:16) roam x -16
+\i (00:00:16) roam y -16
+\i (00:00:16) roam y -32
+\i (00:00:16) roam y -32
+\i (00:00:16) roam end
+\i (00:00:18) roam start
+\i (00:00:18) roam x -48
+\i (00:00:18) roam y -32
+\i (00:00:18) roam x -48
+\i (00:00:18) roam y -16
+\i (00:00:18) roam x -16
+\i (00:00:18) roam y -16
+\i (00:00:18) roam end
+\i (00:00:22) zoom out 1 
+\i (00:00:22) setwindow pcb
+\i (00:00:22) zoom out 31.460 -843.137
+\i (00:00:22) trapsize 4441
+\i (00:00:22) zoom out 1 
+\i (00:00:22) setwindow pcb
+\i (00:00:22) zoom out 32.348 -844.025
+\i (00:00:22) trapsize 8882
+\i (00:00:23) roam start
+\i (00:00:23) roam y -48
+\i (00:00:23) roam y -80
+\i (00:00:23) roam x 16
+\i (00:00:23) roam y -48
+\i (00:00:23) roam y -16
+\i (00:00:23) roam x 16
+\i (00:00:23) roam y -16
+\i (00:00:23) roam end
+\i (00:00:24) zoom in 1 
+\i (00:00:24) setwindow pcb
+\i (00:00:24) zoom in 67.434 -721.449
+\i (00:00:24) trapsize 4441
+\i (00:01:09) roam start
+\i (00:01:09) roam x -128
+\i (00:01:09) roam y -96
+\i (00:01:09) roam x -160
+\i (00:01:09) roam y -144
+\i (00:01:09) roam x -32
+\i (00:01:09) roam y -64
+\i (00:01:09) roam y -16
+\i (00:01:09) roam y -32
+\i (00:01:09) roam end
+\i (00:01:09) zoom out 1 
+\i (00:01:09) setwindow pcb
+\i (00:01:09) zoom out -103.995 -153.868
+\i (00:01:09) trapsize 8882
+\i (00:01:09) zoom out 1 
+\i (00:01:09) setwindow pcb
+\i (00:01:09) zoom out -89.784 -168.079
+\i (00:01:09) trapsize 17765
+\i (00:01:12) zoom fit 
+\i (00:01:12) trapsize 10263
+\i (00:22:08) exit 
+\t (00:22:08)     Journal end - Tue Nov 17 21:33:35 2020

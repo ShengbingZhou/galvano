@@ -1,0 +1,53 @@
+\t (00:15:23) allegro_free_viewer 17.2 S015 Windows SPB 64-bit Edition
+\t (00:15:23)     Journal start - Tue Nov 17 19:59:08 2020
+\t (00:15:23)         Host=BZHOU-L02 User=BZhou Pid=14792 CPUs=12
+\t (00:15:23) CmdLine= C:\Program Files (x86)\Cadence Design Systems\17.2\tools\bin\allegro_free_viewer.exe
+\t (00:15:23) 
+\d (00:15:23) Design opened: C:/bzhou/repo/github/galvano/design/DigDrv.v3/motor_sensor/PCB/MOTOR_SENSOR.brd
+\i (00:15:25) zoom in 1 
+\i (00:15:26) setwindow pcb
+\i (00:15:26) zoom in -1.0000 -0.2884
+\i (00:15:26) trapsize 373
+\i (00:15:26) zoom out 1 
+\i (00:15:26) setwindow pcb
+\i (00:15:26) zoom out -0.9775 -0.3481
+\i (00:15:26) trapsize 747
+\i (00:15:27) roam start
+\i (00:15:27) roam x 48
+\i (00:15:27) roam y 48
+\i (00:15:27) roam x 64
+\i (00:15:27) roam y 48
+\i (00:15:27) roam y 16
+\i (00:15:27) roam x 16
+\i (00:15:27) roam y 16
+\i (00:15:27) roam end
+\i (00:15:27) zoom in 1 
+\i (00:15:27) setwindow pcb
+\i (00:15:27) zoom in 1.2495 -2.3031
+\i (00:15:27) trapsize 373
+\i (00:15:27) zoom in 1 
+\i (00:15:27) setwindow pcb
+\i (00:15:27) zoom in 1.2495 -2.3031
+\i (00:15:27) trapsize 187
+\i (00:15:28) zoom out 1 
+\i (00:15:28) setwindow pcb
+\i (00:15:28) zoom out 1.2533 -2.1910
+\i (00:15:28) trapsize 373
+\i (00:15:29) roam start
+\i (00:15:29) roam x -48
+\i (00:15:29) roam y -32
+\i (00:15:29) roam x -128
+\i (00:15:29) roam y -112
+\i (00:15:29) roam x -96
+\i (00:15:29) roam y -64
+\i (00:15:29) roam x -32
+\i (00:15:29) roam y -48
+\i (00:15:29) roam x -16
+\i (00:15:29) roam y -32
+\i (00:15:29) roam end
+\i (00:15:31) zoom fit 
+\i (00:15:31) trapsize 709
+\i (00:16:03) open 
+\i (00:34:53) fillin "menu_cancel"
+\i (01:37:36) exit 
+\t (01:37:36)     Journal end - Tue Nov 17 21:21:21 2020
