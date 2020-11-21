@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.Drawing.Imaging;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -38,10 +41,10 @@ namespace Galvano
             TbLimit0.Text = limit[0].ToString() + " (-10V)";
             TbLimit1.Text = limit[1].ToString() + " (+10V)";
 
-            TbKp.Text = "600";
-            TbKi.Text = "12";
-            TbKd.Text = "50000";
-            TbISaturation.Text = "2000";
+            TbKp.Text = "550";
+            TbKi.Text = "13";
+            TbKd.Text = "63000";
+            TbISaturation.Text = "4000";
             TbMaxDacSwing.Text = "2500";
 
             timer.Interval = 10;
@@ -64,6 +67,45 @@ namespace Galvano
             BtnSineWaveTest.Text = "Start Sine Test";
             BtnSineWaveTest.Click += BtnSineWaveTest_Click;
             PanelOps.Enabled = false;
+            BtnSave.Click += BtnSave_Click;
+        }
+
+        public void CaptureApplication()
+        {
+            var proc = Process.GetCurrentProcess();
+            var rect = new User32.Rect();
+            User32.GetWindowRect(proc.MainWindowHandle, ref rect);
+
+            int width = rect.right - rect.left;
+            int height = rect.bottom - rect.top;
+
+            var bmp = new Bitmap(width, height, PixelFormat.Format32bppArgb);
+            using (Graphics graphics = Graphics.FromImage(bmp))
+            {
+                graphics.CopyFromScreen(rect.left, rect.top, 0, 0, new Size(width, height), CopyPixelOperation.SourceCopy);
+            }
+
+            bmp.Save(String.Format("kp({0}) ki({1}) kd({2}) saturation({3}) maxswing({4}) {5}.png",TbKp.Text, TbKi.Text, TbKd.Text, TbISaturation.Text, TbMaxDacSwing.Text, DateTime.Now.ToString("yyyyMMddHHmmss")), ImageFormat.Png);
+        }
+
+        private class User32
+        {
+            [StructLayout(LayoutKind.Sequential)]
+            public struct Rect
+            {
+                public int left;
+                public int top;
+                public int right;
+                public int bottom;
+            }
+
+            [DllImport("user32.dll")]
+            public static extern IntPtr GetWindowRect(IntPtr hWnd, ref Rect rect);
+        }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            CaptureApplication();
         }
 
         void SetReg(Byte addr, UInt16 value)

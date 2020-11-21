@@ -9,7 +9,7 @@ module ads8686if
     
     output reg         ads_csn,
     output wire        ads_rstn,
-    output reg         ads_sclk,
+    output reg         ads_sclk,    // clk_ref/2
     output reg         ads_sdi,
     input  wire        ads_sdo0,
     input  wire        ads_sdo1,
@@ -62,8 +62,8 @@ end
 localparam IDLE  = 0;
 localparam DELAY = 1;
 localparam WRITE = 2;
-reg [3:0]  state;
-reg [15:0] clk_cnt;
+reg [ 1:0] state;
+reg [ 7:0] clk_cnt;
 reg [31:0] reg_cfg_data;
 reg [15:0] dout_last;
 always @(negedge sys_rstn or posedge clk_ref) begin
@@ -78,7 +78,7 @@ always @(negedge sys_rstn or posedge clk_ref) begin
     else begin
         case(state)
             IDLE: begin
-                state <= DELAY;              
+                state <= DELAY;
                 clk_cnt <= 0;
             end
             DELAY: begin
@@ -86,7 +86,7 @@ always @(negedge sys_rstn or posedge clk_ref) begin
                 if (clk_cnt >= 50) begin
                     state <= WRITE;  
                     readout <= 0;                    
-                    reg_cfg_data <= {cfg_data[30:0], 1'b0};                    					
+                    reg_cfg_data <= {cfg_data[30:0], 1'b0};
                     ads_sdi <= cfg_data[31];
                 end
             end
@@ -96,10 +96,10 @@ always @(negedge sys_rstn or posedge clk_ref) begin
                     state <= IDLE;
                     ads_csn <= 1;
 
-                    // current value
+                    //position value
                     dout <= readout[31:16];
 
-                    // average of 2
+                    //average of 2
                     //dout_last <= readout[31:16];
                     //dout <= {1'b0, readout[31:17]} + {1'b0, dout_last[15:1]};
                     

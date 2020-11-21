@@ -9,7 +9,7 @@ module dac7731if
     input  wire [15:0] dac_data,
     output wire        dac_csn,
     output wire        dac_rstn,
-    output wire        dac_sck,     // 10MHz
+    output wire        dac_sck,     // clk_ref/2 
     output wire        dac_sdi,
     input  wire        dac_sdo,
     output wire        dac_lr,

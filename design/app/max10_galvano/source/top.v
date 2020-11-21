@@ -3,8 +3,8 @@
 module top
 (
     // XY2-100
-    input  wire xy_sync,
     input  wire xy_clk,
+    input  wire xy_sync,
     input  wire xy_x,
     input  wire xy_y,
     output wire xy_status,
@@ -66,9 +66,11 @@ always @(posedge clk_in) begin
 	clk_div <= clk_div + 1;
 end
 
-wire clk_80mhz, clk_20mhz, clk_5mhz;
+wire clk_80mhz, clk_40mhz, clk_20mhz, clk_10mhz, clk_5mhz;
 assign clk_80mhz = clk_in;
+assign clk_40mhz = clk_div[0];
 assign clk_20mhz = clk_div[1];
+assign clk_10mhz = clk_div[2];
 assign clk_5mhz  = clk_div[3];
 
 // registers
@@ -200,7 +202,50 @@ always @(negedge cnt_rstn or posedge clk_20mhz) begin // only support cpol = cph
     end
 end
 
-// xy2_100 interface
+// xy2_100 interface (2mhz xy_clk)
+assign xy_status = 0; // no error
+reg [18:0] xy2_xsetpoint;
+reg [18:0] xy2_xsetpoint_reg;
+reg [ 1:0] xy_clk_dly;
+reg [ 1:0] xy_sync_dly;
+localparam XY2_IDLE = 0;
+localparam XY2_DATA = 1;
+localparam XY2_CHECK = 2;
+reg [ 1:0] xy2_state;
+always @(negedge sys_rstn or posedge clk_20mhz) begin
+    if (!sys_rstn) begin
+        xy2_xsetpoint <= 19'h8000;
+        xy2_xsetpoint_reg <= 19'h8000;
+        xy2_state <= XY2_IDLE;
+    end
+    else begin
+        xy_clk_dly  <= {xy_clk_dly[0],  xy_clk};
+        xy_sync_dly <= {xy_sync_dly[0], xy_sync};
+        case(xy2_state)
+            XY2_IDLE: begin
+                if (xy_sync_dly == 2'b01) begin
+                    xy2_state <= XY2_DATA;
+                end
+            end
+            XY2_DATA: begin
+                if (xy_clk_dly == 2'b10) begin
+                    xy2_xsetpoint_reg <= {xy2_xsetpoint_reg[17:0], xy_x};
+                end
+                if (xy_sync_dly == 2'b10) begin
+                    xy2_state <= XY2_CHECK;
+                end
+            end
+            XY2_CHECK: begin
+                if (xy_clk_dly == 2'b10) begin
+                    // xy_x is P, TODO: calculate and compare parity
+                    if (xy2_xsetpoint_reg[18:16] == 3'b001)
+                        xy2_xsetpoint <= xy2_xsetpoint_reg;
+                    xy2_state <= XY2_IDLE;
+                end
+            end
+        endcase
+    end
+end
 
 // xp-adc
 wire xp_data_valid;
@@ -209,7 +254,7 @@ ads8686if xp_adc_u1
 (
     .sys_rstn(sys_rstn),
     .clk_ref(clk_20mhz),
-    .ads_csn(xpadc_cs),              // xpadc_cs,  <= 500KSps  (use ~350ksps)
+    .ads_csn(xpadc_cs),              // xpadc_cs,  <= 500Ksps  (use 150ksps), convertion time (high level) >= 1us, acq time (low level) >= 1us
     .ads_rstn(xpadc_rst),
     .ads_sclk(xpadc_sck),            // xpadc_sck, <= 66.67mhz (use 10mhz)
     .ads_sdi(xpadc_sdi),             

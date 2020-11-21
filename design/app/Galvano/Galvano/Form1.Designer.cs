@@ -61,6 +61,7 @@ namespace Galvano
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnConnectDongle = new System.Windows.Forms.Button();
             this.PosChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.BtnSave = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.PanelOps.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -330,6 +331,7 @@ namespace Galvano
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.BtnSave);
             this.panel2.Controls.Add(this.BtnConnectDongle);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -373,6 +375,17 @@ namespace Galvano
             this.PosChart.Size = new System.Drawing.Size(1221, 421);
             this.PosChart.TabIndex = 10;
             this.PosChart.Text = "chart1";
+            // 
+            // BtnSave
+            // 
+            this.BtnSave.Location = new System.Drawing.Point(282, 11);
+            this.BtnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnSave.MinimumSize = new System.Drawing.Size(0, 31);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(181, 31);
+            this.BtnSave.TabIndex = 1;
+            this.BtnSave.Text = "Save as PNG";
+            this.BtnSave.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -426,6 +439,7 @@ namespace Galvano
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button BtnStartSmallToggleTest;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button BtnSave;
     }
 }
 

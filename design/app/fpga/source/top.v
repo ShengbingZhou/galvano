@@ -228,11 +228,11 @@ ads8686if xp_adc_u1
 (
     .sys_rstn(sys_rstn),
     .clk_ref(clk1),         // 20MHz
-    .convst_csn(),  // xpadc_cs, max 500KSps
+    .convst_csn(),          // xpadc_cs,  max 500KSps
     .ads_rstn(xpadc_rst),
-    .ads_sclk(),    // xpadc_sck, max 66.67MHz
-    .ads_sdi(),     // xpadc_sdi
-    .ads_sdo0(),    // xpadc_sdo0
+    .ads_sclk(),            // xpadc_sck, max 66.67MHz
+    .ads_sdi(),             // xpadc_sdi
+    .ads_sdo0(),            // xpadc_sdo0
     .ads_sdo1(xpadc_sdo1),
     .ads_rvs(xpadc_rvs),
     .dvalid(xp_data_valid),
