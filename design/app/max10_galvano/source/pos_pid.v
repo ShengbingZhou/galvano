@@ -45,15 +45,9 @@ always @(negedge sys_rstn or posedge clk_pid) begin
                 P <= ($signed({1'b0, kp}) * error) >>> 10;
                 I <= ($signed({1'b0, ki}) * integrator) >>> 10;
                 
-                D <= ($signed({1'b0, kd}) * (error - error_last)) >>> 10;
+                D <= ($signed({1'b0, kd}) * (error - error_last)) >>> 8;
                 pid <= (P + I + D);
-                
-                //D <= (($signed(kd) * (error - error_last)) >>> 10) * ((P + I));
-                //if((error < 400) && (error > -400))
-                //    pid <= (P + I + D);
-                //else
-                //    pid <= (P + I);
-
+            
                 if ((-(integrator + error) < $signed({1'b0, pid_i_saturation})) && 
                     ( (integrator + error) < $signed({1'b0, pid_i_saturation})))
                     integrator <= integrator + error;

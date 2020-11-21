@@ -41,10 +41,10 @@ namespace Galvano
             TbLimit0.Text = limit[0].ToString() + " (-10V)";
             TbLimit1.Text = limit[1].ToString() + " (+10V)";
 
-            TbKp.Text = "550";
-            TbKi.Text = "13";
-            TbKd.Text = "63000";
-            TbISaturation.Text = "4000";
+            TbKp.Text = "950";
+            TbKi.Text = "15";
+            TbKd.Text = "48000";
+            TbISaturation.Text = "5000";
             TbMaxDacSwing.Text = "2500";
 
             timer.Interval = 10;
@@ -280,10 +280,12 @@ namespace Galvano
         private void BtnStartSmallToggleTest_Click(object sender, EventArgs e)
         {
             smallToggleData = new UInt16[majorTestLoops * minorTestLoops];
+            UInt16 amp = (UInt16)((limit[1] - limit[0]) / 20);
+            UInt16 mid = (UInt16)((limit[0] + limit[1]) / 2);
             for (int i = 0; i < majorTestLoops; i++)
             {
                 for (int j = 0; j < minorTestLoops; j++)
-                    smallToggleData[i * minorTestLoops + j] = ((i & 1) == 0) ? (UInt16)((limit[0] + limit[1]) / 2 - 1000) : (UInt16)((limit[0] + limit[1]) / 2 + 1000);
+                    smallToggleData[i * minorTestLoops + j] = ((i & 1) == 0) ? (UInt16)(mid - amp) : (UInt16)(mid + amp);
             }
 
             if (BtnStartSmallToggleTest.Text == "Start Small Toggle Test")

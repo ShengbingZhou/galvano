@@ -253,10 +253,10 @@ wire [15:0] xp_data;
 ads8686if xp_adc_u1
 (
     .sys_rstn(sys_rstn),
-    .clk_ref(clk_20mhz),
-    .ads_csn(xpadc_cs),              // xpadc_cs,  <= 500Ksps  (use 150ksps), convertion time (high level) >= 1us, acq time (low level) >= 1us
+    .clk_ref(clk_40mhz),
+    .ads_csn(xpadc_cs),              // xpadc_cs,  <= 500Ksps  (use 300ksps), convertion time (high level) >= 1us, acq time (low level) >= 1us
     .ads_rstn(xpadc_rst),
-    .ads_sclk(xpadc_sck),            // xpadc_sck, <= 66.67mhz (use 10mhz)
+    .ads_sclk(xpadc_sck),            // xpadc_sck, <= 66.67mhz (use 20mhz)
     .ads_sdi(xpadc_sdi),             
     .ads_sdo0(xpadc_sdo0),
     .ads_sdo1(xpadc_sdo1),
