@@ -206,6 +206,8 @@ end
 assign xy_status = 0; // no error
 reg [18:0] xy2_xsetpoint;
 reg [18:0] xy2_xsetpoint_reg;
+reg [18:0] xy2_ysetpoint;
+reg [18:0] xy2_ysetpoint_reg;
 reg [ 1:0] xy_clk_dly;
 reg [ 1:0] xy_sync_dly;
 localparam XY2_IDLE = 0;
@@ -216,6 +218,8 @@ always @(negedge sys_rstn or posedge clk_20mhz) begin
     if (!sys_rstn) begin
         xy2_xsetpoint <= 19'h8000;
         xy2_xsetpoint_reg <= 19'h8000;
+        xy2_ysetpoint <= 19'h8000;
+        xy2_ysetpoint_reg <= 19'h8000;
         xy2_state <= XY2_IDLE;
     end
     else begin
@@ -230,6 +234,7 @@ always @(negedge sys_rstn or posedge clk_20mhz) begin
             XY2_DATA: begin
                 if (xy_clk_dly == 2'b10) begin
                     xy2_xsetpoint_reg <= {xy2_xsetpoint_reg[17:0], xy_x};
+                    xy2_ysetpoint_reg <= {xy2_ysetpoint_reg[17:0], xy_y};
                 end
                 if (xy_sync_dly == 2'b10) begin
                     xy2_state <= XY2_CHECK;
@@ -240,6 +245,8 @@ always @(negedge sys_rstn or posedge clk_20mhz) begin
                     // xy_x is P, TODO: calculate and compare parity
                     if (xy2_xsetpoint_reg[18:16] == 3'b001)
                         xy2_xsetpoint <= xy2_xsetpoint_reg;
+                    if (xy2_ysetpoint_reg[18:16] == 3'b001)
+                        xy2_ysetpoint <= xy2_ysetpoint_reg;
                     xy2_state <= XY2_IDLE;
                 end
             end
@@ -303,11 +310,11 @@ wire [15:0] yp_data;
 ads8686if yp_adc_u1
 (
     .sys_rstn(sys_rstn),
-    .clk_ref(clk_20mhz),
+    .clk_ref(clk_40mhz),
     .ads_csn(ypadc_cs),
     .ads_rstn(ypadc_rst),
-    .ads_sclk(ypadc_sck),   // <= 66.67mhz
-    .ads_sdi(ypadc_sdi),    // 5mhz
+    .ads_sclk(ypadc_sck),
+    .ads_sdi(ypadc_sdi),
     .ads_sdo0(ypadc_sdo0),
     .ads_sdo1(ypadc_sdo1),
     .ads_rvs(ypadc_rvs),
@@ -324,11 +331,26 @@ dac7731if ydac_u1
     .dac_data(ydac_data),
     .dac_csn(ydac_cs),
     .dac_rstn(ydac_rst),
-    .dac_sck(ydac_sck),     // <= 66.67mhz
-    .dac_sdi(ydac_sdi),     // 5mhz
+    .dac_sck(ydac_sck),
+    .dac_sdi(ydac_sdi),
     .dac_sdo(ydac_sdo),
     .dac_lr(ydac_ldac),
     .ads_rstsel(ydac_rstsel)
+);
+
+// pos pid
+pos_pid ypos_pid_u1
+(
+    .sys_rstn(sys_rstn & spi_regs[2][1]),
+    .clk_pid(yp_data_valid),
+    .kp(spi_regs[3]),
+    .ki(spi_regs[4]),
+    .kd(spi_regs[5]),
+    .dac_limit(spi_regs[8]),
+    .pid_i_saturation({spi_regs[10][7:0], spi_regs[9]}),
+    .pos_target(spi_regs[6]),
+    .pos_adc(yp_data),
+    .pos_dac(ydac_data)
 );
 
 endmodule

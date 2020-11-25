@@ -1,5 +1,5 @@
 Analysis & Synthesis report for max10_galvano
-Sat Nov 21 19:24:44 2020
+Tue Nov 24 11:01:56 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -35,13 +35,12 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
  27. Parameter Settings for Inferred Entity Instance: pos_pid:xpos_pid_u1|lpm_mult:Mult0
  28. lpm_mult Parameter Settings by Entity Instance
  29. Port Connectivity Checks: "dac7731if:ydac_u1"
- 30. Port Connectivity Checks: "ads8686if:yp_adc_u1"
- 31. Port Connectivity Checks: "internal_osc:osc_u1"
- 32. Signal Tap Logic Analyzer Settings
- 33. Post-Synthesis Netlist Statistics for Top Partition
- 34. Elapsed Time Per Partition
- 35. Connections to In-System Debugging Instance "auto_signaltap_0"
- 36. Analysis & Synthesis Messages
+ 30. Port Connectivity Checks: "internal_osc:osc_u1"
+ 31. Signal Tap Logic Analyzer Settings
+ 32. Post-Synthesis Netlist Statistics for Top Partition
+ 33. Elapsed Time Per Partition
+ 34. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 35. Analysis & Synthesis Messages
 
 
 
@@ -68,15 +67,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Nov 21 19:24:43 2020       ;
+; Analysis & Synthesis Status        ; Successful - Tue Nov 24 11:01:56 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; max10_galvano                               ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 2,271                                       ;
-;     Total combinational functions  ; 1,568                                       ;
-;     Dedicated logic registers      ; 1,473                                       ;
-; Total registers                    ; 1473                                        ;
+; Total logic elements               ; 2,203                                       ;
+;     Total combinational functions  ; 1,500                                       ;
+;     Dedicated logic registers      ; 1,419                                       ;
+; Total registers                    ; 1419                                        ;
 ; Total pins                         ; 40                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 23,552                                      ;
@@ -276,20 +275,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 2,271      ;
+; Estimated Total logic elements              ; 2,203      ;
 ;                                             ;            ;
-; Total combinational functions               ; 1568       ;
+; Total combinational functions               ; 1500       ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 506        ;
-;     -- 3 input functions                    ; 547        ;
-;     -- <=2 input functions                  ; 515        ;
+;     -- 4 input functions                    ; 495        ;
+;     -- 3 input functions                    ; 528        ;
+;     -- <=2 input functions                  ; 477        ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 1044       ;
-;     -- arithmetic mode                      ; 524        ;
+;     -- normal mode                          ; 983        ;
+;     -- arithmetic mode                      ; 517        ;
 ;                                             ;            ;
-; Total registers                             ; 1473       ;
-;     -- Dedicated logic registers            ; 1473       ;
+; Total registers                             ; 1419       ;
+;     -- Dedicated logic registers            ; 1419       ;
 ;     -- I/O registers                        ; 0          ;
 ;                                             ;            ;
 ; I/O pins                                    ; 40         ;
@@ -298,9 +297,9 @@ https://fpgasoftware.intel.com/eula.
 ; Embedded Multiplier 9-bit elements          ; 10         ;
 ;                                             ;            ;
 ; Maximum fan-out node                        ; clk_div[1] ;
-; Maximum fan-out                             ; 766        ;
-; Total fan-out                               ; 10189      ;
-; Average fan-out                             ; 3.22       ;
+; Maximum fan-out                             ; 711        ;
+; Total fan-out                               ; 9846       ;
+; Average fan-out                             ; 3.24       ;
 +---------------------------------------------+------------+
 
 
@@ -309,9 +308,9 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                             ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |top                                                                                                                                    ; 1568 (368)          ; 1473 (353)                ; 23552       ; 0          ; 10           ; 0       ; 5         ; 40   ; 0            ; 0          ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
-;    |ads8686if:xp_adc_u1|                                                                                                                ; 106 (106)           ; 104 (104)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|ads8686if:xp_adc_u1                                                                                                                                                                                                                                                                                                                        ; ads8686if                         ; work         ;
-;    |ads8686if:yp_adc_u1|                                                                                                                ; 69 (69)             ; 55 (55)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|ads8686if:yp_adc_u1                                                                                                                                                                                                                                                                                                                        ; ads8686if                         ; work         ;
+; |top                                                                                                                                    ; 1500 (369)          ; 1419 (353)                ; 23552       ; 0          ; 10           ; 0       ; 5         ; 40   ; 0            ; 0          ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
+;    |ads8686if:xp_adc_u1|                                                                                                                ; 103 (103)           ; 104 (104)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|ads8686if:xp_adc_u1                                                                                                                                                                                                                                                                                                                        ; ads8686if                         ; work         ;
+;    |ads8686if:yp_adc_u1|                                                                                                                ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|ads8686if:yp_adc_u1                                                                                                                                                                                                                                                                                                                        ; ads8686if                         ; work         ;
 ;    |dac7731if:xdac_u1|                                                                                                                  ; 47 (47)             ; 37 (37)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dac7731if:xdac_u1                                                                                                                                                                                                                                                                                                                          ; dac7731if                         ; work         ;
 ;    |internal_osc:osc_u1|                                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|internal_osc:osc_u1                                                                                                                                                                                                                                                                                                                        ; internal_osc                      ; internal_osc ;
 ;       |altera_int_osc:int_osc_0|                                                                                                        ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|internal_osc:osc_u1|altera_int_osc:int_osc_0                                                                                                                                                                                                                                                                                               ; altera_int_osc                    ; internal_osc ;
@@ -505,82 +504,172 @@ Encoding Type:  One-Hot
 +-------------+------------+-------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                             ;
-+-----------------------------------------------+------------------------------------------------+
-; Register name                                 ; Reason for Removal                             ;
-+-----------------------------------------------+------------------------------------------------+
-; dac7731if:ydac_u1|adc_dvalid_dly[0]           ; Stuck at GND due to stuck port data_in         ;
-; ads8686if:yp_adc_u1|cfg_data[1..17,21..26,29] ; Stuck at GND due to stuck port data_in         ;
-; ads8686if:xp_adc_u1|cfg_data[1..17,21..26,29] ; Stuck at GND due to stuck port data_in         ;
-; dac7731if:ydac_u1|adc_dvalid_dly[1]           ; Lost fanout                                    ;
-; dac7731if:ydac_u1|reg_lr                      ; Stuck at VCC due to stuck port data_in         ;
-; dac7731if:ydac_u1|reg_data[0]                 ; Stuck at GND due to stuck port data_in         ;
-; dac7731if:ydac_u1|reg_csn                     ; Stuck at VCC due to stuck port data_in         ;
-; dac7731if:ydac_u1|reg_data[1..14]             ; Stuck at GND due to stuck port data_in         ;
-; ads8686if:yp_adc_u1|cfg_data[30]              ; Merged with ads8686if:yp_adc_u1|cfg_data[31]   ;
-; pos_pid:xpos_pid_u1|error[16..46]             ; Merged with pos_pid:xpos_pid_u1|error[47]      ;
-; pos_pid:xpos_pid_u1|error_last[16..46]        ; Merged with pos_pid:xpos_pid_u1|error_last[47] ;
-; dac7731if:xdac_u1|reg_csn                     ; Merged with dac7731if:xdac_u1|reg_lr           ;
-; ads8686if:xp_adc_u1|cfg_data[30]              ; Merged with ads8686if:xp_adc_u1|cfg_data[31]   ;
-; pos_pid:xpos_pid_u1|I[38..47]                 ; Merged with pos_pid:xpos_pid_u1|I[37]          ;
-; pos_pid:xpos_pid_u1|P[38..47]                 ; Merged with pos_pid:xpos_pid_u1|P[37]          ;
-; pos_pid:xpos_pid_u1|D[40..47]                 ; Merged with pos_pid:xpos_pid_u1|D[39]          ;
-; pos_pid:xpos_pid_u1|pid[40..46]               ; Merged with pos_pid:xpos_pid_u1|pid[47]        ;
-; pos_pid:xpos_pid_u1|P[23..36]                 ; Merged with pos_pid:xpos_pid_u1|P[37]          ;
-; pos_pid:xpos_pid_u1|D[26..38]                 ; Merged with pos_pid:xpos_pid_u1|D[39]          ;
-; pos_pid:xpos_pid_u1|pid[39]                   ; Merged with pos_pid:xpos_pid_u1|pid[47]        ;
-; ads8686if:xp_adc_u1|reg_cfg_data[0]           ; Stuck at GND due to stuck port data_in         ;
-; ads8686if:yp_adc_u1|reg_cfg_data[0]           ; Stuck at GND due to stuck port data_in         ;
-; spi_cs_fsm~10                                 ; Lost fanout                                    ;
-; spi_cs_fsm~11                                 ; Lost fanout                                    ;
-; spi_cs_fsm~12                                 ; Lost fanout                                    ;
-; spi_cs_fsm~13                                 ; Lost fanout                                    ;
-; dac7731if:ydac_u1|state~7                     ; Lost fanout                                    ;
-; dac7731if:ydac_u1|state~8                     ; Lost fanout                                    ;
-; dac7731if:ydac_u1|state~9                     ; Lost fanout                                    ;
-; dac7731if:xdac_u1|state~7                     ; Lost fanout                                    ;
-; dac7731if:xdac_u1|state~8                     ; Lost fanout                                    ;
-; dac7731if:xdac_u1|state~9                     ; Lost fanout                                    ;
-; xy_clk_dly[0,1]                               ; Lost fanout                                    ;
-; xy_sync_dly[0,1]                              ; Lost fanout                                    ;
-; xy2_state.XY2_DATA                            ; Lost fanout                                    ;
-; xy2_state.XY2_CHECK                           ; Lost fanout                                    ;
-; xy2_state.XY2_IDLE                            ; Lost fanout                                    ;
-; dac7731if:ydac_u1|state.WRITE                 ; Stuck at GND due to stuck port data_in         ;
-; dac7731if:ydac_u1|clk_cnt[0..15]              ; Stuck at GND due to stuck port clock_enable    ;
-; dac7731if:ydac_u1|reg_clk                     ; Stuck at GND due to stuck port clock_enable    ;
-; dac7731if:ydac_u1|reg_data[15]                ; Stuck at VCC due to stuck port clock_enable    ;
-; ads8686if:xp_adc_u1|cfg_cnt[3]                ; Stuck at GND due to stuck port data_in         ;
-; ads8686if:yp_adc_u1|cfg_cnt[3]                ; Stuck at GND due to stuck port data_in         ;
-; Total Number of Removed Registers = 235       ;                                                ;
-+-----------------------------------------------+------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                               ;
++-----------------------------------------------+--------------------------------------------------+
+; Register name                                 ; Reason for Removal                               ;
++-----------------------------------------------+--------------------------------------------------+
+; dac7731if:ydac_u1|adc_dvalid_dly[0]           ; Stuck at GND due to stuck port data_in           ;
+; ads8686if:yp_adc_u1|cfg_data[1..17,21..26,29] ; Stuck at GND due to stuck port data_in           ;
+; ads8686if:xp_adc_u1|cfg_data[1..17,21..26,29] ; Stuck at GND due to stuck port data_in           ;
+; dac7731if:ydac_u1|adc_dvalid_dly[1]           ; Lost fanout                                      ;
+; pos_pid:ypos_pid_u1|pos_dac[0..15]            ; Lost fanout                                      ;
+; pos_pid:ypos_pid_u1|pid[0..47]                ; Lost fanout                                      ;
+; pos_pid:ypos_pid_u1|D[0]                      ; Lost fanout                                      ;
+; pos_pid:ypos_pid_u1|state                     ; Lost fanout                                      ;
+; pos_pid:ypos_pid_u1|error[0..47]              ; Lost fanout                                      ;
+; pos_pid:ypos_pid_u1|error_last[0..47]         ; Lost fanout                                      ;
+; pos_pid:ypos_pid_u1|integrator[0..47]         ; Lost fanout                                      ;
+; pos_pid:ypos_pid_u1|P[0..47]                  ; Lost fanout                                      ;
+; pos_pid:ypos_pid_u1|I[0..47]                  ; Lost fanout                                      ;
+; pos_pid:ypos_pid_u1|D[1..47]                  ; Lost fanout                                      ;
+; ads8686if:yp_adc_u1|dvalid                    ; Lost fanout                                      ;
+; ads8686if:yp_adc_u1|readout[0..31]            ; Lost fanout                                      ;
+; ads8686if:yp_adc_u1|dout[0..15]               ; Lost fanout                                      ;
+; dac7731if:ydac_u1|reg_lr                      ; Stuck at VCC due to stuck port data_in           ;
+; dac7731if:ydac_u1|reg_data[0]                 ; Stuck at GND due to stuck port data_in           ;
+; dac7731if:ydac_u1|reg_csn                     ; Stuck at VCC due to stuck port data_in           ;
+; dac7731if:ydac_u1|reg_data[1..14]             ; Stuck at GND due to stuck port data_in           ;
+; ads8686if:yp_adc_u1|cfg_data[30]              ; Merged with ads8686if:yp_adc_u1|cfg_data[31]     ;
+; pos_pid:xpos_pid_u1|error[16..46]             ; Merged with pos_pid:xpos_pid_u1|error[47]        ;
+; pos_pid:xpos_pid_u1|error_last[16..46]        ; Merged with pos_pid:xpos_pid_u1|error_last[47]   ;
+; dac7731if:xdac_u1|reg_csn                     ; Merged with dac7731if:xdac_u1|reg_lr             ;
+; ads8686if:xp_adc_u1|cfg_data[30]              ; Merged with ads8686if:xp_adc_u1|cfg_data[31]     ;
+; pos_pid:xpos_pid_u1|I[38..47]                 ; Merged with pos_pid:xpos_pid_u1|I[37]            ;
+; pos_pid:xpos_pid_u1|P[38..47]                 ; Merged with pos_pid:xpos_pid_u1|P[37]            ;
+; pos_pid:xpos_pid_u1|D[40..47]                 ; Merged with pos_pid:xpos_pid_u1|D[39]            ;
+; pos_pid:xpos_pid_u1|pid[40..46]               ; Merged with pos_pid:xpos_pid_u1|pid[47]          ;
+; pos_pid:xpos_pid_u1|P[23..36]                 ; Merged with pos_pid:xpos_pid_u1|P[37]            ;
+; pos_pid:xpos_pid_u1|D[26..38]                 ; Merged with pos_pid:xpos_pid_u1|D[39]            ;
+; pos_pid:xpos_pid_u1|pid[39]                   ; Merged with pos_pid:xpos_pid_u1|pid[47]          ;
+; ads8686if:xp_adc_u1|reg_cfg_data[0]           ; Stuck at GND due to stuck port data_in           ;
+; ads8686if:yp_adc_u1|reg_cfg_data[0]           ; Stuck at GND due to stuck port data_in           ;
+; spi_cs_fsm~10                                 ; Lost fanout                                      ;
+; spi_cs_fsm~11                                 ; Lost fanout                                      ;
+; spi_cs_fsm~12                                 ; Lost fanout                                      ;
+; spi_cs_fsm~13                                 ; Lost fanout                                      ;
+; dac7731if:ydac_u1|state~7                     ; Lost fanout                                      ;
+; dac7731if:ydac_u1|state~8                     ; Lost fanout                                      ;
+; dac7731if:ydac_u1|state~9                     ; Lost fanout                                      ;
+; dac7731if:xdac_u1|state~7                     ; Lost fanout                                      ;
+; dac7731if:xdac_u1|state~8                     ; Lost fanout                                      ;
+; dac7731if:xdac_u1|state~9                     ; Lost fanout                                      ;
+; xy_clk_dly[0,1]                               ; Lost fanout                                      ;
+; xy_sync_dly[0,1]                              ; Lost fanout                                      ;
+; xy2_state.XY2_DATA                            ; Lost fanout                                      ;
+; xy2_state.XY2_CHECK                           ; Lost fanout                                      ;
+; xy2_state.XY2_IDLE                            ; Lost fanout                                      ;
+; ads8686if:yp_adc_u1|clk_cnt[7]                ; Merged with ads8686if:xp_adc_u1|clk_cnt[7]       ;
+; ads8686if:yp_adc_u1|clk_cnt[5]                ; Merged with ads8686if:xp_adc_u1|clk_cnt[5]       ;
+; ads8686if:yp_adc_u1|clk_cnt[4]                ; Merged with ads8686if:xp_adc_u1|clk_cnt[4]       ;
+; ads8686if:yp_adc_u1|clk_cnt[3]                ; Merged with ads8686if:xp_adc_u1|clk_cnt[3]       ;
+; ads8686if:yp_adc_u1|clk_cnt[2]                ; Merged with ads8686if:xp_adc_u1|clk_cnt[2]       ;
+; ads8686if:yp_adc_u1|clk_cnt[1]                ; Merged with ads8686if:xp_adc_u1|clk_cnt[1]       ;
+; ads8686if:yp_adc_u1|clk_cnt[6]                ; Merged with ads8686if:xp_adc_u1|clk_cnt[6]       ;
+; ads8686if:yp_adc_u1|clk_cnt[0]                ; Merged with ads8686if:xp_adc_u1|clk_cnt[0]       ;
+; ads8686if:yp_adc_u1|state.WRITE               ; Merged with ads8686if:xp_adc_u1|state.WRITE      ;
+; ads8686if:yp_adc_u1|cfg_data[31]              ; Merged with ads8686if:xp_adc_u1|cfg_data[31]     ;
+; ads8686if:yp_adc_u1|state.DELAY               ; Merged with ads8686if:xp_adc_u1|state.DELAY      ;
+; ads8686if:yp_adc_u1|state.IDLE                ; Merged with ads8686if:xp_adc_u1|state.IDLE       ;
+; ads8686if:yp_adc_u1|cfg_cnt[3]                ; Merged with ads8686if:xp_adc_u1|cfg_cnt[3]       ;
+; ads8686if:yp_adc_u1|cfg_cnt[2]                ; Merged with ads8686if:xp_adc_u1|cfg_cnt[2]       ;
+; ads8686if:yp_adc_u1|cfg_cnt[1]                ; Merged with ads8686if:xp_adc_u1|cfg_cnt[1]       ;
+; ads8686if:yp_adc_u1|cfg_cnt[0]                ; Merged with ads8686if:xp_adc_u1|cfg_cnt[0]       ;
+; ads8686if:yp_adc_u1|cfg_data[28]              ; Merged with ads8686if:xp_adc_u1|cfg_data[28]     ;
+; ads8686if:yp_adc_u1|cfg_data[27]              ; Merged with ads8686if:xp_adc_u1|cfg_data[27]     ;
+; ads8686if:yp_adc_u1|cfg_data[20]              ; Merged with ads8686if:xp_adc_u1|cfg_data[20]     ;
+; ads8686if:yp_adc_u1|cfg_data[19]              ; Merged with ads8686if:xp_adc_u1|cfg_data[19]     ;
+; ads8686if:yp_adc_u1|cfg_data[18]              ; Merged with ads8686if:xp_adc_u1|cfg_data[18]     ;
+; ads8686if:yp_adc_u1|cfg_data[0]               ; Merged with ads8686if:xp_adc_u1|cfg_data[0]      ;
+; dac7731if:ydac_u1|state.WRITE                 ; Stuck at GND due to stuck port data_in           ;
+; dac7731if:ydac_u1|clk_cnt[0..15]              ; Stuck at GND due to stuck port clock_enable      ;
+; dac7731if:ydac_u1|reg_clk                     ; Stuck at GND due to stuck port clock_enable      ;
+; dac7731if:ydac_u1|reg_data[15]                ; Stuck at VCC due to stuck port clock_enable      ;
+; ads8686if:yp_adc_u1|ads_sclk                  ; Merged with ads8686if:xp_adc_u1|ads_sclk         ;
+; ads8686if:yp_adc_u1|reg_cfg_data[1]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[1]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[2]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[2]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[3]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[3]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[4]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[4]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[5]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[5]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[6]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[6]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[7]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[7]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[8]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[8]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[9]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[9]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[10]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[10] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[11]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[11] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[12]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[12] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[13]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[13] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[14]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[14] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[15]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[15] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[16]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[16] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[17]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[17] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[18]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[18] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[19]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[19] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[20]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[20] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[21]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[21] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[22]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[22] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[23]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[23] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[24]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[24] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[25]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[25] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[26]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[26] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[27]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[27] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[28]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[28] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[29]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[29] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[30]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[30] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[31]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[31] ;
+; ads8686if:xp_adc_u1|cfg_cnt[3]                ; Stuck at GND due to stuck port data_in           ;
+; ads8686if:yp_adc_u1|ads_sdi                   ; Merged with ads8686if:xp_adc_u1|ads_sdi          ;
+; Total Number of Removed Registers = 691       ;                                                  ;
++-----------------------------------------------+--------------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                           ;
-+-------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
-; Register name                       ; Reason for Removal        ; Registers Removed due to This Register                                              ;
-+-------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
-; dac7731if:ydac_u1|adc_dvalid_dly[0] ; Stuck at GND              ; dac7731if:ydac_u1|reg_lr, dac7731if:ydac_u1|reg_csn, dac7731if:ydac_u1|clk_cnt[15], ;
-;                                     ; due to stuck port data_in ; dac7731if:ydac_u1|clk_cnt[14], dac7731if:ydac_u1|clk_cnt[13],                       ;
-;                                     ;                           ; dac7731if:ydac_u1|clk_cnt[12], dac7731if:ydac_u1|clk_cnt[11],                       ;
-;                                     ;                           ; dac7731if:ydac_u1|clk_cnt[10], dac7731if:ydac_u1|clk_cnt[9],                        ;
-;                                     ;                           ; dac7731if:ydac_u1|clk_cnt[8], dac7731if:ydac_u1|clk_cnt[7],                         ;
-;                                     ;                           ; dac7731if:ydac_u1|clk_cnt[6], dac7731if:ydac_u1|clk_cnt[5],                         ;
-;                                     ;                           ; dac7731if:ydac_u1|clk_cnt[4], dac7731if:ydac_u1|clk_cnt[3],                         ;
-;                                     ;                           ; dac7731if:ydac_u1|clk_cnt[2], dac7731if:ydac_u1|clk_cnt[1],                         ;
-;                                     ;                           ; dac7731if:ydac_u1|clk_cnt[0], dac7731if:ydac_u1|reg_clk,                            ;
-;                                     ;                           ; dac7731if:ydac_u1|reg_data[15]                                                      ;
-; dac7731if:ydac_u1|reg_data[0]       ; Stuck at GND              ; dac7731if:ydac_u1|reg_data[1], dac7731if:ydac_u1|reg_data[2],                       ;
-;                                     ; due to stuck port data_in ; dac7731if:ydac_u1|reg_data[3], dac7731if:ydac_u1|reg_data[4],                       ;
-;                                     ;                           ; dac7731if:ydac_u1|reg_data[5], dac7731if:ydac_u1|reg_data[6],                       ;
-;                                     ;                           ; dac7731if:ydac_u1|reg_data[7], dac7731if:ydac_u1|reg_data[8],                       ;
-;                                     ;                           ; dac7731if:ydac_u1|reg_data[9], dac7731if:ydac_u1|reg_data[10],                      ;
-;                                     ;                           ; dac7731if:ydac_u1|reg_data[11], dac7731if:ydac_u1|reg_data[12],                     ;
-;                                     ;                           ; dac7731if:ydac_u1|reg_data[13], dac7731if:ydac_u1|reg_data[14]                      ;
-; xy_clk_dly[1]                       ; Lost Fanouts              ; xy_clk_dly[0]                                                                       ;
-+-------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                            ;
++-------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
+; Register name                       ; Reason for Removal        ; Registers Removed due to This Register                                               ;
++-------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
+; dac7731if:ydac_u1|adc_dvalid_dly[0] ; Stuck at GND              ; dac7731if:ydac_u1|reg_lr, dac7731if:ydac_u1|reg_csn, dac7731if:ydac_u1|clk_cnt[15],  ;
+;                                     ; due to stuck port data_in ; dac7731if:ydac_u1|clk_cnt[14], dac7731if:ydac_u1|clk_cnt[13],                        ;
+;                                     ;                           ; dac7731if:ydac_u1|clk_cnt[12], dac7731if:ydac_u1|clk_cnt[11],                        ;
+;                                     ;                           ; dac7731if:ydac_u1|clk_cnt[10], dac7731if:ydac_u1|clk_cnt[9],                         ;
+;                                     ;                           ; dac7731if:ydac_u1|clk_cnt[8], dac7731if:ydac_u1|clk_cnt[7],                          ;
+;                                     ;                           ; dac7731if:ydac_u1|clk_cnt[6], dac7731if:ydac_u1|clk_cnt[5],                          ;
+;                                     ;                           ; dac7731if:ydac_u1|clk_cnt[4], dac7731if:ydac_u1|clk_cnt[3],                          ;
+;                                     ;                           ; dac7731if:ydac_u1|clk_cnt[2], dac7731if:ydac_u1|clk_cnt[1],                          ;
+;                                     ;                           ; dac7731if:ydac_u1|clk_cnt[0], dac7731if:ydac_u1|reg_clk,                             ;
+;                                     ;                           ; dac7731if:ydac_u1|reg_data[15]                                                       ;
+; pos_pid:ypos_pid_u1|pos_dac[15]     ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[47], pos_pid:ypos_pid_u1|pid[46],                            ;
+;                                     ;                           ; pos_pid:ypos_pid_u1|pid[45], pos_pid:ypos_pid_u1|pid[44],                            ;
+;                                     ;                           ; pos_pid:ypos_pid_u1|pid[43], pos_pid:ypos_pid_u1|pid[15], pos_pid:ypos_pid_u1|state, ;
+;                                     ;                           ; pos_pid:ypos_pid_u1|P[47], pos_pid:ypos_pid_u1|P[46], pos_pid:ypos_pid_u1|P[45],     ;
+;                                     ;                           ; pos_pid:ypos_pid_u1|P[44], pos_pid:ypos_pid_u1|P[43], pos_pid:ypos_pid_u1|P[42],     ;
+;                                     ;                           ; ads8686if:yp_adc_u1|dvalid                                                           ;
+; dac7731if:ydac_u1|reg_data[0]       ; Stuck at GND              ; dac7731if:ydac_u1|reg_data[1], dac7731if:ydac_u1|reg_data[2],                        ;
+;                                     ; due to stuck port data_in ; dac7731if:ydac_u1|reg_data[3], dac7731if:ydac_u1|reg_data[4],                        ;
+;                                     ;                           ; dac7731if:ydac_u1|reg_data[5], dac7731if:ydac_u1|reg_data[6],                        ;
+;                                     ;                           ; dac7731if:ydac_u1|reg_data[7], dac7731if:ydac_u1|reg_data[8],                        ;
+;                                     ;                           ; dac7731if:ydac_u1|reg_data[9], dac7731if:ydac_u1|reg_data[10],                       ;
+;                                     ;                           ; dac7731if:ydac_u1|reg_data[11], dac7731if:ydac_u1|reg_data[12],                      ;
+;                                     ;                           ; dac7731if:ydac_u1|reg_data[13], dac7731if:ydac_u1|reg_data[14]                       ;
+; pos_pid:ypos_pid_u1|D[0]            ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error_last[47], pos_pid:ypos_pid_u1|error_last[46],              ;
+;                                     ;                           ; pos_pid:ypos_pid_u1|error_last[45], pos_pid:ypos_pid_u1|error_last[44]               ;
+; pos_pid:ypos_pid_u1|pos_dac[14]     ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[14]                                                          ;
+; pos_pid:ypos_pid_u1|pos_dac[13]     ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[13]                                                          ;
+; pos_pid:ypos_pid_u1|pos_dac[12]     ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[12]                                                          ;
+; pos_pid:ypos_pid_u1|pos_dac[11]     ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[11]                                                          ;
+; pos_pid:ypos_pid_u1|pos_dac[10]     ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[10]                                                          ;
+; pos_pid:ypos_pid_u1|pos_dac[9]      ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[9]                                                           ;
+; pos_pid:ypos_pid_u1|pos_dac[8]      ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[8]                                                           ;
+; pos_pid:ypos_pid_u1|pos_dac[7]      ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[7]                                                           ;
+; pos_pid:ypos_pid_u1|pos_dac[6]      ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[6]                                                           ;
+; pos_pid:ypos_pid_u1|pos_dac[5]      ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[5]                                                           ;
+; pos_pid:ypos_pid_u1|pos_dac[4]      ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[4]                                                           ;
+; pos_pid:ypos_pid_u1|pos_dac[3]      ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[3]                                                           ;
+; pos_pid:ypos_pid_u1|pos_dac[2]      ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[2]                                                           ;
+; pos_pid:ypos_pid_u1|pos_dac[1]      ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[1]                                                           ;
+; pos_pid:ypos_pid_u1|pos_dac[0]      ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[0]                                                           ;
+; xy_clk_dly[1]                       ; Lost Fanouts              ; xy_clk_dly[0]                                                                        ;
++-------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -588,12 +677,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1473  ;
-; Number of registers using Synchronous Clear  ; 80    ;
+; Total registers                              ; 1419  ;
+; Number of registers using Synchronous Clear  ; 72    ;
 ; Number of registers using Synchronous Load   ; 81    ;
-; Number of registers using Asynchronous Clear ; 539   ;
+; Number of registers using Asynchronous Clear ; 519   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1049  ;
+; Number of registers using Clock Enable       ; 1017  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -897,16 +986,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ads8686if:yp_adc_u1"                                                                  ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                             ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-; dvalid ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; dout   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------------------------+
 ; Port Connectivity Checks: "internal_osc:osc_u1" ;
 +--------+-------+----------+---------------------+
@@ -931,30 +1010,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                   ; Count                      ;
 +------------------------+----------------------------+
 ; boundary_port          ; 58                         ;
-; cycloneiii_ff          ; 777                        ;
-;     CLR                ; 72                         ;
-;     CLR SCLR           ; 16                         ;
-;     ENA                ; 471                        ;
-;     ENA CLR            ; 174                        ;
+; cycloneiii_ff          ; 723                        ;
+;     CLR                ; 61                         ;
+;     CLR SCLR           ; 8                          ;
+;     ENA                ; 440                        ;
+;     ENA CLR            ; 173                        ;
 ;     ENA CLR SCLR       ; 16                         ;
 ;     ENA CLR SLD        ; 14                         ;
-;     plain              ; 14                         ;
-; cycloneiii_lcell_comb  ; 1035                       ;
-;     arith              ; 437                        ;
-;         2 data inputs  ; 174                        ;
-;         3 data inputs  ; 263                        ;
-;     normal             ; 598                        ;
-;         0 data inputs  ; 3                          ;
-;         1 data inputs  ; 26                         ;
+;     plain              ; 11                         ;
+; cycloneiii_lcell_comb  ; 967                        ;
+;     arith              ; 430                        ;
 ;         2 data inputs  ; 167                        ;
-;         3 data inputs  ; 124                        ;
-;         4 data inputs  ; 278                        ;
+;         3 data inputs  ; 263                        ;
+;     normal             ; 537                        ;
+;         0 data inputs  ; 3                          ;
+;         1 data inputs  ; 24                         ;
+;         2 data inputs  ; 138                        ;
+;         3 data inputs  ; 105                        ;
+;         4 data inputs  ; 267                        ;
 ; cycloneiii_mac_mult    ; 5                          ;
 ; cycloneiii_mac_out     ; 5                          ;
 ; fiftyfivenm_oscillator ; 1                          ;
 ;                        ;                            ;
 ; Max LUT depth          ; 9.80                       ;
-; Average LUT depth      ; 4.11                       ;
+; Average LUT depth      ; 4.24                       ;
 +------------------------+----------------------------+
 
 
@@ -1060,7 +1139,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Sat Nov 21 19:23:54 2020
+    Info: Processing started: Tue Nov 24 11:01:22 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off max10_galvano -c max10_galvano
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -1082,6 +1161,7 @@ Info (12127): Elaborating entity "top" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at top.v(69): object "clk_80mhz" assigned a value but never read File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 69
 Warning (10036): Verilog HDL or VHDL warning at top.v(69): object "clk_10mhz" assigned a value but never read File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 69
 Warning (10036): Verilog HDL or VHDL warning at top.v(207): object "xy2_xsetpoint" assigned a value but never read File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 207
+Warning (10036): Verilog HDL or VHDL warning at top.v(209): object "xy2_ysetpoint" assigned a value but never read File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 209
 Warning (10230): Verilog HDL assignment warning at top.v(66): truncated value with size 32 to match size of target (4) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 66
 Warning (10230): Verilog HDL assignment warning at top.v(95): truncated value with size 32 to match size of target (17) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 95
 Warning (10230): Verilog HDL assignment warning at top.v(99): truncated value with size 32 to match size of target (17) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 99
@@ -1092,13 +1172,13 @@ Warning (10034): Output port "temp_cs" at top.v(45) has no driver File: C:/bzhou
 Warning (10034): Output port "temp_clk" at top.v(46) has no driver File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 46
 Info (12128): Elaborating entity "internal_osc" for hierarchy "internal_osc:osc_u1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 62
 Info (12128): Elaborating entity "altera_int_osc" for hierarchy "internal_osc:osc_u1|altera_int_osc:int_osc_0" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/internal_osc/synthesis/internal_osc.v Line: 18
-Info (12128): Elaborating entity "ads8686if" for hierarchy "ads8686if:xp_adc_u1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 266
+Info (12128): Elaborating entity "ads8686if" for hierarchy "ads8686if:xp_adc_u1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 273
 Warning (10230): Verilog HDL assignment warning at ads8685.v(85): truncated value with size 32 to match size of target (8) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/ads8685.v Line: 85
 Warning (10230): Verilog HDL assignment warning at ads8685.v(94): truncated value with size 32 to match size of target (8) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/ads8685.v Line: 94
 Warning (10230): Verilog HDL assignment warning at ads8685.v(108): truncated value with size 32 to match size of target (4) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/ads8685.v Line: 108
-Info (12128): Elaborating entity "dac7731if" for hierarchy "dac7731if:xdac_u1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 283
+Info (12128): Elaborating entity "dac7731if" for hierarchy "dac7731if:xdac_u1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 290
 Warning (10230): Verilog HDL assignment warning at dac7731.v(52): truncated value with size 32 to match size of target (16) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/dac7731.v Line: 52
-Info (12128): Elaborating entity "pos_pid" for hierarchy "pos_pid:xpos_pid_u1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 298
+Info (12128): Elaborating entity "pos_pid" for hierarchy "pos_pid:xpos_pid_u1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 305
 Warning (10230): Verilog HDL assignment warning at pos_pid.v(22): truncated value with size 32 to match size of target (16) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 22
 Warning (10230): Verilog HDL assignment warning at pos_pid.v(23): truncated value with size 32 to match size of target (16) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 23
 Warning (10230): Verilog HDL assignment warning at pos_pid.v(62): truncated value with size 48 to match size of target (16) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 62
@@ -1122,7 +1202,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_drb File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/db/cmpr_drb.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2020.11.21.19:24:25 Progress: Loading sld69100c46/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2020.11.24.11:01:41 Progress: Loading sld69100c46/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1209,7 +1289,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "temp_cs" is stuck at GND File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 45
     Warning (13410): Pin "temp_clk" is stuck at GND File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 46
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 18 registers lost all their fanouts during netlist optimizations.
+Info (17049): 420 registers lost all their fanouts during netlist optimizations.
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 79 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1223,16 +1303,16 @@ Warning (21074): Design contains 9 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "temp_data" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 47
     Warning (15610): No output dependent on input pin "xy_clk" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 6
     Warning (15610): No output dependent on input pin "xy_sync" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 7
-Info (21057): Implemented 2418 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2349 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 28 output pins
-    Info (21061): Implemented 2339 logic cells
+    Info (21061): Implemented 2270 logic cells
     Info (21064): Implemented 23 RAM segments
     Info (21062): Implemented 10 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 45 warnings
-    Info: Peak virtual memory: 4928 megabytes
-    Info: Processing ended: Sat Nov 21 19:24:44 2020
-    Info: Elapsed time: 00:00:50
-    Info: Total CPU time (on all processors): 00:01:01
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 46 warnings
+    Info: Peak virtual memory: 4932 megabytes
+    Info: Processing ended: Tue Nov 24 11:01:56 2020
+    Info: Elapsed time: 00:00:34
+    Info: Total CPU time (on all processors): 00:00:50
 
 
