@@ -21,14 +21,14 @@ namespace Galvano
         Timer timer = new Timer();
         Random rand = new Random();
 
-        UInt16[] bigToggleData;
-        UInt16[] smallToggleData;
+        UInt16[] bigStepData;
+        UInt16[] smallStepData;
         UInt16[] sineData;
         UInt16[] limit = new UInt16[2];
 
         bool randomTestEnabled = false;
-        bool bigToggleTestEnabled = false;
-        bool smallToggleTestEnabled = false;
+        bool bigStepTestEnabled = false;
+        bool smallStepTestEnabled = false;
         bool targetTestEnabled = false;
         bool sineTestEnabled = false;
         public int aardvarkHandle = 0;
@@ -60,10 +60,10 @@ namespace Galvano
             BtnTargetTest.Click += BtnTargetTest_Click;
             BtnStartRandTest.Text = "Start Random Test";
             BtnStartRandTest.Click += BtnStartRandomTest_Click;
-            BtnStartBigToggleTest.Text = "Start Big Toggle Test";
-            BtnStartBigToggleTest.Click += BtnStartBigToggleTest_Click;
-            BtnStartSmallToggleTest.Text = "Start Small Toggle Test";
-            BtnStartSmallToggleTest.Click += BtnStartSmallToggleTest_Click;
+            BtnStartBigStepTest.Text = "Start Big Step Test";
+            BtnStartBigStepTest.Click += BtnStartBigStepTest_Click;
+            BtnStartSmallStepTest.Text = "Start Small Step Test";
+            BtnStartSmallStepTest.Click += BtnStartSmallStepTest_Click;
             BtnSineWaveTest.Text = "Start Sine Test";
             BtnSineWaveTest.Click += BtnSineWaveTest_Click;
             PanelOps.Enabled = false;
@@ -245,65 +245,65 @@ namespace Galvano
             }
         }
 
-        private void BtnStartBigToggleTest_Click(object sender, EventArgs e)
+        private void BtnStartBigStepTest_Click(object sender, EventArgs e)
         {
-            bigToggleData = new UInt16[majorTestLoops * minorTestLoops];
+            bigStepData = new UInt16[majorTestLoops * minorTestLoops];
             UInt16 amp = (UInt16)((limit[1] - limit[0]) * 9/ 20); // 45% of full range
             UInt16 mid = (UInt16)((limit[0] + limit[1]) / 2);
             for (int i = 0; i < majorTestLoops; i++)
             {
                 for (int j = 0; j < minorTestLoops; j++)
-                    bigToggleData[i * minorTestLoops + j] = ((i & 1) == 0) ? (UInt16)(mid - amp) : (UInt16)(mid + amp); // 90% range
+                    bigStepData[i * minorTestLoops + j] = ((i & 1) == 0) ? (UInt16)(mid - amp) : (UInt16)(mid + amp); // 90% range
             }
 
-            if (BtnStartBigToggleTest.Text == "Start Big Toggle Test")
+            if (BtnStartBigStepTest.Text == "Start Big Step Test")
             {
-                BtnStartBigToggleTest.Text = "Stop Big Toggle Test";
-                BtnStartBigToggleTest.ForeColor = Color.Red;
+                BtnStartBigStepTest.Text = "Stop Big Step Test";
+                BtnStartBigStepTest.ForeColor = Color.Red;
                 PosChart.Series[0].Points.Clear();
                 PosChart.Series[1].Points.Clear();
 
-                bigToggleTestEnabled = true;
+                bigStepTestEnabled = true;
                 SetPIDParam();
                 timer.Enabled = true;
             }
-            else if (BtnStartBigToggleTest.Text == "Stop Big Toggle Test")
+            else if (BtnStartBigStepTest.Text == "Stop Big Step Test")
             {
-                BtnStartBigToggleTest.Text = "Start Big Toggle Test";
-                BtnStartBigToggleTest.ForeColor = Color.Black;
+                BtnStartBigStepTest.Text = "Start Big Step Test";
+                BtnStartBigStepTest.ForeColor = Color.Black;
                 timer.Enabled = false;
-                bigToggleTestEnabled = false;
+                bigStepTestEnabled = false;
             }
         }
 
-        private void BtnStartSmallToggleTest_Click(object sender, EventArgs e)
+        private void BtnStartSmallStepTest_Click(object sender, EventArgs e)
         {
-            smallToggleData = new UInt16[majorTestLoops * minorTestLoops];
+            smallStepData = new UInt16[majorTestLoops * minorTestLoops];
             UInt16 amp = (UInt16)((limit[1] - limit[0]) / 20); // 5% of full range
             UInt16 mid = (UInt16)((limit[0] + limit[1]) / 2);
             for (int i = 0; i < majorTestLoops; i++)
             {
                 for (int j = 0; j < minorTestLoops; j++)
-                    smallToggleData[i * minorTestLoops + j] = ((i & 1) == 0) ? (UInt16)(mid - amp) : (UInt16)(mid + amp); // 10% of full range
+                    smallStepData[i * minorTestLoops + j] = ((i & 1) == 0) ? (UInt16)(mid - amp) : (UInt16)(mid + amp); // 10% of full range
             }
 
-            if (BtnStartSmallToggleTest.Text == "Start Small Toggle Test")
+            if (BtnStartSmallStepTest.Text == "Start Small Step Test")
             {
-                BtnStartSmallToggleTest.Text = "Stop Small Toggle Test";
-                BtnStartSmallToggleTest.ForeColor = Color.Red;
+                BtnStartSmallStepTest.Text = "Stop Small Step Test";
+                BtnStartSmallStepTest.ForeColor = Color.Red;
                 PosChart.Series[0].Points.Clear();
                 PosChart.Series[1].Points.Clear();
 
-                smallToggleTestEnabled = true;
+                smallStepTestEnabled = true;
                 SetPIDParam();
                 timer.Enabled = true;
             }
-            else if (BtnStartSmallToggleTest.Text == "Stop Small Toggle Test")
+            else if (BtnStartSmallStepTest.Text == "Stop Small Step Test")
             {
-                BtnStartSmallToggleTest.Text = "Start Small Toggle Test";
-                BtnStartSmallToggleTest.ForeColor = Color.Black;
+                BtnStartSmallStepTest.Text = "Start Small Step Test";
+                BtnStartSmallStepTest.ForeColor = Color.Black;
                 timer.Enabled = false;
-                smallToggleTestEnabled = false;
+                smallStepTestEnabled = false;
             }
         }
 
@@ -345,10 +345,10 @@ namespace Galvano
                     BtnTargetTest_Click(null, null);
                 if (randomTestEnabled)
                     BtnStartRandomTest_Click(null, null);
-                if (bigToggleTestEnabled)
-                    BtnStartBigToggleTest_Click(null, null);
-                if (smallToggleTestEnabled)
-                    BtnStartSmallToggleTest_Click(null, null);
+                if (bigStepTestEnabled)
+                    BtnStartBigStepTest_Click(null, null);
+                if (smallStepTestEnabled)
+                    BtnStartSmallStepTest_Click(null, null);
                 if (sineTestEnabled)
                     BtnSineWaveTest_Click(null, null);
 
@@ -367,13 +367,13 @@ namespace Galvano
                     UInt16 mid = (UInt16)((limit[0] + limit[1]) / 2);
                     target = (ushort)rand.Next(mid - amp, mid + amp);
                 }
-                if (bigToggleTestEnabled)
+                if (bigStepTestEnabled)
                 {               
-                    target = bigToggleData[PosChart.Series[0].Points.Count];
+                    target = bigStepData[PosChart.Series[0].Points.Count];
                 }
-                if (smallToggleTestEnabled)
+                if (smallStepTestEnabled)
                 {
-                    target = smallToggleData[PosChart.Series[0].Points.Count];
+                    target = smallStepData[PosChart.Series[0].Points.Count];
                 }
                 if (sineTestEnabled)
                 {

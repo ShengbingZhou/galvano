@@ -37,8 +37,8 @@ namespace Galvano
             this.PanelOps = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnTargetTest = new System.Windows.Forms.Button();
-            this.BtnStartBigToggleTest = new System.Windows.Forms.Button();
-            this.BtnStartSmallToggleTest = new System.Windows.Forms.Button();
+            this.BtnStartBigStepTest = new System.Windows.Forms.Button();
+            this.BtnStartSmallStepTest = new System.Windows.Forms.Button();
             this.BtnSineWaveTest = new System.Windows.Forms.Button();
             this.BtnStartRandTest = new System.Windows.Forms.Button();
             this.TbTarget = new System.Windows.Forms.TextBox();
@@ -97,8 +97,8 @@ namespace Galvano
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.BtnTargetTest);
-            this.groupBox1.Controls.Add(this.BtnStartBigToggleTest);
-            this.groupBox1.Controls.Add(this.BtnStartSmallToggleTest);
+            this.groupBox1.Controls.Add(this.BtnStartBigStepTest);
+            this.groupBox1.Controls.Add(this.BtnStartSmallStepTest);
             this.groupBox1.Controls.Add(this.BtnSineWaveTest);
             this.groupBox1.Controls.Add(this.BtnStartRandTest);
             this.groupBox1.Controls.Add(this.TbTarget);
@@ -121,27 +121,27 @@ namespace Galvano
             this.BtnTargetTest.Text = "Single Target Test";
             this.BtnTargetTest.UseVisualStyleBackColor = true;
             // 
-            // BtnStartBigToggleTest
+            // BtnStartBigStepTest
             // 
-            this.BtnStartBigToggleTest.Location = new System.Drawing.Point(66, 61);
-            this.BtnStartBigToggleTest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnStartBigToggleTest.MinimumSize = new System.Drawing.Size(0, 31);
-            this.BtnStartBigToggleTest.Name = "BtnStartBigToggleTest";
-            this.BtnStartBigToggleTest.Size = new System.Drawing.Size(181, 31);
-            this.BtnStartBigToggleTest.TabIndex = 7;
-            this.BtnStartBigToggleTest.Text = "Start Big Toggle Test";
-            this.BtnStartBigToggleTest.UseVisualStyleBackColor = true;
+            this.BtnStartBigStepTest.Location = new System.Drawing.Point(66, 61);
+            this.BtnStartBigStepTest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnStartBigStepTest.MinimumSize = new System.Drawing.Size(0, 31);
+            this.BtnStartBigStepTest.Name = "BtnStartBigStepTest";
+            this.BtnStartBigStepTest.Size = new System.Drawing.Size(181, 31);
+            this.BtnStartBigStepTest.TabIndex = 7;
+            this.BtnStartBigStepTest.Text = "Start Big Step Test";
+            this.BtnStartBigStepTest.UseVisualStyleBackColor = true;
             // 
-            // BtnStartSmallToggleTest
+            // BtnStartSmallStepTest
             // 
-            this.BtnStartSmallToggleTest.Location = new System.Drawing.Point(252, 61);
-            this.BtnStartSmallToggleTest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnStartSmallToggleTest.MinimumSize = new System.Drawing.Size(0, 31);
-            this.BtnStartSmallToggleTest.Name = "BtnStartSmallToggleTest";
-            this.BtnStartSmallToggleTest.Size = new System.Drawing.Size(181, 31);
-            this.BtnStartSmallToggleTest.TabIndex = 7;
-            this.BtnStartSmallToggleTest.Text = "Start Small Toggle Test";
-            this.BtnStartSmallToggleTest.UseVisualStyleBackColor = true;
+            this.BtnStartSmallStepTest.Location = new System.Drawing.Point(252, 61);
+            this.BtnStartSmallStepTest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnStartSmallStepTest.MinimumSize = new System.Drawing.Size(0, 31);
+            this.BtnStartSmallStepTest.Name = "BtnStartSmallStepTest";
+            this.BtnStartSmallStepTest.Size = new System.Drawing.Size(181, 31);
+            this.BtnStartSmallStepTest.TabIndex = 7;
+            this.BtnStartSmallStepTest.Text = "Start Small Step Test";
+            this.BtnStartSmallStepTest.UseVisualStyleBackColor = true;
             // 
             // BtnSineWaveTest
             // 
@@ -447,10 +447,10 @@ namespace Galvano
         private System.Windows.Forms.Button BtnStartRandTest;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnSineWaveTest;
-        private System.Windows.Forms.Button BtnStartBigToggleTest;
+        private System.Windows.Forms.Button BtnStartBigStepTest;
         private System.Windows.Forms.TextBox TbLimit0;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button BtnStartSmallToggleTest;
+        private System.Windows.Forms.Button BtnStartSmallStepTest;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.GroupBox groupBox2;
