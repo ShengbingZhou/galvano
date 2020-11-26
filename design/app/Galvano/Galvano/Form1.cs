@@ -16,7 +16,7 @@ namespace Galvano
 {
     public partial class Form1 : Form
     {
-        UInt32 majorTestLoops = 10;
+        UInt32 majorTestLoops = 5;
         UInt32 minorTestLoops = 30;
         Timer timer = new Timer();
         Random rand = new Random();
@@ -158,8 +158,7 @@ namespace Galvano
                     {
                         AardvarkApi.aa_configure(aardvarkHandle, AardvarkConfig.AA_CONFIG_SPI_GPIO);
                         AardvarkApi.aa_target_power(aardvarkHandle, AardvarkApi.AA_TARGET_POWER_BOTH);
-                        AardvarkApi.aa_spi_configure(aardvarkHandle, AardvarkSpiPolarity.AA_SPI_POL_RISING_FALLING,
-                                AardvarkSpiPhase.AA_SPI_PHASE_SAMPLE_SETUP, AardvarkSpiBitorder.AA_SPI_BITORDER_MSB);
+                        AardvarkApi.aa_spi_configure(aardvarkHandle, AardvarkSpiPolarity.AA_SPI_POL_RISING_FALLING, AardvarkSpiPhase.AA_SPI_PHASE_SAMPLE_SETUP, AardvarkSpiBitorder.AA_SPI_BITORDER_MSB);
                         AardvarkApi.aa_i2c_bitrate(aardvarkHandle, 1000);
                     }
                 }
@@ -199,8 +198,6 @@ namespace Galvano
 
             PosChart.ChartAreas[0].AxisY.Minimum = limit[0];
             PosChart.ChartAreas[0].AxisY.Maximum = limit[1];
-            //PosChart.ChartAreas[0].AxisY.Title = String.Format("{0}V ~ {1}V", ((limit[0] - 32768) * 10.0 / 32768).ToString("F4"), ((limit[1] - 32768) * 10.0 / 32768).ToString("F4"));
-            //PosChart.ChartAreas[0].AxisY.TitleFont = this.Font;
         }
 
         private void BtnTargetTest_Click(object sender, EventArgs e)
@@ -251,10 +248,12 @@ namespace Galvano
         private void BtnStartBigToggleTest_Click(object sender, EventArgs e)
         {
             bigToggleData = new UInt16[majorTestLoops * minorTestLoops];
+            UInt16 amp = (UInt16)((limit[1] - limit[0]) * 9/ 20); // 45% of full range
+            UInt16 mid = (UInt16)((limit[0] + limit[1]) / 2);
             for (int i = 0; i < majorTestLoops; i++)
             {
                 for (int j = 0; j < minorTestLoops; j++)
-                    bigToggleData[i * minorTestLoops + j] = ((i & 1) == 0) ? (UInt16)(limit[0] + 1000) : (UInt16)(limit[1] - 1000);
+                    bigToggleData[i * minorTestLoops + j] = ((i & 1) == 0) ? (UInt16)(mid - amp) : (UInt16)(mid + amp); // 90% range
             }
 
             if (BtnStartBigToggleTest.Text == "Start Big Toggle Test")
@@ -280,12 +279,12 @@ namespace Galvano
         private void BtnStartSmallToggleTest_Click(object sender, EventArgs e)
         {
             smallToggleData = new UInt16[majorTestLoops * minorTestLoops];
-            UInt16 amp = (UInt16)((limit[1] - limit[0]) / 20);
+            UInt16 amp = (UInt16)((limit[1] - limit[0]) / 20); // 5% of full range
             UInt16 mid = (UInt16)((limit[0] + limit[1]) / 2);
             for (int i = 0; i < majorTestLoops; i++)
             {
                 for (int j = 0; j < minorTestLoops; j++)
-                    smallToggleData[i * minorTestLoops + j] = ((i & 1) == 0) ? (UInt16)(mid - amp) : (UInt16)(mid + amp);
+                    smallToggleData[i * minorTestLoops + j] = ((i & 1) == 0) ? (UInt16)(mid - amp) : (UInt16)(mid + amp); // 10% of full range
             }
 
             if (BtnStartSmallToggleTest.Text == "Start Small Toggle Test")
@@ -311,9 +310,11 @@ namespace Galvano
         private void BtnSineWaveTest_Click(object sender, EventArgs e)
         {
             sineData = new UInt16[majorTestLoops * minorTestLoops];
+            UInt16 amp = (UInt16)((limit[1] - limit[0]) * 9 / 20); // 45% of full range
+            UInt16 mid = (UInt16)((limit[0] + limit[1]) / 2);
             for (int i = 0; i < majorTestLoops * minorTestLoops; i++)
             {
-                sineData[i] = (ushort)((((limit[1] - limit[0] - 2000) / 2) * Math.Sin((2 * Math.PI * i * 1000) / 8000) + (limit[0] + 1000) + ((limit[1] - limit[0] - 2000) / 2)));
+                sineData[i] = (ushort)((mid + amp * Math.Sin((2 * Math.PI * i) / 8))); // 90% of full range
             }
 
             if (BtnSineWaveTest.Text == "Start Sine Test")
@@ -362,7 +363,9 @@ namespace Galvano
                 }
                 if (randomTestEnabled)
                 {
-                    target = (ushort)rand.Next(limit[0] + 1000, limit[1] - 1000);
+                    UInt16 amp = (UInt16)((limit[1] - limit[0]) * 9 / 20); // 45% of full range
+                    UInt16 mid = (UInt16)((limit[0] + limit[1]) / 2);
+                    target = (ushort)rand.Next(mid - amp, mid + amp);
                 }
                 if (bigToggleTestEnabled)
                 {               
