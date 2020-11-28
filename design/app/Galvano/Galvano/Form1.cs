@@ -23,12 +23,14 @@ namespace Galvano
 
         UInt16[] bigStepData;
         UInt16[] smallStepData;
+        UInt16[] minorStepData;
         UInt16[] sineData;
         UInt16[] limit = new UInt16[2];
 
         bool randomTestEnabled = false;
         bool bigStepTestEnabled = false;
         bool smallStepTestEnabled = false;
+        bool minorStepTestEnabled = false;
         bool targetTestEnabled = false;
         bool sineTestEnabled = false;
         public int aardvarkHandle = 0;
@@ -41,11 +43,11 @@ namespace Galvano
             TbLimit0.Text = limit[0].ToString() + " (-10V)";
             TbLimit1.Text = limit[1].ToString() + " (+10V)";
 
-            TbKp.Text = "950";
-            TbKi.Text = "15";
-            TbKd.Text = "48000";
+            TbKp.Text = "1800";
+            TbKi.Text = "16";
+            TbKd.Text = "58000";
             TbISaturation.Text = "5000";
-            TbMaxDacSwing.Text = "2500";
+            TbMaxDacSwing.Text = "5000";
 
             timer.Interval = 10;
             timer.Tick += RunTimer_Tick;
@@ -64,6 +66,8 @@ namespace Galvano
             BtnStartBigStepTest.Click += BtnStartBigStepTest_Click;
             BtnStartSmallStepTest.Text = "Start Small Step Test";
             BtnStartSmallStepTest.Click += BtnStartSmallStepTest_Click;
+            BtnStartMinorStepTest.Text = "Start Minor Step Test";
+            BtnStartMinorStepTest.Click += BtnStartMinorStepTest_Click;
             BtnSineWaveTest.Text = "Start Sine Test";
             BtnSineWaveTest.Click += BtnSineWaveTest_Click;
             PanelOps.Enabled = false;
@@ -159,7 +163,7 @@ namespace Galvano
                         AardvarkApi.aa_configure(aardvarkHandle, AardvarkConfig.AA_CONFIG_SPI_GPIO);
                         AardvarkApi.aa_target_power(aardvarkHandle, AardvarkApi.AA_TARGET_POWER_BOTH);
                         AardvarkApi.aa_spi_configure(aardvarkHandle, AardvarkSpiPolarity.AA_SPI_POL_RISING_FALLING, AardvarkSpiPhase.AA_SPI_PHASE_SAMPLE_SETUP, AardvarkSpiBitorder.AA_SPI_BITORDER_MSB);
-                        AardvarkApi.aa_i2c_bitrate(aardvarkHandle, 1000);
+                        //AardvarkApi.aa_i2c_bitrate(aardvarkHandle, 1000); // default is 1000khz
                     }
                 }
                 if (aardvarkHandle <= 0)
@@ -175,23 +179,23 @@ namespace Galvano
 
         private void BtnCalibration_Click(object sender, EventArgs e)
         {
-            SetReg(3, 10); // kp
-            SetReg(4, 4);  // ki
+            SetReg(3, 100); // kp
+            SetReg(4, 14); // ki
             SetReg(5, 0);  // kd
-            SetReg(8, 1500); //Max DAC Swing
+            SetReg(8, 5000); //Max DAC Swing
             SetReg(9, (UInt16)((UInt32)Decimal.Parse(TbISaturation.Text) & 0xffff)); // I-Saturation
             SetReg(10, (UInt16)((UInt32)Decimal.Parse(TbISaturation.Text) >> 16));   // I-Saturation
 
             SetReg(6, 0);       //Target
             SetReg(2, 0x00003); //bit1: pid resetn, bit0: sys resetn
-            System.Threading.Thread.Sleep(100);
+            System.Threading.Thread.Sleep(10);
             limit[0] = GetReg(7); // current position
             TbLimit0.Text = limit[0].ToString() + " (" + ((limit[0] - 32768) * (10.0 / 32768)).ToString("F4") + "V)";
             SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
 
             SetReg(6, 65535);   //Target
             SetReg(2, 0x00003); //bit1: pid resetn, bit0: sys resetn
-            System.Threading.Thread.Sleep(100);
+            System.Threading.Thread.Sleep(10);
             limit[1] = GetReg(7); // current position
             TbLimit1.Text = limit[1].ToString() + " (" + ((limit[1] - 32768) * (10.0 / 32768)).ToString("F4") + "V)";
             SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
@@ -220,6 +224,7 @@ namespace Galvano
                 BtnTargetTest.ForeColor = Color.Black;
                 timer.Enabled = false;
                 targetTestEnabled = false;
+                SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
             }
         }
 
@@ -242,6 +247,7 @@ namespace Galvano
                 BtnStartRandTest.ForeColor = Color.Black;
                 timer.Enabled = false;
                 randomTestEnabled = false;
+                SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
             }
         }
 
@@ -273,6 +279,7 @@ namespace Galvano
                 BtnStartBigStepTest.ForeColor = Color.Black;
                 timer.Enabled = false;
                 bigStepTestEnabled = false;
+                SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
             }
         }
 
@@ -304,6 +311,39 @@ namespace Galvano
                 BtnStartSmallStepTest.ForeColor = Color.Black;
                 timer.Enabled = false;
                 smallStepTestEnabled = false;
+                SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
+            }
+        }
+
+        private void BtnStartMinorStepTest_Click(object sender, EventArgs e)
+        {
+            minorStepData = new UInt16[majorTestLoops * minorTestLoops];
+            UInt16 amp = (UInt16)((limit[1] - limit[0]) / 200); // 0.5% of full range
+            UInt16 mid = (UInt16)((limit[0] + limit[1]) / 2);
+            for (int i = 0; i < majorTestLoops; i++)
+            {
+                for (int j = 0; j < minorTestLoops; j++)
+                    minorStepData[i * minorTestLoops + j] = ((i & 1) == 0) ? (UInt16)(mid - amp) : (UInt16)(mid + amp); // 1% of full range
+            }
+
+            if (BtnStartMinorStepTest.Text == "Start Minor Step Test")
+            {
+                BtnStartMinorStepTest.Text = "Stop Minor Step Test";
+                BtnStartMinorStepTest.ForeColor = Color.Red;
+                PosChart.Series[0].Points.Clear();
+                PosChart.Series[1].Points.Clear();
+
+                minorStepTestEnabled = true;
+                SetPIDParam();
+                timer.Enabled = true;
+            }
+            else if (BtnStartMinorStepTest.Text == "Stop Minor Step Test")
+            {
+                BtnStartMinorStepTest.Text = "Start Minor Step Test";
+                BtnStartMinorStepTest.ForeColor = Color.Black;
+                timer.Enabled = false;
+                minorStepTestEnabled = false;
+                SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
             }
         }
 
@@ -334,6 +374,7 @@ namespace Galvano
                 BtnSineWaveTest.ForeColor = Color.Black;
                 timer.Enabled = false;
                 sineTestEnabled = false;
+                SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
             }
         }
 
@@ -349,10 +390,10 @@ namespace Galvano
                     BtnStartBigStepTest_Click(null, null);
                 if (smallStepTestEnabled)
                     BtnStartSmallStepTest_Click(null, null);
+                if (minorStepTestEnabled)
+                    BtnStartMinorStepTest_Click(null, null);
                 if (sineTestEnabled)
                     BtnSineWaveTest_Click(null, null);
-
-                SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
             }
             else
             {
@@ -374,6 +415,10 @@ namespace Galvano
                 if (smallStepTestEnabled)
                 {
                     target = smallStepData[PosChart.Series[0].Points.Count];
+                }
+                if (minorStepTestEnabled)
+                {
+                    target = minorStepData[PosChart.Series[0].Points.Count];
                 }
                 if (sineTestEnabled)
                 {

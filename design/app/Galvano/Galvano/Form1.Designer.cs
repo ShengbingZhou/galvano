@@ -29,12 +29,28 @@ namespace Galvano
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelOps = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BtnCalibration = new System.Windows.Forms.Button();
+            this.TbLimit0 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblMaxDacOut = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TbKd = new System.Windows.Forms.TextBox();
+            this.TbKi = new System.Windows.Forms.TextBox();
+            this.TbLimit1 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TbKp = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TbMaxDacSwing = new System.Windows.Forms.TextBox();
+            this.TbISaturation = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnTargetTest = new System.Windows.Forms.Button();
             this.BtnStartBigStepTest = new System.Windows.Forms.Button();
@@ -43,32 +59,17 @@ namespace Galvano
             this.BtnStartRandTest = new System.Windows.Forms.Button();
             this.TbTarget = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblMaxDacOut = new System.Windows.Forms.Label();
-            this.TbKd = new System.Windows.Forms.TextBox();
-            this.TbLimit1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.TbISaturation = new System.Windows.Forms.TextBox();
-            this.TbMaxDacSwing = new System.Windows.Forms.TextBox();
-            this.TbKp = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.TbKi = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.BtnCalibration = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TbLimit0 = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnConnectDongle = new System.Windows.Forms.Button();
             this.PosChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.BtnStartMinorStepTest = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.PanelOps.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PosChart)).BeginInit();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,10 +95,169 @@ namespace Galvano
             this.PanelOps.Size = new System.Drawing.Size(1221, 204);
             this.PanelOps.TabIndex = 14;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.BtnCalibration);
+            this.groupBox2.Controls.Add(this.TbLimit0);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.lblMaxDacOut);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.TbKd);
+            this.groupBox2.Controls.Add(this.TbKi);
+            this.groupBox2.Controls.Add(this.TbLimit1);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.TbKp);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.TbMaxDacSwing);
+            this.groupBox2.Controls.Add(this.TbISaturation);
+            this.groupBox2.Location = new System.Drawing.Point(28, 4);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(487, 188);
+            this.groupBox2.TabIndex = 14;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Calibrate";
+            // 
+            // BtnCalibration
+            // 
+            this.BtnCalibration.Location = new System.Drawing.Point(67, 22);
+            this.BtnCalibration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnCalibration.MinimumSize = new System.Drawing.Size(0, 31);
+            this.BtnCalibration.Name = "BtnCalibration";
+            this.BtnCalibration.Size = new System.Drawing.Size(181, 31);
+            this.BtnCalibration.TabIndex = 7;
+            this.BtnCalibration.Text = "Calibrate Motor";
+            this.BtnCalibration.UseVisualStyleBackColor = true;
+            // 
+            // TbLimit0
+            // 
+            this.TbLimit0.Location = new System.Drawing.Point(134, 65);
+            this.TbLimit0.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TbLimit0.Name = "TbLimit0";
+            this.TbLimit0.ReadOnly = true;
+            this.TbLimit0.Size = new System.Drawing.Size(112, 22);
+            this.TbLimit0.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(277, 130);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 16);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "I-Saturation";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(274, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 16);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Higher Limit";
+            // 
+            // lblMaxDacOut
+            // 
+            this.lblMaxDacOut.AutoSize = true;
+            this.lblMaxDacOut.Location = new System.Drawing.Point(253, 101);
+            this.lblMaxDacOut.Name = "lblMaxDacOut";
+            this.lblMaxDacOut.Size = new System.Drawing.Size(92, 16);
+            this.lblMaxDacOut.TabIndex = 12;
+            this.lblMaxDacOut.Text = "Max DAC Swing";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(103, 101);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(22, 16);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Kp";
+            // 
+            // TbKd
+            // 
+            this.TbKd.Location = new System.Drawing.Point(134, 157);
+            this.TbKd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TbKd.Name = "TbKd";
+            this.TbKd.Size = new System.Drawing.Size(112, 22);
+            this.TbKd.TabIndex = 11;
+            // 
+            // TbKi
+            // 
+            this.TbKi.Location = new System.Drawing.Point(134, 127);
+            this.TbKi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TbKi.Name = "TbKi";
+            this.TbKi.Size = new System.Drawing.Size(112, 22);
+            this.TbKi.TabIndex = 9;
+            // 
+            // TbLimit1
+            // 
+            this.TbLimit1.Location = new System.Drawing.Point(353, 64);
+            this.TbLimit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TbLimit1.Name = "TbLimit1";
+            this.TbLimit1.ReadOnly = true;
+            this.TbLimit1.Size = new System.Drawing.Size(112, 22);
+            this.TbLimit1.TabIndex = 1;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(109, 131);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(18, 16);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Ki";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(104, 161);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 16);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Kd";
+            // 
+            // TbKp
+            // 
+            this.TbKp.Location = new System.Drawing.Point(134, 97);
+            this.TbKp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TbKp.Name = "TbKp";
+            this.TbKp.Size = new System.Drawing.Size(112, 22);
+            this.TbKp.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(57, 70);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Lower Limit";
+            // 
+            // TbMaxDacSwing
+            // 
+            this.TbMaxDacSwing.Location = new System.Drawing.Point(353, 97);
+            this.TbMaxDacSwing.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TbMaxDacSwing.Name = "TbMaxDacSwing";
+            this.TbMaxDacSwing.Size = new System.Drawing.Size(112, 22);
+            this.TbMaxDacSwing.TabIndex = 9;
+            this.TbMaxDacSwing.Text = "5000";
+            // 
+            // TbISaturation
+            // 
+            this.TbISaturation.Location = new System.Drawing.Point(353, 127);
+            this.TbISaturation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TbISaturation.Name = "TbISaturation";
+            this.TbISaturation.Size = new System.Drawing.Size(112, 22);
+            this.TbISaturation.TabIndex = 9;
+            this.TbISaturation.Text = "300000";
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.BtnTargetTest);
             this.groupBox1.Controls.Add(this.BtnStartBigStepTest);
+            this.groupBox1.Controls.Add(this.BtnStartMinorStepTest);
             this.groupBox1.Controls.Add(this.BtnStartSmallStepTest);
             this.groupBox1.Controls.Add(this.BtnSineWaveTest);
             this.groupBox1.Controls.Add(this.BtnStartRandTest);
@@ -134,7 +294,7 @@ namespace Galvano
             // 
             // BtnStartSmallStepTest
             // 
-            this.BtnStartSmallStepTest.Location = new System.Drawing.Point(252, 61);
+            this.BtnStartSmallStepTest.Location = new System.Drawing.Point(66, 100);
             this.BtnStartSmallStepTest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnStartSmallStepTest.MinimumSize = new System.Drawing.Size(0, 31);
             this.BtnStartSmallStepTest.Name = "BtnStartSmallStepTest";
@@ -145,7 +305,7 @@ namespace Galvano
             // 
             // BtnSineWaveTest
             // 
-            this.BtnSineWaveTest.Location = new System.Drawing.Point(253, 100);
+            this.BtnSineWaveTest.Location = new System.Drawing.Point(253, 101);
             this.BtnSineWaveTest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnSineWaveTest.MinimumSize = new System.Drawing.Size(0, 31);
             this.BtnSineWaveTest.Name = "BtnSineWaveTest";
@@ -156,7 +316,7 @@ namespace Galvano
             // 
             // BtnStartRandTest
             // 
-            this.BtnStartRandTest.Location = new System.Drawing.Point(66, 100);
+            this.BtnStartRandTest.Location = new System.Drawing.Point(253, 61);
             this.BtnStartRandTest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BtnStartRandTest.MinimumSize = new System.Drawing.Size(0, 31);
             this.BtnStartRandTest.Name = "BtnStartRandTest";
@@ -181,140 +341,6 @@ namespace Galvano
             this.label3.Size = new System.Drawing.Size(41, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Target";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(277, 130);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 16);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "I-Saturation";
-            // 
-            // lblMaxDacOut
-            // 
-            this.lblMaxDacOut.AutoSize = true;
-            this.lblMaxDacOut.Location = new System.Drawing.Point(253, 101);
-            this.lblMaxDacOut.Name = "lblMaxDacOut";
-            this.lblMaxDacOut.Size = new System.Drawing.Size(92, 16);
-            this.lblMaxDacOut.TabIndex = 12;
-            this.lblMaxDacOut.Text = "Max DAC Swing";
-            // 
-            // TbKd
-            // 
-            this.TbKd.Location = new System.Drawing.Point(134, 157);
-            this.TbKd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TbKd.Name = "TbKd";
-            this.TbKd.Size = new System.Drawing.Size(112, 22);
-            this.TbKd.TabIndex = 11;
-            // 
-            // TbLimit1
-            // 
-            this.TbLimit1.Location = new System.Drawing.Point(353, 64);
-            this.TbLimit1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TbLimit1.Name = "TbLimit1";
-            this.TbLimit1.ReadOnly = true;
-            this.TbLimit1.Size = new System.Drawing.Size(112, 22);
-            this.TbLimit1.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(104, 161);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(22, 16);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Kd";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 70);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 16);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Lower Limit";
-            // 
-            // TbISaturation
-            // 
-            this.TbISaturation.Location = new System.Drawing.Point(353, 127);
-            this.TbISaturation.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TbISaturation.Name = "TbISaturation";
-            this.TbISaturation.Size = new System.Drawing.Size(112, 22);
-            this.TbISaturation.TabIndex = 9;
-            this.TbISaturation.Text = "300000";
-            // 
-            // TbMaxDacSwing
-            // 
-            this.TbMaxDacSwing.Location = new System.Drawing.Point(353, 97);
-            this.TbMaxDacSwing.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TbMaxDacSwing.Name = "TbMaxDacSwing";
-            this.TbMaxDacSwing.Size = new System.Drawing.Size(112, 22);
-            this.TbMaxDacSwing.TabIndex = 9;
-            this.TbMaxDacSwing.Text = "5000";
-            // 
-            // TbKp
-            // 
-            this.TbKp.Location = new System.Drawing.Point(134, 97);
-            this.TbKp.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TbKp.Name = "TbKp";
-            this.TbKp.Size = new System.Drawing.Size(112, 22);
-            this.TbKp.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(109, 131);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(18, 16);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Ki";
-            // 
-            // TbKi
-            // 
-            this.TbKi.Location = new System.Drawing.Point(134, 127);
-            this.TbKi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TbKi.Name = "TbKi";
-            this.TbKi.Size = new System.Drawing.Size(112, 22);
-            this.TbKi.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(103, 101);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(22, 16);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Kp";
-            // 
-            // BtnCalibration
-            // 
-            this.BtnCalibration.Location = new System.Drawing.Point(67, 22);
-            this.BtnCalibration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnCalibration.MinimumSize = new System.Drawing.Size(0, 31);
-            this.BtnCalibration.Name = "BtnCalibration";
-            this.BtnCalibration.Size = new System.Drawing.Size(181, 31);
-            this.BtnCalibration.TabIndex = 7;
-            this.BtnCalibration.Text = "Calibrate Motor";
-            this.BtnCalibration.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(274, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 16);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Higher Limit";
-            // 
-            // TbLimit0
-            // 
-            this.TbLimit0.Location = new System.Drawing.Point(134, 65);
-            this.TbLimit0.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.TbLimit0.Name = "TbLimit0";
-            this.TbLimit0.ReadOnly = true;
-            this.TbLimit0.Size = new System.Drawing.Size(112, 22);
-            this.TbLimit0.TabIndex = 0;
             // 
             // panel2
             // 
@@ -351,53 +377,40 @@ namespace Galvano
             // 
             // PosChart
             // 
-            chartArea4.Name = "ChartArea1";
-            this.PosChart.ChartAreas.Add(chartArea4);
+            chartArea1.Name = "ChartArea1";
+            this.PosChart.ChartAreas.Add(chartArea1);
             this.PosChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.PosChart.Legends.Add(legend4);
+            legend1.Name = "Legend1";
+            this.PosChart.Legends.Add(legend1);
             this.PosChart.Location = new System.Drawing.Point(0, 260);
             this.PosChart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PosChart.Name = "PosChart";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.IsXValueIndexed = true;
-            series7.Legend = "Legend1";
-            series7.Name = "Target Position";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.IsXValueIndexed = true;
-            series8.Legend = "Legend1";
-            series8.Name = "Actual Position";
-            this.PosChart.Series.Add(series7);
-            this.PosChart.Series.Add(series8);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.IsXValueIndexed = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Target Position";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.IsXValueIndexed = true;
+            series2.Legend = "Legend1";
+            series2.Name = "Actual Position";
+            this.PosChart.Series.Add(series1);
+            this.PosChart.Series.Add(series2);
             this.PosChart.Size = new System.Drawing.Size(1221, 522);
             this.PosChart.TabIndex = 10;
             this.PosChart.Text = "chart1";
             // 
-            // groupBox2
+            // BtnStartMinorStepTest
             // 
-            this.groupBox2.Controls.Add(this.BtnCalibration);
-            this.groupBox2.Controls.Add(this.TbLimit0);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.lblMaxDacOut);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.TbKd);
-            this.groupBox2.Controls.Add(this.TbKi);
-            this.groupBox2.Controls.Add(this.TbLimit1);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.TbKp);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.TbMaxDacSwing);
-            this.groupBox2.Controls.Add(this.TbISaturation);
-            this.groupBox2.Location = new System.Drawing.Point(28, 4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(487, 188);
-            this.groupBox2.TabIndex = 14;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Calibrate";
+            this.BtnStartMinorStepTest.Location = new System.Drawing.Point(66, 139);
+            this.BtnStartMinorStepTest.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnStartMinorStepTest.MinimumSize = new System.Drawing.Size(0, 31);
+            this.BtnStartMinorStepTest.Name = "BtnStartMinorStepTest";
+            this.BtnStartMinorStepTest.Size = new System.Drawing.Size(181, 31);
+            this.BtnStartMinorStepTest.TabIndex = 7;
+            this.BtnStartMinorStepTest.Text = "Start Minor Step Test";
+            this.BtnStartMinorStepTest.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -413,12 +426,12 @@ namespace Galvano
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.PanelOps.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PosChart)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -454,6 +467,7 @@ namespace Galvano
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button BtnStartMinorStepTest;
     }
 }
 
