@@ -17,7 +17,7 @@ namespace Galvano
     public partial class Form1 : Form
     {
         UInt32 majorTestLoops = 5;
-        UInt32 minorTestLoops = 30;
+        UInt32 minorTestLoops = 10;
         Timer timer = new Timer();
         Random rand = new Random();
 
