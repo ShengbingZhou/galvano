@@ -16,6 +16,8 @@ namespace Galvano
 {
     public partial class Form1 : Form
     {
+        UInt32 testLoops = 1;
+        UInt32 passedTestLoops = 0;
         UInt32 majorTestLoops = 5;
         UInt32 minorTestLoops = 10;
         Timer timer = new Timer();
@@ -49,7 +51,7 @@ namespace Galvano
             TbISaturation.Text = "5000";
             TbMaxDacSwing.Text = "5000";
 
-            timer.Interval = 10;
+            timer.Interval = 5;
             timer.Tick += RunTimer_Tick;
             PosChart.ChartAreas[0].AxisY.Maximum = 65536;
             PosChart.Series[0].XAxisType = AxisType.Secondary;
@@ -72,6 +74,30 @@ namespace Galvano
             BtnSineWaveTest.Click += BtnSineWaveTest_Click;
             PanelOps.Enabled = false;
             BtnSave.Click += BtnSave_Click;
+
+            lblDacSwing.Text = "(" + (((UInt16)Decimal.Parse(TbMaxDacSwing.Text)) * 10.0 / 32768).ToString("F4") + "V)";
+            TbMaxDacSwing.TextChanged += (s, e) =>
+            {
+                try
+                {
+                    lblDacSwing.Text = "(" + (((UInt16)Decimal.Parse(TbMaxDacSwing.Text)) * 10.0 / 32768).ToString("F4") + "V)";
+                }
+                catch
+                {
+                }
+            };
+
+            tbLoops.Text = testLoops.ToString();
+            tbLoops.TextChanged += (s, e) =>
+            {
+                try
+                {
+                    testLoops = (UInt32)Decimal.Parse(tbLoops.Text);
+                }
+                catch
+                {
+                }
+            };
         }
 
         public void CaptureApplication()
@@ -180,8 +206,8 @@ namespace Galvano
         private void BtnCalibration_Click(object sender, EventArgs e)
         {
             SetReg(3, 100); // kp
-            SetReg(4, 14); // ki
-            SetReg(5, 0);  // kd
+            SetReg(4, 14);  // ki
+            SetReg(5, 0);   // kd
             SetReg(8, 5000); //Max DAC Swing
             SetReg(9, (UInt16)((UInt32)Decimal.Parse(TbISaturation.Text) & 0xffff)); // I-Saturation
             SetReg(10, (UInt16)((UInt32)Decimal.Parse(TbISaturation.Text) >> 16));   // I-Saturation
@@ -217,6 +243,7 @@ namespace Galvano
                 targetTestEnabled = true;
                 SetPIDParam();
                 timer.Enabled = true;
+                passedTestLoops = 0;
             }
             else if (BtnTargetTest.Text == "Stop Target Test")
             {
@@ -240,6 +267,7 @@ namespace Galvano
                 randomTestEnabled = true;
                 SetPIDParam();
                 timer.Enabled = true;
+                passedTestLoops = 0;
             }
             else if (BtnStartRandTest.Text == "Stop Random Test")
             {
@@ -272,6 +300,7 @@ namespace Galvano
                 bigStepTestEnabled = true;
                 SetPIDParam();
                 timer.Enabled = true;
+                passedTestLoops = 0;
             }
             else if (BtnStartBigStepTest.Text == "Stop Big Step Test")
             {
@@ -304,6 +333,7 @@ namespace Galvano
                 smallStepTestEnabled = true;
                 SetPIDParam();
                 timer.Enabled = true;
+                passedTestLoops = 0;
             }
             else if (BtnStartSmallStepTest.Text == "Stop Small Step Test")
             {
@@ -336,6 +366,7 @@ namespace Galvano
                 minorStepTestEnabled = true;
                 SetPIDParam();
                 timer.Enabled = true;
+                passedTestLoops = 0;
             }
             else if (BtnStartMinorStepTest.Text == "Stop Minor Step Test")
             {
@@ -354,7 +385,7 @@ namespace Galvano
             UInt16 mid = (UInt16)((limit[0] + limit[1]) / 2);
             for (int i = 0; i < majorTestLoops * minorTestLoops; i++)
             {
-                sineData[i] = (ushort)((mid + amp * Math.Sin((2 * Math.PI * i) / 8))); // 90% of full range
+                sineData[i] = (ushort)((mid + amp * Math.Sin((2 * Math.PI * i) / 32))); // 90% of full range
             }
 
             if (BtnSineWaveTest.Text == "Start Sine Test")
@@ -367,6 +398,7 @@ namespace Galvano
                 sineTestEnabled = true;
                 SetPIDParam();
                 timer.Enabled = true;
+                passedTestLoops = 0;
             }
             else if (BtnSineWaveTest.Text == "Stop Sine Test")
             {
@@ -382,18 +414,27 @@ namespace Galvano
         {
             if (PosChart.Series[0].Points.Count >= majorTestLoops * minorTestLoops)
             {
-                if (targetTestEnabled)
-                    BtnTargetTest_Click(null, null);
-                if (randomTestEnabled)
-                    BtnStartRandomTest_Click(null, null);
-                if (bigStepTestEnabled)
-                    BtnStartBigStepTest_Click(null, null);
-                if (smallStepTestEnabled)
-                    BtnStartSmallStepTest_Click(null, null);
-                if (minorStepTestEnabled)
-                    BtnStartMinorStepTest_Click(null, null);
-                if (sineTestEnabled)
-                    BtnSineWaveTest_Click(null, null);
+                passedTestLoops++;
+                if (passedTestLoops > testLoops)
+                {
+                    if (targetTestEnabled)
+                        BtnTargetTest_Click(null, null);
+                    if (randomTestEnabled)
+                        BtnStartRandomTest_Click(null, null);
+                    if (bigStepTestEnabled)
+                        BtnStartBigStepTest_Click(null, null);
+                    if (smallStepTestEnabled)
+                        BtnStartSmallStepTest_Click(null, null);
+                    if (minorStepTestEnabled)
+                        BtnStartMinorStepTest_Click(null, null);
+                    if (sineTestEnabled)
+                        BtnSineWaveTest_Click(null, null);
+                }
+                else
+                {
+                    PosChart.Series[0].Points.Clear();
+                    PosChart.Series[1].Points.Clear();
+                }
             }
             else
             {
@@ -428,19 +469,21 @@ namespace Galvano
                 SetReg(2, 0x00003); //bit1: pid resetn, bit0: sys resetn
                 if (!sineTestEnabled)
                 {
+                    UInt16[] position = new UInt16[minorTestLoops];
+                    for (int i = 0; i < minorTestLoops; i++)
+                    {                        
+                        position[i] = GetReg(7); // current position
+                    }
                     for (int i = 0; i < minorTestLoops; i++)
                     {
-                        //System.Threading.Thread.Sleep(1);
                         PosChart.Series[0].Points.AddY(target);
-                        UInt16 position = GetReg(7); // current position
-                        PosChart.Series[1].Points.AddY(position);
+                        PosChart.Series[1].Points.AddY(position[i]);
                     }
                 }
                 else
                 {
-                    //System.Threading.Thread.Sleep(1);
-                    PosChart.Series[0].Points.AddY(target);
                     UInt16 position = GetReg(7); // current position
+                    PosChart.Series[0].Points.AddY(target);
                     PosChart.Series[1].Points.AddY(position);
                 }
             }
