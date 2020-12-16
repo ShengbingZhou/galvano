@@ -1,5 +1,5 @@
 Flow report for max10_galvano
-Tue Nov 24 11:02:21 2020
+Wed Dec 16 10:11:26 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,21 +41,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 24 11:02:15 2020       ;
+; Flow Status                        ; Successful - Wed Dec 16 10:11:20 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; max10_galvano                               ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M02SCU169I7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,951 / 2,304 ( 85 % )                      ;
-;     Total combinational functions  ; 1,503 / 2,304 ( 65 % )                      ;
-;     Dedicated logic registers      ; 1,368 / 2,304 ( 59 % )                      ;
-; Total registers                    ; 1368                                        ;
+; Total logic elements               ; 1,439 / 2,304 ( 62 % )                      ;
+;     Total combinational functions  ; 1,060 / 2,304 ( 46 % )                      ;
+;     Dedicated logic registers      ; 1,103 / 2,304 ( 48 % )                      ;
+; Total registers                    ; 1103                                        ;
 ; Total pins                         ; 40 / 130 ( 31 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 23,552 / 110,592 ( 21 % )                   ;
-; Embedded Multiplier 9-bit elements ; 10 / 32 ( 31 % )                            ;
+; Total memory bits                  ; 13,312 / 110,592 ( 12 % )                   ;
+; Embedded Multiplier 9-bit elements ; 2 / 32 ( 6 % )                              ;
 ; Total PLLs                         ; 0 / 1 ( 0 % )                               ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
 ; ADC blocks                         ; 0                                           ;
@@ -67,68 +67,68 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/24/2020 11:01:23 ;
+; Start date & time ; 12/16/2020 10:08:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; max10_galvano       ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                                                                         ;
-+-------------------------------------+------------------------------------------------------------------------------------------------------------------+---------------+--------------+------------------+
-; Assignment Name                     ; Value                                                                                                            ; Default Value ; Entity Name  ; Section Id       ;
-+-------------------------------------+------------------------------------------------------------------------------------------------------------------+---------------+--------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 26759796052659.160618688324456                                                                                   ; --            ; --           ; --               ;
-; ENABLE_SIGNALTAP                    ; On                                                                                                               ; --            ; --           ; --               ;
-; FLOW_ENABLE_POWER_ANALYZER          ; On                                                                                                               ; Off           ; --           ; --               ;
-; MAX_CORE_JUNCTION_TEMP              ; 100                                                                                                              ; --            ; --           ; --               ;
-; MIN_CORE_JUNCTION_TEMP              ; -40                                                                                                              ; --            ; --           ; --               ;
-; MISC_FILE                           ; source/internal_osc/synthesis/../internal_osc.cmp                                                                ; --            ; --           ; --               ;
-; MISC_FILE                           ; source/internal_osc/synthesis/../../internal_osc.qsys                                                            ; --            ; --           ; --               ;
-; MISC_FILE                           ; source/pll_bb.v                                                                                                  ; --            ; --           ; --               ;
-; MISC_FILE                           ; source/pll.ppf                                                                                                   ; --            ; --           ; --               ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                                                           ; --            ; top          ; Top              ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                                                           ; --            ; top          ; Top              ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                                                           ; --            ; top          ; Top              ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                                              ; --            ; --           ; --               ;
-; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE  ; 12.5 %                                                                                                           ; 12.5%         ; --           ; --               ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                                                            ; --            ; --           ; --               ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                                                     ; --            ; --           ; --               ;
-; SLD_FILE                            ; source/internal_osc/synthesis/internal_osc.debuginfo                                                             ; --            ; --           ; --               ;
-; SLD_FILE                            ; db/stp1_auto_stripped.stp                                                                                        ; --            ; --           ; --               ;
-; SLD_INFO                            ; QSYS_NAME internal_osc HAS_SOPCINFO 1 GENERATION_ID 1572597774                                                   ; --            ; internal_osc ; --               ;
-; SLD_NODE_CREATOR_ID                 ; 110                                                                                                              ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_ENTITY_NAME                ; sld_signaltap                                                                                                    ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_BLOCK_TYPE=AUTO                                                                                          ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_INFO=805334528                                                                                          ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_POWER_UP_TRIGGER=0                                                                                           ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                                                                    ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ATTRIBUTE_MEM_MODE=OFF                                                                                       ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_FLOW_USE_GENERATED=0                                                                                   ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_BITS=11                                                                                                ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_BUFFER_FULL_STOP=1                                                                                           ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_CURRENT_RESOURCE_WIDTH=1                                                                                     ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INCREMENTAL_ROUTING=1                                                                                        ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL=1                                                                                              ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_IN_ENABLED=0                                                                                         ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_PIPELINE=0                                                                                           ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_PIPELINE=0                                                                                               ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_COUNTER_PIPELINE=0                                                                                           ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,                                                                             ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                                                     ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ENABLE_ADVANCED_TRIGGER=0                                                                                    ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SEGMENT_SIZE=1024                                                                                            ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SAMPLE_DEPTH=1024                                                                                            ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_DATA_BITS=23                                                                                                 ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_BITS=23                                                                                              ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_BITS=23                                                                                    ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 ; --            ; --           ; auto_signaltap_0 ;
-; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK_LENGTH=93                                                                                     ; --            ; --           ; auto_signaltap_0 ;
-; SOPCINFO_FILE                       ; source/internal_osc/synthesis/../../internal_osc.sopcinfo                                                        ; --            ; --           ; --               ;
-; SYNTHESIS_ONLY_QIP                  ; On                                                                                                               ; --            ; --           ; --               ;
-; TOP_LEVEL_ENTITY                    ; top                                                                                                              ; max10_galvano ; --           ; --               ;
-; USE_SIGNALTAP_FILE                  ; stp1.stp                                                                                                         ; --            ; --           ; --               ;
-+-------------------------------------+------------------------------------------------------------------------------------------------------------------+---------------+--------------+------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                                           ;
++-------------------------------------+------------------------------------------------------------------------------------+---------------+--------------+------------------+
+; Assignment Name                     ; Value                                                                              ; Default Value ; Entity Name  ; Section Id       ;
++-------------------------------------+------------------------------------------------------------------------------------+---------------+--------------+------------------+
+; COMPILER_SIGNATURE_ID               ; 26759796052659.160808450538360                                                     ; --            ; --           ; --               ;
+; ENABLE_SIGNALTAP                    ; On                                                                                 ; --            ; --           ; --               ;
+; FLOW_ENABLE_POWER_ANALYZER          ; On                                                                                 ; Off           ; --           ; --               ;
+; MAX_CORE_JUNCTION_TEMP              ; 100                                                                                ; --            ; --           ; --               ;
+; MIN_CORE_JUNCTION_TEMP              ; -40                                                                                ; --            ; --           ; --               ;
+; MISC_FILE                           ; source/internal_osc/synthesis/../internal_osc.cmp                                  ; --            ; --           ; --               ;
+; MISC_FILE                           ; source/internal_osc/synthesis/../../internal_osc.qsys                              ; --            ; --           ; --               ;
+; MISC_FILE                           ; source/pll_bb.v                                                                    ; --            ; --           ; --               ;
+; MISC_FILE                           ; source/pll.ppf                                                                     ; --            ; --           ; --               ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family)                                             ; --            ; top          ; Top              ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                                             ; --            ; top          ; Top              ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                                             ; --            ; top          ; Top              ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                                                ; --            ; --           ; --               ;
+; POWER_DEFAULT_INPUT_IO_TOGGLE_RATE  ; 12.5 %                                                                             ; 12.5%         ; --           ; --               ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                                              ; --            ; --           ; --               ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                                       ; --            ; --           ; --               ;
+; SLD_FILE                            ; source/internal_osc/synthesis/internal_osc.debuginfo                               ; --            ; --           ; --               ;
+; SLD_FILE                            ; db/stp1_auto_stripped.stp                                                          ; --            ; --           ; --               ;
+; SLD_INFO                            ; QSYS_NAME internal_osc HAS_SOPCINFO 1 GENERATION_ID 1572597774                     ; --            ; internal_osc ; --               ;
+; SLD_NODE_CREATOR_ID                 ; 110                                                                                ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_ENTITY_NAME                ; sld_signaltap                                                                      ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_BLOCK_TYPE=AUTO                                                            ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_NODE_INFO=805334528                                                            ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_POWER_UP_TRIGGER=0                                                             ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_INVERSION_MASK_LENGTH=0                                      ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ATTRIBUTE_MEM_MODE=OFF                                                         ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_FLOW_USE_GENERATED=0                                                     ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STATE_BITS=11                                                                  ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_BUFFER_FULL_STOP=1                                                             ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_CURRENT_RESOURCE_WIDTH=1                                                       ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INCREMENTAL_ROUTING=1                                                          ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL=1                                                                ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_IN_ENABLED=0                                                           ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_PIPELINE=0                                                             ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_RAM_PIPELINE=0                                                                 ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_COUNTER_PIPELINE=0                                                             ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ADVANCED_TRIGGER_ENTITY=basic,1,                                               ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_LEVEL_PIPELINE=1                                                       ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_ENABLE_ADVANCED_TRIGGER=0                                                      ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SEGMENT_SIZE=1024                                                              ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_SAMPLE_DEPTH=1024                                                              ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_DATA_BITS=13                                                                   ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_TRIGGER_BITS=13                                                                ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_STORAGE_QUALIFIER_BITS=13                                                      ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK=000000000000000000000000000000000000000000000000000000000000000 ; --            ; --           ; auto_signaltap_0 ;
+; SLD_NODE_PARAMETER_ASSIGNMENT       ; SLD_INVERSION_MASK_LENGTH=63                                                       ; --            ; --           ; auto_signaltap_0 ;
+; SOPCINFO_FILE                       ; source/internal_osc/synthesis/../../internal_osc.sopcinfo                          ; --            ; --           ; --               ;
+; SYNTHESIS_ONLY_QIP                  ; On                                                                                 ; --            ; --           ; --               ;
+; TOP_LEVEL_ENTITY                    ; top                                                                                ; max10_galvano ; --           ; --               ;
+; USE_SIGNALTAP_FILE                  ; stp1.stp                                                                           ; --            ; --           ; --               ;
++-------------------------------------+------------------------------------------------------------------------------------+---------------+--------------+------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -136,12 +136,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:33     ; 1.0                     ; 4932 MB             ; 00:00:48                           ;
-; Fitter               ; 00:00:08     ; 1.4                     ; 5866 MB             ; 00:00:14                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4752 MB             ; 00:00:02                           ;
-; Power Analyzer       ; 00:00:03     ; 1.7                     ; 4943 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.8                     ; 4890 MB             ; 00:00:06                           ;
-; Total                ; 00:00:51     ; --                      ; --                  ; 00:01:15                           ;
+; Analysis & Synthesis ; 00:02:34     ; 1.0                     ; 4945 MB             ; 00:02:51                           ;
+; Fitter               ; 00:00:09     ; 1.3                     ; 5727 MB             ; 00:00:13                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4748 MB             ; 00:00:02                           ;
+; Power Analyzer       ; 00:00:04     ; 1.5                     ; 4911 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.5                     ; 4859 MB             ; 00:00:05                           ;
+; Total                ; 00:02:54     ; --                      ; --                  ; 00:03:15                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

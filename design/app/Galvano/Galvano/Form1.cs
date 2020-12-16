@@ -415,7 +415,7 @@ namespace Galvano
             if (PosChart.Series[0].Points.Count >= majorTestLoops * minorTestLoops)
             {
                 passedTestLoops++;
-                if (passedTestLoops > testLoops)
+                if (passedTestLoops >= testLoops)
                 {
                     if (targetTestEnabled)
                         BtnTargetTest_Click(null, null);

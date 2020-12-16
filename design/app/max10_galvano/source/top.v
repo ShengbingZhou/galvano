@@ -46,7 +46,7 @@ module top
     output wire temp_clk,
     input  wire temp_data,
 
-    // uart
+    // spi
     input  wire aardvark_ss,
     input  wire aardvark_sclk,
     input  wire aardvark_mosi,
@@ -115,6 +115,7 @@ reg [1:0]  spi_sck_delay;
 reg [3:0]  spi_cs_fsm;
 reg [31:0] spi_data;
 reg [15:0] spi_reg_data_temp;
+reg        spi_new_target_valid;
 always @(negedge cnt_rstn or posedge clk_20mhz) begin // only support cpol = cpha = 0
     if (~cnt_rstn) begin
         spi_cmd <= 0;
@@ -124,6 +125,7 @@ always @(negedge cnt_rstn or posedge clk_20mhz) begin // only support cpol = cph
         spi_cs_fsm <= 0;
         spi_data <= 0;
         spi_regs[8] <= 5000;
+        spi_new_target_valid <= 0;
     end
     else if(clk_20mhz) begin
         if (xp_data_valid)
@@ -153,6 +155,7 @@ always @(negedge cnt_rstn or posedge clk_20mhz) begin // only support cpol = cph
                 if (spi_cs_cnt >= 30) begin
                     if (spi_cmd == 8'h03) begin
                         spi_cs_fsm <= 6; // regs write
+                        spi_new_target_valid <= 0;
                     end
                     else if (spi_cmd == 8'h04) begin
                         spi_cs_fsm <= 7; // regs read
@@ -170,6 +173,8 @@ always @(negedge cnt_rstn or posedge clk_20mhz) begin // only support cpol = cph
                 if (spi_cs_delay == 2'b01) begin
                     spi_cs_fsm <= 5;
                     spi_regs[spi_data[23:16]] <= spi_data[15:0];
+                    if (spi_data[23:16] == 6)
+                        spi_new_target_valid <= 1;
                 end
                 if (spi_sck_delay == 2'b01) begin
                     spi_data <= {spi_data[30:0], aardvark_mosi};
@@ -293,13 +298,15 @@ dac7731if xdac_u1
 pos_pid xpos_pid_u1
 (
     .sys_rstn(sys_rstn & spi_regs[2][1]),
-    .clk_pid(xp_data_valid),
+    .clk_pid(clk_5mhz),
     .kp(spi_regs[3]),
     .ki(spi_regs[4]),
     .kd(spi_regs[5]),
     .dac_limit(spi_regs[8]),
     .pid_i_saturation({spi_regs[10][7:0], spi_regs[9]}),
+    .spi_new_target_valid(spi_new_target_valid),
     .pos_target(spi_regs[6]),
+    .pos_adc_data_valid(xp_data_valid),
     .pos_adc(xp_data),
     .pos_dac(xdac_data)
 );
@@ -336,21 +343,6 @@ dac7731if ydac_u1
     .dac_sdo(ydac_sdo),
     .dac_lr(ydac_ldac),
     .ads_rstsel(ydac_rstsel)
-);
-
-// pos pid
-pos_pid ypos_pid_u1
-(
-    .sys_rstn(sys_rstn & spi_regs[2][1]),
-    .clk_pid(yp_data_valid),
-    .kp(spi_regs[3]),
-    .ki(spi_regs[4]),
-    .kd(spi_regs[5]),
-    .dac_limit(spi_regs[8]),
-    .pid_i_saturation({spi_regs[10][7:0], spi_regs[9]}),
-    .pos_target(spi_regs[6]),
-    .pos_adc(yp_data),
-    .pos_dac(ydac_data)
 );
 
 endmodule
