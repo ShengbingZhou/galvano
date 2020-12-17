@@ -41,9 +41,9 @@ namespace Galvano
         {
             InitializeComponent();
 
-            limit[0] = 0; limit[1] = 65535;
-            TbLimit0.Text = limit[0].ToString() + " (-10V)";
-            TbLimit1.Text = limit[1].ToString() + " (+10V)";
+            limit[0] = 10000; limit[1] = 60000;
+            TbLimit0.Text = limit[0].ToString() + " (" + ((limit[0] - 32768) * (10.0 / 32768)).ToString("F4") + "V)";
+            TbLimit1.Text = limit[1].ToString() + " (" + ((limit[1] - 32768) * (10.0 / 32768)).ToString("F4") + "V)";
 
             TbKp.Text = "1800";
             TbKi.Text = "16";
@@ -58,7 +58,7 @@ namespace Galvano
             PosChart.Series[0].BorderWidth = 2;
             PosChart.Series[1].BorderWidth = 2;
             BtnConnectDongle.Click += BtnConnectDongle_Click;
-            BtnCalibration.Click += BtnCalibration_Click;
+            BtnCalibrate.Click += BtnCalibrate_Click;
             TbTarget.Text = "45000";
             BtnTargetTest.Text = "Start Target Test";
             BtnTargetTest.Click += BtnTargetTest_Click;
@@ -98,6 +98,11 @@ namespace Galvano
                 {
                 }
             };
+        }
+
+        private void BtnANN_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         public void CaptureApplication()
@@ -203,7 +208,7 @@ namespace Galvano
             }
         }
 
-        private void BtnCalibration_Click(object sender, EventArgs e)
+        private void BtnCalibrate_Click(object sender, EventArgs e)
         {
             SetReg(3, 100); // kp
             SetReg(4, 14);  // ki
@@ -251,7 +256,8 @@ namespace Galvano
                 BtnTargetTest.ForeColor = Color.Black;
                 timer.Enabled = false;
                 targetTestEnabled = false;
-                SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
+                if (!CBTrainANN.Checked)
+                    SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
             }
         }
 
@@ -275,7 +281,8 @@ namespace Galvano
                 BtnStartRandTest.ForeColor = Color.Black;
                 timer.Enabled = false;
                 randomTestEnabled = false;
-                SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
+                if (!CBTrainANN.Checked)
+                    SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
             }
         }
 
@@ -308,7 +315,8 @@ namespace Galvano
                 BtnStartBigStepTest.ForeColor = Color.Black;
                 timer.Enabled = false;
                 bigStepTestEnabled = false;
-                SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
+                if (!CBTrainANN.Checked)
+                    SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
             }
         }
 
@@ -341,7 +349,8 @@ namespace Galvano
                 BtnStartSmallStepTest.ForeColor = Color.Black;
                 timer.Enabled = false;
                 smallStepTestEnabled = false;
-                SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
+                if (!CBTrainANN.Checked)
+                    SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
             }
         }
 
@@ -374,7 +383,8 @@ namespace Galvano
                 BtnStartMinorStepTest.ForeColor = Color.Black;
                 timer.Enabled = false;
                 minorStepTestEnabled = false;
-                SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
+                if (!CBTrainANN.Checked)
+                    SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
             }
         }
 
@@ -406,7 +416,8 @@ namespace Galvano
                 BtnSineWaveTest.ForeColor = Color.Black;
                 timer.Enabled = false;
                 sineTestEnabled = false;
-                SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
+                if (!CBTrainANN.Checked)
+                    SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
             }
         }
 

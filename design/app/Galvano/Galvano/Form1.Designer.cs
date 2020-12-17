@@ -29,15 +29,14 @@ namespace Galvano
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelOps = new System.Windows.Forms.Panel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.lblDacSwing = new System.Windows.Forms.Label();
-            this.BtnCalibration = new System.Windows.Forms.Button();
+            this.BtnCalibrate = new System.Windows.Forms.Button();
             this.TbLimit0 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,21 +52,23 @@ namespace Galvano
             this.TbMaxDacSwing = new System.Windows.Forms.TextBox();
             this.TbISaturation = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.BtnTargetTest = new System.Windows.Forms.Button();
             this.BtnStartBigStepTest = new System.Windows.Forms.Button();
             this.BtnStartMinorStepTest = new System.Windows.Forms.Button();
             this.BtnStartSmallStepTest = new System.Windows.Forms.Button();
             this.BtnSineWaveTest = new System.Windows.Forms.Button();
             this.BtnStartRandTest = new System.Windows.Forms.Button();
+            this.tbLoops = new System.Windows.Forms.TextBox();
             this.TbTarget = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.BtnSave = new System.Windows.Forms.Button();
             this.BtnConnectDongle = new System.Windows.Forms.Button();
             this.PosChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.tbLoops = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblDacSwing = new System.Windows.Forms.Label();
+            this.CBTrainANN = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.PanelOps.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -102,7 +103,7 @@ namespace Galvano
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.lblDacSwing);
-            this.groupBox2.Controls.Add(this.BtnCalibration);
+            this.groupBox2.Controls.Add(this.BtnCalibrate);
             this.groupBox2.Controls.Add(this.TbLimit0);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label2);
@@ -124,25 +125,16 @@ namespace Galvano
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Calibrate";
             // 
-            // lblDacSwing
+            // BtnCalibrate
             // 
-            this.lblDacSwing.AutoSize = true;
-            this.lblDacSwing.Location = new System.Drawing.Point(471, 101);
-            this.lblDacSwing.Name = "lblDacSwing";
-            this.lblDacSwing.Size = new System.Drawing.Size(23, 16);
-            this.lblDacSwing.TabIndex = 13;
-            this.lblDacSwing.Text = "(V)";
-            // 
-            // BtnCalibration
-            // 
-            this.BtnCalibration.Location = new System.Drawing.Point(67, 22);
-            this.BtnCalibration.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.BtnCalibration.MinimumSize = new System.Drawing.Size(0, 31);
-            this.BtnCalibration.Name = "BtnCalibration";
-            this.BtnCalibration.Size = new System.Drawing.Size(181, 31);
-            this.BtnCalibration.TabIndex = 7;
-            this.BtnCalibration.Text = "Calibrate Motor";
-            this.BtnCalibration.UseVisualStyleBackColor = true;
+            this.BtnCalibrate.Location = new System.Drawing.Point(67, 22);
+            this.BtnCalibrate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnCalibrate.MinimumSize = new System.Drawing.Size(0, 31);
+            this.BtnCalibrate.Name = "BtnCalibrate";
+            this.BtnCalibrate.Size = new System.Drawing.Size(181, 31);
+            this.BtnCalibrate.TabIndex = 7;
+            this.BtnCalibrate.Text = "Calibrate Motor";
+            this.BtnCalibrate.UseVisualStyleBackColor = true;
             // 
             // TbLimit0
             // 
@@ -269,6 +261,7 @@ namespace Galvano
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.CBTrainANN);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.BtnTargetTest);
             this.groupBox1.Controls.Add(this.BtnStartBigStepTest);
@@ -286,6 +279,15 @@ namespace Galvano
             this.groupBox1.TabIndex = 13;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Test";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(468, 64);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 16);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Test Loops";
             // 
             // BtnTargetTest
             // 
@@ -353,6 +355,14 @@ namespace Galvano
             this.BtnStartRandTest.Text = "Start Random Test";
             this.BtnStartRandTest.UseVisualStyleBackColor = true;
             // 
+            // tbLoops
+            // 
+            this.tbLoops.Location = new System.Drawing.Point(471, 86);
+            this.tbLoops.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbLoops.Name = "tbLoops";
+            this.tbLoops.Size = new System.Drawing.Size(112, 22);
+            this.tbLoops.TabIndex = 9;
+            // 
             // TbTarget
             // 
             this.TbTarget.Location = new System.Drawing.Point(310, 26);
@@ -369,6 +379,14 @@ namespace Galvano
             this.label3.Size = new System.Drawing.Size(41, 16);
             this.label3.TabIndex = 8;
             this.label3.Text = "Target";
+            // 
+            // panel3
+            // 
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Location = new System.Drawing.Point(52, 13);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(400, 169);
+            this.panel3.TabIndex = 10;
             // 
             // panel2
             // 
@@ -405,54 +423,48 @@ namespace Galvano
             // 
             // PosChart
             // 
-            chartArea4.Name = "ChartArea1";
-            this.PosChart.ChartAreas.Add(chartArea4);
+            chartArea1.Name = "ChartArea1";
+            this.PosChart.ChartAreas.Add(chartArea1);
             this.PosChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.PosChart.Legends.Add(legend4);
+            legend1.Name = "Legend1";
+            this.PosChart.Legends.Add(legend1);
             this.PosChart.Location = new System.Drawing.Point(0, 260);
             this.PosChart.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PosChart.Name = "PosChart";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series7.IsXValueIndexed = true;
-            series7.Legend = "Legend1";
-            series7.Name = "Target Position";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.IsXValueIndexed = true;
-            series8.Legend = "Legend1";
-            series8.Name = "Actual Position";
-            this.PosChart.Series.Add(series7);
-            this.PosChart.Series.Add(series8);
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.IsXValueIndexed = true;
+            series1.Legend = "Legend1";
+            series1.Name = "Target Position";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.IsXValueIndexed = true;
+            series2.Legend = "Legend1";
+            series2.Name = "Actual Position";
+            this.PosChart.Series.Add(series1);
+            this.PosChart.Series.Add(series2);
             this.PosChart.Size = new System.Drawing.Size(1221, 522);
             this.PosChart.TabIndex = 10;
             this.PosChart.Text = "chart1";
             // 
-            // panel3
+            // lblDacSwing
             // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(52, 13);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(400, 169);
-            this.panel3.TabIndex = 10;
+            this.lblDacSwing.AutoSize = true;
+            this.lblDacSwing.Location = new System.Drawing.Point(471, 101);
+            this.lblDacSwing.Name = "lblDacSwing";
+            this.lblDacSwing.Size = new System.Drawing.Size(23, 16);
+            this.lblDacSwing.TabIndex = 13;
+            this.lblDacSwing.Text = "(V)";
             // 
-            // tbLoops
+            // CBTrainANN
             // 
-            this.tbLoops.Location = new System.Drawing.Point(471, 86);
-            this.tbLoops.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbLoops.Name = "tbLoops";
-            this.tbLoops.Size = new System.Drawing.Size(112, 22);
-            this.tbLoops.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(468, 64);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 16);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Test Loops";
+            this.CBTrainANN.AutoSize = true;
+            this.CBTrainANN.Location = new System.Drawing.Point(471, 41);
+            this.CBTrainANN.Name = "CBTrainANN";
+            this.CBTrainANN.Size = new System.Drawing.Size(82, 20);
+            this.CBTrainANN.TabIndex = 12;
+            this.CBTrainANN.Text = "Train ANN";
+            this.CBTrainANN.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -497,7 +509,7 @@ namespace Galvano
         private System.Windows.Forms.TextBox TbTarget;
         private System.Windows.Forms.TextBox TbKi;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button BtnCalibration;
+        private System.Windows.Forms.Button BtnCalibrate;
         private System.Windows.Forms.Button BtnTargetTest;
         private System.Windows.Forms.Button BtnStartRandTest;
         private System.Windows.Forms.Label label2;
@@ -510,10 +522,11 @@ namespace Galvano
         private System.Windows.Forms.Button BtnSave;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button BtnStartMinorStepTest;
-        private System.Windows.Forms.Label lblDacSwing;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox tbLoops;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblDacSwing;
+        private System.Windows.Forms.CheckBox CBTrainANN;
     }
 }
 
