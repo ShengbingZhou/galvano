@@ -26,7 +26,7 @@ module tb();
     always #2000 spi_new_target_valid = ~spi_new_target_valid;
 
     always @(posedge pos_adc_data_valid)
-        pos_adc = pos_adc + 200;
+        pos_adc = pos_adc + 30;
 
     initial begin
         clk = 0;
@@ -35,41 +35,10 @@ module tb();
         pos_adc_data_valid = 0;
         spi_new_target_valid = 0;
         pos_target = 1000;
-        $dumpfile("test.vcd");
+        
+        $dumpfile("pid.vcd");
         $dumpvars;
-        
-        $dumpvars(0, tb.pid.w[0][0][0]);
-        $dumpvars(0, tb.pid.w[0][0][1]);
-        $dumpvars(0, tb.pid.w[0][0][2]);
-        
-        $dumpvars(0, tb.pid.w[1][0][0]);
-        $dumpvars(0, tb.pid.w[1][0][1]);
-        $dumpvars(0, tb.pid.w[1][0][2]);
-        $dumpvars(0, tb.pid.w[1][1][0]);
-        $dumpvars(0, tb.pid.w[1][1][1]);
-        $dumpvars(0, tb.pid.w[1][1][2]);
-        $dumpvars(0, tb.pid.w[1][2][0]);
-        $dumpvars(0, tb.pid.w[1][2][1]);
-        $dumpvars(0, tb.pid.w[1][2][2]);
-        
-        $dumpvars(0, tb.pid.x[0][0]);
-        $dumpvars(0, tb.pid.x[0][1]);
-        $dumpvars(0, tb.pid.x[0][2]);
-        $dumpvars(0, tb.pid.x[1][0]);
-        $dumpvars(0, tb.pid.x[1][1]);
-        $dumpvars(0, tb.pid.x[1][2]);
-        $dumpvars(0, tb.pid.x[2][0]);
-        $dumpvars(0, tb.pid.x[2][1]);
-        $dumpvars(0, tb.pid.x[2][2]);
-        
-        $dumpvars(0, tb.pid.e[1][0]);
-        $dumpvars(0, tb.pid.e[1][1]);
-        $dumpvars(0, tb.pid.e[1][2]);
-        $dumpvars(0, tb.pid.e[2][0]);
-        $dumpvars(0, tb.pid.e[2][1]);
-        $dumpvars(0, tb.pid.e[2][2]);
 
-        //$monitor($time,"dac: %d", pos_dac);
         #100 reset = 1;
         #50000 $finish;
     end

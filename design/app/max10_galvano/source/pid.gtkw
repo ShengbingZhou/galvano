@@ -1,74 +1,72 @@
 [*]
 [*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
-[*] Thu Dec 17 14:35:15 2020
+[*] Fri Dec 18 05:14:19 2020
 [*]
-[dumpfile] "C:\bzhou\repo\github\galvano\design\app\max10_galvano\source\test.vcd"
-[dumpfile_mtime] "Thu Dec 17 14:32:03 2020"
-[dumpfile_size] 251213
+[dumpfile] "C:\bzhou\repo\github\galvano\design\app\max10_galvano\source\pid.vcd"
+[dumpfile_mtime] "Fri Dec 18 05:14:15 2020"
+[dumpfile_size] 224960
 [savefile] "C:\bzhou\repo\github\galvano\design\app\max10_galvano\source\pid.gtkw"
 [timestart] 0
 [size] 2560 1387
 [pos] -1 -1
-*-12.341275 16260 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-12.419569 4930 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] tb.
 [treeopen] tb.pid.
-[sst_width] 252
-[signals_width] 325
+[sst_width] 366
+[signals_width] 313
 [sst_expanded] 1
-[sst_vpaned_height] 570
+[sst_vpaned_height] 849
 @28
 tb.pid.sys_rstn
 tb.pid.clk_pid
 tb.pid.pos_adc_data_valid
 @24
 tb.pid.pos_adc[15:0]
-@22
-tb.pid.state[3:0]
-tb.pid.bpann_loop[7:0]
 @28
 tb.pid.spi_new_target_valid
-@420
-tb.pid.\e[0][15:0]
-tb.pid.\e[1][15:0]
-tb.pid.\e[2][15:0]
-tb.pid.\e[3][15:0]
-tb.pid.\e[4][15:0]
-tb.pid.\e[5][15:0]
-tb.pid.\x[0][15:0]
-tb.pid.\x[1][15:0]
-tb.pid.\x[2][15:0]
-tb.pid.\x[3][15:0]
-tb.pid.\x[4][15:0]
-tb.pid.\x[5][15:0]
-tb.pid.\x[6][15:0]
-tb.pid.\x[7][15:0]
-tb.pid.\x[8][15:0]
-@c00421
-tb.pid.\w[0][7:0]
-@28
-(0)tb.pid.\w[0][7:0]
-(1)tb.pid.\w[0][7:0]
-(2)tb.pid.\w[0][7:0]
-(3)tb.pid.\w[0][7:0]
-(4)tb.pid.\w[0][7:0]
-(5)tb.pid.\w[0][7:0]
-(6)tb.pid.\w[0][7:0]
-(7)tb.pid.\w[0][7:0]
-@1401201
--group_end
-@420
-tb.pid.\w[1][7:0]
-tb.pid.\w[2][7:0]
-tb.pid.\w[9][7:0]
-tb.pid.\w[10][7:0]
-tb.pid.\w[11][7:0]
-tb.pid.\w[12][7:0]
-tb.pid.\w[13][7:0]
-tb.pid.\w[14][7:0]
-tb.pid.\w[15][7:0]
-tb.pid.\w[16][7:0]
-tb.pid.\w[17][7:0]
+@22
+tb.pid.state[3:0]
 @24
 tb.pid.pos_dac[15:0]
+@420
+tb.pid.x00[15:0]
+tb.pid.x01[15:0]
+tb.pid.x02[15:0]
+tb.pid.x10[15:0]
+tb.pid.x11[15:0]
+tb.pid.x12[15:0]
+tb.pid.x20[15:0]
+tb.pid.x21[15:0]
+tb.pid.x22[15:0]
+tb.pid.b10[15:0]
+tb.pid.b11[15:0]
+tb.pid.b12[15:0]
+tb.pid.b20[15:0]
+tb.pid.b21[15:0]
+tb.pid.b22[15:0]
+tb.pid.e10[15:0]
+tb.pid.e11[15:0]
+tb.pid.e12[15:0]
+tb.pid.e20[15:0]
+tb.pid.e21[15:0]
+tb.pid.e22[15:0]
+tb.pid.w000[7:0]
+tb.pid.w001[7:0]
+tb.pid.w002[7:0]
+tb.pid.w010[7:0]
+tb.pid.w011[7:0]
+tb.pid.w012[7:0]
+tb.pid.w020[7:0]
+tb.pid.w021[7:0]
+tb.pid.w022[7:0]
+tb.pid.w100[7:0]
+tb.pid.w101[7:0]
+tb.pid.w102[7:0]
+tb.pid.w110[7:0]
+tb.pid.w111[7:0]
+tb.pid.w112[7:0]
+tb.pid.w120[7:0]
+tb.pid.w121[7:0]
+tb.pid.w122[7:0]
 [pattern_trace] 1
 [pattern_trace] 0
