@@ -1,5 +1,5 @@
 Flow report for max10_galvano
-Fri Dec 18 12:59:20 2020
+Fri Dec 18 21:23:15 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Fri Dec 18 12:59:20 2020      ;
+; Flow Status                        ; Flow Failed - Fri Dec 18 21:23:15 2020      ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; max10_galvano                               ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M02SCU169I7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 18,802 / 2,304 ( 816 % )                    ;
-;     Total combinational functions  ; 18,180 / 2,304 ( 789 % )                    ;
-;     Dedicated logic registers      ; 1,681 / 2,304 ( 73 % )                      ;
-; Total registers                    ; 1681                                        ;
+; Total logic elements               ; 11,224 / 2,304 ( 487 % )                    ;
+;     Total combinational functions  ; 10,669 / 2,304 ( 463 % )                    ;
+;     Dedicated logic registers      ; 1,446 / 2,304 ( 63 % )                      ;
+; Total registers                    ; 1446                                        ;
 ; Total pins                         ; 40 / 130 ( 31 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 13,312 / 110,592 ( 12 % )                   ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/18/2020 12:56:34 ;
+; Start date & time ; 12/18/2020 21:20:12 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; max10_galvano       ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+------------------------------------------------------------------------------------+---------------+--------------+------------------+
 ; Assignment Name                     ; Value                                                                              ; Default Value ; Entity Name  ; Section Id       ;
 +-------------------------------------+------------------------------------------------------------------------------------+---------------+--------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 26759796052659.160826739436524                                                     ; --            ; --           ; --               ;
+; COMPILER_SIGNATURE_ID               ; 26759796052659.160829761111996                                                     ; --            ; --           ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                                 ; --            ; --           ; --               ;
 ; FLOW_ENABLE_POWER_ANALYZER          ; On                                                                                 ; Off           ; --           ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 100                                                                                ; --            ; --           ; --               ;
@@ -138,9 +138,9 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:02:23     ; 1.0                     ; 5040 MB             ; 00:02:31                           ;
-; Fitter               ; 00:00:21     ; 1.0                     ; 5595 MB             ; 00:00:19                           ;
-; Total                ; 00:02:44     ; --                      ; --                  ; 00:02:50                           ;
+; Analysis & Synthesis ; 00:02:44     ; 1.0                     ; 4984 MB             ; 00:02:56                           ;
+; Fitter               ; 00:00:18     ; 1.0                     ; 5551 MB             ; 00:00:16                           ;
+; Total                ; 00:03:02     ; --                      ; --                  ; 00:03:12                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

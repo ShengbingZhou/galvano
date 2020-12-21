@@ -1,14 +1,14 @@
-Fitter Status : Failed - Fri Dec 18 12:59:20 2020
+Fitter Status : Failed - Fri Dec 18 21:23:15 2020
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : max10_galvano
 Top-level Entity Name : top
 Family : MAX 10
 Device : 10M02SCU169I7G
 Timing Models : Final
-Total logic elements : 18,802 / 2,304 ( 816 % )
-    Total combinational functions : 18,180 / 2,304 ( 789 % )
-    Dedicated logic registers : 1,681 / 2,304 ( 73 % )
-Total registers : 1681
+Total logic elements : 11,224 / 2,304 ( 487 % )
+    Total combinational functions : 10,669 / 2,304 ( 463 % )
+    Dedicated logic registers : 1,446 / 2,304 ( 63 % )
+Total registers : 1446
 Total pins : 40 / 130 ( 31 % )
 Total virtual pins : 0
 Total memory bits : 13,312 / 110,592 ( 12 % )

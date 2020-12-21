@@ -1,55 +1,27 @@
 [*]
 [*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
-[*] Fri Dec 18 05:14:19 2020
+[*] Mon Dec 21 14:53:00 2020
 [*]
 [dumpfile] "C:\bzhou\repo\github\galvano\design\app\max10_galvano\source\pid.vcd"
-[dumpfile_mtime] "Fri Dec 18 05:14:15 2020"
-[dumpfile_size] 224960
+[dumpfile_mtime] "Mon Dec 21 14:52:42 2020"
+[dumpfile_size] 209630
 [savefile] "C:\bzhou\repo\github\galvano\design\app\max10_galvano\source\pid.gtkw"
 [timestart] 0
 [size] 2560 1387
 [pos] -1 -1
-*-12.419569 4930 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+*-12.215433 36060 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] tb.
-[treeopen] tb.pid.
-[sst_width] 366
-[signals_width] 313
+[sst_width] 197
+[signals_width] 204
 [sst_expanded] 1
-[sst_vpaned_height] 849
+[sst_vpaned_height] 908
 @28
 tb.pid.sys_rstn
 tb.pid.clk_pid
-tb.pid.pos_adc_data_valid
-@24
-tb.pid.pos_adc[15:0]
-@28
-tb.pid.spi_new_target_valid
 @22
-tb.pid.state[3:0]
-@24
-tb.pid.pos_dac[15:0]
+tb.pid.pos_adc[15:0]
 @420
-tb.pid.x00[15:0]
-tb.pid.x01[15:0]
-tb.pid.x02[15:0]
-tb.pid.x10[15:0]
-tb.pid.x11[15:0]
-tb.pid.x12[15:0]
-tb.pid.x20[15:0]
-tb.pid.x21[15:0]
-tb.pid.x22[15:0]
-tb.pid.b10[15:0]
-tb.pid.b11[15:0]
-tb.pid.b12[15:0]
-tb.pid.b20[15:0]
-tb.pid.b21[15:0]
-tb.pid.b22[15:0]
-tb.pid.e10[15:0]
-tb.pid.e11[15:0]
-tb.pid.e12[15:0]
-tb.pid.e20[15:0]
-tb.pid.e21[15:0]
-tb.pid.e22[15:0]
+tb.pid.bpann_loop
 tb.pid.w000[7:0]
 tb.pid.w001[7:0]
 tb.pid.w002[7:0]
@@ -68,5 +40,29 @@ tb.pid.w112[7:0]
 tb.pid.w120[7:0]
 tb.pid.w121[7:0]
 tb.pid.w122[7:0]
+tb.pid.b10[7:0]
+tb.pid.b11[7:0]
+tb.pid.b12[7:0]
+tb.pid.b20[7:0]
+tb.pid.b21[7:0]
+tb.pid.b22[7:0]
+tb.pid.e10[7:0]
+tb.pid.e11[7:0]
+tb.pid.e12[7:0]
+tb.pid.e20[7:0]
+tb.pid.e21[7:0]
+tb.pid.e22[7:0]
+tb.pid.x00[7:0]
+tb.pid.x01[7:0]
+tb.pid.x02[7:0]
+tb.pid.x10[7:0]
+tb.pid.x11[7:0]
+tb.pid.x12[7:0]
+tb.pid.x20[7:0]
+tb.pid.x21[7:0]
+tb.pid.x22[7:0]
+tb.pid.pid[31:0]
+@25
+tb.pid.pos_dac[15:0]
 [pattern_trace] 1
 [pattern_trace] 0

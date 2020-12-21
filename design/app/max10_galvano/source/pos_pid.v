@@ -16,8 +16,8 @@ module pos_pid
     output reg  [15:0] pos_dac
 );
 
-reg signed [47:0] P, I, D, error, error_last, integrator;
-reg signed [47:0] pid;
+reg signed [31:0] P, I, D, error, error_last, integrator;
+reg signed [31:0] pid;
 wire [15:0] limit0;
 wire [15:0] limit1;
 
@@ -28,12 +28,11 @@ reg [1:0] spi_new_target_valid_dly;
 reg [1:0] pos_adc_data_valid_dly;
 
 // bpann
+integer bpann_loop;
 reg signed [ 7:0] w000, w001, w002, w010, w011, w012, w020, w021, w022, w100, w101, w102, w110, w111, w112, w120, w121, w122;
-reg signed [15:0] b10, b11, b12, b20, b21, b22;
-reg signed [15:0] e10, e11, e12, e20, e21, e22;
-reg signed [15:0] x00, x01, x02, x10, x11, x12, x20, x21, x22;
-
-reg         [7:0] bpann_loop;
+reg signed [ 7:0] b10, b11, b12, b20, b21, b22;
+reg signed [ 7:0] e10, e11, e12, e20, e21, e22;
+reg signed [ 7:0] x00, x01, x02, x10, x11, x12, x20, x21, x22;
 
 localparam STATE0 = 0;
 localparam STATE1 = 1;
@@ -68,7 +67,7 @@ always @(negedge sys_rstn or posedge clk_pid) begin
         w012 <= 64; 
         w020 <= 64; 
         w021 <= 64; 
-        w022 <= 64;       
+        w022 <= 64;
         w100 <= 64; 
         w101 <= 64; 
         w102 <= 64; 
@@ -79,12 +78,12 @@ always @(negedge sys_rstn or posedge clk_pid) begin
         w121 <= 64; 
         w122 <= 64;      
 
-        b10  <= 16384; 
-        b11  <= 16384; 
-        b12  <= 16384;
-        b20  <= 16384; 
-        b21  <= 16384; 
-        b22  <= 16384;
+        b10  <= 64; 
+        b11  <= 64; 
+        b12  <= 64;
+        b20  <= 64; 
+        b21  <= 64; 
+        b22  <= 64;
     end
     else if (clk_pid) begin
         spi_new_target_valid_dly <= {spi_new_target_valid_dly[0], spi_new_target_valid};
@@ -114,7 +113,7 @@ always @(negedge sys_rstn or posedge clk_pid) begin
             STATE3: begin
                 P <= ($signed({1'b0, kp}) * error) >>> 10;
                 I <= ($signed({1'b0, ki}) * integrator) >>> 10;
-                D <= ($signed({1'b0, kd}) * (error - error_last)) >>> 8;
+                D <= ($signed({1'b0, kd}) * (error - error_last)) >>> 10;
                 integrator <= integrator + error;
                 state <= STATE4;
             end
@@ -125,70 +124,70 @@ always @(negedge sys_rstn or posedge clk_pid) begin
                 state <= STATE5;
             end
             STATE5: begin
-                if (pid > $signed({1'b0, dac_limit})) begin
-                    x00 <=  32767;
+                if (pid > $signed(dac_limit)) begin
+                    x00 <=  127;
                 end
-                else if (-pid > $signed({1'b0, dac_limit})) begin
-                    x00 <= -32767;
+                else if (-pid > $signed(dac_limit)) begin
+                    x00 <= -127;
                 end
                 else begin
-                    x00 <= pid  * 32768 / dac_limit;
+                    x00 <= (pid * 127) / $signed(dac_limit);
                 end
-                x01 <= (pos_adc) / 2;
-                x02 <= (error_last - error) / 2;
+                x01 <= (pos_adc) >>> 8;
+                x02 <= (error_last - error) >>> 8;
                 state <= STATE6;
             end
             STATE6: begin
                 bpann_loop <= bpann_loop + 1;
-                task_bpnn_f((w000*x00 + w010*x01 + w020*x02)/128 + b10, x10);
-                task_bpnn_f((w001*x00 + w011*x01 + w021*x02)/128 + b11, x11);
-                task_bpnn_f((w002*x00 + w012*x01 + w022*x02)/128 + b12, x12);
+                task_bpnn_f(((w000*x00 + w010*x01 + w020*x02) >>> 7) + b10, x10);
+                task_bpnn_f(((w001*x00 + w011*x01 + w021*x02) >>> 7) + b11, x11);
+                task_bpnn_f(((w002*x00 + w012*x01 + w022*x02) >>> 7) + b12, x12);
                 state <= STATE7;
             end
             STATE7: begin
-                task_bpnn_f((w100*x10 + w110*x11 + w120*x12)/128 + b20, x20);
-                task_bpnn_f((w101*x10 + w111*x11 + w121*x12)/128 + b21, x21);
-                task_bpnn_f((w102*x10 + w112*x11 + w122*x12)/128 + b22, x22);
+                task_bpnn_f(((w100*x10 + w110*x11 + w120*x12) >>> 7) + b20, x20);
+                task_bpnn_f(((w101*x10 + w111*x11 + w121*x12) >>> 7) + b21, x21);
+                task_bpnn_f(((w102*x10 + w112*x11 + w122*x12) >>> 7) + b22, x22);
                 state <= STATE8;
             end
             STATE8: begin
-                pos_dac <= 32768 + ((x20*dac_limit)/32768);
+                pos_dac <= 32768 + ((x20*dac_limit)>>>7);
                 if (bpann_loop > 10) begin
                     state <= STATE9;
                     pos_dac <= 32768;
-                    e20 <= (x20) * (32767 - x20) * (16384 - x20) / 1073741824;          // F, Oj * (1 - Oj) * (0.5 - Oj)
-                    e21 <= (x21) * (32767 - x21) * (pos_target/2   - x21) / 1073741824; // P, Oj * (1 - Oj) * (T   - Oj)
-                    e22 <= (x22) * (32767 - x22) * (0     - x22) / 1073741824;          // V, Oj * (1 - Oj) * (0   - Oj)
+                    e20 <= ((x20) * (127 - x20) * (64 - x20)) >>> 14;                   // F, Oj * (1 - Oj) * (0.5 - Oj)
+                    e21 <= ((x21) * (127 - x21) * ((pos_target >>> 8)   - x21)) >>> 14; // P, Oj * (1 - Oj) * (T   - Oj)
+                    e22 <= ((x22) * (127 - x22) * (0  - x22)) >>> 14;                   // V, Oj * (1 - Oj) * (0   - Oj)
                 end
                 else begin
                     state <= STATE2;
                 end
             end
             STATE9: begin
-                e10 <= x10 * (32767 - x10) * (w100*e20 + w101*e21 + w102*e22) / 137438953472; // Oj * (1 - Oj) * Sigma(Errk * wjk)
-                e11 <= x11 * (32767 - x11) * (w110*e20 + w111*e21 + w112*e22) / 137438953472; // Oj * (1 - Oj) * Sigma(Errk * wjk)
-                e12 <= x12 * (32767 - x12) * (w120*e20 + w121*e21 + w122*e22) / 137438953472; // Oj * (1 - Oj) * Sigma(Errk * wjk)
+                e10 <= (x10 * (127 - x10) * (w100*e20 + w101*e21 + w102*e22)) >>> 21; // Oj * (1 - Oj) * Sigma(Errk * wjk)
+                e11 <= (x11 * (127 - x11) * (w110*e20 + w111*e21 + w112*e22)) >>> 21; // Oj * (1 - Oj) * Sigma(Errk * wjk)
+                e12 <= (x12 * (127 - x12) * (w120*e20 + w121*e21 + w122*e22)) >>> 21; // Oj * (1 - Oj) * Sigma(Errk * wjk)
                 state <= STATE10;
             end
             STATE10: begin
-                w000 <= w000 + ((x00*e10)/8388608); 
-                w001 <= w001 + ((x00*e11)/8388608); 
-                w002 <= w002 + ((x00*e12)/8388608);
-                w010 <= w010 + ((x01*e10)/8388608); 
-                w011 <= w011 + ((x01*e11)/8388608); 
-                w012 <= w012 + ((x01*e12)/8388608);
-                w020 <= w020 + ((x02*e10)/8388608); 
-                w021 <= w021 + ((x02*e11)/8388608); 
-                w022 <= w022 + ((x02*e12)/8388608);
-                w100 <= w100 + ((x10*e20)/8388608); 
-                w101 <= w101 + ((x10*e21)/8388608); 
-                w102 <= w102 + ((x10*e22)/8388608);
-                w110 <= w110 + ((x11*e20)/8388608); 
-                w111 <= w111 + ((x11*e21)/8388608); 
-                w112 <= w112 + ((x11*e22)/8388608);
-                w120 <= w120 + ((x12*e20)/8388608); 
-                w121 <= w121 + ((x12*e22)/8388608); 
-                w122 <= w122 + ((x12*e22)/8388608);
+                w000 <= w000 + ((x00*e10)>>>7); 
+                w001 <= w001 + ((x00*e11)>>>7); 
+                w002 <= w002 + ((x00*e12)>>>7);
+                w010 <= w010 + ((x01*e10)>>>7); 
+                w011 <= w011 + ((x01*e11)>>>7); 
+                w012 <= w012 + ((x01*e12)>>>7);
+                w020 <= w020 + ((x02*e10)>>>7); 
+                w021 <= w021 + ((x02*e11)>>>7);
+                w022 <= w022 + ((x02*e12)>>>7);
+                w100 <= w100 + ((x10*e20)>>>7); 
+                w101 <= w101 + ((x10*e21)>>>7);
+                w102 <= w102 + ((x10*e22)>>>7);
+                w110 <= w110 + ((x11*e20)>>>7); 
+                w111 <= w111 + ((x11*e21)>>>7); 
+                w112 <= w112 + ((x11*e22)>>>7);
+                w120 <= w120 + ((x12*e20)>>>7); 
+                w121 <= w121 + ((x12*e22)>>>7); 
+                w122 <= w122 + ((x12*e22)>>>7);
                 
                 b10 <= b10 + e10; 
                 b11 <= b11 + e11; 
@@ -204,9 +203,9 @@ always @(negedge sys_rstn or posedge clk_pid) begin
 end
 
 task task_bpnn_f;
-    input  reg signed [15:0] x;
-    output reg signed [15:0] y;
-    y = 16384 + (16384 * x / (1 + (x > 0) ? x : (-x)));
+    input  reg signed [7:0] x;
+    output reg signed [7:0] y;
+    y = 64 + (64 * x / (1 + (x > 0) ? x : (-x)));
 endtask
 
 endmodule
