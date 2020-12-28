@@ -22,15 +22,19 @@ wire [15:0] limit1;
 assign limit0 = 32768 - dac_limit;
 assign limit1 = 32768 + dac_limit;
 
-localparam IDLE = 1'b0;
-localparam RUN  = 1'b1;
-reg state;
+localparam STATE0 = 0;
+localparam STATE1 = 1;
+localparam STATE2 = 2;
+reg [1:0] state;
 always @(negedge sys_rstn or posedge clk_pid) begin
     if (!sys_rstn) begin
-        state <= IDLE;
+        state <= STATE0;
         error <= 0;
         error_last <= 0;
         integrator <= 0;
+        P <= 0;
+        I <= 0;
+        D <= 0;
         pid <= 0;
         pos_dac <= 32768;
     end
@@ -38,14 +42,16 @@ always @(negedge sys_rstn or posedge clk_pid) begin
         error <= $signed({1'b0, pos_target}) - $signed({1'b0, pos_adc});
         error_last <= error;
         case(state)
-            IDLE: begin // get first position
-                state <= RUN;
+            STATE0: begin // error has valid value
+                state <= STATE1;
             end
-            RUN: begin
+            STATE1: begin // error_last has valid value
+                state <= STATE2;
+            end
+            STATE2: begin
                 P <= ($signed({1'b0, kp}) * error) >>> 10;
                 I <= ($signed({1'b0, ki}) * integrator) >>> 10;
-                
-                D <= ($signed({1'b0, kd}) * (error - error_last)) >>> 8;
+                D <= ($signed({1'b0, kd}) * (error - error_last)) >>> 10;
                 pid <= (P + I + D);
             
                 if ((-(integrator + error) < $signed({1'b0, pid_i_saturation})) && 

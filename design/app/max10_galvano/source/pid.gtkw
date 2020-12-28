@@ -1,0 +1,35 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Mon Dec 21 15:29:27 2020
+[*]
+[dumpfile] "C:\bzhou\repo\github\galvano\design\app\max10_galvano\source\pid.vcd"
+[dumpfile_mtime] "Mon Dec 21 15:27:08 2020"
+[dumpfile_size] 1300274
+[savefile] "C:\bzhou\repo\github\galvano\design\app\max10_galvano\source\pid.gtkw"
+[timestart] 0
+[size] 2560 1387
+[pos] -1 -1
+*-12.236122 12390 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb.
+[sst_width] 197
+[signals_width] 234
+[sst_expanded] 1
+[sst_vpaned_height] 474
+@28
+tb.pid.sys_rstn
+tb.pid.clk_pid
+@24
+tb.pid.pos_adc[15:0]
+@10024
+tb.pid.pos_dac[15:0]
+@420
+tb.pid.pid[47:0]
+tb.pid.P[47:0]
+tb.pid.I[47:0]
+tb.pid.D[47:0]
+@421
+tb.pid.error[47:0]
+@420
+tb.pid.error_last[47:0]
+[pattern_trace] 1
+[pattern_trace] 0
