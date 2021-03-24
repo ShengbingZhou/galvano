@@ -1,5 +1,5 @@
 Flow report for max10_galvano
-Tue Nov 24 11:02:21 2020
+Mon Mar 22 21:59:43 2021
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -41,17 +41,17 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Nov 24 11:02:15 2020       ;
+; Flow Status                        ; Successful - Mon Mar 22 21:59:35 2021       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; max10_galvano                               ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M02SCU169I7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,951 / 2,304 ( 85 % )                      ;
-;     Total combinational functions  ; 1,503 / 2,304 ( 65 % )                      ;
-;     Dedicated logic registers      ; 1,368 / 2,304 ( 59 % )                      ;
-; Total registers                    ; 1368                                        ;
+; Total logic elements               ; 1,994 / 2,304 ( 87 % )                      ;
+;     Total combinational functions  ; 1,550 / 2,304 ( 67 % )                      ;
+;     Dedicated logic registers      ; 1,370 / 2,304 ( 59 % )                      ;
+; Total registers                    ; 1370                                        ;
 ; Total pins                         ; 40 / 130 ( 31 % )                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 23,552 / 110,592 ( 21 % )                   ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/24/2020 11:01:23 ;
+; Start date & time ; 03/22/2021 21:58:24 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; max10_galvano       ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------+------------------------------------------------------------------------------------------------------------------+---------------+--------------+------------------+
 ; Assignment Name                     ; Value                                                                                                            ; Default Value ; Entity Name  ; Section Id       ;
 +-------------------------------------+------------------------------------------------------------------------------------------------------------------+---------------+--------------+------------------+
-; COMPILER_SIGNATURE_ID               ; 26759796052659.160618688324456                                                                                   ; --            ; --           ; --               ;
+; COMPILER_SIGNATURE_ID               ; 251485281035653.161642150426560                                                                                  ; --            ; --           ; --               ;
 ; ENABLE_SIGNALTAP                    ; On                                                                                                               ; --            ; --           ; --               ;
 ; FLOW_ENABLE_POWER_ANALYZER          ; On                                                                                                               ; Off           ; --           ; --               ;
 ; MAX_CORE_JUNCTION_TEMP              ; 100                                                                                                              ; --            ; --           ; --               ;
@@ -136,12 +136,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:33     ; 1.0                     ; 4932 MB             ; 00:00:48                           ;
-; Fitter               ; 00:00:08     ; 1.4                     ; 5866 MB             ; 00:00:14                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4752 MB             ; 00:00:02                           ;
-; Power Analyzer       ; 00:00:03     ; 1.7                     ; 4943 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.8                     ; 4890 MB             ; 00:00:06                           ;
-; Total                ; 00:00:51     ; --                      ; --                  ; 00:01:15                           ;
+; Analysis & Synthesis ; 00:00:45     ; 1.0                     ; 4932 MB             ; 00:01:06                           ;
+; Fitter               ; 00:00:12     ; 1.5                     ; 5872 MB             ; 00:00:20                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4753 MB             ; 00:00:02                           ;
+; Power Analyzer       ; 00:00:04     ; 1.8                     ; 4942 MB             ; 00:00:06                           ;
+; Timing Analyzer      ; 00:00:05     ; 1.8                     ; 4890 MB             ; 00:00:08                           ;
+; Total                ; 00:01:08     ; --                      ; --                  ; 00:01:42                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

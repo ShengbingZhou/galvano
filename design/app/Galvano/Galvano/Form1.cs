@@ -45,10 +45,10 @@ namespace Galvano
             TbLimit0.Text = limit[0].ToString() + " (-10V)";
             TbLimit1.Text = limit[1].ToString() + " (+10V)";
 
-            TbKp.Text = "1800";
-            TbKi.Text = "16";
-            TbKd.Text = "58000";
-            TbISaturation.Text = "5000";
+            TbKp.Text = "1400";
+            TbKi.Text = "15";
+            TbKd.Text = "14000";
+            TbISaturation.Text = "10000";
             TbMaxDacSwing.Text = "5000";
 
             timer.Interval = 5;
@@ -153,6 +153,7 @@ namespace Galvano
 
         void SetPIDParam()
         {
+            SetReg(11, cbRotateDirection.Checked ? (ushort)0xffff : (ushort)0x0000); // pid sign
             SetReg(3, (UInt16)Decimal.Parse(TbKp.Text)); // kp
             SetReg(4, (UInt16)Decimal.Parse(TbKi.Text)); // ki
             SetReg(5, (UInt16)Decimal.Parse(TbKd.Text)); // kd
@@ -205,27 +206,30 @@ namespace Galvano
 
         private void BtnCalibration_Click(object sender, EventArgs e)
         {
-            SetReg(3, 100); // kp
-            SetReg(4, 14);  // ki
+            var delay = 40; // ms
+
+            SetReg(11, cbRotateDirection.Checked ? (ushort)0xffff : (ushort)0x0000); // pid sign
+            SetReg(3, 200); // kp
+            SetReg(4, 4);   // ki
             SetReg(5, 0);   // kd
-            SetReg(8, 5000); //Max DAC Swing
-            SetReg(9, (UInt16)((UInt32)Decimal.Parse(TbISaturation.Text) & 0xffff)); // I-Saturation
+            SetReg(8,  (UInt16)((UInt32)Decimal.Parse(TbMaxDacSwing.Text)));         // Max DAC Swing
+            SetReg(9,  (UInt16)((UInt32)Decimal.Parse(TbISaturation.Text) & 0xffff));// I-Saturation
             SetReg(10, (UInt16)((UInt32)Decimal.Parse(TbISaturation.Text) >> 16));   // I-Saturation
 
             SetReg(6, 0);       //Target
             SetReg(2, 0x00003); //bit1: pid resetn, bit0: sys resetn
-            System.Threading.Thread.Sleep(10);
+            System.Threading.Thread.Sleep(delay);
             limit[0] = GetReg(7); // current position
-            TbLimit0.Text = limit[0].ToString() + " (" + ((limit[0] - 32768) * (10.0 / 32768)).ToString("F4") + "V)";
             SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
+            TbLimit0.Text = limit[0].ToString() + " (" + ((limit[0] - 32768) * (10.0 / 32768)).ToString("F4") + "V)";
 
             SetReg(6, 65535);   //Target
             SetReg(2, 0x00003); //bit1: pid resetn, bit0: sys resetn
-            System.Threading.Thread.Sleep(10);
+            System.Threading.Thread.Sleep(delay);
             limit[1] = GetReg(7); // current position
-            TbLimit1.Text = limit[1].ToString() + " (" + ((limit[1] - 32768) * (10.0 / 32768)).ToString("F4") + "V)";
             SetReg(2, 0x00000); //bit1: pid resetn, bit0: sys resetn
-
+            TbLimit1.Text = limit[1].ToString() + " (" + ((limit[1] - 32768) * (10.0 / 32768)).ToString("F4") + "V)";
+            
             PosChart.ChartAreas[0].AxisY.Minimum = limit[0];
             PosChart.ChartAreas[0].AxisY.Maximum = limit[1];
         }
@@ -415,7 +419,7 @@ namespace Galvano
             if (PosChart.Series[0].Points.Count >= majorTestLoops * minorTestLoops)
             {
                 passedTestLoops++;
-                if (passedTestLoops > testLoops)
+                if (passedTestLoops >= testLoops)
                 {
                     if (targetTestEnabled)
                         BtnTargetTest_Click(null, null);

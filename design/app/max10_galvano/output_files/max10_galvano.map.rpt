@@ -1,5 +1,5 @@
 Analysis & Synthesis report for max10_galvano
-Tue Nov 24 11:01:56 2020
+Mon Mar 22 21:59:10 2021
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -18,29 +18,31 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
  10. Analysis & Synthesis IP Cores Summary
  11. State Machine - |top|xy2_state
  12. State Machine - |top|spi_cs_fsm
- 13. State Machine - |top|dac7731if:ydac_u1|state
- 14. State Machine - |top|ads8686if:yp_adc_u1|state
- 15. State Machine - |top|dac7731if:xdac_u1|state
- 16. State Machine - |top|ads8686if:xp_adc_u1|state
- 17. Registers Removed During Synthesis
- 18. Removed Registers Triggering Further Register Optimizations
- 19. General Register Statistics
- 20. Inverted Register Statistics
- 21. Multiplexer Restructuring Statistics (Restructuring Performed)
- 22. Source assignments for sld_signaltap:auto_signaltap_0
- 23. Parameter Settings for User Entity Instance: internal_osc:osc_u1|altera_int_osc:int_osc_0
- 24. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
- 25. Parameter Settings for Inferred Entity Instance: pos_pid:xpos_pid_u1|lpm_mult:Mult2
- 26. Parameter Settings for Inferred Entity Instance: pos_pid:xpos_pid_u1|lpm_mult:Mult1
- 27. Parameter Settings for Inferred Entity Instance: pos_pid:xpos_pid_u1|lpm_mult:Mult0
- 28. lpm_mult Parameter Settings by Entity Instance
- 29. Port Connectivity Checks: "dac7731if:ydac_u1"
- 30. Port Connectivity Checks: "internal_osc:osc_u1"
- 31. Signal Tap Logic Analyzer Settings
- 32. Post-Synthesis Netlist Statistics for Top Partition
- 33. Elapsed Time Per Partition
- 34. Connections to In-System Debugging Instance "auto_signaltap_0"
- 35. Analysis & Synthesis Messages
+ 13. State Machine - |top|pos_pid:ypos_pid_u1|state
+ 14. State Machine - |top|dac7731if:ydac_u1|state
+ 15. State Machine - |top|ads8686if:yp_adc_u1|state
+ 16. State Machine - |top|pos_pid:xpos_pid_u1|state
+ 17. State Machine - |top|dac7731if:xdac_u1|state
+ 18. State Machine - |top|ads8686if:xp_adc_u1|state
+ 19. Registers Removed During Synthesis
+ 20. Removed Registers Triggering Further Register Optimizations
+ 21. General Register Statistics
+ 22. Inverted Register Statistics
+ 23. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 24. Source assignments for sld_signaltap:auto_signaltap_0
+ 25. Parameter Settings for User Entity Instance: internal_osc:osc_u1|altera_int_osc:int_osc_0
+ 26. Parameter Settings for Inferred Entity Instance: sld_signaltap:auto_signaltap_0
+ 27. Parameter Settings for Inferred Entity Instance: pos_pid:xpos_pid_u1|lpm_mult:Mult2
+ 28. Parameter Settings for Inferred Entity Instance: pos_pid:xpos_pid_u1|lpm_mult:Mult1
+ 29. Parameter Settings for Inferred Entity Instance: pos_pid:xpos_pid_u1|lpm_mult:Mult0
+ 30. lpm_mult Parameter Settings by Entity Instance
+ 31. Port Connectivity Checks: "dac7731if:ydac_u1"
+ 32. Port Connectivity Checks: "internal_osc:osc_u1"
+ 33. Signal Tap Logic Analyzer Settings
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Connections to In-System Debugging Instance "auto_signaltap_0"
+ 37. Analysis & Synthesis Messages
 
 
 
@@ -67,15 +69,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 24 11:01:56 2020       ;
+; Analysis & Synthesis Status        ; Successful - Mon Mar 22 21:59:10 2021       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; max10_galvano                               ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 2,203                                       ;
-;     Total combinational functions  ; 1,500                                       ;
-;     Dedicated logic registers      ; 1,419                                       ;
-; Total registers                    ; 1419                                        ;
+; Total logic elements               ; 2,254                                       ;
+;     Total combinational functions  ; 1,547                                       ;
+;     Dedicated logic registers      ; 1,423                                       ;
+; Total registers                    ; 1423                                        ;
 ; Total pins                         ; 40                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 23,552                                      ;
@@ -264,9 +266,6 @@ https://fpgasoftware.intel.com/eula.
 ; db/mult_0hs.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/bzhou/repo/github/galvano/design/app/max10_galvano/db/mult_0hs.tdf                                                    ;              ;
 ; db/mult_5hs.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/bzhou/repo/github/galvano/design/app/max10_galvano/db/mult_5hs.tdf                                                    ;              ;
 ; db/mult_tgs.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/bzhou/repo/github/galvano/design/app/max10_galvano/db/mult_tgs.tdf                                                    ;              ;
-; db/mult_ugs.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/bzhou/repo/github/galvano/design/app/max10_galvano/db/mult_ugs.tdf                                                    ;              ;
-; db/mult_vgs.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/bzhou/repo/github/galvano/design/app/max10_galvano/db/mult_vgs.tdf                                                    ;              ;
-; db/mult_rgs.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/bzhou/repo/github/galvano/design/app/max10_galvano/db/mult_rgs.tdf                                                    ;              ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+--------------------------------------------------------------------------------------------------------------------------+--------------+
 
 
@@ -275,20 +274,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+------------+
 ; Resource                                    ; Usage      ;
 +---------------------------------------------+------------+
-; Estimated Total logic elements              ; 2,203      ;
+; Estimated Total logic elements              ; 2,254      ;
 ;                                             ;            ;
-; Total combinational functions               ; 1500       ;
+; Total combinational functions               ; 1547       ;
 ; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 495        ;
-;     -- 3 input functions                    ; 528        ;
-;     -- <=2 input functions                  ; 477        ;
+;     -- 4 input functions                    ; 497        ;
+;     -- 3 input functions                    ; 570        ;
+;     -- <=2 input functions                  ; 480        ;
 ;                                             ;            ;
 ; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 983        ;
-;     -- arithmetic mode                      ; 517        ;
+;     -- normal mode                          ; 989        ;
+;     -- arithmetic mode                      ; 558        ;
 ;                                             ;            ;
-; Total registers                             ; 1419       ;
-;     -- Dedicated logic registers            ; 1419       ;
+; Total registers                             ; 1423       ;
+;     -- Dedicated logic registers            ; 1423       ;
 ;     -- I/O registers                        ; 0          ;
 ;                                             ;            ;
 ; I/O pins                                    ; 40         ;
@@ -298,8 +297,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;            ;
 ; Maximum fan-out node                        ; clk_div[1] ;
 ; Maximum fan-out                             ; 711        ;
-; Total fan-out                               ; 9846       ;
-; Average fan-out                             ; 3.24       ;
+; Total fan-out                               ; 10091      ;
+; Average fan-out                             ; 3.26       ;
 +---------------------------------------------+------------+
 
 
@@ -308,13 +307,13 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                             ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |top                                                                                                                                    ; 1500 (369)          ; 1419 (353)                ; 23552       ; 0          ; 10           ; 0       ; 5         ; 40   ; 0            ; 0          ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
-;    |ads8686if:xp_adc_u1|                                                                                                                ; 103 (103)           ; 104 (104)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|ads8686if:xp_adc_u1                                                                                                                                                                                                                                                                                                                        ; ads8686if                         ; work         ;
-;    |ads8686if:yp_adc_u1|                                                                                                                ; 3 (3)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|ads8686if:yp_adc_u1                                                                                                                                                                                                                                                                                                                        ; ads8686if                         ; work         ;
+; |top                                                                                                                                    ; 1547 (369)          ; 1423 (353)                ; 23552       ; 0          ; 10           ; 0       ; 5         ; 40   ; 0            ; 0          ; |top                                                                                                                                                                                                                                                                                                                                            ; top                               ; work         ;
+;    |ads8686if:xp_adc_u1|                                                                                                                ; 105 (105)           ; 104 (104)                 ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|ads8686if:xp_adc_u1                                                                                                                                                                                                                                                                                                                        ; ads8686if                         ; work         ;
+;    |ads8686if:yp_adc_u1|                                                                                                                ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|ads8686if:yp_adc_u1                                                                                                                                                                                                                                                                                                                        ; ads8686if                         ; work         ;
 ;    |dac7731if:xdac_u1|                                                                                                                  ; 47 (47)             ; 37 (37)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|dac7731if:xdac_u1                                                                                                                                                                                                                                                                                                                          ; dac7731if                         ; work         ;
 ;    |internal_osc:osc_u1|                                                                                                                ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|internal_osc:osc_u1                                                                                                                                                                                                                                                                                                                        ; internal_osc                      ; internal_osc ;
 ;       |altera_int_osc:int_osc_0|                                                                                                        ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|internal_osc:osc_u1|altera_int_osc:int_osc_0                                                                                                                                                                                                                                                                                               ; altera_int_osc                    ; internal_osc ;
-;    |pos_pid:xpos_pid_u1|                                                                                                                ; 443 (429)           ; 228 (228)                 ; 0           ; 0          ; 10           ; 0       ; 5         ; 0    ; 0            ; 0          ; |top|pos_pid:xpos_pid_u1                                                                                                                                                                                                                                                                                                                        ; pos_pid                           ; work         ;
+;    |pos_pid:xpos_pid_u1|                                                                                                                ; 491 (477)           ; 232 (232)                 ; 0           ; 0          ; 10           ; 0       ; 5         ; 0    ; 0            ; 0          ; |top|pos_pid:xpos_pid_u1                                                                                                                                                                                                                                                                                                                        ; pos_pid                           ; work         ;
 ;       |lpm_mult:Mult0|                                                                                                                  ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |top|pos_pid:xpos_pid_u1|lpm_mult:Mult0                                                                                                                                                                                                                                                                                                         ; lpm_mult                          ; work         ;
 ;          |mult_tgs:auto_generated|                                                                                                      ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 2            ; 0       ; 1         ; 0    ; 0            ; 0          ; |top|pos_pid:xpos_pid_u1|lpm_mult:Mult0|mult_tgs:auto_generated                                                                                                                                                                                                                                                                                 ; mult_tgs                          ; work         ;
 ;       |lpm_mult:Mult1|                                                                                                                  ; 14 (0)              ; 0 (0)                     ; 0           ; 0          ; 6            ; 0       ; 3         ; 0    ; 0            ; 0          ; |top|pos_pid:xpos_pid_u1|lpm_mult:Mult1                                                                                                                                                                                                                                                                                                         ; lpm_mult                          ; work         ;
@@ -459,6 +458,18 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
++-----------------------------------------------------------+
+; State Machine - |top|pos_pid:ypos_pid_u1|state            ;
++--------------+--------------+--------------+--------------+
+; Name         ; state.STATE0 ; state.STATE2 ; state.STATE1 ;
++--------------+--------------+--------------+--------------+
+; state.STATE0 ; 0            ; 0            ; 0            ;
+; state.STATE1 ; 1            ; 0            ; 1            ;
+; state.STATE2 ; 1            ; 1            ; 0            ;
++--------------+--------------+--------------+--------------+
+
+
+Encoding Type:  One-Hot
 +----------------------------------------------+
 ; State Machine - |top|dac7731if:ydac_u1|state ;
 +-------------+--------------------------------+
@@ -479,6 +490,18 @@ Encoding Type:  One-Hot
 ; state.DELAY ; 1          ; 0           ; 1           ;
 ; state.WRITE ; 1          ; 1           ; 0           ;
 +-------------+------------+-------------+-------------+
+
+
+Encoding Type:  One-Hot
++-----------------------------------------------------------+
+; State Machine - |top|pos_pid:xpos_pid_u1|state            ;
++--------------+--------------+--------------+--------------+
+; Name         ; state.STATE0 ; state.STATE2 ; state.STATE1 ;
++--------------+--------------+--------------+--------------+
+; state.STATE0 ; 0            ; 0            ; 0            ;
+; state.STATE1 ; 1            ; 0            ; 1            ;
+; state.STATE2 ; 1            ; 1            ; 0            ;
++--------------+--------------+--------------+--------------+
 
 
 Encoding Type:  One-Hot
@@ -515,15 +538,12 @@ Encoding Type:  One-Hot
 ; dac7731if:ydac_u1|adc_dvalid_dly[1]           ; Lost fanout                                      ;
 ; pos_pid:ypos_pid_u1|pos_dac[0..15]            ; Lost fanout                                      ;
 ; pos_pid:ypos_pid_u1|pid[0..47]                ; Lost fanout                                      ;
-; pos_pid:ypos_pid_u1|D[0]                      ; Lost fanout                                      ;
-; pos_pid:ypos_pid_u1|state                     ; Lost fanout                                      ;
-; pos_pid:ypos_pid_u1|error[0..47]              ; Lost fanout                                      ;
-; pos_pid:ypos_pid_u1|error_last[0..47]         ; Lost fanout                                      ;
-; pos_pid:ypos_pid_u1|integrator[0..47]         ; Lost fanout                                      ;
 ; pos_pid:ypos_pid_u1|P[0..47]                  ; Lost fanout                                      ;
 ; pos_pid:ypos_pid_u1|I[0..47]                  ; Lost fanout                                      ;
-; pos_pid:ypos_pid_u1|D[1..47]                  ; Lost fanout                                      ;
-; ads8686if:yp_adc_u1|dvalid                    ; Lost fanout                                      ;
+; pos_pid:ypos_pid_u1|D[0..47]                  ; Lost fanout                                      ;
+; pos_pid:ypos_pid_u1|error_last[0..47]         ; Lost fanout                                      ;
+; pos_pid:ypos_pid_u1|error[0..47]              ; Lost fanout                                      ;
+; pos_pid:ypos_pid_u1|integrator[0..47]         ; Lost fanout                                      ;
 ; ads8686if:yp_adc_u1|readout[0..31]            ; Lost fanout                                      ;
 ; ads8686if:yp_adc_u1|dout[0..15]               ; Lost fanout                                      ;
 ; dac7731if:ydac_u1|reg_lr                      ; Stuck at VCC due to stuck port data_in           ;
@@ -533,17 +553,21 @@ Encoding Type:  One-Hot
 ; ads8686if:yp_adc_u1|cfg_data[30]              ; Merged with ads8686if:yp_adc_u1|cfg_data[31]     ;
 ; pos_pid:xpos_pid_u1|error[16..46]             ; Merged with pos_pid:xpos_pid_u1|error[47]        ;
 ; pos_pid:xpos_pid_u1|error_last[16..46]        ; Merged with pos_pid:xpos_pid_u1|error_last[47]   ;
+; pos_pid:xpos_pid_u1|P[37..46]                 ; Merged with pos_pid:xpos_pid_u1|P[47]            ;
+; pos_pid:xpos_pid_u1|I[37..46]                 ; Merged with pos_pid:xpos_pid_u1|I[47]            ;
+; pos_pid:xpos_pid_u1|D[41..46]                 ; Merged with pos_pid:xpos_pid_u1|D[47]            ;
 ; dac7731if:xdac_u1|reg_csn                     ; Merged with dac7731if:xdac_u1|reg_lr             ;
 ; ads8686if:xp_adc_u1|cfg_data[30]              ; Merged with ads8686if:xp_adc_u1|cfg_data[31]     ;
-; pos_pid:xpos_pid_u1|I[38..47]                 ; Merged with pos_pid:xpos_pid_u1|I[37]            ;
-; pos_pid:xpos_pid_u1|P[38..47]                 ; Merged with pos_pid:xpos_pid_u1|P[37]            ;
-; pos_pid:xpos_pid_u1|D[40..47]                 ; Merged with pos_pid:xpos_pid_u1|D[39]            ;
-; pos_pid:xpos_pid_u1|pid[40..46]               ; Merged with pos_pid:xpos_pid_u1|pid[47]          ;
-; pos_pid:xpos_pid_u1|P[23..36]                 ; Merged with pos_pid:xpos_pid_u1|P[37]            ;
-; pos_pid:xpos_pid_u1|D[26..38]                 ; Merged with pos_pid:xpos_pid_u1|D[39]            ;
-; pos_pid:xpos_pid_u1|pid[39]                   ; Merged with pos_pid:xpos_pid_u1|pid[47]          ;
+; pos_pid:xpos_pid_u1|P[23..36]                 ; Merged with pos_pid:xpos_pid_u1|P[47]            ;
+; pos_pid:xpos_pid_u1|D[28..40]                 ; Merged with pos_pid:xpos_pid_u1|D[47]            ;
 ; ads8686if:xp_adc_u1|reg_cfg_data[0]           ; Stuck at GND due to stuck port data_in           ;
 ; ads8686if:yp_adc_u1|reg_cfg_data[0]           ; Stuck at GND due to stuck port data_in           ;
+; pos_pid:xpos_pid_u1|pid[41..47]               ; Merged with pos_pid:xpos_pid_u1|pid[40]          ;
+; pos_pid:ypos_pid_u1|state.STATE1              ; Lost fanout                                      ;
+; pos_pid:ypos_pid_u1|state.STATE2              ; Lost fanout                                      ;
+; pos_pid:ypos_pid_u1|state.STATE0              ; Lost fanout                                      ;
+; ads8686if:yp_adc_u1|dvalid                    ; Lost fanout                                      ;
+; pos_pid:xpos_pid_u1|state.STATE1              ; Lost fanout                                      ;
 ; spi_cs_fsm~10                                 ; Lost fanout                                      ;
 ; spi_cs_fsm~11                                 ; Lost fanout                                      ;
 ; spi_cs_fsm~12                                 ; Lost fanout                                      ;
@@ -559,6 +583,8 @@ Encoding Type:  One-Hot
 ; xy2_state.XY2_DATA                            ; Lost fanout                                      ;
 ; xy2_state.XY2_CHECK                           ; Lost fanout                                      ;
 ; xy2_state.XY2_IDLE                            ; Lost fanout                                      ;
+; ads8686if:yp_adc_u1|ads_csn                   ; Merged with ads8686if:xp_adc_u1|ads_csn          ;
+; ads8686if:yp_adc_u1|ads_sclk                  ; Merged with ads8686if:xp_adc_u1|ads_sclk         ;
 ; ads8686if:yp_adc_u1|clk_cnt[7]                ; Merged with ads8686if:xp_adc_u1|clk_cnt[7]       ;
 ; ads8686if:yp_adc_u1|clk_cnt[5]                ; Merged with ads8686if:xp_adc_u1|clk_cnt[5]       ;
 ; ads8686if:yp_adc_u1|clk_cnt[4]                ; Merged with ads8686if:xp_adc_u1|clk_cnt[4]       ;
@@ -569,32 +595,41 @@ Encoding Type:  One-Hot
 ; ads8686if:yp_adc_u1|clk_cnt[0]                ; Merged with ads8686if:xp_adc_u1|clk_cnt[0]       ;
 ; ads8686if:yp_adc_u1|state.WRITE               ; Merged with ads8686if:xp_adc_u1|state.WRITE      ;
 ; ads8686if:yp_adc_u1|cfg_data[31]              ; Merged with ads8686if:xp_adc_u1|cfg_data[31]     ;
+; ads8686if:yp_adc_u1|reg_cfg_data[31]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[31] ;
 ; ads8686if:yp_adc_u1|state.DELAY               ; Merged with ads8686if:xp_adc_u1|state.DELAY      ;
 ; ads8686if:yp_adc_u1|state.IDLE                ; Merged with ads8686if:xp_adc_u1|state.IDLE       ;
 ; ads8686if:yp_adc_u1|cfg_cnt[3]                ; Merged with ads8686if:xp_adc_u1|cfg_cnt[3]       ;
 ; ads8686if:yp_adc_u1|cfg_cnt[2]                ; Merged with ads8686if:xp_adc_u1|cfg_cnt[2]       ;
 ; ads8686if:yp_adc_u1|cfg_cnt[1]                ; Merged with ads8686if:xp_adc_u1|cfg_cnt[1]       ;
+; ads8686if:yp_adc_u1|reg_cfg_data[30]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[30] ;
 ; ads8686if:yp_adc_u1|cfg_cnt[0]                ; Merged with ads8686if:xp_adc_u1|cfg_cnt[0]       ;
+; ads8686if:yp_adc_u1|reg_cfg_data[29]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[29] ;
 ; ads8686if:yp_adc_u1|cfg_data[28]              ; Merged with ads8686if:xp_adc_u1|cfg_data[28]     ;
+; ads8686if:yp_adc_u1|reg_cfg_data[28]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[28] ;
 ; ads8686if:yp_adc_u1|cfg_data[27]              ; Merged with ads8686if:xp_adc_u1|cfg_data[27]     ;
+; ads8686if:yp_adc_u1|reg_cfg_data[27]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[27] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[26]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[26] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[25]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[25] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[24]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[24] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[23]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[23] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[22]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[22] ;
+; ads8686if:yp_adc_u1|reg_cfg_data[21]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[21] ;
 ; ads8686if:yp_adc_u1|cfg_data[20]              ; Merged with ads8686if:xp_adc_u1|cfg_data[20]     ;
+; ads8686if:yp_adc_u1|reg_cfg_data[20]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[20] ;
 ; ads8686if:yp_adc_u1|cfg_data[19]              ; Merged with ads8686if:xp_adc_u1|cfg_data[19]     ;
+; ads8686if:yp_adc_u1|reg_cfg_data[19]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[19] ;
 ; ads8686if:yp_adc_u1|cfg_data[18]              ; Merged with ads8686if:xp_adc_u1|cfg_data[18]     ;
-; ads8686if:yp_adc_u1|cfg_data[0]               ; Merged with ads8686if:xp_adc_u1|cfg_data[0]      ;
-; dac7731if:ydac_u1|state.WRITE                 ; Stuck at GND due to stuck port data_in           ;
-; dac7731if:ydac_u1|clk_cnt[0..15]              ; Stuck at GND due to stuck port clock_enable      ;
-; dac7731if:ydac_u1|reg_clk                     ; Stuck at GND due to stuck port clock_enable      ;
-; dac7731if:ydac_u1|reg_data[15]                ; Stuck at VCC due to stuck port clock_enable      ;
-; ads8686if:yp_adc_u1|ads_sclk                  ; Merged with ads8686if:xp_adc_u1|ads_sclk         ;
-; ads8686if:yp_adc_u1|reg_cfg_data[1]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[1]  ;
-; ads8686if:yp_adc_u1|reg_cfg_data[2]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[2]  ;
-; ads8686if:yp_adc_u1|reg_cfg_data[3]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[3]  ;
-; ads8686if:yp_adc_u1|reg_cfg_data[4]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[4]  ;
-; ads8686if:yp_adc_u1|reg_cfg_data[5]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[5]  ;
-; ads8686if:yp_adc_u1|reg_cfg_data[6]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[6]  ;
-; ads8686if:yp_adc_u1|reg_cfg_data[7]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[7]  ;
-; ads8686if:yp_adc_u1|reg_cfg_data[8]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[8]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[18]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[18] ;
 ; ads8686if:yp_adc_u1|reg_cfg_data[9]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[9]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[8]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[8]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[7]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[7]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[6]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[6]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[5]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[5]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[4]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[4]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[3]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[3]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[2]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[2]  ;
+; ads8686if:yp_adc_u1|reg_cfg_data[1]           ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[1]  ;
+; ads8686if:yp_adc_u1|cfg_data[0]               ; Merged with ads8686if:xp_adc_u1|cfg_data[0]      ;
 ; ads8686if:yp_adc_u1|reg_cfg_data[10]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[10] ;
 ; ads8686if:yp_adc_u1|reg_cfg_data[11]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[11] ;
 ; ads8686if:yp_adc_u1|reg_cfg_data[12]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[12] ;
@@ -603,22 +638,11 @@ Encoding Type:  One-Hot
 ; ads8686if:yp_adc_u1|reg_cfg_data[15]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[15] ;
 ; ads8686if:yp_adc_u1|reg_cfg_data[16]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[16] ;
 ; ads8686if:yp_adc_u1|reg_cfg_data[17]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[17] ;
-; ads8686if:yp_adc_u1|reg_cfg_data[18]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[18] ;
-; ads8686if:yp_adc_u1|reg_cfg_data[19]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[19] ;
-; ads8686if:yp_adc_u1|reg_cfg_data[20]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[20] ;
-; ads8686if:yp_adc_u1|reg_cfg_data[21]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[21] ;
-; ads8686if:yp_adc_u1|reg_cfg_data[22]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[22] ;
-; ads8686if:yp_adc_u1|reg_cfg_data[23]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[23] ;
-; ads8686if:yp_adc_u1|reg_cfg_data[24]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[24] ;
-; ads8686if:yp_adc_u1|reg_cfg_data[25]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[25] ;
-; ads8686if:yp_adc_u1|reg_cfg_data[26]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[26] ;
-; ads8686if:yp_adc_u1|reg_cfg_data[27]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[27] ;
-; ads8686if:yp_adc_u1|reg_cfg_data[28]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[28] ;
-; ads8686if:yp_adc_u1|reg_cfg_data[29]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[29] ;
-; ads8686if:yp_adc_u1|reg_cfg_data[30]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[30] ;
-; ads8686if:yp_adc_u1|reg_cfg_data[31]          ; Merged with ads8686if:xp_adc_u1|reg_cfg_data[31] ;
+; dac7731if:ydac_u1|state.WRITE                 ; Stuck at GND due to stuck port data_in           ;
+; dac7731if:ydac_u1|clk_cnt[0..15]              ; Stuck at GND due to stuck port clock_enable      ;
+; dac7731if:ydac_u1|reg_clk                     ; Stuck at GND due to stuck port clock_enable      ;
+; dac7731if:ydac_u1|reg_data[15]                ; Stuck at VCC due to stuck port clock_enable      ;
 ; ads8686if:xp_adc_u1|cfg_cnt[3]                ; Stuck at GND due to stuck port data_in           ;
-; ads8686if:yp_adc_u1|ads_sdi                   ; Merged with ads8686if:xp_adc_u1|ads_sdi          ;
 ; Total Number of Removed Registers = 691       ;                                                  ;
 +-----------------------------------------------+--------------------------------------------------+
 
@@ -638,12 +662,6 @@ Encoding Type:  One-Hot
 ;                                     ;                           ; dac7731if:ydac_u1|clk_cnt[2], dac7731if:ydac_u1|clk_cnt[1],                          ;
 ;                                     ;                           ; dac7731if:ydac_u1|clk_cnt[0], dac7731if:ydac_u1|reg_clk,                             ;
 ;                                     ;                           ; dac7731if:ydac_u1|reg_data[15]                                                       ;
-; pos_pid:ypos_pid_u1|pos_dac[15]     ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[47], pos_pid:ypos_pid_u1|pid[46],                            ;
-;                                     ;                           ; pos_pid:ypos_pid_u1|pid[45], pos_pid:ypos_pid_u1|pid[44],                            ;
-;                                     ;                           ; pos_pid:ypos_pid_u1|pid[43], pos_pid:ypos_pid_u1|pid[15], pos_pid:ypos_pid_u1|state, ;
-;                                     ;                           ; pos_pid:ypos_pid_u1|P[47], pos_pid:ypos_pid_u1|P[46], pos_pid:ypos_pid_u1|P[45],     ;
-;                                     ;                           ; pos_pid:ypos_pid_u1|P[44], pos_pid:ypos_pid_u1|P[43], pos_pid:ypos_pid_u1|P[42],     ;
-;                                     ;                           ; ads8686if:yp_adc_u1|dvalid                                                           ;
 ; dac7731if:ydac_u1|reg_data[0]       ; Stuck at GND              ; dac7731if:ydac_u1|reg_data[1], dac7731if:ydac_u1|reg_data[2],                        ;
 ;                                     ; due to stuck port data_in ; dac7731if:ydac_u1|reg_data[3], dac7731if:ydac_u1|reg_data[4],                        ;
 ;                                     ;                           ; dac7731if:ydac_u1|reg_data[5], dac7731if:ydac_u1|reg_data[6],                        ;
@@ -651,9 +669,17 @@ Encoding Type:  One-Hot
 ;                                     ;                           ; dac7731if:ydac_u1|reg_data[9], dac7731if:ydac_u1|reg_data[10],                       ;
 ;                                     ;                           ; dac7731if:ydac_u1|reg_data[11], dac7731if:ydac_u1|reg_data[12],                      ;
 ;                                     ;                           ; dac7731if:ydac_u1|reg_data[13], dac7731if:ydac_u1|reg_data[14]                       ;
-; pos_pid:ypos_pid_u1|D[0]            ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error_last[47], pos_pid:ypos_pid_u1|error_last[46],              ;
-;                                     ;                           ; pos_pid:ypos_pid_u1|error_last[45], pos_pid:ypos_pid_u1|error_last[44]               ;
-; pos_pid:ypos_pid_u1|pos_dac[14]     ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[14]                                                          ;
+; pos_pid:ypos_pid_u1|pos_dac[15]     ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[47], pos_pid:ypos_pid_u1|pid[46],                            ;
+;                                     ;                           ; pos_pid:ypos_pid_u1|pid[45], pos_pid:ypos_pid_u1|pid[44],                            ;
+;                                     ;                           ; pos_pid:ypos_pid_u1|pid[43], pos_pid:ypos_pid_u1|pid[15], pos_pid:ypos_pid_u1|P[47], ;
+;                                     ;                           ; pos_pid:ypos_pid_u1|P[46], pos_pid:ypos_pid_u1|P[45], pos_pid:ypos_pid_u1|P[44],     ;
+;                                     ;                           ; pos_pid:ypos_pid_u1|P[43], ads8686if:yp_adc_u1|dvalid                                ;
+; pos_pid:ypos_pid_u1|D[47]           ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error_last[47], pos_pid:ypos_pid_u1|error_last[46],              ;
+;                                     ;                           ; pos_pid:ypos_pid_u1|error_last[45], pos_pid:ypos_pid_u1|error_last[44],              ;
+;                                     ;                           ; pos_pid:ypos_pid_u1|error_last[43], pos_pid:ypos_pid_u1|error_last[42],              ;
+;                                     ;                           ; pos_pid:ypos_pid_u1|error[47], pos_pid:ypos_pid_u1|error[46],                        ;
+;                                     ;                           ; pos_pid:ypos_pid_u1|error[45], pos_pid:ypos_pid_u1|error[44],                        ;
+;                                     ;                           ; pos_pid:ypos_pid_u1|error[43], pos_pid:ypos_pid_u1|error[42]                         ;
 ; pos_pid:ypos_pid_u1|pos_dac[13]     ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[13]                                                          ;
 ; pos_pid:ypos_pid_u1|pos_dac[12]     ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[12]                                                          ;
 ; pos_pid:ypos_pid_u1|pos_dac[11]     ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[11]                                                          ;
@@ -668,6 +694,50 @@ Encoding Type:  One-Hot
 ; pos_pid:ypos_pid_u1|pos_dac[2]      ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[2]                                                           ;
 ; pos_pid:ypos_pid_u1|pos_dac[1]      ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[1]                                                           ;
 ; pos_pid:ypos_pid_u1|pos_dac[0]      ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[0]                                                           ;
+; pos_pid:ypos_pid_u1|error_last[41]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[41]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[40]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[40]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[39]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[39]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[38]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[38]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[37]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[37]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[36]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[36]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[35]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[35]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[34]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[34]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[33]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[33]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[32]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[32]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[31]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[31]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[30]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[30]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[29]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[29]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[28]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[28]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[27]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[27]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[26]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[26]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[25]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[25]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[24]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[24]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[23]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[23]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[22]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[22]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[21]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[21]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[20]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[20]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[19]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[19]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[18]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[18]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[17]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[17]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[16]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[16]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[15]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[15]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[14]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[14]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[13]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[13]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[12]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[12]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[11]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[11]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[10]  ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[10]                                                        ;
+; pos_pid:ypos_pid_u1|error_last[9]   ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[9]                                                         ;
+; pos_pid:ypos_pid_u1|error_last[8]   ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[8]                                                         ;
+; pos_pid:ypos_pid_u1|error_last[7]   ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[7]                                                         ;
+; pos_pid:ypos_pid_u1|error_last[6]   ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[6]                                                         ;
+; pos_pid:ypos_pid_u1|error_last[5]   ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[5]                                                         ;
+; pos_pid:ypos_pid_u1|error_last[4]   ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[4]                                                         ;
+; pos_pid:ypos_pid_u1|error_last[3]   ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[3]                                                         ;
+; pos_pid:ypos_pid_u1|error_last[2]   ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[2]                                                         ;
+; pos_pid:ypos_pid_u1|error_last[1]   ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[1]                                                         ;
+; pos_pid:ypos_pid_u1|error_last[0]   ; Lost Fanouts              ; pos_pid:ypos_pid_u1|error[0]                                                         ;
+; pos_pid:ypos_pid_u1|pos_dac[14]     ; Lost Fanouts              ; pos_pid:ypos_pid_u1|pid[14]                                                          ;
+; pos_pid:ypos_pid_u1|state.STATE1    ; Lost Fanouts              ; pos_pid:ypos_pid_u1|state.STATE0                                                     ;
 ; xy_clk_dly[1]                       ; Lost Fanouts              ; xy_clk_dly[0]                                                                        ;
 +-------------------------------------+---------------------------+--------------------------------------------------------------------------------------+
 
@@ -677,12 +747,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1419  ;
+; Total registers                              ; 1423  ;
 ; Number of registers using Synchronous Clear  ; 72    ;
 ; Number of registers using Synchronous Load   ; 81    ;
-; Number of registers using Asynchronous Clear ; 519   ;
+; Number of registers using Asynchronous Clear ; 612   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 1017  ;
+; Number of registers using Clock Enable       ; 1021  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -692,8 +762,7 @@ Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                                                                                                                                                                                                                                                               ; Fan out ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; ads8686if:xp_adc_u1|ads_csn                                                                                                                                                                                                                                                                                                     ; 3       ;
-; ads8686if:yp_adc_u1|ads_csn                                                                                                                                                                                                                                                                                                     ; 2       ;
+; ads8686if:xp_adc_u1|ads_csn                                                                                                                                                                                                                                                                                                     ; 4       ;
 ; dac7731if:xdac_u1|reg_lr                                                                                                                                                                                                                                                                                                        ; 4       ;
 ; dac7731if:xdac_u1|reg_data[15]                                                                                                                                                                                                                                                                                                  ; 2       ;
 ; pos_pid:xpos_pid_u1|pos_dac[15]                                                                                                                                                                                                                                                                                                 ; 1       ;
@@ -715,7 +784,7 @@ Encoding Type:  One-Hot
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[9]                                                                                                                                                   ; 1       ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[10]                                                                                                                                                  ; 2       ;
 ; sld_signaltap:auto_signaltap_0|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[0]                                                                                                                                                   ; 1       ;
-; Total number of inverted registers = 23                                                                                                                                                                                                                                                                                         ;         ;
+; Total number of inverted registers = 22                                                                                                                                                                                                                                                                                         ;         ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -724,21 +793,21 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |top|dac7731if:xdac_u1|reg_data[13]       ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|spi_regs[7][6]                       ;
-; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |top|dac7731if:xdac_u1|clk_cnt[15]        ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |top|dac7731if:xdac_u1|reg_data[6]        ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|spi_regs[7][7]                       ;
+; 3:1                ; 17 bits   ; 34 LEs        ; 17 LEs               ; 17 LEs                 ; Yes        ; |top|dac7731if:xdac_u1|clk_cnt[2]         ;
 ; 3:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |top|pos_pid:xpos_pid_u1|pos_dac[11]      ;
-; 5:1                ; 24 bits   ; 72 LEs        ; 24 LEs               ; 48 LEs                 ; Yes        ; |top|ads8686if:xp_adc_u1|reg_cfg_data[23] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |top|ads8686if:xp_adc_u1|reg_cfg_data[20] ;
+; 5:1                ; 24 bits   ; 72 LEs        ; 24 LEs               ; 48 LEs                 ; Yes        ; |top|ads8686if:xp_adc_u1|reg_cfg_data[4]  ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |top|ads8686if:xp_adc_u1|reg_cfg_data[28] ;
 ; 5:1                ; 24 bits   ; 72 LEs        ; 24 LEs               ; 48 LEs                 ; Yes        ; |top|ads8686if:yp_adc_u1|reg_cfg_data[25] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |top|ads8686if:yp_adc_u1|reg_cfg_data[20] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |top|spi_cmd[3]                           ;
-; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |top|ads8686if:xp_adc_u1|readout[8]       ;
-; 18:1               ; 15 bits   ; 180 LEs       ; 165 LEs              ; 15 LEs                 ; Yes        ; |top|spi_reg_data_temp[3]                 ;
-; 7:1                ; 24 bits   ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; Yes        ; |top|spi_data[1]                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |top|ads8686if:yp_adc_u1|ads_sdi          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |top|spi_cmd[7]                           ;
+; 5:1                ; 32 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |top|ads8686if:xp_adc_u1|readout[14]      ;
+; 18:1               ; 15 bits   ; 180 LEs       ; 165 LEs              ; 15 LEs                 ; Yes        ; |top|spi_reg_data_temp[12]                ;
+; 7:1                ; 24 bits   ; 96 LEs        ; 24 LEs               ; 72 LEs                 ; Yes        ; |top|spi_data[15]                         ;
 ; 9:1                ; 16 bits   ; 96 LEs        ; 32 LEs               ; 64 LEs                 ; Yes        ; |top|spi_cs_cnt[13]                       ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top|Selector56                           ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |top|Selector1                            ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top|Selector54                           ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; No         ; |top|Selector2                            ;
 ; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |top|Selector5                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------+
 
@@ -1010,30 +1079,30 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                   ; Count                      ;
 +------------------------+----------------------------+
 ; boundary_port          ; 58                         ;
-; cycloneiii_ff          ; 723                        ;
+; cycloneiii_ff          ; 727                        ;
 ;     CLR                ; 61                         ;
 ;     CLR SCLR           ; 8                          ;
-;     ENA                ; 440                        ;
-;     ENA CLR            ; 173                        ;
+;     ENA                ; 351                        ;
+;     ENA CLR            ; 266                        ;
 ;     ENA CLR SCLR       ; 16                         ;
 ;     ENA CLR SLD        ; 14                         ;
 ;     plain              ; 11                         ;
-; cycloneiii_lcell_comb  ; 967                        ;
-;     arith              ; 430                        ;
-;         2 data inputs  ; 167                        ;
-;         3 data inputs  ; 263                        ;
-;     normal             ; 537                        ;
+; cycloneiii_lcell_comb  ; 1013                       ;
+;     arith              ; 471                        ;
+;         2 data inputs  ; 168                        ;
+;         3 data inputs  ; 303                        ;
+;     normal             ; 542                        ;
 ;         0 data inputs  ; 3                          ;
-;         1 data inputs  ; 24                         ;
-;         2 data inputs  ; 138                        ;
-;         3 data inputs  ; 105                        ;
-;         4 data inputs  ; 267                        ;
+;         1 data inputs  ; 23                         ;
+;         2 data inputs  ; 140                        ;
+;         3 data inputs  ; 107                        ;
+;         4 data inputs  ; 269                        ;
 ; cycloneiii_mac_mult    ; 5                          ;
 ; cycloneiii_mac_out     ; 5                          ;
 ; fiftyfivenm_oscillator ; 1                          ;
 ;                        ;                            ;
 ; Max LUT depth          ; 9.80                       ;
-; Average LUT depth      ; 4.24                       ;
+; Average LUT depth      ; 4.52                       ;
 +------------------------+----------------------------+
 
 
@@ -1042,7 +1111,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1139,7 +1208,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Tue Nov 24 11:01:22 2020
+    Info: Processing started: Mon Mar 22 21:58:23 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off max10_galvano -c max10_galvano
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -1160,28 +1229,28 @@ Info (12021): Found 1 design units, including 1 entities, in source file source/
 Info (12127): Elaborating entity "top" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at top.v(69): object "clk_80mhz" assigned a value but never read File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 69
 Warning (10036): Verilog HDL or VHDL warning at top.v(69): object "clk_10mhz" assigned a value but never read File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 69
-Warning (10036): Verilog HDL or VHDL warning at top.v(207): object "xy2_xsetpoint" assigned a value but never read File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 207
-Warning (10036): Verilog HDL or VHDL warning at top.v(209): object "xy2_ysetpoint" assigned a value but never read File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 209
+Warning (10036): Verilog HDL or VHDL warning at top.v(208): object "xy2_xsetpoint" assigned a value but never read File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 208
+Warning (10036): Verilog HDL or VHDL warning at top.v(210): object "xy2_ysetpoint" assigned a value but never read File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 210
 Warning (10230): Verilog HDL assignment warning at top.v(66): truncated value with size 32 to match size of target (4) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 66
-Warning (10230): Verilog HDL assignment warning at top.v(95): truncated value with size 32 to match size of target (17) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 95
-Warning (10230): Verilog HDL assignment warning at top.v(99): truncated value with size 32 to match size of target (17) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 99
-Warning (10230): Verilog HDL assignment warning at top.v(148): truncated value with size 32 to match size of target (16) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 148
-Warning (10230): Verilog HDL assignment warning at top.v(152): truncated value with size 32 to match size of target (16) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 152
-Warning (10230): Verilog HDL assignment warning at top.v(195): truncated value with size 32 to match size of target (16) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 195
+Warning (10230): Verilog HDL assignment warning at top.v(96): truncated value with size 32 to match size of target (17) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 96
+Warning (10230): Verilog HDL assignment warning at top.v(100): truncated value with size 32 to match size of target (17) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 100
+Warning (10230): Verilog HDL assignment warning at top.v(149): truncated value with size 32 to match size of target (16) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 149
+Warning (10230): Verilog HDL assignment warning at top.v(153): truncated value with size 32 to match size of target (16) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 153
+Warning (10230): Verilog HDL assignment warning at top.v(196): truncated value with size 32 to match size of target (16) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 196
 Warning (10034): Output port "temp_cs" at top.v(45) has no driver File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 45
 Warning (10034): Output port "temp_clk" at top.v(46) has no driver File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 46
 Info (12128): Elaborating entity "internal_osc" for hierarchy "internal_osc:osc_u1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 62
 Info (12128): Elaborating entity "altera_int_osc" for hierarchy "internal_osc:osc_u1|altera_int_osc:int_osc_0" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/internal_osc/synthesis/internal_osc.v Line: 18
-Info (12128): Elaborating entity "ads8686if" for hierarchy "ads8686if:xp_adc_u1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 273
+Info (12128): Elaborating entity "ads8686if" for hierarchy "ads8686if:xp_adc_u1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 274
 Warning (10230): Verilog HDL assignment warning at ads8685.v(85): truncated value with size 32 to match size of target (8) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/ads8685.v Line: 85
 Warning (10230): Verilog HDL assignment warning at ads8685.v(94): truncated value with size 32 to match size of target (8) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/ads8685.v Line: 94
 Warning (10230): Verilog HDL assignment warning at ads8685.v(108): truncated value with size 32 to match size of target (4) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/ads8685.v Line: 108
-Info (12128): Elaborating entity "dac7731if" for hierarchy "dac7731if:xdac_u1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 290
+Info (12128): Elaborating entity "dac7731if" for hierarchy "dac7731if:xdac_u1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 291
 Warning (10230): Verilog HDL assignment warning at dac7731.v(52): truncated value with size 32 to match size of target (16) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/dac7731.v Line: 52
-Info (12128): Elaborating entity "pos_pid" for hierarchy "pos_pid:xpos_pid_u1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 305
-Warning (10230): Verilog HDL assignment warning at pos_pid.v(22): truncated value with size 32 to match size of target (16) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 22
+Info (12128): Elaborating entity "pos_pid" for hierarchy "pos_pid:xpos_pid_u1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 307
 Warning (10230): Verilog HDL assignment warning at pos_pid.v(23): truncated value with size 32 to match size of target (16) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 23
-Warning (10230): Verilog HDL assignment warning at pos_pid.v(62): truncated value with size 48 to match size of target (16) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 62
+Warning (10230): Verilog HDL assignment warning at pos_pid.v(24): truncated value with size 32 to match size of target (16) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 24
+Warning (10230): Verilog HDL assignment warning at pos_pid.v(68): truncated value with size 48 to match size of target (16) File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 68
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2l14.tdf
     Info (12023): Found entity 1: altsyncram_2l14 File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/db/altsyncram_2l14.tdf Line: 28
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_f7c.tdf
@@ -1202,7 +1271,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_drb File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/db/cmpr_drb.tdf Line: 23
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "auto_signaltap_0"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2020.11.24.11:01:41 Progress: Loading sld69100c46/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2021.03.22.21:58:48 Progress: Loading sld69100c46/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1226,11 +1295,11 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld69100c46/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/db/ip/sld69100c46/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Info (278001): Inferred 3 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pos_pid:xpos_pid_u1|Mult2" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 48
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pos_pid:xpos_pid_u1|Mult1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 46
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pos_pid:xpos_pid_u1|Mult0" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 45
-Info (12130): Elaborated megafunction instantiation "pos_pid:xpos_pid_u1|lpm_mult:Mult2" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 48
-Info (12133): Instantiated megafunction "pos_pid:xpos_pid_u1|lpm_mult:Mult2" with the following parameter: File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 48
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pos_pid:xpos_pid_u1|Mult2" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 55
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pos_pid:xpos_pid_u1|Mult1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 54
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "pos_pid:xpos_pid_u1|Mult0" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 53
+Info (12130): Elaborated megafunction instantiation "pos_pid:xpos_pid_u1|lpm_mult:Mult2" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 55
+Info (12133): Instantiated megafunction "pos_pid:xpos_pid_u1|lpm_mult:Mult2" with the following parameter: File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 55
     Info (12134): Parameter "LPM_WIDTHA" = "17"
     Info (12134): Parameter "LPM_WIDTHB" = "18"
     Info (12134): Parameter "LPM_WIDTHP" = "35"
@@ -1242,8 +1311,8 @@ Info (12133): Instantiated megafunction "pos_pid:xpos_pid_u1|lpm_mult:Mult2" wit
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_0hs.tdf
     Info (12023): Found entity 1: mult_0hs File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/db/mult_0hs.tdf Line: 29
-Info (12130): Elaborated megafunction instantiation "pos_pid:xpos_pid_u1|lpm_mult:Mult1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 46
-Info (12133): Instantiated megafunction "pos_pid:xpos_pid_u1|lpm_mult:Mult1" with the following parameter: File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 46
+Info (12130): Elaborated megafunction instantiation "pos_pid:xpos_pid_u1|lpm_mult:Mult1" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 54
+Info (12133): Instantiated megafunction "pos_pid:xpos_pid_u1|lpm_mult:Mult1" with the following parameter: File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 54
     Info (12134): Parameter "LPM_WIDTHA" = "17"
     Info (12134): Parameter "LPM_WIDTHB" = "48"
     Info (12134): Parameter "LPM_WIDTHP" = "65"
@@ -1255,8 +1324,8 @@ Info (12133): Instantiated megafunction "pos_pid:xpos_pid_u1|lpm_mult:Mult1" wit
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_5hs.tdf
     Info (12023): Found entity 1: mult_5hs File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/db/mult_5hs.tdf Line: 31
-Info (12130): Elaborated megafunction instantiation "pos_pid:xpos_pid_u1|lpm_mult:Mult0" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 45
-Info (12133): Instantiated megafunction "pos_pid:xpos_pid_u1|lpm_mult:Mult0" with the following parameter: File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 45
+Info (12130): Elaborated megafunction instantiation "pos_pid:xpos_pid_u1|lpm_mult:Mult0" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 53
+Info (12133): Instantiated megafunction "pos_pid:xpos_pid_u1|lpm_mult:Mult0" with the following parameter: File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/pos_pid.v Line: 53
     Info (12134): Parameter "LPM_WIDTHA" = "17"
     Info (12134): Parameter "LPM_WIDTHB" = "17"
     Info (12134): Parameter "LPM_WIDTHP" = "34"
@@ -1289,7 +1358,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "temp_cs" is stuck at GND File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 45
     Warning (13410): Pin "temp_clk" is stuck at GND File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 46
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
-Info (17049): 420 registers lost all their fanouts during netlist optimizations.
+Info (17049): 423 registers lost all their fanouts during netlist optimizations.
 Info (35024): Successfully connected in-system debug instance "auto_signaltap_0" to all 79 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1303,16 +1372,16 @@ Warning (21074): Design contains 9 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "temp_data" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 47
     Warning (15610): No output dependent on input pin "xy_clk" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 6
     Warning (15610): No output dependent on input pin "xy_sync" File: C:/bzhou/repo/github/galvano/design/app/max10_galvano/source/top.v Line: 7
-Info (21057): Implemented 2349 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2401 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 28 output pins
-    Info (21061): Implemented 2270 logic cells
+    Info (21061): Implemented 2322 logic cells
     Info (21064): Implemented 23 RAM segments
     Info (21062): Implemented 10 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 46 warnings
     Info: Peak virtual memory: 4932 megabytes
-    Info: Processing ended: Tue Nov 24 11:01:56 2020
-    Info: Elapsed time: 00:00:34
-    Info: Total CPU time (on all processors): 00:00:50
+    Info: Processing ended: Mon Mar 22 21:59:10 2021
+    Info: Elapsed time: 00:00:47
+    Info: Total CPU time (on all processors): 00:01:08
 
 

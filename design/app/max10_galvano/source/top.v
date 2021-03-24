@@ -85,6 +85,7 @@ assign clk_5mhz  = clk_div[3];
 // reg[8]: dac limit
 // reg[9]: pid i saturation
 // reg[10]:pid i saturation
+// reg[11]:+/- pid value
 reg [15:0] spi_regs[15:0];
 
 // generate reset using latch
@@ -299,6 +300,7 @@ pos_pid xpos_pid_u1
     .kd(spi_regs[5]),
     .dac_limit(spi_regs[8]),
     .pid_i_saturation({spi_regs[10][7:0], spi_regs[9]}),
+    .pid_sign(spi_regs[11]),
     .pos_target(spi_regs[6]),
     .pos_adc(xp_data),
     .pos_dac(xdac_data)
@@ -348,6 +350,7 @@ pos_pid ypos_pid_u1
     .kd(spi_regs[5]),
     .dac_limit(spi_regs[8]),
     .pid_i_saturation({spi_regs[10][7:0], spi_regs[9]}),
+    .pid_sign(spi_regs[11]),
     .pos_target(spi_regs[6]),
     .pos_adc(yp_data),
     .pos_dac(ydac_data)

@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue Nov 24 11:01:56 2020
+Analysis & Synthesis Status : Successful - Mon Mar 22 21:59:10 2021
 Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 Revision Name : max10_galvano
 Top-level Entity Name : top
 Family : MAX 10
-Total logic elements : 2,203
-    Total combinational functions : 1,500
-    Dedicated logic registers : 1,419
-Total registers : 1419
+Total logic elements : 2,254
+    Total combinational functions : 1,547
+    Dedicated logic registers : 1,423
+Total registers : 1423
 Total pins : 40
 Total virtual pins : 0
 Total memory bits : 23,552
